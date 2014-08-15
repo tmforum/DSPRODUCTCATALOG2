@@ -1,0 +1,43 @@
+      {
+      "name": "Name modified",
+      "description": "Description modified", 
+      "isBundle": true,
+      "validFor":       {
+         "startDateTime": "2001-01-01T00:00:00.000+0000",
+         "endDateTime": "2002-01-01T00:00:00.000+0000"
+      },
+      "productCategories":       [
+                  {
+            "id": "id",
+            "name": "name",
+            "description": "desc"
+         },
+                  {
+            "id": "id",
+            "name": "name",
+            "description": "desc"
+         }
+      ],
+      "productSpecification":       {
+         "id": "id",
+         "name": "name",
+         "description": "desc"
+      },
+      "productOfferingPrices": [      {
+         "name": "name",
+         "validFor":          {
+            "startDateTime": "2001-01-01T00:00:00.000+0000",
+            "endDateTime": "2002-01-01T00:00:00.000+0000"
+         },
+         "price":          {
+            "amount": "amount",
+            "currency": "currency"
+         },
+         "recurringChargePeriod": "period"
+      }],
+      "bundledProductOfferings": [      {
+         "id": "id",
+         "name": "name",
+         "description": "desc"
+      }]
+   }
