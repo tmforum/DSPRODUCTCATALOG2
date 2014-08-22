@@ -1,7 +1,12 @@
 package tmf.org.dsmapi.catalog;
 
 import java.io.Serializable;
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.Embedded;
+import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 /**
@@ -14,10 +19,22 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 public class RelatedParty implements Serializable {
     private final static long serialVersionUID = 1L;
 
+    @Column(name = "ID", nullable = true)
     private String id;
+
+    @Column(name = "HREF", nullable = true)
     private String href;
+
+    @Embedded
+    @AttributeOverrides({
+        @AttributeOverride(name = "startDateTime", column = @Column(name = "REL_PARTY_START_DATE_TIME")),
+        @AttributeOverride(name = "endDateTime", column = @Column(name = "REL_PARTY_END_DATE_TIME"))
+    })
     private TimeRange validFor;
-    private String role;
+
+    @Column(name = "PARTY_ROLE", nullable = true)
+    @JsonProperty(value = "role")
+    private String partyRole;
 
     public RelatedParty() {
     }
@@ -46,12 +63,12 @@ public class RelatedParty implements Serializable {
         this.validFor = validFor;
     }
 
-    public String getRole() {
-        return role;
+    public String getPartyRole() {
+        return partyRole;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setPartyRole(String partyRole) {
+        this.partyRole = partyRole;
     }
 
     @Override
@@ -61,11 +78,10 @@ public class RelatedParty implements Serializable {
         hash = 23 * hash + (this.id != null ? this.id.hashCode() : 0);
         hash = 23 * hash + (this.href != null ? this.href.hashCode() : 0);
         hash = 23 * hash + (this.validFor != null ? this.validFor.hashCode() : 0);
-        hash = 23 * hash + (this.role != null ? this.role.hashCode() : 0);
+        hash = 23 * hash + (this.partyRole != null ? this.partyRole.hashCode() : 0);
 
         return hash;
     }
-
 
     @Override
     public boolean equals(Object object) {
@@ -86,7 +102,7 @@ public class RelatedParty implements Serializable {
             return false;
         }
 
-        if (Utilities.areEqual(this.role, other.role) == false) {
+        if (Utilities.areEqual(this.partyRole, other.partyRole) == false) {
             return false;
         }
 
@@ -95,7 +111,7 @@ public class RelatedParty implements Serializable {
 
     @Override
     public String toString() {
-        return "RelatedParty{" + "id=" + id + ", href=" + href + ", validFor=" + validFor + ", role=" + role + '}';
+        return "RelatedParty{" + "id=" + id + ", href=" + href + ", validFor=" + validFor + ", partyRole=" + partyRole + '}';
     }
 
     public static RelatedParty createProto() {
@@ -104,7 +120,7 @@ public class RelatedParty implements Serializable {
         relatedParty.id = "id";
         relatedParty.href = "href";
         relatedParty.validFor = TimeRange.createProto();
-        relatedParty.role = "role";
+        relatedParty.partyRole = "role";
 
         return relatedParty;
     }

@@ -82,7 +82,7 @@ public abstract class AbstractFacade<T> {
     public T find(Object id) {
         return getEntityManager().find(entityClass, id);
     }
-
+/*
     public List<T> findCatalogById(String catalogId) {
         CriteriaBuilder criteriaBuilder = getEntityManager().getCriteriaBuilder();
         CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(entityClass);
@@ -106,48 +106,37 @@ public abstract class AbstractFacade<T> {
 
         return query.getResultList();
     }
-/*
-    public List<T> findById(String catalogId, Float catalogVersion, String entityId, Float version) {
+    */
+
+    public List<T> findCatalogById(String catalogId, Float catalogVersion) {
         CriteriaBuilder criteriaBuilder = getEntityManager().getCriteriaBuilder();
         CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(entityClass);
         Root<T> table = criteriaQuery.from(entityClass);
 
         Predicate condition = null;
 
-        ParameterExpression<String> catalogIdExpression = null;
-        if (catalogId != null) {
-            catalogIdExpression = criteriaBuilder.parameter(String.class);
-            condition = criteriaBuilder.equal(table.get("catalogId"), catalogIdExpression);
-        }
+        ParameterExpression<String> catalogIdExpression = (catalogId != null) ? criteriaBuilder.parameter(String.class) : null;
+        Predicate propertyCondition = (catalogIdExpression != null) ? criteriaBuilder.equal(table.get("id"), catalogIdExpression) : null;
+        condition = propertyCondition;
 
-        ParameterExpression<String> entityIdExpression = null;
-        if (entityId != null) {
-            entityIdExpression = criteriaBuilder.parameter(String.class);
-            Predicate entityIdCondition = criteriaBuilder.equal(table.get("id"), entityIdExpression);
-            if (condition == null) {
-                condition = entityIdCondition;
-            }
-            else {
-                condition = criteriaBuilder.and(condition, entityIdCondition);
-            }
-        }
+        ParameterExpression<Float> catalogVersionExpression = (catalogVersion != null) ? criteriaBuilder.parameter(Float.class) : null;
+        propertyCondition = (catalogVersionExpression != null) ? criteriaBuilder.equal(table.get("version"), catalogVersionExpression) : null;
+        condition = andPredicates(condition, propertyCondition);
 
         criteriaQuery.select(table).where(condition);
-        criteriaQuery.orderBy(criteriaBuilder.desc (table.get("catalogVersion")), criteriaBuilder.desc(table.get("version")));
+        criteriaQuery.orderBy(criteriaBuilder.desc (table.get("id")), criteriaBuilder.desc (table.get("version")));
 
         TypedQuery<T> query = getEntityManager().createQuery(criteriaQuery);
-
         if (catalogId != null) {
             query.setParameter(catalogIdExpression, catalogId);
         }
 
-        if (entityId != null) {
-            query.setParameter(entityIdExpression, entityId);
+        if (catalogVersion != null) {
+            query.setParameter(catalogVersionExpression, catalogVersion);
         }
 
         return query.getResultList();
     }
-*/
 
     public List<T> findById(String catalogId, Float catalogVersion, String entityId, Float entityVersion) {
         CriteriaBuilder criteriaBuilder = getEntityManager().getCriteriaBuilder();
@@ -171,7 +160,6 @@ public abstract class AbstractFacade<T> {
         ParameterExpression<Float> entityVersionExpression = (entityVersion != null) ? criteriaBuilder.parameter(Float.class) : null;
         propertyCondition = (entityVersionExpression != null) ? criteriaBuilder.equal(table.get("version"), entityVersionExpression) : null;
         condition = andPredicates(condition, propertyCondition);
-System.out.println ("entity version:" + propertyCondition);
 
         criteriaQuery.select(table).where(condition);
         criteriaQuery.orderBy(criteriaBuilder.desc (table.get("catalogId")), criteriaBuilder.desc (table.get("catalogVersion")), criteriaBuilder.desc (table.get("id")), criteriaBuilder.desc(table.get("version")));
@@ -191,7 +179,6 @@ System.out.println ("entity version:" + propertyCondition);
 
         if (entityVersion != null) {
             query.setParameter(entityVersionExpression, entityVersion);
-System.out.println ("entity version:" + entityVersion);
         }
 
         return query.getResultList();

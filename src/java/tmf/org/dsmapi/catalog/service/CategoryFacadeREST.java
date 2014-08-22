@@ -34,7 +34,7 @@ import tmf.org.dsmapi.commons.jaxrs.PATCH;
 @Path("category")
 public class CategoryFacadeREST {
     private static final Logger logger = Logger.getLogger(Category.class.getName());
-    private static final String RelativeContext = "category";
+    private static final String RELATIVE_CONTEXT = "category";
 
     @EJB
     private CategoryFacade manager;
@@ -53,7 +53,7 @@ public class CategoryFacadeREST {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        if (input.valid() == false) {
+        if (input.isValid() == false) {
             logger.log(Level.FINE, "input is not valid");
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
@@ -62,7 +62,7 @@ public class CategoryFacadeREST {
         input.setCatalogVersion(Category.getDefaultCatalogVersion());
         manager.create(input);
 
-        input.setHref(FacadeRestUtil.buildHref(uriInfo, RelativeContext, input.getId(), input.getVersion()));
+        input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getVersion()));
         manager.edit(input);
 
         return Response.status(Response.Status.CREATED).entity(input).build();
@@ -234,7 +234,7 @@ public class CategoryFacadeREST {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        if (input.valid() == false) {
+        if (input.isValid() == false) {
             logger.log(Level.FINE, "invalid input.");
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
@@ -250,7 +250,7 @@ public class CategoryFacadeREST {
         input.setCatalogVersion(Category.getDefaultCatalogVersion());
 
         if (input.keysMatch(category)) {
-            input.setHref(FacadeRestUtil.buildHref(uriInfo, RelativeContext, input.getId(), input.getVersion()));
+            input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getVersion()));
             manager.edit(input);
             return Response.status(Response.Status.CREATED).entity(input).build();
         }
@@ -258,7 +258,7 @@ public class CategoryFacadeREST {
         manager.remove(category);
         manager.create(input);
 
-        input.setHref(FacadeRestUtil.buildHref(uriInfo, RelativeContext, input.getId(), input.getVersion()));
+        input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getVersion()));
         manager.edit(input);
 
         return Response.status(Response.Status.CREATED).entity(input).build();
@@ -283,7 +283,7 @@ public class CategoryFacadeREST {
         }
 
         category.edit(input);
-        if(category.valid() == false) {
+        if(category.isValid() == false) {
             logger.log(Level.FINE, "patched category would be invalid");
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
@@ -301,7 +301,7 @@ public class CategoryFacadeREST {
         manager.remove(category);
 
         category.setVersion(input.getVersion());
-        category.setHref(FacadeRestUtil.buildHref(uriInfo, RelativeContext, category.getId(), category.getVersion()));
+        category.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, category.getId(), category.getVersion()));
         manager.create(category);
 
         return Response.status(Response.Status.CREATED).entity(category).build();

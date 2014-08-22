@@ -33,8 +33,8 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
  *
  * {
  *     "id": "42",
- *     "version": 2.1,
- *     "href": "http://serverlocation:port/catalogManagement/serviceCandidate/42",
+ *     "version": 2.8,
+ *     "href": "http://serverlocation:port/catalogManagement/resourceCandidate/42",
  *     "name": "Virtual Storage Medium",
  *     "description": "Virtual Storage Medium",
  *     "lastUpdate": "2013-04-19T16:42:23-04:00",
@@ -46,9 +46,9 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
  *     "category": [
  *         {
  *             "id": "12",
- *             "version": 2.2,
- *             "href": "http://serverlocation:port/catalogManagement/category/12",
- *             "name": "Cloud service"
+ *             "href": "http://serverlocation:port/catalogManagement/resourceCategory/12",
+ *             "version": "2.0",
+ *             "name": "Cloud offerings"
  *         }
  *     ],
  *     "serviceLevelAgreement": {
@@ -56,11 +56,11 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
  *         "href": "http://serverlocation:port/slaManagement/serviceLevelAgreement/28",
  *         "name": "Standard SLA"
  *     },
- *     "serviceSpecification": {
+ *     "resourceSpecification": {
  *         "id": "13",
- *         "version": 1.2,
- *         "href": "http://serverlocation:port/catalogManagement/serviceSpecification/13",
- *         "name": "specification 1"
+ *         "href": "http://serverlocation:port/catalogManagement/resourceSpecification/13",
+ *         "name": "specification 1",
+ *         "version": "1.1"
  *     }
  * }
  *
@@ -68,12 +68,12 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 @Entity
 @XmlRootElement
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
-@IdClass(ServiceCandidateId.class)
-@Table(name = "CRI_SERVICE_CANDIDATE")
-public class ServiceCandidate extends AbstractEntity implements Serializable {
+@IdClass(ResourceCandidateId.class)
+@Table(name = "CRI_RESOURCE_CANDIDATE")
+public class ResourceCandidate extends AbstractEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    private final static Logger logger = Logger.getLogger(ServiceCandidate.class.getName());
+    private final static Logger logger = Logger.getLogger(ResourceCandidate.class.getName());
 
     @Id
     @Column(name = "CATALOG_ID", nullable = false)
@@ -114,7 +114,7 @@ public class ServiceCandidate extends AbstractEntity implements Serializable {
 
     @Embedded
     @ElementCollection
-    @CollectionTable(name = "CRI_SERVICE_R_CATEGORY", joinColumns = {
+    @CollectionTable(name = "CRI_RESOURCE_R_CATEGORY", joinColumns = {
         @JoinColumn(name = "CATALOG_ID", referencedColumnName = "CATALOG_ID"),
         @JoinColumn(name = "CATALOG_VERSION", referencedColumnName = "CATALOG_VERSION"),
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
@@ -134,15 +134,15 @@ public class ServiceCandidate extends AbstractEntity implements Serializable {
 
     @Embedded
     @AttributeOverrides({
-        @AttributeOverride(name = "id", column = @Column(name = "SERVICE_SPEC_ID")),
-        @AttributeOverride(name = "version", column = @Column(name = "SERVICE_SPEC_VERSION")),
-        @AttributeOverride(name = "href", column = @Column(name = "SERVICE_SPEC_HREF")),
-        @AttributeOverride(name = "name", column = @Column(name = "SERVICE_SPEC_NAME")),
-        @AttributeOverride(name = "description", column = @Column(name = "SERVICE_SPEC_DESCRIPTION"))
+        @AttributeOverride(name = "id", column = @Column(name = "RESOURCE_SPEC_ID")),
+        @AttributeOverride(name = "version", column = @Column(name = "RESOURCE_SPEC_VERSION")),
+        @AttributeOverride(name = "href", column = @Column(name = "RESOURCE_SPEC_HREF")),
+        @AttributeOverride(name = "name", column = @Column(name = "RESOURCE_SPEC_NAME")),
+        @AttributeOverride(name = "description", column = @Column(name = "RESOURCE_SPEC_DESCRIPTION"))
     })
-    private Reference serviceSpecification;
+    private Reference resourceSpecification;
 
-    public ServiceCandidate() {
+    public ResourceCandidate() {
     }
 
     public String getCatalogId() {
@@ -241,31 +241,31 @@ public class ServiceCandidate extends AbstractEntity implements Serializable {
         this.serviceLevelAgreement = serviceLevelAgreement;
     }
 
-    public Reference getServiceSpecification() {
-        return serviceSpecification;
+    public Reference getResourceSpecification() {
+        return resourceSpecification;
     }
 
-    public void setServiceSpecification(Reference serviceSpecification) {
-        this.serviceSpecification = serviceSpecification;
+    public void setResourceSpecification(Reference resourceSpecification) {
+        this.resourceSpecification = resourceSpecification;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
 
-        hash = 17 * hash + (this.catalogId != null ? this.catalogId.hashCode() : 0);
-        hash = 17 * hash + (this.catalogVersion != null ? this.catalogVersion.hashCode() : 0);
-        hash = 17 * hash + (this.id != null ? this.id.hashCode() : 0);
-        hash = 17 * hash + (this.version != null ? this.version.hashCode() : 0);
-        hash = 17 * hash + (this.href != null ? this.href.hashCode() : 0);
-        hash = 17 * hash + (this.name != null ? this.name.hashCode() : 0);
-        hash = 17 * hash + (this.description != null ? this.description.hashCode() : 0);
-        hash = 17 * hash + (this.lastUpdate != null ? this.lastUpdate.hashCode() : 0);
-        hash = 17 * hash + (this.lifecycleStatus != null ? this.lifecycleStatus.hashCode() : 0);
-        hash = 17 * hash + (this.validFor != null ? this.validFor.hashCode() : 0);
-        hash = 17 * hash + (this.category != null ? this.category.hashCode() : 0);
-        hash = 17 * hash + (this.serviceLevelAgreement != null ? this.serviceLevelAgreement.hashCode() : 0);
-        hash = 17 * hash + (this.serviceSpecification != null ? this.serviceSpecification.hashCode() : 0);
+        hash = 97 * hash + (this.catalogId != null ? this.catalogId.hashCode() : 0);
+        hash = 97 * hash + (this.catalogVersion != null ? this.catalogVersion.hashCode() : 0);
+        hash = 97 * hash + (this.id != null ? this.id.hashCode() : 0);
+        hash = 97 * hash + (this.version != null ? this.version.hashCode() : 0);
+        hash = 97 * hash + (this.href != null ? this.href.hashCode() : 0);
+        hash = 97 * hash + (this.name != null ? this.name.hashCode() : 0);
+        hash = 97 * hash + (this.description != null ? this.description.hashCode() : 0);
+        hash = 97 * hash + (this.lastUpdate != null ? this.lastUpdate.hashCode() : 0);
+        hash = 97 * hash + (this.lifecycleStatus != null ? this.lifecycleStatus.hashCode() : 0);
+        hash = 97 * hash + (this.validFor != null ? this.validFor.hashCode() : 0);
+        hash = 97 * hash + (this.category != null ? this.category.hashCode() : 0);
+        hash = 97 * hash + (this.serviceLevelAgreement != null ? this.serviceLevelAgreement.hashCode() : 0);
+        hash = 97 * hash + (this.resourceSpecification != null ? this.resourceSpecification.hashCode() : 0);
 
         return hash;
     }
@@ -276,7 +276,7 @@ public class ServiceCandidate extends AbstractEntity implements Serializable {
             return false;
         }
 
-        final ServiceCandidate other = (ServiceCandidate) object;
+        final ResourceCandidate other = (ResourceCandidate) object;
         if (Utilities.areEqual(this.catalogId, other.catalogId) == false) {
             return false;
         }
@@ -325,7 +325,7 @@ public class ServiceCandidate extends AbstractEntity implements Serializable {
             return false;
         }
 
-        if (Utilities.areEqual(this.serviceSpecification, other.serviceSpecification) == false) {
+        if (Utilities.areEqual(this.resourceSpecification, other.resourceSpecification) == false) {
             return false;
         }
 
@@ -334,10 +334,10 @@ public class ServiceCandidate extends AbstractEntity implements Serializable {
 
     @Override
     public String toString() {
-        return "ServiceCandidate{" + "catalogId=" + catalogId + ", catalogVersion=" + catalogVersion + ", id=" + id + ", version=" + version + ", href=" + href + ", name=" + name + ", description=" + description + ", lastUpdate=" + lastUpdate + ", lifecycleStatus=" + lifecycleStatus + ", validFor=" + validFor + ", category=" + category + ", serviceLevelAgreement=" + serviceLevelAgreement + ", serviceSpecification=" + serviceSpecification + '}';
+        return "ResourceCandidate{" + "catalogId=" + catalogId + ", catalogVersion=" + catalogVersion + ", id=" + id + ", version=" + version + ", href=" + href + ", name=" + name + ", description=" + description + ", lastUpdate=" + lastUpdate + ", lifecycleStatus=" + lifecycleStatus + ", validFor=" + validFor + ", category=" + category + ", serviceLevelAgreement=" + serviceLevelAgreement + ", resourceSpecification=" + resourceSpecification + '}';
     }
 
-    public boolean keysMatch(ServiceCandidate input) {
+    public boolean keysMatch(ResourceCandidate input) {
         if (input == null) {
             return false;
         }
@@ -365,7 +365,7 @@ public class ServiceCandidate extends AbstractEntity implements Serializable {
         return true;
     }
 
-    public void edit(ServiceCandidate input) {
+    public void edit(ResourceCandidate input) {
         if (input == null || input == this) {
             return;
         }
@@ -402,14 +402,14 @@ public class ServiceCandidate extends AbstractEntity implements Serializable {
             this.serviceLevelAgreement = input.serviceLevelAgreement;
         }
 
-        if (input.serviceSpecification != null) {
-            this.serviceSpecification = input.serviceSpecification;
+        if (input.resourceSpecification != null) {
+            this.resourceSpecification = input.resourceSpecification;
         }
     }
 
     @JsonIgnore
     public boolean isValid() {
-        logger.log(Level.FINE, "ServiceCandidate:valid ()");
+        logger.log(Level.FINE, "ResourceCandidate:valid ()");
 
         if (Utilities.hasValue(this.name) == false) {
             logger.log(Level.FINE, " invalid: name is required");
@@ -452,25 +452,25 @@ public class ServiceCandidate extends AbstractEntity implements Serializable {
         lastUpdate = new Date ();
     }
 
-    public static ServiceCandidate createProto() {
-        ServiceCandidate serviceCandidate = new ServiceCandidate();
+    public static ResourceCandidate createProto() {
+        ResourceCandidate resourceCandidate = new ResourceCandidate();
 
-        serviceCandidate.id = "id";
-        serviceCandidate.version = 1.3f;
-        serviceCandidate.href = "href";
-        serviceCandidate.name = "name";
-        serviceCandidate.description = "description";
-        serviceCandidate.lastUpdate = new Date ();
-        serviceCandidate.lifecycleStatus = LifecycleStatus.ACTIVE;
-        serviceCandidate.validFor = TimeRange.createProto();
+        resourceCandidate.id = "id";
+        resourceCandidate.version = 1.3f;
+        resourceCandidate.href = "href";
+        resourceCandidate.name = "name";
+        resourceCandidate.description = "description";
+        resourceCandidate.lastUpdate = new Date ();
+        resourceCandidate.lifecycleStatus = LifecycleStatus.ACTIVE;
+        resourceCandidate.validFor = TimeRange.createProto();
 
-        serviceCandidate.category = new ArrayList<Reference>();
-        serviceCandidate.category.add(Reference.createProto());
+        resourceCandidate.category = new ArrayList<Reference>();
+        resourceCandidate.category.add(Reference.createProto());
 
-        serviceCandidate.serviceLevelAgreement = Reference.createProto();
-        serviceCandidate.serviceSpecification = Reference.createProto();
+        resourceCandidate.serviceLevelAgreement = Reference.createProto();
+        resourceCandidate.resourceSpecification = Reference.createProto();
 
-        return serviceCandidate;
+        return resourceCandidate;
     }
 
 }

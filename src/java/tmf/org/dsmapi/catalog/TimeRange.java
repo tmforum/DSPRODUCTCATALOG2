@@ -2,9 +2,11 @@ package tmf.org.dsmapi.catalog;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 /**
@@ -17,9 +19,11 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 public class TimeRange implements Serializable {
     private final static long serialVersionUID = 1L;
 
+    @Column(name = "START_DATE_TIME", nullable = true)
     @Temporal(TemporalType.TIMESTAMP)
     private Date startDateTime;
 
+    @Column(name = "END_DATE_TIME", nullable = true)
     @Temporal(TemporalType.TIMESTAMP)
     private Date endDateTime;
 
@@ -44,21 +48,8 @@ public class TimeRange implements Serializable {
         return "TimeRange{" + "startDateTime=" + startDateTime + ", endDateTime=" + endDateTime + '}';
     }
 
-    public void edit(TimeRange input) {
-        if (input == null) {
-            return;
-        }
-
-        if (input.startDateTime != null) {
-            this.startDateTime = input.startDateTime;
-        }
-
-        if (input.endDateTime != null) {
-            this.endDateTime = input.endDateTime;
-        }
-    }
-
-    public boolean valid() {
+    @JsonIgnore
+    public boolean isValid() {
         if (startDateTime == null || endDateTime == null) {
             return true;
         }

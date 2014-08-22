@@ -11,19 +11,19 @@ import tmf.org.dsmapi.catalog.specification.SpecificationCharacteristicValue;
 
 /**
  *
- * @author pierregauthier
+ * @author bahman.barzideh
  *
  * {
- *     "id": "42",
+ *     "id": "54",
  *     "name": "Screen Size",
  *     "description": "Screen size",
- *     "valueType": "number",
- *     "configurable": "false",
  *     "validFor": {
  *         "startDateTime": "2013-04-19T16:42:23-04:00",
  *         "endDateTime": ""
  *     },
- *     "productSpecCharRelationship": [
+ *     "valueType": "number",
+ *     "configurable": "false",
+ *     "resourceSpecCharRelationship": [
  *         {
  *             "type": "dependency",
  *             "id": "43",
@@ -33,7 +33,7 @@ import tmf.org.dsmapi.catalog.specification.SpecificationCharacteristicValue;
  *             }
  *         }
  *     ],
- *     "productSpecCharacteristicValue": [
+ *     "resourceSpecCharacteristicValue": [
  *         {
  *             "valueType": "number",
  *             "default": "true",
@@ -52,19 +52,19 @@ import tmf.org.dsmapi.catalog.specification.SpecificationCharacteristicValue;
  */
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 @Embeddable
-public class ProductSpecCharacteristic implements Serializable {
+public class ResourceSpecCharacteristic implements Serializable {
     public final static long serialVersionUID = 1L;
 
     private String id;
     private String name;
     private String description;
+    private TimeRange validFor;
     private CharacteristicValueType valueType;
     private Boolean configurable;
-    private TimeRange validFor;
-    private List<SpecificationCharacteristicRelationship> productSpecCharRelationship;
-    private List<SpecificationCharacteristicValue> productSpecCharacteristicValue;
+    private List<SpecificationCharacteristicRelationship> resourceSpecCharRelationship;
+    private List<SpecificationCharacteristicValue> resourceSpecCharacteristicValue;
 
-    public ProductSpecCharacteristic() {
+    public ResourceSpecCharacteristic() {
     }
 
     public String getId() {
@@ -91,6 +91,14 @@ public class ProductSpecCharacteristic implements Serializable {
         this.description = description;
     }
 
+    public TimeRange getValidFor() {
+        return validFor;
+    }
+
+    public void setValidFor(TimeRange validFor) {
+        this.validFor = validFor;
+    }
+
     public CharacteristicValueType getValueType() {
         return valueType;
     }
@@ -107,33 +115,25 @@ public class ProductSpecCharacteristic implements Serializable {
         this.configurable = configurable;
     }
 
-    public TimeRange getValidFor() {
-        return validFor;
+    public List<SpecificationCharacteristicRelationship> getResourceSpecCharRelationship() {
+        return resourceSpecCharRelationship;
     }
 
-    public void setValidFor(TimeRange validFor) {
-        this.validFor = validFor;
+    public void setResourceSpecCharRelationship(List<SpecificationCharacteristicRelationship> resourceSpecCharRelationship) {
+        this.resourceSpecCharRelationship = resourceSpecCharRelationship;
     }
 
-    public List<SpecificationCharacteristicRelationship> getProductSpecCharRelationship() {
-        return productSpecCharRelationship;
+    public List<SpecificationCharacteristicValue> getResourceSpecCharacteristicValue() {
+        return resourceSpecCharacteristicValue;
     }
 
-    public void setProductSpecCharRelationship(List<SpecificationCharacteristicRelationship> productSpecCharRelationship) {
-        this.productSpecCharRelationship = productSpecCharRelationship;
-    }
-
-    public List<SpecificationCharacteristicValue> getProductSpecCharacteristicValue() {
-        return productSpecCharacteristicValue;
-    }
-
-    public void setProductSpecCharacteristicValue(List<SpecificationCharacteristicValue> productSpecCharacteristicValue) {
-        this.productSpecCharacteristicValue = productSpecCharacteristicValue;
+    public void setResourceSpecCharacteristicValue(List<SpecificationCharacteristicValue> resourceSpecCharacteristicValue) {
+        this.resourceSpecCharacteristicValue = resourceSpecCharacteristicValue;
     }
 
     @Override
     public int hashCode() {
-        int hash = 5;
+        int hash = 7;
 
         hash = 71 * hash + (this.id != null ? this.id.hashCode() : 0);
         hash = 71 * hash + (this.name != null ? this.name.hashCode() : 0);
@@ -141,8 +141,8 @@ public class ProductSpecCharacteristic implements Serializable {
         hash = 71 * hash + (this.valueType != null ? this.valueType.hashCode() : 0);
         hash = 71 * hash + (this.configurable != null ? this.configurable.hashCode() : 0);
         hash = 71 * hash + (this.validFor != null ? this.validFor.hashCode() : 0);
-        hash = 71 * hash + (this.productSpecCharRelationship != null ? this.productSpecCharRelationship.hashCode() : 0);
-        hash = 71 * hash + (this.productSpecCharacteristicValue != null ? this.productSpecCharacteristicValue.hashCode() : 0);
+        hash = 71 * hash + (this.resourceSpecCharRelationship != null ? this.resourceSpecCharRelationship.hashCode() : 0);
+        hash = 71 * hash + (this.resourceSpecCharacteristicValue != null ? this.resourceSpecCharacteristicValue.hashCode() : 0);
 
         return hash;
     }
@@ -153,7 +153,7 @@ public class ProductSpecCharacteristic implements Serializable {
             return false;
         }
 
-        final ProductSpecCharacteristic other = (ProductSpecCharacteristic) object;
+        final ResourceSpecCharacteristic other = (ResourceSpecCharacteristic) object;
         if (Utilities.areEqual(this.id, other.id) == false) {
             return false;
         }
@@ -178,11 +178,11 @@ public class ProductSpecCharacteristic implements Serializable {
             return false;
         }
 
-        if (Utilities.areEqual(this.productSpecCharRelationship, other.productSpecCharRelationship) == false) {
+        if (Utilities.areEqual(this.resourceSpecCharRelationship, other.resourceSpecCharRelationship) == false) {
             return false;
         }
 
-        if (Utilities.areEqual(this.productSpecCharacteristicValue, other.productSpecCharacteristicValue) == false) {
+        if (Utilities.areEqual(this.resourceSpecCharacteristicValue, other.resourceSpecCharacteristicValue) == false) {
             return false;
         }
 
@@ -191,26 +191,26 @@ public class ProductSpecCharacteristic implements Serializable {
 
     @Override
     public String toString() {
-        return "ProductSpecCharacteristic{" + "id=" + id + ", name=" + name + ", description=" + description + ", valueType=" + valueType + ", configurable=" + configurable + ", validFor=" + validFor + ", productSpecCharRelationship=" + productSpecCharRelationship + ", productSpecCharacteristicValue=" + productSpecCharacteristicValue + '}';
+        return "ResourceSpecCharacteristic{" + "id=" + id + ", name=" + name + ", description=" + description + ", validFor=" + validFor + ", valueType=" + valueType + ", configurable=" + configurable + ", resourceSpecCharRelationship=" + resourceSpecCharRelationship + ", resourceSpecCharacteristicValue=" + resourceSpecCharacteristicValue + '}';
     }
 
-    public static ProductSpecCharacteristic createProto() {
-        ProductSpecCharacteristic productSpecCharacteristic = new ProductSpecCharacteristic();
+    public static ResourceSpecCharacteristic createProto() {
+        ResourceSpecCharacteristic resourceSpecCharacteristic = new ResourceSpecCharacteristic();
 
-        productSpecCharacteristic.id = "id";
-        productSpecCharacteristic.name = "name";
-        productSpecCharacteristic.description = "description";
-        productSpecCharacteristic.valueType = CharacteristicValueType.NUMBER;
-        productSpecCharacteristic.configurable = true;
-        productSpecCharacteristic.validFor = TimeRange.createProto();
+        resourceSpecCharacteristic.id = "id";
+        resourceSpecCharacteristic.name = "name";
+        resourceSpecCharacteristic.description = "description";
+        resourceSpecCharacteristic.valueType = CharacteristicValueType.NUMBER;
+        resourceSpecCharacteristic.configurable = true;
+        resourceSpecCharacteristic.validFor = TimeRange.createProto();
 
-        productSpecCharacteristic.productSpecCharRelationship = new ArrayList<SpecificationCharacteristicRelationship>();
-        productSpecCharacteristic.productSpecCharRelationship.add(SpecificationCharacteristicRelationship.createProto());
+        resourceSpecCharacteristic.resourceSpecCharRelationship = new ArrayList<SpecificationCharacteristicRelationship>();
+        resourceSpecCharacteristic.resourceSpecCharRelationship.add(SpecificationCharacteristicRelationship.createProto());
 
-        productSpecCharacteristic.productSpecCharacteristicValue = new ArrayList<SpecificationCharacteristicValue>();
-        productSpecCharacteristic.productSpecCharacteristicValue.add (SpecificationCharacteristicValue.createProto());
+        resourceSpecCharacteristic.resourceSpecCharacteristicValue = new ArrayList<SpecificationCharacteristicValue>();
+        resourceSpecCharacteristic.resourceSpecCharacteristicValue.add (SpecificationCharacteristicValue.createProto());
 
-        return productSpecCharacteristic;
+        return resourceSpecCharacteristic;
     }
 
 }

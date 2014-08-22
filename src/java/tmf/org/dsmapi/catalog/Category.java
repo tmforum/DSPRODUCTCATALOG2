@@ -15,7 +15,6 @@ import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.UniqueConstraint;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
@@ -45,16 +44,18 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 @XmlRootElement
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 @IdClass(CategoryId.class)
-@Table(name = "CRI_CATEGORY", uniqueConstraints = @UniqueConstraint(columnNames = {"CATALOG_ID", "CATALOG_VERSION", "ID", "VERSION" }))
+@Table(name = "CRI_CATEGORY")
 public class Category extends AbstractEntity implements Serializable {
     private final static long serialVersionUID = 1L;
 
     private static final Logger logger = Logger.getLogger(Category.class.getName());
 
+    @Id
     @Column(name = "CATALOG_ID", nullable = false)
     @JsonIgnore
     private String catalogId;
 
+    @Id
     @Column(name = "CATALOG_VERSION", nullable = true)
     @JsonIgnore
     private Float catalogVersion;
@@ -84,7 +85,6 @@ public class Category extends AbstractEntity implements Serializable {
     @Column(name = "LIFECYCLE_STATUS", nullable = true)
     private LifecycleStatus lifecycleStatus;
 
-    @Column(name = "VALID_FOR", nullable = true)
     private TimeRange validFor;
 
     @Column(name = "PARENT_ID", nullable = true)
@@ -96,6 +96,7 @@ public class Category extends AbstractEntity implements Serializable {
     public Category() {
         isRoot = true;
     }
+
     public String getCatalogId() {
         return catalogId;
     }
@@ -251,7 +252,7 @@ public class Category extends AbstractEntity implements Serializable {
             return false;
         }
 
-        if (Utilities.areEqual(this.lifecycleStatus, other.lifecycleStatus) == false) {
+        if (this.lifecycleStatus != other.lifecycleStatus) {
             return false;
         }
 
@@ -329,10 +330,7 @@ public class Category extends AbstractEntity implements Serializable {
         }
 
         if (input.validFor != null) {
-            if (this.validFor == null)
-                this.validFor = new TimeRange ();
-
-            this.validFor.edit(input.validFor);
+            this.validFor = input.validFor;
         }
 
         if (input.parentId != null) {
@@ -344,19 +342,21 @@ public class Category extends AbstractEntity implements Serializable {
         }
     }
 
-    public boolean valid() {
+    @JsonIgnore
+    public boolean isValid() {
         logger.log(Level.FINE, "Category:valid ()");
+
         if (Utilities.hasValue(this.name) == false) {
             logger.log(Level.FINE, " invalid: name is required");
             return false;
         }
 
-        if (this.isRoot == false && Utilities.hasValue(this.parentId) == false) {
+        if (this.isRoot == Boolean.FALSE && Utilities.hasValue(this.parentId) == false) {
             logger.log(Level.FINE, " invalid: parentId must be specified when isRoot is false");
             return false;
         }
 
-        if (this.validFor != null && this.validFor.valid() == false) {
+        if (this.validFor != null && this.validFor.isValid() == false) {
             logger.log(Level.FINE, " invalid: validFor");
             return false;
         }
@@ -374,7 +374,7 @@ public class Category extends AbstractEntity implements Serializable {
         lastUpdate = new Date ();
     }
 
-    public static float getDefaultEntityVersion () {
+    public static Float getDefaultEntityVersion () {
         return 1.0f;
     }
 
@@ -390,7 +390,7 @@ public class Category extends AbstractEntity implements Serializable {
         category.lifecycleStatus = LifecycleStatus.ACTIVE;
         category.validFor = TimeRange.createProto ();
         category.parentId = "parent id";
-        category.isRoot = true;
+        category.isRoot = false;
 
         return category;
     }

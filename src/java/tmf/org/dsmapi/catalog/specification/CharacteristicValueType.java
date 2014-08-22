@@ -1,4 +1,4 @@
-package tmf.org.dsmapi.catalog;
+package tmf.org.dsmapi.catalog.specification;
 
 import org.codehaus.jackson.annotate.JsonCreator;
 import org.codehaus.jackson.annotate.JsonValue;
@@ -20,7 +20,7 @@ public enum CharacteristicValueType {
 
     @Override
     public String toString() {
-        return (value);
+        return value;
     }
 
     @JsonValue(true)

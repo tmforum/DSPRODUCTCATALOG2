@@ -1,7 +1,9 @@
-package tmf.org.dsmapi.catalog;
+package tmf.org.dsmapi.catalog.specification;
 
 import java.io.Serializable;
 import org.codehaus.jackson.annotate.JsonProperty;
+import tmf.org.dsmapi.catalog.TimeRange;
+import tmf.org.dsmapi.catalog.Utilities;
 
 /**
  *
@@ -21,7 +23,7 @@ import org.codehaus.jackson.annotate.JsonProperty;
  * }
  *
  */
-public class ProductSpecCharacteristicValue implements Serializable {
+public class SpecCharacteristicValue implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private CharacteristicValueType valueType;
@@ -111,7 +113,7 @@ public class ProductSpecCharacteristicValue implements Serializable {
             return false;
         }
 
-        final ProductSpecCharacteristicValue other = (ProductSpecCharacteristicValue) object;
+        final SpecCharacteristicValue other = (SpecCharacteristicValue) object;
         if (Utilities.areEqual(this.valueType, other.valueType) == false) {
             return false;
         }
@@ -125,21 +127,21 @@ public class ProductSpecCharacteristicValue implements Serializable {
 
     @Override
     public String toString() {
-        return "ProductSpecCharacteristicValue{" + "valueType=" + valueType + ", defaultValue=" + defaultValue + ", value=" + value + ", unitOfMeasure=" + unitOfMeasure + ", valueFrom=" + valueFrom + ", valueTo=" + valueTo + ", validFor=" + validFor + '}';
+        return "SpecCharacteristicValue{" + "valueType=" + valueType + ", defaultValue=" + defaultValue + ", value=" + value + ", unitOfMeasure=" + unitOfMeasure + ", valueFrom=" + valueFrom + ", valueTo=" + valueTo + ", validFor=" + validFor + '}';
     }
 
-    public static ProductSpecCharacteristicValue createProto() {
-        ProductSpecCharacteristicValue productSpecCharacteristicValue = new ProductSpecCharacteristicValue();
+    public static SpecCharacteristicValue createProto() {
+        SpecCharacteristicValue specCharacteristicValue = new SpecCharacteristicValue();
 
-        productSpecCharacteristicValue.valueType = CharacteristicValueType.STRING;
-        productSpecCharacteristicValue.defaultValue = false;
-        productSpecCharacteristicValue.value = "value";
-        productSpecCharacteristicValue.unitOfMeasure = "kilo";
-        productSpecCharacteristicValue.valueFrom = "value from";
-        productSpecCharacteristicValue.valueTo = "value to";
-        productSpecCharacteristicValue.validFor = TimeRange.createProto();
+        specCharacteristicValue.valueType = CharacteristicValueType.STRING;
+        specCharacteristicValue.defaultValue = false;
+        specCharacteristicValue.value = "value";
+        specCharacteristicValue.unitOfMeasure = "kilo";
+        specCharacteristicValue.valueFrom = "value from";
+        specCharacteristicValue.valueTo = "value to";
+        specCharacteristicValue.validFor = TimeRange.createProto();
 
-        return productSpecCharacteristicValue;
+        return specCharacteristicValue;
     }
 
 }

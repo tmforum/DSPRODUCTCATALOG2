@@ -59,22 +59,12 @@ public class ProductSpecificationId implements Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 0;
-        if (catalogId != null) {
-            hash += catalogId.hashCode();
-        }
+        int hash = 3;
 
-        if (catalogVersion != null) {
-            hash += catalogVersion.hashCode();
-        }
-
-        if (id != null) {
-            hash += id.hashCode();
-        }
-
-        if (version != null) {
-            hash += version.hashCode();
-        }
+        hash = 73 * hash + (this.catalogId != null ? this.catalogId.hashCode() : 0);
+        hash = 73 * hash + (this.catalogVersion != null ? this.catalogVersion.hashCode() : 0);
+        hash = 73 * hash + (this.id != null ? this.id.hashCode() : 0);
+        hash = 73 * hash + (this.version != null ? this.version.hashCode() : 0);
 
         return hash;
     }
@@ -94,7 +84,7 @@ public class ProductSpecificationId implements Serializable {
             return false;
         }
 
-        if (Utilities.areEqual (this.id, other.id) == false) {
+        if (Utilities.areEqual(this.id, other.id) == false) {
             return false;
         }
 
@@ -103,6 +93,11 @@ public class ProductSpecificationId implements Serializable {
         }
 
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "ProductSpecificationId{" + "catalogId=" + catalogId + ", catalogVersion=" + catalogVersion + ", id=" + id + ", version=" + version + '}';
     }
 
 }

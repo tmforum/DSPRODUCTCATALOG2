@@ -26,7 +26,7 @@ public enum LifecycleStatus {
 
     @Override
     public String toString() {
-        return (value);
+        return value;
     }
 
     @JsonValue(true)

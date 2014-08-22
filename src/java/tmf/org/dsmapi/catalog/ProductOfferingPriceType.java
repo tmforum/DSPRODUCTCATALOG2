@@ -8,14 +8,14 @@ import org.codehaus.jackson.annotate.JsonValue;
  * @author bahman.barzideh
  *
  */
-public enum CatalogType {
-    PRODUCT_CATALOG   ("Product Catalog"),
-    SERVICE_CATALOG   ("Service Catalog"),
-    RESOOURCE_CATALOG ("Resource Catalog");
+public enum ProductOfferingPriceType {
+    RECURRING ("recurring"),
+    ONE_TIME  ("one time"),
+    USAGE     ("usage");
 
     private String value;
 
-    private CatalogType(String value) {
+    private ProductOfferingPriceType(String value) {
         this.value = value;
     }
 
@@ -30,13 +30,14 @@ public enum CatalogType {
     }
 
     @JsonCreator
-    public static CatalogType find(String value) {
-        for (CatalogType catalogType : values ()) {
-            if (catalogType.value.equals (value)) {
-                return (catalogType);
+    public static ProductOfferingPriceType find(String value) {
+        for (ProductOfferingPriceType productOfferingPriceType : values ()) {
+            if (productOfferingPriceType.value.equals (value)) {
+                return (productOfferingPriceType);
             }
         }
 
         return (null);
     }
+
 }

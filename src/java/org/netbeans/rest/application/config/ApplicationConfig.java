@@ -21,17 +21,18 @@ public class ApplicationConfig extends Application {
      */
     private Set<Class<?>> getRestResourceClasses() {
         Set<Class<?>> resources = new java.util.HashSet<Class<?>>();
-        resources.add(tmf.org.dsmapi.catalog.service.JacksonConfigurator.class);
         resources.add(tmf.org.dsmapi.catalog.service.BadUsageExceptionMapper.class);
-        resources.add(tmf.org.dsmapi.catalog.service.CategoryFacadeREST.class);
         resources.add(tmf.org.dsmapi.catalog.service.CatalogFacadeREST.class);
-        resources.add(tmf.org.dsmapi.catalog.service.ProductSpecificationFacadeREST.class);
-        resources.add(tmf.org.dsmapi.catalog.service.CategoryInCatalogIdVersionFacadeREST.class);
+        resources.add(tmf.org.dsmapi.catalog.service.CategoryFacadeREST.class);
         resources.add(tmf.org.dsmapi.catalog.service.CategoryInCatalogIdFacadeREST.class);
+        resources.add(tmf.org.dsmapi.catalog.service.CategoryInCatalogIdVersionFacadeREST.class);
+        resources.add(tmf.org.dsmapi.catalog.service.JacksonConfigurator.class);
         resources.add(tmf.org.dsmapi.catalog.service.ProductOfferingFacadeREST.class);
+        resources.add(tmf.org.dsmapi.catalog.service.ProductSpecificationFacadeREST.class);
         resources.add(tmf.org.dsmapi.catalog.service.ServiceCandidateFacadeREST.class);
+        // following code can be used to customize Jersey 1.x JSON provider:
         try {
-            Class<?> jacksonProvider = Class.forName("org.codehaus.jackson.jaxrs.JacksonJsonProvider");
+            Class jacksonProvider = Class.forName("org.codehaus.jackson.jaxrs.JacksonJsonProvider");
             resources.add(jacksonProvider);
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(getClass().getName()).log(java.util.logging.Level.SEVERE, null, ex);

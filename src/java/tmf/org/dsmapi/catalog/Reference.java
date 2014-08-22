@@ -1,6 +1,7 @@
 package tmf.org.dsmapi.catalog;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Transient;
 import org.codehaus.jackson.annotate.JsonProperty;
@@ -18,10 +19,19 @@ import tmf.org.dsmapi.catalog.client.CatalogClient;
 public class Reference implements Serializable {
     public final static long serialVersionUID = 1L;
 
+    @Column(name = "ID", nullable = true)
     private String id;
+
+    @Column(name = "VERSION", nullable = true)
     private Float version;
+
+    @Column(name = "HREF", nullable = true)
     private String href;
+
+    @Column(name = "NAME", nullable = true)
     private String name;
+
+    @Column(name = "DESCRIPTION", nullable = true)
     private String description;
 
     @Transient
@@ -148,8 +158,6 @@ public class Reference implements Serializable {
         return true;
     }
 
-
-
     public void fetchEntity(Class<? extends AbstractEntity> theClass) {
         try {
             entity = (AbstractEntity) CatalogClient.getObject(href, theClass, 2);
@@ -161,6 +169,7 @@ public class Reference implements Serializable {
 
     public static Reference createProto() {
         Reference reference = new Reference ();
+        
         reference.id = "id";
         reference.version = 1.6f;
         reference.href = "href";

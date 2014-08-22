@@ -1,76 +1,129 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package tmf.org.dsmapi.catalog;
 
 import java.io.Serializable;
 import java.util.logging.Logger;
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 /**
- * "price": {
-            “amount” : "12",
-            “currency” : “$”
-        },
+ *
  * @author pierregauthier
+ *
+ * {
+ *     "taxIncludedAmount": "12.00",
+ *     "dutyFreeAmount": "10.00",
+ *     "taxRate": "20.00",
+ *     "currencyCode": "EUR"
+ * }
+ *
  */
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 @Embeddable
 public class Price implements Serializable {
-    private static final Logger LOG = Logger.getLogger(Price.class.getName());
-    
-    
-    String amount;
-    
-    String currency;
+    private final static long serialVersionUID = 1L;
 
-    public String getAmount() {
-        return amount;
+    private final static Logger logger = Logger.getLogger(ProductOfferingPrice.class.getName());
+
+    @Column(name = "TAX_INCLUDED_AMOUNT", nullable = true)
+    String taxIncludedAmount;
+
+    @Column(name = "DUTY_FREE_AMOUNT", nullable = true)
+    String dutyFreeAmount;
+
+    @Column(name = "TAX_RATE", nullable = true)
+    String taxRate;
+
+    @Column(name = "CURRENCY_CODE", nullable = true)
+    String currencyCode;
+
+    public Price() {
     }
 
-    public void setAmount(String amount) {
-        this.amount = amount;
+    public String getTaxIncludedAmount() {
+        return taxIncludedAmount;
     }
 
-    public String getCurrency() {
-        return currency;
+    public void setTaxIncludedAmount(String taxIncludedAmount) {
+        this.taxIncludedAmount = taxIncludedAmount;
     }
 
-    public void setCurrency(String currency) {
-        this.currency = currency;
+    public String getDutyFreeAmount() {
+        return dutyFreeAmount;
+    }
+
+    public void setDutyFreeAmount(String dutyFreeAmount) {
+        this.dutyFreeAmount = dutyFreeAmount;
+    }
+
+    public String getTaxRate() {
+        return taxRate;
+    }
+
+    public void setTaxRate(String taxRate) {
+        this.taxRate = taxRate;
+    }
+
+    public String getCurrencyCode() {
+        return currencyCode;
+    }
+
+    public void setCurrencyCode(String currencyCode) {
+        this.currencyCode = currencyCode;
     }
 
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 53 * hash + (this.amount != null ? this.amount.hashCode() : 0);
-        hash = 53 * hash + (this.currency != null ? this.currency.hashCode() : 0);
+
+        hash = 53 * hash + (this.taxIncludedAmount != null ? this.taxIncludedAmount.hashCode() : 0);
+        hash = 53 * hash + (this.dutyFreeAmount != null ? this.dutyFreeAmount.hashCode() : 0);
+        hash = 53 * hash + (this.taxRate != null ? this.taxRate.hashCode() : 0);
+        hash = 53 * hash + (this.currencyCode != null ? this.currencyCode.hashCode() : 0);
+
         return hash;
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
+    public boolean equals(Object object) {
+        if (object == null || getClass() != object.getClass()) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
+
+        final Price other = (Price) object;
+        if (Utilities.areEqual(this.taxIncludedAmount, other.taxIncludedAmount) == false) {
             return false;
         }
-        final Price other = (Price) obj;
-        if ((this.amount == null) ? (other.amount != null) : !this.amount.equals(other.amount)) {
+
+        if (Utilities.areEqual(this.dutyFreeAmount, other.dutyFreeAmount) == false) {
             return false;
         }
-        if ((this.currency == null) ? (other.currency != null) : !this.currency.equals(other.currency)) {
+
+        if (Utilities.areEqual(this.taxRate, other.taxRate) == false) {
             return false;
         }
+
+        if (Utilities.areEqual(this.currencyCode, other.currencyCode) == false) {
+            return false;
+        }
+
         return true;
     }
 
     @Override
     public String toString() {
-        return "Price{" + "amount=" + amount + ", currency=" + currency + '}';
+        return "Price{" + "taxIncludedAmount=" + taxIncludedAmount + ", dutyFreeAmount=" + dutyFreeAmount + ", taxRate=" + taxRate + ", currencyCode=" + currencyCode + '}';
     }
-   
+
+    public static Price createProto() {
+        Price price = new Price();
+
+        price.taxIncludedAmount = "tax included amount";
+        price.dutyFreeAmount = "duty free amount";
+        price.taxRate = "tax rate";
+        price.currencyCode = "currency code";
+
+        return price;
+    }
+    
 }

@@ -17,7 +17,7 @@ public abstract class AbstractEntity implements Serializable {
     }
 
     public static Float getDefaultCatalogVersion() {
-        return null;
+        return -1.0f;
     }
 
 }

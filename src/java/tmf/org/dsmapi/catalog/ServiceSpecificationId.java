@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @author bahman.barzideh
  *
  */
-public class CategoryId implements Serializable {
+public class ServiceSpecificationId implements Serializable {
     private final static long serialVersionUID = 1L;
 
     private String catalogId;
@@ -15,10 +15,10 @@ public class CategoryId implements Serializable {
     private String id;
     private Float version;
 
-    public CategoryId() {
+    public ServiceSpecificationId() {
     }
 
-    public CategoryId(String catalogId, Float catalogVersion, String id, Float version) {
+    public ServiceSpecificationId(String catalogId, Float catalogVersion, String id, Float version) {
         this.catalogId = catalogId;
         this.catalogVersion = catalogVersion;
         this.id = id;
@@ -59,12 +59,12 @@ public class CategoryId implements Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 7;
+        int hash = 3;
 
-        hash = 23 * hash + (this.catalogId != null ? this.catalogId.hashCode() : 0);
-        hash = 23 * hash + (this.catalogVersion != null ? this.catalogVersion.hashCode() : 0);
-        hash = 23 * hash + (this.id != null ? this.id.hashCode() : 0);
-        hash = 23 * hash + (this.version != null ? this.version.hashCode() : 0);
+        hash = 53 * hash + (this.catalogId != null ? this.catalogId.hashCode() : 0);
+        hash = 53 * hash + (this.catalogVersion != null ? this.catalogVersion.hashCode() : 0);
+        hash = 53 * hash + (this.id != null ? this.id.hashCode() : 0);
+        hash = 53 * hash + (this.version != null ? this.version.hashCode() : 0);
 
         return hash;
     }
@@ -75,8 +75,8 @@ public class CategoryId implements Serializable {
             return false;
         }
 
-        final CategoryId other = (CategoryId) object;
-        if (Utilities.areEqual(this.catalogId, other.catalogId) == false) {
+        final ServiceSpecificationId other = (ServiceSpecificationId) object;
+        if (Utilities.areEqual((this.catalogId), other.catalogId) == false) {
             return false;
         }
 
@@ -84,7 +84,7 @@ public class CategoryId implements Serializable {
             return false;
         }
 
-        if (Utilities.areEqual (this.id, other.id) == false) {
+        if (Utilities.areEqual(this.id, other.id) == false) {
             return false;
         }
 
@@ -97,7 +97,7 @@ public class CategoryId implements Serializable {
 
     @Override
     public String toString() {
-        return "CategoryId{" + "catalogId=" + catalogId + ", catalogVersion=" + catalogVersion + ", id=" + id + ", version=" + version + '}';
+        return "ServiceSpecificationId{" + "catalogId=" + catalogId + ", catalogVersion=" + catalogVersion + ", id=" + id + ", version=" + version + '}';
     }
 
 }
