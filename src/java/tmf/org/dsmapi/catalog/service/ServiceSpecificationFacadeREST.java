@@ -1,6 +1,5 @@
 package tmf.org.dsmapi.catalog.service;
 
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -23,7 +22,7 @@ import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import org.codehaus.jackson.node.ObjectNode;
-import tmf.org.dsmapi.catalog.Catalog;
+import tmf.org.dsmapi.catalog.ServiceSpecification;
 import tmf.org.dsmapi.commons.exceptions.BadUsageException;
 import tmf.org.dsmapi.commons.jaxrs.PATCH;
 
@@ -33,32 +32,32 @@ import tmf.org.dsmapi.commons.jaxrs.PATCH;
  *
  */
 @Stateless
-@Path("catalog")
-public class CatalogFacadeREST {
-    private static final Logger logger = Logger.getLogger(Catalog.class.getName());
-    private static final String RELATIVE_CONTEXT = "catalog";
+@Path("serviceSpecification")
+public class ServiceSpecificationFacadeREST {
+    private static final Logger logger = Logger.getLogger(ServiceSpecification.class.getName());
+    private static final String RELATIVE_CONTEXT = "serviceSpecification";
 
     @EJB
-    CatalogFacade manager;
-
+    private ServiceSpecificationFacade manager;
+    
     /*
      *
      */
-    public CatalogFacadeREST() {
+    public ServiceSpecificationFacadeREST() {
     }
-    
+
     /*
      *
      */
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response create(Catalog input, @Context UriInfo uriInfo) {
-        logger.log(Level.FINE, "CatalogFacadeREST:create()");
+    public Response create(ServiceSpecification input, @Context UriInfo uriInfo) {
+        logger.log(Level.FINE, "ServiceSpecificationFacadeREST:create()");
 
         if (input == null) {
-           logger.log(Level.FINE, "input is required");
-           return Response.status(Response.Status.BAD_REQUEST).build();
+            logger.log(Level.FINE, "input is required");
+            return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
         if (input.isValid() == false) {
@@ -66,9 +65,11 @@ public class CatalogFacadeREST {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
+        input.setCatalogId(ServiceSpecification.getDefaultCatalogId());
+        input.setCatalogVersion(ServiceSpecification.getDefaultCatalogVersion());
         manager.create(input);
 
-        input.setHref(buildHref_(uriInfo, input.getId(), input.getVersion()));
+        input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getVersion()));
         manager.edit(input);
 
         return Response.status(Response.Status.CREATED).entity(input).build();
@@ -81,8 +82,8 @@ public class CatalogFacadeREST {
     @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("entityId") String entityId, Catalog input, @Context UriInfo uriInfo) {
-        logger.log(Level.FINE, "CatalogFacadeREST:update(entityId: {0})", entityId);
+    public Response update(@PathParam("entityId") String entityId, ServiceSpecification input, @Context UriInfo uriInfo) {
+        logger.log(Level.FINE, "ServiceSpecificationFacadeREST:update(entityId: {0})", entityId);
 
         return update_(entityId, null, input, uriInfo);
     }
@@ -94,8 +95,8 @@ public class CatalogFacadeREST {
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, Catalog input, @Context UriInfo uriInfo) {
-        logger.log(Level.FINE, "CatalogFacadeREST:update(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
+    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, ServiceSpecification input, @Context UriInfo uriInfo) {
+        logger.log(Level.FINE, "ServiceSpecificationFacadeREST:update(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return update_(entityId, entityVersion, input, uriInfo);
     }
@@ -107,8 +108,8 @@ public class CatalogFacadeREST {
     @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("entityId") String entityId, Catalog input, @Context UriInfo uriInfo) {
-        logger.log(Level.FINE, "CatalogFacadeREST::edit(entityId: {0})", new Object[]{entityId});
+    public Response edit(@PathParam("entityId") String entityId, ServiceSpecification input, @Context UriInfo uriInfo) {
+        logger.log(Level.FINE, "ServiceSpecificationFacadeREST:edit(entityId: {0})", entityId);
 
         return edit_(entityId, null, input, uriInfo);
     }
@@ -120,8 +121,8 @@ public class CatalogFacadeREST {
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, Catalog input, @Context UriInfo uriInfo) {
-        logger.log(Level.FINE, "CatalogFacadeREST:edit(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
+    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, ServiceSpecification input, @Context UriInfo uriInfo) {
+        logger.log(Level.FINE, "ServiceSpecificationFacadeREST:edit(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return edit_(entityId, entityVersion, input, uriInfo);
     }
@@ -132,7 +133,7 @@ public class CatalogFacadeREST {
     @DELETE
     @Path("{entityId}")
     public Response remove(@PathParam("entityId") String entityId) {
-        logger.log(Level.FINE, "CatalogFacadeREST:remove(entityId: {0})", new Object[]{entityId});
+        logger.log(Level.FINE, "ServiceSpecificationFacadeREST:remove(entityId: {0})", entityId);
 
         return remove_(entityId, null);
     }
@@ -143,7 +144,7 @@ public class CatalogFacadeREST {
     @DELETE
     @Path("{entityId}:({entityVersion})")
     public Response remove(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion) {
-        logger.log(Level.FINE, "CatalogFacadeREST:remove(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
+        logger.log(Level.FINE, "ServiceSpecificationFacadeREST:remove(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return remove_(entityId, entityVersion);
     }
@@ -154,7 +155,7 @@ public class CatalogFacadeREST {
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public Response find(@QueryParam("depth") int depth, @Context UriInfo uriInfo) throws BadUsageException {
-        logger.log(Level.FINE, "CatalogFacadeREST:find(depth: {0})", depth);
+        logger.log(Level.FINE, "ServiceSpecificationFacadeREST:find(depth: {0})", depth);
 
         MultivaluedMap<String, String> criteria = uriInfo.getQueryParameters();
 
@@ -162,27 +163,25 @@ public class CatalogFacadeREST {
         Set<String> outputFields = FacadeRestUtil.getFieldSet(criteria);
         criteria.remove("depth");
 
-        Set<Catalog> entities = manager.find(criteria, Catalog.class);
+        Set<ServiceSpecification> entities = manager.find(criteria, ServiceSpecification.class);
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        if (depth > 0) {
-            getEnclosedEntities_(entities, depth);
+        getEnclosedEntities_ (entities, depth);
+
+        if (outputFields.isEmpty() || outputFields.contains(FacadeRestUtil.ALL_FIELDS)) {
+            return Response.ok(entities).build();
         }
 
-       if (outputFields.isEmpty() || outputFields.contains(FacadeRestUtil.ALL_FIELDS)) {
-           return Response.ok(entities).build();
-       }
+        outputFields.add(FacadeRestUtil.ID_FIELD);
+        List<ObjectNode> nodeList = new ArrayList<ObjectNode>();
+        for (ServiceSpecification entity : entities) {
+            ObjectNode node = FacadeRestUtil.createNodeViewWithFields(entity, outputFields);
+            nodeList.add(node);
+        }
 
-       outputFields.add(FacadeRestUtil.ID_FIELD);
-       List<ObjectNode> nodeList = new ArrayList<ObjectNode>();
-       for (Catalog entity : entities) {
-           ObjectNode node = FacadeRestUtil.createNodeViewWithFields(entity, outputFields);
-           nodeList.add(node);
-       }
-
-       return Response.ok(nodeList).build();
+        return Response.ok(nodeList).build ();
     }
 
     /*
@@ -192,7 +191,7 @@ public class CatalogFacadeREST {
     @Path("{entityId}")
     @Produces({MediaType.APPLICATION_JSON})
     public Response findById(@PathParam("entityId") String entityId, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
-        logger.log(Level.FINE, "CatalogFacadeREST:find(entityId: {0}, depth: {1})", new Object[]{entityId, depth});
+        logger.log(Level.FINE, "ServiceSpecificationFacadeREST:find(entityId: {0}, depth: {1})", new Object[]{entityId, depth});
 
         return find_(entityId, null, depth, uriInfo);
     }
@@ -203,8 +202,8 @@ public class CatalogFacadeREST {
     @GET
     @Path("{entityId}:({entityVersion})")
     @Produces({MediaType.APPLICATION_JSON})
-    public Response findById(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
-        logger.log(Level.FINE, "CatalogFacadeREST:find(entityId: {0}, entityVersion: {1}, depth: {2})", new Object[]{entityId, entityVersion, depth});
+    public Response find(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
+        logger.log(Level.FINE, "ServiceSpecificationFacadeREST:find(entityId: {0}, entityVersion: {1}, depth: {2})", new Object[]{entityId, entityVersion, depth});
 
         return find_(entityId, entityVersion, depth, uriInfo);
     }
@@ -216,9 +215,9 @@ public class CatalogFacadeREST {
     @Path("admin/proto")
     @Produces({MediaType.APPLICATION_JSON})
     public Response proto() {
-        logger.log(Level.FINE, "CatalogFacadeREST:proto()");
+        logger.log(Level.FINE, "ServiceSpecificationFacadeREST:proto()");
 
-        return Response.ok(Catalog.createProto()).build();
+        return Response.ok(ServiceSpecification.createProto()).build();
     }
 
     /*
@@ -228,7 +227,7 @@ public class CatalogFacadeREST {
     @Path("admin/count")
     @Produces({MediaType.TEXT_PLAIN})
     public Response count() {
-        logger.log(Level.FINE, "CatalogFacadeREST:count()");
+        logger.log(Level.FINE, "ServiceSpecificationFacadeREST:count()");
 
         int entityCount = manager.count();
         return Response.ok(String.valueOf(entityCount)).build();
@@ -237,8 +236,8 @@ public class CatalogFacadeREST {
     /*
      *
      */
-    private Response update_(String entityId, Float entityVersion, Catalog input, UriInfo uriInfo) {
-        logger.log(Level.FINE, "CatalogFacadeREST:update_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
+    private Response update_(String entityId, Float entityVersion, ServiceSpecification input, UriInfo uriInfo) {
+        logger.log(Level.FINE, "ServiceSpecificationFacadeREST:update_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
             logger.log(Level.FINE, "input is required.");
@@ -250,15 +249,18 @@ public class CatalogFacadeREST {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        List<Catalog> entities = manager.findCatalogById(entityId, entityVersion);
-        Catalog entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
+        List<ServiceSpecification> entities = manager.findById(ServiceSpecification.getDefaultCatalogId(), ServiceSpecification.getDefaultCatalogVersion(), entityId, entityVersion);
+        ServiceSpecification entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
         if (entity == null) {
-            logger.log(Level.FINE, "requested Catalog [{0}, {1}] not found", new Object[]{entityId, entityVersion});
+            logger.log(Level.FINE, "requested ServiceSpecification [{0}, {1}] not found", new Object[]{entityId, entityVersion});
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
+        input.setCatalogId(ServiceSpecification.getDefaultCatalogId());
+        input.setCatalogVersion(ServiceSpecification.getDefaultCatalogVersion());
+
         if (input.keysMatch(entity)) {
-            input.setHref(buildHref_(uriInfo, input.getId(), input.getVersion()));
+            input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getVersion()));
             manager.edit(input);
             return Response.status(Response.Status.CREATED).entity(input).build();
         }
@@ -266,7 +268,7 @@ public class CatalogFacadeREST {
         manager.remove(entity);
         manager.create(input);
 
-        input.setHref(buildHref_(uriInfo, input.getId(), input.getVersion()));
+        input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getVersion()));
         manager.edit(input);
 
         return Response.status(Response.Status.CREATED).entity(input).build();
@@ -275,26 +277,28 @@ public class CatalogFacadeREST {
     /*
      *
      */
-    private Response edit_(String entityId, Float entityVersion, Catalog input, UriInfo uriInfo) {
-        logger.log(Level.FINE, "CatalogFacadeREST:edit_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
+    private Response edit_(String entityId, Float entityVersion, ServiceSpecification input, UriInfo uriInfo) {
+        logger.log(Level.FINE, "ServiceSpecificationFacadeREST:edit_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
             logger.log(Level.FINE, "input is required");
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        List<Catalog> entities = manager.findCatalogById(entityId, entityVersion);
-        Catalog entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
+        List<ServiceSpecification> entities = manager.findById(ServiceSpecification.getDefaultCatalogId(), ServiceSpecification.getDefaultCatalogVersion(), entityId, entityVersion);
+        ServiceSpecification entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
         if (entity == null) {
-            logger.log(Level.FINE, "requested Catalog [{0}, {1}] not found", new Object[]{entityId, entityVersion});
+            logger.log(Level.FINE, "requested ServiceSpecification [{0}, {1}] not found", new Object[]{entityId, entityVersion});
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
         input.edit(entity);
+        input.setCatalogId(entity.getCatalogId());
+        input.setCatalogVersion(entity.getCatalogVersion());
         input.setId(entity.getId());
 
         if(entity.isValid() == false) {
-            logger.log(Level.FINE, "patched Catalog would be invalid");
+            logger.log(Level.FINE, "patched ServiceSpecification would be invalid");
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
@@ -311,7 +315,7 @@ public class CatalogFacadeREST {
 
         manager.remove(entity);
 
-        input.setHref(buildHref_(uriInfo, entity.getId(), entity.getVersion()));
+        input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getVersion()));
         manager.create(input);
 
         return Response.status(Response.Status.CREATED).entity(input).build();
@@ -321,9 +325,9 @@ public class CatalogFacadeREST {
      *
      */
     private Response remove_(String entityId, Float entityVersion) {
-        logger.log(Level.FINE, "CatalogFacadeREST:remove_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
+        logger.log(Level.FINE, "ServiceSpecificationFacadeREST:remove_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
-        List<Catalog> entities = manager.findCatalogById(entityId, entityVersion);
+        List<ServiceSpecification> entities = manager.findById(ServiceSpecification.getDefaultCatalogId(), ServiceSpecification.getDefaultCatalogVersion(), entityId, entityVersion);
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
@@ -336,14 +340,14 @@ public class CatalogFacadeREST {
      *
      */
     private Response find_(String entityId, Float entityVersion, int depth, UriInfo uriInfo) {
-        logger.log(Level.FINE, "CatalogFacadeREST:find_(entityId: {0}, entityVersion: {1}, depth: {2})", new Object[]{entityId, entityVersion, depth});
+        logger.log(Level.FINE, "ServiceSpecificationFacadeREST:find_(entityId: {0}, entityVersion: {1}, depth: {2})", new Object[]{entityId, entityVersion, depth});
 
-        List<Catalog> entities = manager.findCatalogById(entityId, entityVersion);
+        List<ServiceSpecification> entities = manager.findById(ServiceSpecification.getDefaultCatalogId(), ServiceSpecification.getDefaultCatalogVersion(), entityId, entityVersion);
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        Catalog entity = entities.get(0);
+        ServiceSpecification entity = entities.get(0);
         entity.getEnclosedEntities(depth);
 
         Set<String> outputFields = FacadeRestUtil.getFieldSet(uriInfo.getQueryParameters());
@@ -359,37 +363,10 @@ public class CatalogFacadeREST {
     /*
      *
      */
-    private void getEnclosedEntities_(Set<Catalog> entities, int depth) {
-        for (Catalog entity : entities) {
+    private void getEnclosedEntities_ (Set<ServiceSpecification> entities, int depth) {
+        for (ServiceSpecification entity : entities) {
             entity.getEnclosedEntities(depth);
         }
-    }
-
-    /*
-     *
-     */
-    private String buildHref_(UriInfo uriInfo, String id, Float version) {
-        URI uri = (uriInfo != null) ? uriInfo.getBaseUri() : null;
-        String basePath = (uri != null) ? uri.toString() : null;
-        if (basePath == null) {
-            return null;
-        }
-
-        if (basePath.endsWith("/") == false) {
-            basePath += "/";
-        }
-
-        basePath += CatalogFacadeREST.RELATIVE_CONTEXT + "/";
-        if (id == null || id.length() <= 0) {
-            return (basePath);
-        }
-
-        basePath += id;
-        if (version == null) {
-            return basePath;
-        }
-
-        return basePath + ":(" + version + ")";
     }
 
 }

@@ -382,47 +382,47 @@ public class ProductOfferingPrice extends AbstractEntity implements Serializable
             return;
         }
 
-        if (input.href != null) {
+        if (this.href == null) {
             this.href = input.href;
         }
 
-        if (input.name != null) {
+        if (this.name == null) {
             this.name = input.name;
         }
 
-        if (input.description != null) {
+        if (this.description == null) {
             this.description = input.description;
         }
 
-        if (input.lastUpdate != null) {
+        if (this.lastUpdate == null) {
             this.lastUpdate = input.lastUpdate;
         }
 
-        if (input.lifecycleStatus != null) {
+        if (this.lifecycleStatus == null) {
             this.lifecycleStatus = input.lifecycleStatus;
         }
 
-        if (input.validFor != null) {
+        if (this.validFor == null) {
             this.validFor = input.validFor;
         }
 
-        if (input.priceType != null) {
+        if (this.priceType == null) {
             this.priceType = input.priceType;
         }
 
-        if (input.unitOfMeasure != null) {
+        if (this.unitOfMeasure == null) {
             this.unitOfMeasure = input.unitOfMeasure;
         }
 
-        if (input.price != null) {
+        if (this.price == null) {
             this.price = input.price;
         }
 
-        if (input.recurringChargePeriod != null) {
+        if (this.recurringChargePeriod == null) {
             this.recurringChargePeriod = input.recurringChargePeriod;
         }
 
-        if (input.productOfferPriceAlteration != null) {
+        if (this.productOfferPriceAlteration == null) {
             this.productOfferPriceAlteration = input.productOfferPriceAlteration;
         }
     }
@@ -444,11 +444,11 @@ public class ProductOfferingPrice extends AbstractEntity implements Serializable
         return true;
     }
 
-    public void fetchChildren(int depth) {
-    }
-
-    public static Float getDefaultEntityVersion () {
-        return 1.0f;
+    @Override
+    public void getEnclosedEntities(int depth) {
+        if (depth <= AbstractEntity.MINIMUM_DEPTH) {
+            return;
+        }
     }
 
     @PrePersist

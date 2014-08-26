@@ -370,39 +370,39 @@ public class ServiceCandidate extends AbstractEntity implements Serializable {
             return;
         }
 
-        if (input.href != null) {
+        if (this.href == null) {
             this.href = input.href;
         }
 
-        if (input.name != null) {
+        if (this.name == null) {
             this.name = input.name;
         }
 
-        if (input.description != null) {
+        if (this.description == null) {
             this.description = input.description;
         }
 
-        if (input.lastUpdate != null) {
+        if (this.lastUpdate == null) {
             this.lastUpdate = input.lastUpdate;
         }
 
-        if (input.lifecycleStatus != null) {
+        if (this.lifecycleStatus == null) {
             this.lifecycleStatus = input.lifecycleStatus;
         }
 
-        if (input.validFor != null) {
+        if (this.validFor == null) {
             this.validFor = input.validFor;
         }
 
-        if (input.category != null) {
+        if (this.category == null) {
             this.category = input.category;
         }
 
-        if (input.serviceLevelAgreement != null) {
+        if (this.serviceLevelAgreement == null) {
             this.serviceLevelAgreement = input.serviceLevelAgreement;
         }
 
-        if (input.serviceSpecification != null) {
+        if (this.serviceSpecification == null) {
             this.serviceSpecification = input.serviceSpecification;
         }
     }
@@ -424,22 +424,17 @@ public class ServiceCandidate extends AbstractEntity implements Serializable {
         return true;
     }
 
-    public void fetchChildren(int depth) {
-        if (depth <= 0) {
+    @Override
+    public void getEnclosedEntities(int depth) {
+        if (depth <= AbstractEntity.MINIMUM_DEPTH) {
             return;
         }
 
-        if (category == null) {
-            return;
+        if (category != null) {
+            for (Reference reference : category) {
+                reference.fetchEntity(Category.class);
+            }
         }
-
-        for (Reference reference : category) {
-            reference.fetchEntity(Category.class);
-        }
-    }
-
-    public static Float getDefaultEntityVersion () {
-        return 1.0f;
     }
 
     @PrePersist

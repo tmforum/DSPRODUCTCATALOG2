@@ -322,39 +322,39 @@ public class Catalog extends AbstractEntity implements Serializable {
             return;
         }
 
-        if (input.href != null) {
+        if (this.href == null) {
             this.href = input.href;
         }
 
-        if (input.name != null) {
+        if (this.name == null) {
             this.name = input.name;
         }
 
-        if (input.description != null) {
+        if (this.description == null) {
             this.description = input.description;
         }
 
-        if (input.lastUpdate != null) {
+        if (this.lastUpdate == null) {
             this.lastUpdate = input.lastUpdate;
         }
 
-        if (input.lifecycleStatus != null) {
+        if (this.lifecycleStatus == null) {
             this.lifecycleStatus = input.lifecycleStatus;
         }
 
-        if (input.validFor != null) {
+        if (this.validFor == null) {
             this.validFor = input.validFor;
         }
 
-        if (input.type != null) {
+        if (this.type == null) {
             this.type = input.type;
         }
 
-        if (input.category != null) {
+        if (this.category == null) {
             this.category = input.category;
         }
 
-        if (input.relatedParty != null) {
+        if (this.relatedParty == null) {
             this.relatedParty = input.relatedParty;
         }
     }
@@ -376,8 +376,9 @@ public class Catalog extends AbstractEntity implements Serializable {
         return true;
     }
 
-    public void fetchChildren(int depth) {
-        if (depth <= 0) {
+    @Override
+    public void getEnclosedEntities(int depth) {
+        if (depth <= AbstractEntity.MINIMUM_DEPTH) {
             return;
         }
 

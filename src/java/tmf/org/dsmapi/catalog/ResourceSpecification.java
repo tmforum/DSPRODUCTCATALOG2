@@ -490,47 +490,47 @@ public class ResourceSpecification extends AbstractEntity implements Serializabl
             return;
         }
 
-        if (input.href != null) {
+        if (this.href == null) {
             this.href = input.href;
         }
 
-        if (input.name != null) {
+        if (this.name == null) {
             this.name = input.name;
         }
 
-        if (input.description != null) {
+        if (this.description == null) {
             this.description = input.description;
         }
 
-        if (input.lastUpdate != null) {
+        if (this.lastUpdate == null) {
             this.lastUpdate = input.lastUpdate;
         }
 
-        if (input.lifecycleStatus != null) {
+        if (this.lifecycleStatus == null) {
             this.lifecycleStatus = input.lifecycleStatus;
         }
 
-        if (input.validFor != null) {
+        if (this.validFor == null) {
             this.validFor = input.validFor;
         }
 
-        if (input.brand != null) {
+        if (this.brand == null) {
             this.brand = input.brand;
         }
 
-        if (input.attachment != null) {
+        if (this.attachment == null) {
             this.attachment = input.attachment;
         }
 
-        if (input.relatedParty != null) {
+        if (this.relatedParty == null) {
             this.relatedParty = input.relatedParty;
         }
 
-        if (input.resourceSpecRelationship != null) {
+        if (this.resourceSpecRelationship == null) {
             this.resourceSpecRelationship = input.resourceSpecRelationship;
         }
 
-        if (input.resourceSpecCharacteristic != null) {
+        if (this.resourceSpecCharacteristic == null) {
             this.resourceSpecCharacteristic = input.resourceSpecCharacteristic;
         }
     }
@@ -552,6 +552,13 @@ public class ResourceSpecification extends AbstractEntity implements Serializabl
         return true;
     }
 
+    @Override
+    public void getEnclosedEntities(int depth) {
+        if (depth <= AbstractEntity.MINIMUM_DEPTH) {
+            return;
+        }
+    }
+
     @PrePersist
     private void onCreate() {
         lastUpdate = new Date ();
@@ -560,10 +567,6 @@ public class ResourceSpecification extends AbstractEntity implements Serializabl
     @PreUpdate
     protected void onUpdate() {
         lastUpdate = new Date ();
-    }
-
-    public static Float getDefaultEntityVersion () {
-        return 1.0f;
     }
 
     public static ResourceSpecification createProto() {

@@ -15,14 +15,15 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import org.codehaus.jackson.node.ObjectNode;
-import tmf.org.dsmapi.commons.exceptions.BadUsageException;
 import tmf.org.dsmapi.catalog.Category;
+import tmf.org.dsmapi.commons.exceptions.BadUsageException;
 import tmf.org.dsmapi.commons.jaxrs.PATCH;
 
 /**
@@ -38,6 +39,12 @@ public class CategoryFacadeREST {
 
     @EJB
     private CategoryFacade manager;
+    
+    /*
+     *
+     */
+    public CategoryFacadeREST() {
+    }
 
     /*
      *
@@ -72,74 +79,74 @@ public class CategoryFacadeREST {
      *
      */
     @PUT
-    @Path("{categoryId}")
+    @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("categoryId") String categoryId, Category input, @Context UriInfo uriInfo) {
-        logger.log(Level.FINE, "CategoryFacadeREST:update(categoryId: {0})", categoryId);
+    public Response update(@PathParam("entityId") String entityId, Category input, @Context UriInfo uriInfo) {
+        logger.log(Level.FINE, "CategoryFacadeREST:update(entityId: {0})", entityId);
 
-        return update_(categoryId, null, input, uriInfo);
+        return update_(entityId, null, input, uriInfo);
     }
 
     /*
      *
      */
     @PUT
-    @Path("{categoryId}:({categoryVersion})")
+    @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("categoryId") String categoryId, @PathParam("categoryVersion") Float categoryVersion, Category input, @Context UriInfo uriInfo) {
-        logger.log(Level.FINE, "CategoryFacadeREST:update(categoryId: {0}, categoryVersion: {1})", new Object[]{categoryId, categoryVersion});
+    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, Category input, @Context UriInfo uriInfo) {
+        logger.log(Level.FINE, "CategoryFacadeREST:update(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
-        return update_(categoryId, categoryVersion, input, uriInfo);
+        return update_(entityId, entityVersion, input, uriInfo);
     }
 
     /*
      *
      */
     @PATCH
-    @Path("{categoryId}")
+    @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("categoryId") String categoryId, Category input, @Context UriInfo uriInfo) {
-        logger.log(Level.FINE, "CategoryFacadeREST:edit(categoryId: {0})", categoryId);
+    public Response edit(@PathParam("entityId") String entityId, Category input, @Context UriInfo uriInfo) {
+        logger.log(Level.FINE, "CategoryFacadeREST:edit(entityId: {0})", entityId);
 
-        return edit_(categoryId, null, input, uriInfo);
+        return edit_(entityId, null, input, uriInfo);
     }
 
     /*
      *
      */
     @PATCH
-    @Path("{categoryId}:({categoryVersion})")
+    @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("categoryId") String categoryId, @PathParam("categoryVersion") Float categoryVersion, Category input, @Context UriInfo uriInfo) {
-        logger.log(Level.FINE, "CategoryFacadeREST:edit(categoryId: {0}, categoryVersion: {1})", new Object[]{categoryId, categoryVersion});
+    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, Category input, @Context UriInfo uriInfo) {
+        logger.log(Level.FINE, "CategoryFacadeREST:edit(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
-        return edit_(categoryId, categoryVersion, input, uriInfo);
+        return edit_(entityId, entityVersion, input, uriInfo);
     }
 
     /*
      *
      */
     @DELETE
-    @Path("{categoryId}")
-    public Response remove(@PathParam("categoryId") String categoryId) {
-        logger.log(Level.FINE, "CategoryFacadeREST:remove(categoryId: {0})", categoryId);
+    @Path("{entityId}")
+    public Response remove(@PathParam("entityId") String entityId) {
+        logger.log(Level.FINE, "CategoryFacadeREST:remove(entityId: {0})", entityId);
 
-        return remove_(categoryId, null);
+        return remove_(entityId, null);
     }
 
     /*
      *
      */
     @DELETE
-    @Path("{categoryId}:({categoryVersion})")
-    public Response remove(@PathParam("categoryId") String categoryId, @PathParam("categoryVersion") Float categoryVersion) {
-        logger.log(Level.FINE, "CategoryFacadeREST:remove(categoryId: {0}, categoryVersion: {1})", new Object[]{categoryId, categoryVersion});
+    @Path("{entityId}:({entityVersion})")
+    public Response remove(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion) {
+        logger.log(Level.FINE, "CategoryFacadeREST:remove(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
-        return remove_(categoryId, categoryVersion);
+        return remove_(entityId, entityVersion);
     }
 
     /*
@@ -147,27 +154,30 @@ public class CategoryFacadeREST {
      */
     @GET
     @Produces({MediaType.APPLICATION_JSON})
-    public Response find(@Context UriInfo uriInfo) throws BadUsageException {
-        logger.log(Level.FINE, "CategoryFacadeREST:find()");
+    public Response find(@QueryParam("depth") int depth, @Context UriInfo uriInfo) throws BadUsageException {
+        logger.log(Level.FINE, "CategoryFacadeREST:find(depth: {0})", depth);
 
         MultivaluedMap<String, String> criteria = uriInfo.getQueryParameters();
 
-        // Remove the output filters before running the query.
+        // Remove known parameters before running the query.
         Set<String> outputFields = FacadeRestUtil.getFieldSet(criteria);
+        criteria.remove("depth");
 
-        Set<Category> results = manager.find(criteria, Category.class);
-        if (results == null || results.size() <= 0) {
+        Set<Category> entities = manager.find(criteria, Category.class);
+        if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
+        getEnclosedEntities_ (entities, depth);
+
         if (outputFields.isEmpty() || outputFields.contains(FacadeRestUtil.ALL_FIELDS)) {
-            return Response.ok(results).build();
+            return Response.ok(entities).build();
         }
 
         outputFields.add(FacadeRestUtil.ID_FIELD);
         List<ObjectNode> nodeList = new ArrayList<ObjectNode>();
-        for (Category category : results) {
-            ObjectNode node = FacadeRestUtil.createNodeViewWithFields(category, outputFields);
+        for (Category entity : entities) {
+            ObjectNode node = FacadeRestUtil.createNodeViewWithFields(entity, outputFields);
             nodeList.add(node);
         }
 
@@ -178,24 +188,24 @@ public class CategoryFacadeREST {
      *
      */
     @GET
-    @Path("{categoryId}")
+    @Path("{entityId}")
     @Produces({MediaType.APPLICATION_JSON})
-    public Response findById(@PathParam("categoryId") String categoryId, @Context UriInfo uriInfo) {
-        logger.log(Level.FINE, "CategoryFacadeREST:find(categoryId: {0})", categoryId);
+    public Response findById(@PathParam("entityId") String entityId, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
+        logger.log(Level.FINE, "CategoryFacadeREST:find(entityId: {0}, depth: {1})", new Object[]{entityId, depth});
 
-        return find_(categoryId, null, uriInfo);
+        return find_(entityId, null, depth, uriInfo);
     }
 
     /*
      *
      */
     @GET
-    @Path("{categoryId}:({categoryVersion})")
+    @Path("{entityId}:({entityVersion})")
     @Produces({MediaType.APPLICATION_JSON})
-    public Response find(@PathParam("categoryId") String categoryId, @PathParam("categoryVersion") Float categoryVersion, @Context UriInfo uriInfo) {
-        logger.log(Level.FINE, "CategoryFacadeREST:find(categoryId: {0}, categoryVersion: {1})", new Object[]{categoryId, categoryVersion});
+    public Response find(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
+        logger.log(Level.FINE, "CategoryFacadeREST:find(entityId: {0}, entityVersion: {1}, depth: {2})", new Object[]{entityId, entityVersion, depth});
 
-        return find_(categoryId, categoryVersion, uriInfo);
+        return find_(entityId, entityVersion, depth, uriInfo);
     }
 
     /*
@@ -226,8 +236,8 @@ public class CategoryFacadeREST {
     /*
      *
      */
-    private Response update_(String categoryId, Float categoryVersion, Category input, UriInfo uriInfo) {
-        logger.log(Level.FINE, "CategoryFacadeREST:update_(categoryId: {0}, categoryVersion: {1})", new Object[]{categoryId, categoryVersion});
+    private Response update_(String entityId, Float entityVersion, Category input, UriInfo uriInfo) {
+        logger.log(Level.FINE, "CategoryFacadeREST:update_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
             logger.log(Level.FINE, "input is required.");
@@ -239,23 +249,23 @@ public class CategoryFacadeREST {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        List<Category> categories = manager.findById(Category.getDefaultCatalogId(), Category.getDefaultCatalogVersion(), categoryId, categoryVersion);
-        Category category = (categories != null && categories.size() > 0) ? categories.get(0) : null;
-        if (category == null) {
-            logger.log(Level.FINE, "requested category [{0}, {1}] not found", new Object[]{categoryId, categoryVersion});
+        List<Category> entities = manager.findById(Category.getDefaultCatalogId(), Category.getDefaultCatalogVersion(), entityId, entityVersion);
+        Category entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
+        if (entity == null) {
+            logger.log(Level.FINE, "requested Category [{0}, {1}] not found", new Object[]{entityId, entityVersion});
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
         input.setCatalogId(Category.getDefaultCatalogId());
         input.setCatalogVersion(Category.getDefaultCatalogVersion());
 
-        if (input.keysMatch(category)) {
+        if (input.keysMatch(entity)) {
             input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getVersion()));
             manager.edit(input);
             return Response.status(Response.Status.CREATED).entity(input).build();
         }
 
-        manager.remove(category);
+        manager.remove(entity);
         manager.create(input);
 
         input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getVersion()));
@@ -267,82 +277,96 @@ public class CategoryFacadeREST {
     /*
      *
      */
-    private Response edit_(String categoryId, Float categoryVersion, Category input, UriInfo uriInfo) {
-        logger.log(Level.FINE, "CategoryFacadeREST:edit_(categoryId: {0}, categoryVersion: {1})", new Object[]{categoryId, categoryVersion});
+    private Response edit_(String entityId, Float entityVersion, Category input, UriInfo uriInfo) {
+        logger.log(Level.FINE, "CategoryFacadeREST:edit_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
             logger.log(Level.FINE, "input is required");
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        List<Category> categories = manager.findById(Category.getDefaultCatalogId(), Category.getDefaultCatalogVersion(), categoryId, categoryVersion);
-        Category category = (categories != null && categories.size() > 0) ? categories.get(0) : null;
-        if (category == null) {
-            logger.log(Level.FINE, "requested category [{0}, {1}] not found", new Object[]{categoryId, categoryVersion});
+        List<Category> entities = manager.findById(Category.getDefaultCatalogId(), Category.getDefaultCatalogVersion(), entityId, entityVersion);
+        Category entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
+        if (entity == null) {
+            logger.log(Level.FINE, "requested Category [{0}, {1}] not found", new Object[]{entityId, entityVersion});
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        category.edit(input);
-        if(category.isValid() == false) {
-            logger.log(Level.FINE, "patched category would be invalid");
+        input.edit(entity);
+        input.setCatalogId(entity.getCatalogId());
+        input.setCatalogVersion(entity.getCatalogVersion());
+        input.setId(entity.getId());
+
+        if(entity.isValid() == false) {
+            logger.log(Level.FINE, "patched Category would be invalid");
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
         if (input.getVersion() == null) {
-            manager.edit(category);
-            return Response.status(Response.Status.CREATED).entity(category).build();
+            input.setVersion(entity.getVersion());
+            manager.edit(input);
+            return Response.status(Response.Status.CREATED).entity(input).build();
         }
 
-        if (input.getVersion() <= category.getVersion()) {
-            logger.log(Level.FINE, "specified version ({0} must be higher than entity's version({1})", new Object[]{input.getVersion(), category.getVersion()});
+        if (input.getVersion() <= entity.getVersion()) {
+            logger.log(Level.FINE, "specified version ({0}) must be higher than entity version ({1})", new Object[]{input.getVersion(), entity.getVersion()});
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        manager.remove(category);
+        manager.remove(entity);
 
-        category.setVersion(input.getVersion());
-        category.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, category.getId(), category.getVersion()));
-        manager.create(category);
+        input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getVersion()));
+        manager.create(input);
 
-        return Response.status(Response.Status.CREATED).entity(category).build();
+        return Response.status(Response.Status.CREATED).entity(input).build();
     }
 
     /*
      *
      */
-    private Response remove_(String categoryId, Float categoryVersion) {
-        logger.log(Level.FINE, "CategoryFacadeREST:remove_(categoryId: {0}, categoryVersion: {1})", new Object[]{categoryId, categoryVersion});
+    private Response remove_(String entityId, Float entityVersion) {
+        logger.log(Level.FINE, "CategoryFacadeREST:remove_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
-        List<Category> categories = manager.findById(Category.getDefaultCatalogId(), Category.getDefaultCatalogVersion(), categoryId, categoryVersion);
-        if (categories == null || categories.size() <= 0) {
+        List<Category> entities = manager.findById(Category.getDefaultCatalogId(), Category.getDefaultCatalogVersion(), entityId, entityVersion);
+        if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        manager.remove(categories.get(0));
+        manager.remove(entities.get(0));
         return Response.ok().build();
     }
 
     /*
      *
      */
-    private Response find_(String categoryId, Float categoryVersion, UriInfo uriInfo) {
-        logger.log(Level.FINE, "CategoryFacadeREST:find_(categoryId: {0}, categoryVersion: {1})", new Object[]{categoryId, categoryVersion});
+    private Response find_(String entityId, Float entityVersion, int depth, UriInfo uriInfo) {
+        logger.log(Level.FINE, "CategoryFacadeREST:find_(entityId: {0}, entityVersion: {1}, depth: {2})", new Object[]{entityId, entityVersion, depth});
 
-        List<Category> results = manager.findById(Category.getDefaultCatalogId(), Category.getDefaultCatalogVersion(), categoryId, categoryVersion);
-        if (results == null || results.size() <= 0) {
+        List<Category> entities = manager.findById(Category.getDefaultCatalogId(), Category.getDefaultCatalogVersion(), entityId, entityVersion);
+        if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        Category category = results.get(0);
+        Category entity = entities.get(0);
+        entity.getEnclosedEntities(depth);
 
         Set<String> outputFields = FacadeRestUtil.getFieldSet(uriInfo.getQueryParameters());
         if (outputFields.isEmpty() || outputFields.contains(FacadeRestUtil.ALL_FIELDS)) {
-            return Response.ok(category).build();
+            return Response.ok(entity).build();
         }
 
         outputFields.add(FacadeRestUtil.ID_FIELD);
-        ObjectNode node = FacadeRestUtil.createNodeViewWithFields(category, outputFields);
+        ObjectNode node = FacadeRestUtil.createNodeViewWithFields(entity, outputFields);
         return Response.ok(node).build();
+    }
+
+    /*
+     *
+     */
+    private void getEnclosedEntities_ (Set<Category> entities, int depth) {
+        for (Category entity : entities) {
+            entity.getEnclosedEntities(depth);
+        }
     }
 
 }

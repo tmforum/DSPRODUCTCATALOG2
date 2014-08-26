@@ -8,8 +8,13 @@ import java.io.Serializable;
  *
  */
 public abstract class AbstractEntity implements Serializable {
+    public final static int MINIMUM_DEPTH = 1;
 
     protected AbstractEntity() {
+    }
+
+    public static Float getDefaultEntityVersion () {
+        return 1.0f;
     }
 
     public static String getDefaultCatalogId() {
@@ -20,4 +25,6 @@ public abstract class AbstractEntity implements Serializable {
         return -1.0f;
     }
 
+    public abstract void getEnclosedEntities(int depth);
+    
 }

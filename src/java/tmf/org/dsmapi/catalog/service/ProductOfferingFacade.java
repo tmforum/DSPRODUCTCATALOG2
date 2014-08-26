@@ -1,6 +1,5 @@
 package tmf.org.dsmapi.catalog.service;
 
-import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

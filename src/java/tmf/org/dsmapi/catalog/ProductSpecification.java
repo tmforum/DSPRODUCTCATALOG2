@@ -182,7 +182,7 @@ import tmf.org.dsmapi.catalog.specification.SpecificationRelationship;
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 @IdClass(ProductSpecificationId.class)
 @Table(name = "CRI_PRODUCT_SPECIFICATION")
-public class ProductSpecification implements Serializable {
+public class ProductSpecification extends AbstractEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private static final Logger logger = Logger.getLogger(ProductSpecification.class.getName());
@@ -606,63 +606,63 @@ public class ProductSpecification implements Serializable {
             return;
         }
 
-        if (input.href != null) {
+        if (this.href == null) {
             this.href = input.href;
         }
 
-        if (input.name != null) {
+        if (this.name == null) {
             this.name = input.name;
         }
 
-        if (input.description != null) {
+        if (this.description == null) {
             this.description = input.description;
         }
 
-        if (input.lastUpdate != null) {
+        if (this.lastUpdate == null) {
             this.lastUpdate = input.lastUpdate;
         }
 
-        if (input.lifecycleStatus != null) {
+        if (this.lifecycleStatus == null) {
             this.lifecycleStatus = input.lifecycleStatus;
         }
 
-        if (input.validFor != null) {
+        if (this.validFor == null) {
             this.validFor = input.validFor;
         }
 
-        if (input.isBundle != null) {
+        if (this.isBundle == null) {
             this.isBundle = input.isBundle;
         }
 
-        if (input.brand != null) {
+        if (this.brand == null) {
             this.brand = input.brand;
         }
 
-        if (input.attachment != null) {
+        if (this.attachment == null) {
             this.attachment = input.attachment;
         }
 
-        if (input.relatedParty != null) {
+        if (this.relatedParty == null) {
             this.relatedParty = input.relatedParty;
         }
 
-        if (input.bundledProductSpecification != null) {
+        if (this.bundledProductSpecification == null) {
             this.bundledProductSpecification = input.bundledProductSpecification;
         }
 
-        if (input.productSpecificationRelationship != null) {
+        if (this.productSpecificationRelationship == null) {
             this.productSpecificationRelationship = input.productSpecificationRelationship;
         }
 
-        if (input.serviceSpecification != null) {
+        if (this.serviceSpecification == null) {
             this.serviceSpecification = input.serviceSpecification;
         }
 
-        if (input.resourceSpecification != null) {
+        if (this.resourceSpecification == null) {
             this.resourceSpecification = input.resourceSpecification;
         }
 
-        if (input.productSpecCharacteristic != null) {
+        if (this.productSpecCharacteristic == null) {
             this.productSpecCharacteristic = input.productSpecCharacteristic;
         }
     }
@@ -682,6 +682,13 @@ public class ProductSpecification implements Serializable {
         }
 
         return true;
+    }
+
+    @Override
+    public void getEnclosedEntities(int depth) {
+        if (depth <= AbstractEntity.MINIMUM_DEPTH) {
+            return;
+        }
     }
 
     @PrePersist

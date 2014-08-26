@@ -304,40 +304,40 @@ public class Category extends AbstractEntity implements Serializable {
         return true;
     }
 
-    public void edit(Category input) {
+        public void edit(Category input) {
         if (input == null || input == this) {
             return;
         }
 
-        if (input.href != null) {
+        if (this.href == null) {
             this.href = input.href;
         }
 
-        if (input.name != null) {
+        if (this.name == null) {
             this.name = input.name;
         }
 
-        if (input.description != null) {
+        if (this.description == null) {
             this.description = input.description;
         }
 
-        if (input.lastUpdate != null) {
+        if (this.lastUpdate == null) {
             this.lastUpdate = input.lastUpdate;
         }
 
-        if (input.lifecycleStatus != null) {
+        if (this.lifecycleStatus == null) {
             this.lifecycleStatus = input.lifecycleStatus;
         }
 
-        if (input.validFor != null) {
+        if (this.validFor == null) {
             this.validFor = input.validFor;
         }
 
-        if (input.parentId != null) {
+        if (this.parentId == null) {
             this.parentId = input.parentId;
         }
 
-        if (input.isRoot != null) {
+        if (this.isRoot == null) {
             this.isRoot = input.isRoot;
         }
     }
@@ -364,6 +364,10 @@ public class Category extends AbstractEntity implements Serializable {
         return true;
     }
 
+    @Override
+    public void getEnclosedEntities(int depth) {
+    }
+
     @PrePersist
     private void onCreate() {
         lastUpdate = new Date ();
@@ -372,10 +376,6 @@ public class Category extends AbstractEntity implements Serializable {
     @PreUpdate
     protected void onUpdate() {
         lastUpdate = new Date ();
-    }
-
-    public static Float getDefaultEntityVersion () {
-        return 1.0f;
     }
 
     public static Category createProto() {

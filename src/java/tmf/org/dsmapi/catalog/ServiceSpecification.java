@@ -569,55 +569,55 @@ public class ServiceSpecification extends AbstractEntity implements Serializable
             return;
         }
 
-        if (input.href != null) {
+        if (this.href == null) {
             this.href = input.href;
         }
 
-        if (input.name != null) {
+        if (this.name == null) {
             this.name = input.name;
         }
 
-        if (input.description != null) {
+        if (this.description == null) {
             this.description = input.description;
         }
 
-        if (input.lastUpdate != null) {
+        if (this.lastUpdate == null) {
             this.lastUpdate = input.lastUpdate;
         }
 
-        if (input.lifecycleStatus != null) {
+        if (this.lifecycleStatus == null) {
             this.lifecycleStatus = input.lifecycleStatus;
         }
 
-        if (input.validFor != null) {
+        if (this.validFor == null) {
             this.validFor = input.validFor;
         }
 
-        if (input.brand != null) {
+        if (this.brand == null) {
             this.brand = input.brand;
         }
 
-        if (input.attachment != null) {
+        if (this.attachment == null) {
             this.attachment = input.attachment;
         }
 
-        if (input.relatedParty != null) {
+        if (this.relatedParty == null) {
             this.relatedParty = input.relatedParty;
         }
 
-        if (input.serviceSpecRelationship != null) {
+        if (this.serviceSpecRelationship == null) {
             this.serviceSpecRelationship = input.serviceSpecRelationship;
         }
 
-        if (input.requiredServiceSpecification != null) {
+        if (this.requiredServiceSpecification == null) {
             this.requiredServiceSpecification = input.requiredServiceSpecification;
         }
 
-        if (input.requiredResourceSpecification != null) {
+        if (this.requiredResourceSpecification == null) {
             this.requiredResourceSpecification = input.requiredResourceSpecification;
         }
 
-        if (input.serviceSpecCharacteristic != null) {
+        if (this.serviceSpecCharacteristic == null) {
             this.serviceSpecCharacteristic = input.serviceSpecCharacteristic;
         }
     }
@@ -639,6 +639,13 @@ public class ServiceSpecification extends AbstractEntity implements Serializable
         return true;
     }
 
+    @Override
+    public void getEnclosedEntities(int depth) {
+        if (depth <= AbstractEntity.MINIMUM_DEPTH) {
+            return;
+        }
+    }
+
     @PrePersist
     private void onCreate() {
         lastUpdate = new Date ();
@@ -647,10 +654,6 @@ public class ServiceSpecification extends AbstractEntity implements Serializable
     @PreUpdate
     protected void onUpdate() {
         lastUpdate = new Date ();
-    }
-
-    public static Float getDefaultEntityVersion () {
-        return 1.0f;
     }
 
     public static ServiceSpecification createProto() {

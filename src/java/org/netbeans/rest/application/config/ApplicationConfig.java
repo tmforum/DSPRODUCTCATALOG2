@@ -28,8 +28,12 @@ public class ApplicationConfig extends Application {
         resources.add(tmf.org.dsmapi.catalog.service.CategoryInCatalogIdVersionFacadeREST.class);
         resources.add(tmf.org.dsmapi.catalog.service.JacksonConfigurator.class);
         resources.add(tmf.org.dsmapi.catalog.service.ProductOfferingFacadeREST.class);
+        resources.add(tmf.org.dsmapi.catalog.service.ProductOfferingPriceFacadeREST.class);
         resources.add(tmf.org.dsmapi.catalog.service.ProductSpecificationFacadeREST.class);
+        resources.add(tmf.org.dsmapi.catalog.service.ResourceCandidateFacadeREST.class);
+        resources.add(tmf.org.dsmapi.catalog.service.ResourceSpecificationFacadeREST.class);
         resources.add(tmf.org.dsmapi.catalog.service.ServiceCandidateFacadeREST.class);
+        resources.add(tmf.org.dsmapi.catalog.service.ServiceSpecificationFacadeREST.class);
         // following code can be used to customize Jersey 1.x JSON provider:
         try {
             Class jacksonProvider = Class.forName("org.codehaus.jackson.jaxrs.JacksonJsonProvider");
