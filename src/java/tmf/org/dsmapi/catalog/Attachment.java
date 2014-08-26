@@ -13,6 +13,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
  * {
  *     "id": "22",
  *     "href": "http://serverlocation:port/documentManagment/attachment/22",
+ *     "description": "Detailed image of the item"
  *     "type": "Picture",
  *     "url": "http://xxxxx"
  * }
@@ -28,6 +29,9 @@ public class Attachment implements Serializable {
 
     @Column(name = "HREF", nullable = true)
     private String href;
+
+    @Column(name = "DESCRIPTION", nullable = true)
+    private String description;
 
     @Column(name = "TYPE", nullable = true)
     private String type;
@@ -54,6 +58,14 @@ public class Attachment implements Serializable {
         this.href = href;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public String getType() {
         return type;
     }
@@ -76,6 +88,7 @@ public class Attachment implements Serializable {
 
         hash = 97 * hash + (this.id != null ? this.id.hashCode() : 0);
         hash = 97 * hash + (this.href != null ? this.href.hashCode() : 0);
+        hash = 97 * hash + (this.description != null ? this.description.hashCode() : 0);
         hash = 97 * hash + (this.type != null ? this.type.hashCode() : 0);
         hash = 97 * hash + (this.url != null ? this.url.hashCode() : 0);
 
@@ -97,6 +110,10 @@ public class Attachment implements Serializable {
             return false;
         }
 
+        if (Utilities.areEqual(this.description, other.description) == false) {
+            return false;
+        }
+
         if (Utilities.areEqual(this.type, other.type) == false) {
             return false;
         }
@@ -110,12 +127,7 @@ public class Attachment implements Serializable {
 
     @Override
     public String toString() {
-        return "Attachment{" + "id=" + id + ", href=" + href + ", type=" + type + ", url=" + url + '}';
-    }
-
-    @JsonIgnore
-    public boolean isValid() {
-        return true;
+        return "Attachment{" + "id=" + id + ", href=" + href + ", description=" + description + ", type=" + type + ", url=" + url + '}';
     }
 
     public static Attachment createProto() {
@@ -123,6 +135,7 @@ public class Attachment implements Serializable {
 
         attachment.id = "id";
         attachment.href = "href";
+        attachment.description = "description";
         attachment.type = "type";
         attachment.url = "url";
 

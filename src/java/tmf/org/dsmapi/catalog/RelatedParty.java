@@ -13,17 +13,26 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
  *
  * @author bahman.barzideh
  *
+ * {
+ *     "role": "Owner",
+ *     "id": "1234",
+ *     "href": "http ://serverLocation:port/partyManagement/partyRole/1234"
+ * }
+ *
  */
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 @Embeddable
 public class RelatedParty implements Serializable {
     private final static long serialVersionUID = 1L;
 
-    @Column(name = "ID", nullable = true)
+    @Column(name = "REL_PARTY_ID", nullable = true)
     private String id;
 
-    @Column(name = "HREF", nullable = true)
+    @Column(name = "REL_PARTY_HREF", nullable = true)
     private String href;
+
+    @Column(name = "REL_PARTY_NAME", nullable = true)
+    private String name;
 
     @Embedded
     @AttributeOverrides({
@@ -32,7 +41,7 @@ public class RelatedParty implements Serializable {
     })
     private TimeRange validFor;
 
-    @Column(name = "PARTY_ROLE", nullable = true)
+    @Column(name = "REL_PARTY_ROLE", nullable = true)
     @JsonProperty(value = "role")
     private String partyRole;
 
@@ -53,6 +62,14 @@ public class RelatedParty implements Serializable {
 
     public void setHref(String href) {
         this.href = href;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public TimeRange getValidFor() {
@@ -77,6 +94,7 @@ public class RelatedParty implements Serializable {
 
         hash = 23 * hash + (this.id != null ? this.id.hashCode() : 0);
         hash = 23 * hash + (this.href != null ? this.href.hashCode() : 0);
+        hash = 23 * hash + (this.name != null ? this.name.hashCode() : 0);
         hash = 23 * hash + (this.validFor != null ? this.validFor.hashCode() : 0);
         hash = 23 * hash + (this.partyRole != null ? this.partyRole.hashCode() : 0);
 
@@ -98,6 +116,10 @@ public class RelatedParty implements Serializable {
             return false;
         }
 
+        if (Utilities.areEqual(this.name, other.name) == false) {
+            return false;
+        }
+
         if (Utilities.areEqual(this.validFor, other.validFor) == false) {
             return false;
         }
@@ -111,7 +133,7 @@ public class RelatedParty implements Serializable {
 
     @Override
     public String toString() {
-        return "RelatedParty{" + "id=" + id + ", href=" + href + ", validFor=" + validFor + ", partyRole=" + partyRole + '}';
+        return "RelatedParty{" + "id=" + id + ", href=" + href + ", name=" + name + ", validFor=" + validFor + ", partyRole=" + partyRole + '}';
     }
 
     public static RelatedParty createProto() {
@@ -119,6 +141,7 @@ public class RelatedParty implements Serializable {
 
         relatedParty.id = "id";
         relatedParty.href = "href";
+        relatedParty.name = "name";
         relatedParty.validFor = TimeRange.createProto();
         relatedParty.partyRole = "role";
 

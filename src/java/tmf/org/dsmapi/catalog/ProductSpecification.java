@@ -689,6 +689,26 @@ public class ProductSpecification extends AbstractEntity implements Serializable
         if (depth <= AbstractEntity.MINIMUM_DEPTH) {
             return;
         }
+
+        depth--;
+
+        if (bundledProductSpecification != null) {
+            for (Reference reference : bundledProductSpecification) {
+                reference.getEnitty(ProductSpecification.class, depth);
+            }
+        }
+
+        if (serviceSpecification != null) {
+            for (Reference reference : serviceSpecification) {
+                reference.getEnitty(ServiceSpecification.class, depth);
+            }
+        }
+
+        if (resourceSpecification != null) {
+            for (Reference reference : resourceSpecification) {
+                reference.getEnitty(ResourceSpecification.class, depth);
+            }
+        }
     }
 
     @PrePersist

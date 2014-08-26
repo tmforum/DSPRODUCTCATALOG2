@@ -158,9 +158,9 @@ public class Reference implements Serializable {
         return true;
     }
 
-    public void fetchEntity(Class<? extends AbstractEntity> theClass) {
+    public void getEnitty(Class<? extends AbstractEntity> theClass, int depth) {
         try {
-            entity = (AbstractEntity) CatalogClient.getObject(href, theClass, 2);
+            entity = (AbstractEntity) CatalogClient.getObject(href, theClass, depth);
         }
         catch(Exception ex) {
             entity = null;
@@ -169,7 +169,7 @@ public class Reference implements Serializable {
 
     public static Reference createProto() {
         Reference reference = new Reference ();
-        
+
         reference.id = "id";
         reference.version = 1.6f;
         reference.href = "href";

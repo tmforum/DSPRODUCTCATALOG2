@@ -215,7 +215,7 @@ public class ProductOffering extends AbstractEntity implements Serializable {
 
     @Embedded
     @ElementCollection
-    @CollectionTable(name = "CRI_PRODUCT_R_CATEGORY", joinColumns = {
+    @CollectionTable(name = "CRI_PRODUCT_OFFER_R_CATEGORY", joinColumns = {
         @JoinColumn(name = "CATALOG_ID", referencedColumnName = "CATALOG_ID"),
         @JoinColumn(name = "CATALOG_VERSION", referencedColumnName = "CATALOG_VERSION"),
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
@@ -225,7 +225,7 @@ public class ProductOffering extends AbstractEntity implements Serializable {
 
     @Embedded
     @ElementCollection
-    @CollectionTable(name = "CRI_PRODUCT_R_CHANNEL", joinColumns = {
+    @CollectionTable(name = "CRI_PRODUCT_OFFER_R_CHANNEL", joinColumns = {
         @JoinColumn(name = "CATALOG_ID", referencedColumnName = "CATALOG_ID"),
         @JoinColumn(name = "CATALOG_VERSION", referencedColumnName = "CATALOG_VERSION"),
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
@@ -235,7 +235,7 @@ public class ProductOffering extends AbstractEntity implements Serializable {
 
     @Embedded
     @ElementCollection
-    @CollectionTable(name = "CRI_PRODUCT_R_PLACE", joinColumns = {
+    @CollectionTable(name = "CRI_PRODUCT_OFFER_R_PLACE", joinColumns = {
         @JoinColumn(name = "CATALOG_ID", referencedColumnName = "CATALOG_ID"),
         @JoinColumn(name = "CATALOG_VERSION", referencedColumnName = "CATALOG_VERSION"),
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
@@ -243,7 +243,15 @@ public class ProductOffering extends AbstractEntity implements Serializable {
     })
     private List<Reference> place;
 
-    //private List<ProductOfferingReference> bundledProductOffering;
+    @Embedded
+    @ElementCollection
+    @CollectionTable(name = "CRI_PRODUCT_OFFER_R_PRODUCT_OFFER", joinColumns = {
+        @JoinColumn(name = "CATALOG_ID", referencedColumnName = "CATALOG_ID"),
+        @JoinColumn(name = "CATALOG_VERSION", referencedColumnName = "CATALOG_VERSION"),
+        @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
+        @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
+    })
+    private List<Reference> bundledProductOffering;
 
     @Embedded
     @AttributeOverrides({
@@ -257,7 +265,7 @@ public class ProductOffering extends AbstractEntity implements Serializable {
 
     @Embedded
     @ElementCollection
-    @CollectionTable(name = "CRI_PRODUCT_R_PRODUCT_SPEC", joinColumns = {
+    @CollectionTable(name = "CRI_PRODUCT_OFFER_R_PRODUCT_SPEC", joinColumns = {
         @JoinColumn(name = "CATALOG_ID", referencedColumnName = "CATALOG_ID"),
         @JoinColumn(name = "CATALOG_VERSION", referencedColumnName = "CATALOG_VERSION"),
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
@@ -267,7 +275,7 @@ public class ProductOffering extends AbstractEntity implements Serializable {
 
     @Embedded
     @ElementCollection
-    @CollectionTable(name = "CRI_PRODUCT_R_SERVICE", joinColumns = {
+    @CollectionTable(name = "CRI_PRODUCT_OFFER_R_SERVICE", joinColumns = {
         @JoinColumn(name = "CATALOG_ID", referencedColumnName = "CATALOG_ID"),
         @JoinColumn(name = "CATALOG_VERSION", referencedColumnName = "CATALOG_VERSION"),
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
@@ -277,7 +285,7 @@ public class ProductOffering extends AbstractEntity implements Serializable {
 
     @Embedded
     @ElementCollection
-    @CollectionTable(name = "CRI_PRODUCT_R_RESOURCE", joinColumns = {
+    @CollectionTable(name = "CRI_PRODUCT_OFFER_R_RESOURCE", joinColumns = {
         @JoinColumn(name = "CATALOG_ID", referencedColumnName = "CATALOG_ID"),
         @JoinColumn(name = "CATALOG_VERSION", referencedColumnName = "CATALOG_VERSION"),
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
@@ -456,6 +464,14 @@ public class ProductOffering extends AbstractEntity implements Serializable {
         this.place = place;
     }
 
+    public List<Reference> getBundledProductOffering() {
+        return bundledProductOffering;
+    }
+
+    public void setBundledProductOffering(List<Reference> bundledProductOffering) {
+        this.bundledProductOffering = bundledProductOffering;
+    }
+
     public Reference getServiceLevelAgreement() {
         return serviceLevelAgreement;
     }
@@ -506,6 +522,7 @@ public class ProductOffering extends AbstractEntity implements Serializable {
         hash = 73 * hash + (this.category != null ? this.category.hashCode() : 0);
         hash = 73 * hash + (this.channel != null ? this.channel.hashCode() : 0);
         hash = 73 * hash + (this.place != null ? this.place.hashCode() : 0);
+        hash = 73 * hash + (this.bundledProductOffering != null ? this.bundledProductOffering.hashCode() : 0);
         hash = 73 * hash + (this.serviceLevelAgreement != null ? this.serviceLevelAgreement.hashCode() : 0);
         hash = 73 * hash + (this.productSpecification != null ? this.productSpecification.hashCode() : 0);
         hash = 73 * hash + (this.serviceCandidate != null ? this.serviceCandidate.hashCode() : 0);
@@ -576,6 +593,10 @@ public class ProductOffering extends AbstractEntity implements Serializable {
             return false;
         }
 
+        if (Utilities.areEqual(this.bundledProductOffering, other.bundledProductOffering) == false) {
+            return false;
+        }
+
         if (Utilities.areEqual(this.serviceLevelAgreement, other.serviceLevelAgreement) == false) {
             return false;
         }
@@ -597,7 +618,7 @@ public class ProductOffering extends AbstractEntity implements Serializable {
 
     @Override
     public String toString() {
-        return "ProductOffering{" + "catalogId=" + catalogId + ", catalogVersion=" + catalogVersion + ", id=" + id + ", version=" + version + ", href=" + href + ", name=" + name + ", description=" + description + ", lastUpdate=" + lastUpdate + ", lifecycleStatus=" + lifecycleStatus + ", validFor=" + validFor + ", isBundle=" + isBundle + ", category=" + category + ", channel=" + channel + ", place=" + place + ", serviceLevelAgreement=" + serviceLevelAgreement + ", productSpecification=" + productSpecification + ", serviceCandidate=" + serviceCandidate + ", resourceCandidate=" + resourceCandidate + '}';
+        return "ProductOffering{" + "catalogId=" + catalogId + ", catalogVersion=" + catalogVersion + ", id=" + id + ", version=" + version + ", href=" + href + ", name=" + name + ", description=" + description + ", lastUpdate=" + lastUpdate + ", lifecycleStatus=" + lifecycleStatus + ", validFor=" + validFor + ", isBundle=" + isBundle + ", category=" + category + ", channel=" + channel + ", place=" + place + ", bundledProductOffering=" + bundledProductOffering + ", serviceLevelAgreement=" + serviceLevelAgreement + ", productSpecification=" + productSpecification + ", serviceCandidate=" + serviceCandidate + ", resourceCandidate=" + resourceCandidate + '}';
     }
 
     public boolean keysMatch(ProductOffering input) {
@@ -673,6 +694,10 @@ public class ProductOffering extends AbstractEntity implements Serializable {
             this.place = input.place;
         }
 
+        if (this.bundledProductOffering == null) {
+            this.bundledProductOffering = input.bundledProductOffering;
+        }
+
         if (this.serviceLevelAgreement == null) {
             this.serviceLevelAgreement = input.serviceLevelAgreement;
         }
@@ -713,9 +738,35 @@ public class ProductOffering extends AbstractEntity implements Serializable {
             return;
         }
 
+        depth--;
+
         if (category != null) {
             for (Reference reference : category) {
-                reference.fetchEntity(Category.class);
+                reference.getEnitty(Category.class, depth);
+            }
+        }
+
+        if (bundledProductOffering != null) {
+            for (Reference reference : bundledProductOffering) {
+                reference.getEnitty(ProductOffering.class, depth);
+            }
+        }
+
+        if (productSpecification != null) {
+            for (Reference reference : productSpecification) {
+                reference.getEnitty(ProductSpecification.class, depth);
+            }
+        }
+
+        if (serviceCandidate != null) {
+            for (Reference reference : serviceCandidate) {
+                reference.getEnitty(ServiceCandidate.class, depth);
+            }
+        }
+
+        if (resourceCandidate != null) {
+            for (Reference reference : resourceCandidate) {
+                reference.getEnitty(ResourceCandidate.class, depth);
             }
         }
     }
@@ -752,6 +803,9 @@ public class ProductOffering extends AbstractEntity implements Serializable {
         productOffering.place = new ArrayList<Reference>();
         productOffering.place.add(Reference.createProto());
 
+        productOffering.bundledProductOffering = new ArrayList<Reference>();
+        productOffering.bundledProductOffering.add(Reference.createProto());
+        
         productOffering.serviceLevelAgreement = Reference.createProto();
 
         productOffering.productSpecification = new ArrayList<Reference>();

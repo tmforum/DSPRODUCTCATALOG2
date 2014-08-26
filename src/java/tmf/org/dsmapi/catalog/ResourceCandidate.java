@@ -430,10 +430,16 @@ public class ResourceCandidate extends AbstractEntity implements Serializable {
             return;
         }
 
+        depth--;
+
         if (category != null) {
             for (Reference reference : category) {
-                reference.fetchEntity(Category.class);
+                reference.getEnitty(Category.class, depth);
             }
+        }
+
+        if (resourceSpecification != null) {
+            resourceSpecification.getEnitty(ResourceSpecification.class, depth);
         }
     }
 

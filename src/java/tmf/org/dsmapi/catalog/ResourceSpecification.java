@@ -554,9 +554,6 @@ public class ResourceSpecification extends AbstractEntity implements Serializabl
 
     @Override
     public void getEnclosedEntities(int depth) {
-        if (depth <= AbstractEntity.MINIMUM_DEPTH) {
-            return;
-        }
     }
 
     @PrePersist

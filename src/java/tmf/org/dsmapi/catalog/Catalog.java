@@ -382,9 +382,11 @@ public class Catalog extends AbstractEntity implements Serializable {
             return;
         }
 
+        depth--;
+
         if (category != null) {
             for (Reference reference : category) {
-                reference.fetchEntity(Category.class);
+                reference.getEnitty(Category.class, depth);
             }
         }
     }

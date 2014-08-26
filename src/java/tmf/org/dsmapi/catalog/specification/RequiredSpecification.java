@@ -11,6 +11,16 @@ import tmf.org.dsmapi.catalog.Utilities;
  *
  * @author bahman.barzideh
  *
+ * {
+ *     "id": "13",
+ *     "href": "http://serverlocation:port/catalogManagement/serviceSpecification/13",
+ *     "name": "specification 1",
+ *     "validFor": {
+ *         "startDateTime": "2013-04-19T16:42:23-04:00",
+ *         "endDateTime": ""
+ *     }
+ * }
+ * 
  */
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 @Embeddable
@@ -109,7 +119,7 @@ public class RequiredSpecification implements Serializable {
         requiredSpecification.href = "href";
         requiredSpecification.name = "name";
         requiredSpecification.validFor = TimeRange.createProto();
-        
+
         return requiredSpecification;
     }
 

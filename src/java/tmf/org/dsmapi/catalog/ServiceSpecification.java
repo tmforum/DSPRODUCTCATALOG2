@@ -641,9 +641,6 @@ public class ServiceSpecification extends AbstractEntity implements Serializable
 
     @Override
     public void getEnclosedEntities(int depth) {
-        if (depth <= AbstractEntity.MINIMUM_DEPTH) {
-            return;
-        }
     }
 
     @PrePersist
