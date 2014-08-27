@@ -1,0 +1,205 @@
+package org.tmf.dsmapi.catalog.service;
+
+import com.sun.jersey.core.util.MultivaluedMapImpl;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import javax.ws.rs.core.MultivaluedMap;
+import javax.ws.rs.core.UriInfo;
+import org.apache.commons.beanutils.PropertyUtilsBean;
+import org.codehaus.jackson.JsonNode;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.node.ArrayNode;
+import org.codehaus.jackson.node.ObjectNode;
+
+/**
+ *
+ * @author jyus7291
+ *
+ */
+public class FacadeRestUtil {
+
+    private static PropertyUtilsBean pub = new PropertyUtilsBean();
+    public static final String ALL_FIELDS = "all";
+    public static final String ID_FIELD = "id";
+    public static final String QUERY_KEY_FIELD = "fields";
+    public static final String QUERY_KEY_FIELD_ESCAPE = ":";
+
+    public static ObjectNode createNodeViewWithFields(Object bean, Set<String> fieldNames) {
+        ObjectMapper mapper = new ObjectMapper();
+        return createNodeViewWithFields(mapper, bean, fieldNames);
+    }
+
+    public static List<ObjectNode> createNodeListViewWithFields(Collection list, Set<String> fieldNames) {
+        List<ObjectNode> nodeList = new ArrayList<ObjectNode>();
+        for (Object element : list) {
+            ObjectNode node = FacadeRestUtil.createNodeViewWithFields(element, fieldNames);
+            nodeList.add(node);
+        }
+        return nodeList;
+    }
+
+    private static ObjectNode createNodeViewWithFields(ObjectMapper mapper, Object bean, Set<String> fieldNames) {
+        // split fieldNames in 2 categories :
+        // simpleFields for simple property names with no '.'
+        // nestedFields for nested property names with a '.'
+        Set<String> simpleFields = new HashSet<String>();
+        MultivaluedMapImpl nestedFields = new MultivaluedMapImpl();
+        for (String fieldName : fieldNames) {
+            int index = fieldName.indexOf('.');
+            boolean isNestedField = index > 0 && index < fieldName.length();
+            if (isNestedField) {
+                String rootFieldName = fieldName.substring(0, index);
+                String subFieldName = fieldName.substring(index + 1);
+                nestedFields.add(rootFieldName, subFieldName);
+            } else {
+                simpleFields.add(fieldName);
+            }
+        }
+
+        // create a simple node with only one level containing all simples properties
+        ObjectNode rootNode = createNodeWithSimpleFields(mapper, bean, simpleFields);
+
+        // create nested nodes with deeper levels
+        Set<Map.Entry<String, List<String>>> entrySet = nestedFields.entrySet();
+        // for each nested property, create recursively a node
+        for (Map.Entry<String, List<String>> entry : entrySet) {
+            String rootFieldName = entry.getKey();
+            // add in current node only if full property is not already present in 1st level
+            if (!simpleFields.contains(rootFieldName)) {
+                Object nestedBean = getField(bean, rootFieldName);
+                // add only non null fields
+                if (nestedBean == null) {
+                    break;
+                }
+                Set<String> nestedFieldNames = new HashSet<String>(entry.getValue());
+                // current node is an array or a list
+                if ((nestedBean.getClass().isArray()) || (Collection.class.isAssignableFrom(nestedBean.getClass()))) {
+                    Object[] array = null;
+                    if ((nestedBean.getClass().isArray())){
+                        array = (Object[]) nestedBean;
+                    }
+                    else {
+                        Collection collection = (Collection) nestedBean;
+                        array = collection.toArray();
+                    }
+                    if (array.length > 0) {
+                        // create a node for each element in array
+                        // and add created node in an arrayNode
+                        Collection<JsonNode> nodes = new LinkedList<JsonNode>();
+                        for (Object object : array) {
+                            ObjectNode nestedNode = createNodeViewWithFields(mapper, object, nestedFieldNames);
+                            if (nestedNode != null && nestedNode.size() > 0) {
+                                nodes.add(nestedNode);
+                            }
+                        }
+                        ArrayNode arrayNode = mapper.createArrayNode();
+                        arrayNode.addAll(nodes);
+                        if (arrayNode.size() > 0) {
+                            rootNode.put(rootFieldName, arrayNode);
+                        }
+                    }
+                } else {
+                    // create recursively a node and add it in current root node
+                    ObjectNode nestedNode = createNodeViewWithFields(mapper, nestedBean, nestedFieldNames);
+                    if (nestedNode != null && nestedNode.size() > 0) {
+                        rootNode.put(rootFieldName, nestedNode);
+                    }
+                }
+            }
+        }
+        return rootNode;
+    }
+
+    // create a simple flat node with only one-level fields
+    private static ObjectNode createNodeWithSimpleFields(ObjectMapper mapper, Object bean, Set<String> fieldNames) {
+        ObjectNode node = mapper.createObjectNode();
+        for (String fieldName : fieldNames) {
+            Object fieldValue = getField(bean, fieldName);
+            if (fieldValue != null) {
+                nodePut(node, fieldName, fieldValue);
+            }
+        }
+        return node;
+    }
+
+    // generic node.put for any Object
+    private static void nodePut(ObjectNode node, String fieldName, Object value) {
+        if (value instanceof Boolean) {
+            node.put(fieldName, (Boolean) value);
+        } else if (value instanceof Integer) {
+            node.put(fieldName, (Integer) value);
+        } else if (value instanceof Long) {
+            node.put(fieldName, (Long) value);
+        } else if (value instanceof Float) {
+            node.put(fieldName, (Float) value);
+        } else if (value instanceof Double) {
+            node.put(fieldName, (Double) value);
+        } else if (value instanceof BigDecimal) {
+            node.put(fieldName, (BigDecimal) value);
+        } else if (value instanceof String) {
+            node.put(fieldName, (String) value);
+        } else {
+            node.putPOJO(fieldName, value);
+        }
+
+    }
+
+    // get value of field named "name" in bean
+    public static Object getField(Object bean, String name) {
+        try {
+            return pub.getNestedProperty(bean, name);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    public static Set<String> getFieldSet(MultivaluedMap<String, String> criteria) {
+        Set<String> fieldSet = new HashSet<String>();
+        if (criteria != null) {
+            List<String> queryParameterField = criteria.remove(QUERY_KEY_FIELD_ESCAPE + QUERY_KEY_FIELD);
+            if (queryParameterField == null) {
+                queryParameterField = criteria.remove(QUERY_KEY_FIELD);
+            }
+            if (queryParameterField != null && !queryParameterField.isEmpty()) {
+                String queryParameterValue = queryParameterField.get(0);
+                if (queryParameterValue != null) {
+                    String[] tokenArray = queryParameterValue.split(",");
+                    fieldSet.addAll(Arrays.asList(tokenArray));
+                }
+            }
+        }
+        return fieldSet;
+    }
+
+    public static String buildHref(UriInfo uriInfo, String entity, String id, Float version) {
+        URI uri = (uriInfo != null) ? uriInfo.getBaseUri() : null;
+        String basePath = (uri != null) ? uri.toString() : null;
+        if (basePath == null) {
+            return null;
+        }
+
+        if (basePath.endsWith("/") == false) {
+            basePath += "/";
+        }
+
+        basePath += entity + "/";
+        if (id == null || id.length() <= 0) {
+            return (basePath);
+        }
+
+        basePath += id;
+        if (version == null) {
+            return basePath;
+        }
+
+        return basePath + ":(" + version + ")";
+    }
+}

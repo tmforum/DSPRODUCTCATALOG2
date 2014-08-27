@@ -21,19 +21,19 @@ public class ApplicationConfig extends Application {
      */
     private Set<Class<?>> getRestResourceClasses() {
         Set<Class<?>> resources = new java.util.HashSet<Class<?>>();
-        resources.add(tmf.org.dsmapi.catalog.service.BadUsageExceptionMapper.class);
-        resources.add(tmf.org.dsmapi.catalog.service.CatalogFacadeREST.class);
-        resources.add(tmf.org.dsmapi.catalog.service.CategoryFacadeREST.class);
-        resources.add(tmf.org.dsmapi.catalog.service.CategoryInCatalogIdFacadeREST.class);
-        resources.add(tmf.org.dsmapi.catalog.service.CategoryInCatalogIdVersionFacadeREST.class);
-        resources.add(tmf.org.dsmapi.catalog.service.JacksonConfigurator.class);
-        resources.add(tmf.org.dsmapi.catalog.service.ProductOfferingFacadeREST.class);
-        resources.add(tmf.org.dsmapi.catalog.service.ProductOfferingPriceFacadeREST.class);
-        resources.add(tmf.org.dsmapi.catalog.service.ProductSpecificationFacadeREST.class);
-        resources.add(tmf.org.dsmapi.catalog.service.ResourceCandidateFacadeREST.class);
-        resources.add(tmf.org.dsmapi.catalog.service.ResourceSpecificationFacadeREST.class);
-        resources.add(tmf.org.dsmapi.catalog.service.ServiceCandidateFacadeREST.class);
-        resources.add(tmf.org.dsmapi.catalog.service.ServiceSpecificationFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.BadUsageExceptionMapper.class);
+        resources.add(org.tmf.dsmapi.catalog.service.CatalogFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.CategoryFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.CategoryInCatalogIdFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.CategoryInCatalogIdVersionFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.JacksonConfigurator.class);
+        resources.add(org.tmf.dsmapi.catalog.service.ProductOfferingFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.ProductOfferingPriceFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.ProductSpecificationFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.ResourceCandidateFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.ResourceSpecificationFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.ServiceCandidateFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.ServiceSpecificationFacadeREST.class);
         // following code can be used to customize Jersey 1.x JSON provider:
         try {
             Class jacksonProvider = Class.forName("org.codehaus.jackson.jaxrs.JacksonJsonProvider");
