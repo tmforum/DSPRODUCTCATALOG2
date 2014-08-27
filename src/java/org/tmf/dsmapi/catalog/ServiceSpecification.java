@@ -60,7 +60,7 @@ import org.tmf.dsmapi.catalog.specification.SpecificationRelationship;
  *             "href": "http ://serverLocation:port/partyManagement/partyRole/1234"
  *         }
  *     ],
- *     "serviceSpecRelationship": [
+ *     "serviceSpecificationRelationship": [
  *         {
  *             "type": "dependency",
  *             "id": "23",
@@ -258,7 +258,7 @@ public class ServiceSpecification extends AbstractEntity implements Serializable
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
-    private List<SpecificationRelationship> serviceSpecRelationship;
+    private List<SpecificationRelationship> serviceSpecificationRelationship;
 
     @Embedded
     @ElementCollection
@@ -397,12 +397,12 @@ public class ServiceSpecification extends AbstractEntity implements Serializable
         this.relatedParty = relatedParty;
     }
 
-    public List<SpecificationRelationship> getServiceSpecRelationship() {
-        return serviceSpecRelationship;
+    public List<SpecificationRelationship> getServiceSpecificationRelationship() {
+        return serviceSpecificationRelationship;
     }
 
-    public void setServiceSpecRelationship(List<SpecificationRelationship> serviceSpecRelationship) {
-        this.serviceSpecRelationship = serviceSpecRelationship;
+    public void setServiceSpecificationRelationship(List<SpecificationRelationship> serviceSpecificationRelationship) {
+        this.serviceSpecificationRelationship = serviceSpecificationRelationship;
     }
 
     public List<RequiredSpecification> getRequiredServiceSpecification() {
@@ -451,7 +451,7 @@ public class ServiceSpecification extends AbstractEntity implements Serializable
         hash = 89 * hash + (this.brand != null ? this.brand.hashCode() : 0);
         hash = 89 * hash + (this.attachment != null ? this.attachment.hashCode() : 0);
         hash = 89 * hash + (this.relatedParty != null ? this.relatedParty.hashCode() : 0);
-        hash = 89 * hash + (this.serviceSpecRelationship != null ? this.serviceSpecRelationship.hashCode() : 0);
+        hash = 89 * hash + (this.serviceSpecificationRelationship != null ? this.serviceSpecificationRelationship.hashCode() : 0);
         hash = 89 * hash + (this.requiredServiceSpecification != null ? this.requiredServiceSpecification.hashCode() : 0);
         hash = 89 * hash + (this.requiredResourceSpecification != null ? this.requiredResourceSpecification.hashCode() : 0);
         hash = 89 * hash + (this.serviceSpecCharacteristic != null ? this.serviceSpecCharacteristic.hashCode() : 0);
@@ -518,7 +518,7 @@ public class ServiceSpecification extends AbstractEntity implements Serializable
             return false;
         }
 
-        if (Utilities.areEqual(this.serviceSpecRelationship, other.serviceSpecRelationship) == false) {
+        if (Utilities.areEqual(this.serviceSpecificationRelationship, other.serviceSpecificationRelationship) == false) {
             return false;
         }
 
@@ -539,7 +539,7 @@ public class ServiceSpecification extends AbstractEntity implements Serializable
 
     @Override
     public String toString() {
-        return "ServiceSpecification{" + "catalogId=" + catalogId + ", catalogVersion=" + catalogVersion + ", id=" + id + ", version=" + version + ", href=" + href + ", name=" + name + ", description=" + description + ", lastUpdate=" + lastUpdate + ", lifecycleStatus=" + lifecycleStatus + ", validFor=" + validFor + ", brand=" + brand + ", attachment=" + attachment + ", relatedParty=" + relatedParty + ", serviceSpecRelationship=" + serviceSpecRelationship + ", requiredServiceSpecification=" + requiredServiceSpecification + ", requiredResourceSpecification=" + requiredResourceSpecification + ", serviceSpecCharacteristic=" + serviceSpecCharacteristic + '}';
+        return "ServiceSpecification{" + "catalogId=" + catalogId + ", catalogVersion=" + catalogVersion + ", id=" + id + ", version=" + version + ", href=" + href + ", name=" + name + ", description=" + description + ", lastUpdate=" + lastUpdate + ", lifecycleStatus=" + lifecycleStatus + ", validFor=" + validFor + ", brand=" + brand + ", attachment=" + attachment + ", relatedParty=" + relatedParty + ", serviceSpecificationRelationship=" + serviceSpecificationRelationship + ", requiredServiceSpecification=" + requiredServiceSpecification + ", requiredResourceSpecification=" + requiredResourceSpecification + ", serviceSpecCharacteristic=" + serviceSpecCharacteristic + '}';
     }
 
     public boolean keysMatch(ServiceSpecification input) {
@@ -611,8 +611,8 @@ public class ServiceSpecification extends AbstractEntity implements Serializable
             this.relatedParty = input.relatedParty;
         }
 
-        if (this.serviceSpecRelationship == null) {
-            this.serviceSpecRelationship = input.serviceSpecRelationship;
+        if (this.serviceSpecificationRelationship == null) {
+            this.serviceSpecificationRelationship = input.serviceSpecificationRelationship;
         }
 
         if (this.requiredServiceSpecification == null) {
@@ -678,8 +678,8 @@ public class ServiceSpecification extends AbstractEntity implements Serializable
         serviceSpecification.relatedParty = new ArrayList<RelatedParty>();
         serviceSpecification.relatedParty.add(RelatedParty.createProto());
 
-        serviceSpecification.serviceSpecRelationship = new ArrayList<SpecificationRelationship>();
-        serviceSpecification.serviceSpecRelationship.add(SpecificationRelationship.createProto());
+        serviceSpecification.serviceSpecificationRelationship = new ArrayList<SpecificationRelationship>();
+        serviceSpecification.serviceSpecificationRelationship.add(SpecificationRelationship.createProto());
 
         serviceSpecification.requiredServiceSpecification = new ArrayList<RequiredSpecification>();
         serviceSpecification.requiredServiceSpecification.add(RequiredSpecification.createProto());
