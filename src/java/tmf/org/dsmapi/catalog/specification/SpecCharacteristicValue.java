@@ -93,16 +93,22 @@ public class SpecCharacteristicValue implements Serializable {
         this.validFor = validFor;
     }
 
+    @JsonProperty(value = "validFor")
+    public TimeRange validForToJson() {
+        return (validFor != null && validFor.isEmpty() == false) ? validFor : null;
+    }
+
     @Override
     public int hashCode() {
-        int hash = 0;
-        if (valueType != null) {
-            hash += valueType.hashCode();
-        }
+        int hash = 3;
 
-        if (value != null) {
-            hash += value.hashCode();
-        }
+        hash = 83 * hash + (this.valueType != null ? this.valueType.hashCode() : 0);
+        hash = 83 * hash + (this.defaultValue != null ? this.defaultValue.hashCode() : 0);
+        hash = 83 * hash + (this.value != null ? this.value.hashCode() : 0);
+        hash = 83 * hash + (this.unitOfMeasure != null ? this.unitOfMeasure.hashCode() : 0);
+        hash = 83 * hash + (this.valueFrom != null ? this.valueFrom.hashCode() : 0);
+        hash = 83 * hash + (this.valueTo != null ? this.valueTo.hashCode() : 0);
+        hash = 83 * hash + (this.validFor != null ? this.validFor.hashCode() : 0);
 
         return hash;
     }
@@ -118,10 +124,30 @@ public class SpecCharacteristicValue implements Serializable {
             return false;
         }
 
+        if (Utilities.areEqual(this.defaultValue, other.defaultValue) == false) {
+            return false;
+        }
+
         if (Utilities.areEqual(this.value, other.value) == false) {
             return false;
         }
 
+        if (Utilities.areEqual(this.unitOfMeasure, other.unitOfMeasure) == false) {
+            return false;
+        }
+
+        if (Utilities.areEqual(this.valueFrom, other.valueFrom) == false) {
+            return false;
+        }
+
+        if (Utilities.areEqual(this.valueTo, other.valueTo) == false) {
+            return false;
+        }
+
+        if (Utilities.areEqual(this.validFor, other.validFor) == false) {
+            return false;
+        }
+        
         return true;
     }
 

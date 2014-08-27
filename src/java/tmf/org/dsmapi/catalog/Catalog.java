@@ -219,6 +219,11 @@ public class Catalog extends AbstractEntity implements Serializable {
         return (version >= 0) ? version : null;
     }
 
+    @JsonProperty(value = "validFor")
+    public TimeRange validForToJson() {
+        return (validFor != null && validFor.isEmpty() == false) ? validFor : null;
+    }
+
     @Override
     public int hashCode() {
         int hash = 5;

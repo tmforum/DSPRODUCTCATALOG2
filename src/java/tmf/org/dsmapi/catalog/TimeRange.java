@@ -49,6 +49,11 @@ public class TimeRange implements Serializable {
     }
 
     @JsonIgnore
+    public boolean isEmpty() {
+        return (startDateTime == null && endDateTime == null) ? true : false;
+    }
+    
+    @JsonIgnore
     public boolean isValid() {
         if (startDateTime == null || endDateTime == null) {
             return true;

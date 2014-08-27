@@ -18,6 +18,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 /**
@@ -249,6 +250,11 @@ public class ProductOfferingPrice extends AbstractEntity implements Serializable
 
     public void setProductOfferPriceAlteration(ProductOfferPriceAlteration productOfferPriceAlteration) {
         this.productOfferPriceAlteration = productOfferPriceAlteration;
+    }
+
+    @JsonProperty(value = "validFor")
+    public TimeRange validForToJson() {
+        return (validFor != null && validFor.isEmpty() == false) ? validFor : null;
     }
 
     @Override

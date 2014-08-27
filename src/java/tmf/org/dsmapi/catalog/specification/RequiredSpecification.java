@@ -3,6 +3,7 @@ package tmf.org.dsmapi.catalog.specification;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import tmf.org.dsmapi.catalog.TimeRange;
 import tmf.org.dsmapi.catalog.Utilities;
@@ -20,7 +21,7 @@ import tmf.org.dsmapi.catalog.Utilities;
  *         "endDateTime": ""
  *     }
  * }
- * 
+ *
  */
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 @Embeddable
@@ -72,6 +73,11 @@ public class RequiredSpecification implements Serializable {
 
     public void setValidFor(TimeRange validFor) {
         this.validFor = validFor;
+    }
+
+    @JsonProperty(value = "validFor")
+    public TimeRange validForToJson() {
+        return (validFor != null && validFor.isEmpty() == false) ? validFor : null;
     }
 
     @Override

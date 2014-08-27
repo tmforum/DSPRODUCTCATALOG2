@@ -25,6 +25,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 /**
@@ -504,6 +505,11 @@ public class ProductOffering extends AbstractEntity implements Serializable {
         this.resourceCandidate = resourceCandidate;
     }
 
+    @JsonProperty(value = "validFor")
+    public TimeRange validForToJson() {
+        return (validFor != null && validFor.isEmpty() == false) ? validFor : null;
+    }
+
     @Override
     public int hashCode() {
         int hash = 5;
@@ -805,7 +811,7 @@ public class ProductOffering extends AbstractEntity implements Serializable {
 
         productOffering.bundledProductOffering = new ArrayList<Reference>();
         productOffering.bundledProductOffering.add(Reference.createProto());
-        
+
         productOffering.serviceLevelAgreement = Reference.createProto();
 
         productOffering.productSpecification = new ArrayList<Reference>();

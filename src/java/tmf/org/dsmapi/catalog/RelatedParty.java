@@ -88,6 +88,11 @@ public class RelatedParty implements Serializable {
         this.partyRole = partyRole;
     }
 
+    @JsonProperty(value = "validFor")
+    public TimeRange validForToJson() {
+        return (validFor != null && validFor.isEmpty() == false) ? validFor : null;
+    }
+
     @Override
     public int hashCode() {
         int hash = 5;

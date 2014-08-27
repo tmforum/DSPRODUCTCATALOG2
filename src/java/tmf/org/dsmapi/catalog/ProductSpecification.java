@@ -23,6 +23,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import tmf.org.dsmapi.catalog.specification.SpecificationRelationship;
 
@@ -453,6 +454,11 @@ public class ProductSpecification extends AbstractEntity implements Serializable
 
     public void setProductSpecCharacteristic(List<ProductSpecCharacteristic> productSpecCharacteristic) {
         this.productSpecCharacteristic = productSpecCharacteristic;
+    }
+
+    @JsonProperty(value = "validFor")
+    public TimeRange validForToJson() {
+        return (validFor != null && validFor.isEmpty() == false) ? validFor : null;
     }
 
     @Override

@@ -4,6 +4,7 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import tmf.org.dsmapi.catalog.TimeRange;
 import tmf.org.dsmapi.catalog.Utilities;
@@ -74,6 +75,11 @@ public class SpecificationRelationship implements Serializable {
         this.type = type;
     }
 
+    @JsonProperty(value = "validFor")
+    public TimeRange validForToJson() {
+        return (validFor != null && validFor.isEmpty() == false) ? validFor : null;
+    }
+    
     @Override
     public int hashCode() {
         int hash = 3;

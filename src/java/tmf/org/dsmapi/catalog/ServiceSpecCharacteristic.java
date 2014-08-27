@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Embeddable;
+import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import tmf.org.dsmapi.catalog.specification.CharacteristicValueType;
 import tmf.org.dsmapi.catalog.specification.SpecificationCharacteristicRelationship;
@@ -129,6 +130,11 @@ public class ServiceSpecCharacteristic implements Serializable {
 
     public void setServiceSpecCharacteristicValue(List<SpecificationCharacteristicValue> serviceSpecCharacteristicValue) {
         this.serviceSpecCharacteristicValue = serviceSpecCharacteristicValue;
+    }
+
+    @JsonProperty(value = "validFor")
+    public TimeRange validForToJson() {
+        return (validFor != null && validFor.isEmpty() == false) ? validFor : null;
     }
 
     @Override

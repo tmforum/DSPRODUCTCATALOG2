@@ -111,6 +111,11 @@ public class SpecificationCharacteristicValue implements Serializable {
         this.validFor = validFor;
     }
 
+    @JsonProperty(value = "validFor")
+    public TimeRange validForToJson() {
+        return (validFor != null && validFor.isEmpty() == false) ? validFor : null;
+    }
+
     @Override
     public int hashCode() {
         int hash = 3;

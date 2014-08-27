@@ -26,5 +26,5 @@ public abstract class AbstractEntity implements Serializable {
     }
 
     public abstract void getEnclosedEntities(int depth);
-    
+
 }
