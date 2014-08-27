@@ -59,7 +59,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
  *             "href": "http ://serverLocation:port/partyManagement/partyRole/1234"
  *         }
  *     ],
- *     "resourceSpecRelationship": [
+ *     "resourceSpecificationRelationship": [
  *         {
  *             "type": "dependency",
  *             "id": "23",
@@ -225,7 +225,7 @@ public class ResourceSpecification extends AbstractEntity implements Serializabl
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
-    private List<SpecificationRelationship> resourceSpecRelationship;
+    private List<SpecificationRelationship> resourceSpecificationRelationship;
 
     @Embedded
     @ElementCollection
@@ -344,12 +344,12 @@ public class ResourceSpecification extends AbstractEntity implements Serializabl
         this.relatedParty = relatedParty;
     }
 
-    public List<SpecificationRelationship> getResourceSpecRelationship() {
-        return resourceSpecRelationship;
+    public List<SpecificationRelationship> getResourceSpecificationRelationship() {
+        return resourceSpecificationRelationship;
     }
 
-    public void setResourceSpecRelationship(List<SpecificationRelationship> resourceSpecRelationship) {
-        this.resourceSpecRelationship = resourceSpecRelationship;
+    public void setResourceSpecificationRelationship(List<SpecificationRelationship> resourceSpecificationRelationship) {
+        this.resourceSpecificationRelationship = resourceSpecificationRelationship;
     }
 
     public List<ResourceSpecCharacteristic> getResourceSpecCharacteristic() {
@@ -382,7 +382,7 @@ public class ResourceSpecification extends AbstractEntity implements Serializabl
         hash = 89 * hash + (this.brand != null ? this.brand.hashCode() : 0);
         hash = 89 * hash + (this.attachment != null ? this.attachment.hashCode() : 0);
         hash = 89 * hash + (this.relatedParty != null ? this.relatedParty.hashCode() : 0);
-        hash = 89 * hash + (this.resourceSpecRelationship != null ? this.resourceSpecRelationship.hashCode() : 0);
+        hash = 89 * hash + (this.resourceSpecificationRelationship != null ? this.resourceSpecificationRelationship.hashCode() : 0);
         hash = 89 * hash + (this.resourceSpecCharacteristic != null ? this.resourceSpecCharacteristic.hashCode() : 0);
 
         return hash;
@@ -447,7 +447,7 @@ public class ResourceSpecification extends AbstractEntity implements Serializabl
             return false;
         }
 
-        if (Utilities.areEqual(this.resourceSpecRelationship, other.resourceSpecRelationship) == false) {
+        if (Utilities.areEqual(this.resourceSpecificationRelationship, other.resourceSpecificationRelationship) == false) {
             return false;
         }
 
@@ -460,7 +460,7 @@ public class ResourceSpecification extends AbstractEntity implements Serializabl
 
     @Override
     public String toString() {
-        return "ResourceSpecification{" + "catalogId=" + catalogId + ", catalogVersion=" + catalogVersion + ", id=" + id + ", version=" + version + ", href=" + href + ", name=" + name + ", description=" + description + ", lastUpdate=" + lastUpdate + ", lifecycleStatus=" + lifecycleStatus + ", validFor=" + validFor + ", brand=" + brand + ", attachment=" + attachment + ", relatedParty=" + relatedParty + ", resourceSpecRelationship=" + resourceSpecRelationship + ", resourceSpecCharacteristic=" + resourceSpecCharacteristic + '}';
+        return "ResourceSpecification{" + "catalogId=" + catalogId + ", catalogVersion=" + catalogVersion + ", id=" + id + ", version=" + version + ", href=" + href + ", name=" + name + ", description=" + description + ", lastUpdate=" + lastUpdate + ", lifecycleStatus=" + lifecycleStatus + ", validFor=" + validFor + ", brand=" + brand + ", attachment=" + attachment + ", relatedParty=" + relatedParty + ", resourceSpecificationRelationship=" + resourceSpecificationRelationship + ", resourceSpecCharacteristic=" + resourceSpecCharacteristic + '}';
     }
 
     public boolean keysMatch(ResourceSpecification input) {
@@ -532,8 +532,8 @@ public class ResourceSpecification extends AbstractEntity implements Serializabl
             this.relatedParty = input.relatedParty;
         }
 
-        if (this.resourceSpecRelationship == null) {
-            this.resourceSpecRelationship = input.resourceSpecRelationship;
+        if (this.resourceSpecificationRelationship == null) {
+            this.resourceSpecificationRelationship = input.resourceSpecificationRelationship;
         }
 
         if (this.resourceSpecCharacteristic == null) {
@@ -591,8 +591,8 @@ public class ResourceSpecification extends AbstractEntity implements Serializabl
         resourceSpecification.relatedParty = new ArrayList<RelatedParty>();
         resourceSpecification.relatedParty.add(RelatedParty.createProto());
 
-        resourceSpecification.resourceSpecRelationship = new ArrayList<SpecificationRelationship>();
-        resourceSpecification.resourceSpecRelationship.add(SpecificationRelationship.createProto());
+        resourceSpecification.resourceSpecificationRelationship = new ArrayList<SpecificationRelationship>();
+        resourceSpecification.resourceSpecificationRelationship.add(SpecificationRelationship.createProto());
 
         resourceSpecification.resourceSpecCharacteristic = new ArrayList<ResourceSpecCharacteristic>();
         resourceSpecification.resourceSpecCharacteristic.add(ResourceSpecCharacteristic.createProto());
