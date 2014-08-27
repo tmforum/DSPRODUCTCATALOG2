@@ -13,19 +13,11 @@ import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.codehaus.jackson.annotate.JsonIgnore;
-import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 /**
@@ -169,47 +161,10 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 @IdClass(ProductOfferingId.class)
 @Table(name = "CRI_PRODUCT_OFFERING")
-public class ProductOffering extends AbstractEntity implements Serializable {
+public class ProductOffering extends AbstractCatalogEntity implements Serializable {
     private final static long serialVersionUID = 1L;
 
     private final static Logger logger = Logger.getLogger(ProductOffering.class.getName());
-
-    @Id
-    @Column(name = "CATALOG_ID", nullable = false)
-    @JsonIgnore
-    private String catalogId;
-
-    @Id
-    @Column(name = "CATALOG_VERSION", nullable = false)
-    @JsonIgnore
-    private Float catalogVersion;
-
-    @Id
-    @Column(name = "ID", nullable = false)
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
-
-    @Id
-    @Column(name = "VERSION", nullable = false)
-    private Float version;
-
-    @Column(name = "HREF", nullable = true)
-    private String href;
-
-    @Column(name = "NAME", nullable = true)
-    private String name;
-
-    @Column(name = "DESCRIPTION", nullable = true)
-    private String description;
-
-    @Column(name = "LAST_UPDATE", nullable = true)
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date lastUpdate;
-
-    @Column(name = "LIFECYCLE_STATUS", nullable = true)
-    private LifecycleStatus lifecycleStatus;
-
-    private TimeRange validFor;
 
     @Column(name = "IS_BUNDLE", nullable = true)
     private Boolean isBundle;
@@ -353,86 +308,6 @@ public class ProductOffering extends AbstractEntity implements Serializable {
     public ProductOffering() {
     }
 
-    public String getCatalogId() {
-        return catalogId;
-    }
-
-    public void setCatalogId(String catalogId) {
-        this.catalogId = catalogId;
-    }
-
-    public Float getCatalogVersion() {
-        return catalogVersion;
-    }
-
-    public void setCatalogVersion(Float catalogVersion) {
-        this.catalogVersion = catalogVersion;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public Float getVersion() {
-        return version;
-    }
-
-    public void setVersion(Float version) {
-        this.version = version;
-    }
-
-    public String getHref() {
-        return href;
-    }
-
-    public void setHref(String href) {
-        this.href = href;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Date getLastUpdate() {
-        return lastUpdate;
-    }
-
-    public void setLastUpdate(Date lastUpdate) {
-        this.lastUpdate = lastUpdate;
-    }
-
-    public LifecycleStatus getLifecycleStatus() {
-        return lifecycleStatus;
-    }
-
-    public void setLifecycleStatus(LifecycleStatus lifecycleStatus) {
-        this.lifecycleStatus = lifecycleStatus;
-    }
-
-    public TimeRange getValidFor() {
-        return validFor;
-    }
-
-    public void setValidFor(TimeRange validFor) {
-        this.validFor = validFor;
-    }
-
     public Boolean getIsBundle() {
         return isBundle;
     }
@@ -505,25 +380,12 @@ public class ProductOffering extends AbstractEntity implements Serializable {
         this.resourceCandidate = resourceCandidate;
     }
 
-    @JsonProperty(value = "validFor")
-    public TimeRange validForToJson() {
-        return (validFor != null && validFor.isEmpty() == false) ? validFor : null;
-    }
-
     @Override
     public int hashCode() {
         int hash = 5;
 
-        hash = 73 * hash + (this.catalogId != null ? this.catalogId.hashCode() : 0);
-        hash = 73 * hash + (this.catalogVersion != null ? this.catalogVersion.hashCode() : 0);
-        hash = 73 * hash + (this.id != null ? this.id.hashCode() : 0);
-        hash = 73 * hash + (this.version != null ? this.version.hashCode() : 0);
-        hash = 73 * hash + (this.href != null ? this.href.hashCode() : 0);
-        hash = 73 * hash + (this.name != null ? this.name.hashCode() : 0);
-        hash = 73 * hash + (this.description != null ? this.description.hashCode() : 0);
-        hash = 73 * hash + (this.lastUpdate != null ? this.lastUpdate.hashCode() : 0);
-        hash = 73 * hash + (this.lifecycleStatus != null ? this.lifecycleStatus.hashCode() : 0);
-        hash = 73 * hash + (this.validFor != null ? this.validFor.hashCode() : 0);
+        hash = 73 * hash + super.hashCode();
+
         hash = 73 * hash + (this.isBundle != null ? this.isBundle.hashCode() : 0);
         hash = 73 * hash + (this.category != null ? this.category.hashCode() : 0);
         hash = 73 * hash + (this.channel != null ? this.channel.hashCode() : 0);
@@ -539,50 +401,11 @@ public class ProductOffering extends AbstractEntity implements Serializable {
 
     @Override
     public boolean equals(Object object) {
-        if (object == null || getClass() != object.getClass()) {
+        if (super.equals(object) == false) {
             return false;
         }
 
         final ProductOffering other = (ProductOffering) object;
-        if (Utilities.areEqual(this.catalogId, other.catalogId) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.catalogVersion, other.catalogVersion) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.id, other.id) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.version, other.version) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.href, other.href) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.name, other.name) == false) {
-            return false;
-        }
-        if (Utilities.areEqual(this.description, other.description) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.lastUpdate, other.lastUpdate) == false) {
-            return false;
-        }
-
-        if (this.lifecycleStatus != other.lifecycleStatus) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.validFor, other.validFor) == false) {
-            return false;
-        }
-
         if (Utilities.areEqual(this.isBundle, other.isBundle) == false) {
             return false;
         }
@@ -624,35 +447,13 @@ public class ProductOffering extends AbstractEntity implements Serializable {
 
     @Override
     public String toString() {
-        return "ProductOffering{" + "catalogId=" + catalogId + ", catalogVersion=" + catalogVersion + ", id=" + id + ", version=" + version + ", href=" + href + ", name=" + name + ", description=" + description + ", lastUpdate=" + lastUpdate + ", lifecycleStatus=" + lifecycleStatus + ", validFor=" + validFor + ", isBundle=" + isBundle + ", category=" + category + ", channel=" + channel + ", place=" + place + ", bundledProductOffering=" + bundledProductOffering + ", serviceLevelAgreement=" + serviceLevelAgreement + ", productSpecification=" + productSpecification + ", serviceCandidate=" + serviceCandidate + ", resourceCandidate=" + resourceCandidate + '}';
+        return "ProductOffering{<" + super.toString() + ">, isBundle=" + isBundle + ", category=" + category + ", channel=" + channel + ", place=" + place + ", bundledProductOffering=" + bundledProductOffering + ", serviceLevelAgreement=" + serviceLevelAgreement + ", productSpecification=" + productSpecification + ", serviceCandidate=" + serviceCandidate + ", resourceCandidate=" + resourceCandidate + '}';
     }
 
-    public boolean keysMatch(ProductOffering input) {
-        if (input == null) {
-            return false;
-        }
-
-        if (input == this) {
-            return true;
-        }
-
-        if (Utilities.areEqual(this.catalogId, input.catalogId) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.catalogVersion, input.catalogVersion) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.id, input.id) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.version, input.version) == false) {
-            return false;
-        }
-
-        return true;
+    @Override
+    @JsonIgnore
+    public Logger getLogger() {
+        return logger;
     }
 
     public void edit(ProductOffering input) {
@@ -660,29 +461,7 @@ public class ProductOffering extends AbstractEntity implements Serializable {
             return;
         }
 
-        if (this.href == null) {
-            this.href = input.href;
-        }
-
-        if (this.name == null) {
-            this.name = input.name;
-        }
-
-        if (this.description == null) {
-            this.description = input.description;
-        }
-
-        if (this.lastUpdate == null) {
-            this.lastUpdate = input.lastUpdate;
-        }
-
-        if (this.lifecycleStatus == null) {
-            this.lifecycleStatus = input.lifecycleStatus;
-        }
-
-        if (this.validFor == null) {
-            this.validFor = input.validFor;
-        }
+        super.edit(input);
 
         if (this.isBundle == null) {
             this.isBundle = input.isBundle;
@@ -725,13 +504,7 @@ public class ProductOffering extends AbstractEntity implements Serializable {
     public boolean isValid() {
         logger.log(Level.FINE, "ProductOffering:valid ()");
 
-        if (Utilities.hasValue(this.name) == false) {
-            logger.log(Level.FINE, " invalid: name is required");
-            return false;
-        }
-
-        if (this.validFor != null && this.validFor.isValid() == false) {
-            logger.log(Level.FINE, " invalid: validFor");
+        if (super.isValid() == false) {
             return false;
         }
 
@@ -777,27 +550,18 @@ public class ProductOffering extends AbstractEntity implements Serializable {
         }
     }
 
-    @PrePersist
-    private void onCreate() {
-        lastUpdate = new Date();
-    }
-
-    @PreUpdate
-    protected void onUpdate() {
-        lastUpdate = new Date();
-    }
-
     public static ProductOffering createProto() {
         ProductOffering productOffering = new ProductOffering();
 
-        productOffering.id = "id";
-        productOffering.version = 3.43f;
-        productOffering.href = "href";
-        productOffering.name = "name";
-        productOffering.description = "description";
-        productOffering.lastUpdate = new Date();
-        productOffering.lifecycleStatus = LifecycleStatus.ACTIVE;
-        productOffering.validFor = TimeRange.createProto();
+        productOffering.setId("id");
+        productOffering.setVersion(3.43f);
+        productOffering.setHref("href");
+        productOffering.setName("name");
+        productOffering.setDescription("description");
+        productOffering.setLastUpdate(new Date());
+        productOffering.setLifecycleStatus(LifecycleStatus.ACTIVE);
+        productOffering.setValidFor(TimeRange.createProto());
+
         productOffering.isBundle = true;
 
         productOffering.category = new ArrayList<Reference>();

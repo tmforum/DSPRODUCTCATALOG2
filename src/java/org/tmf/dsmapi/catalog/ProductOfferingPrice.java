@@ -7,18 +7,10 @@ import java.util.logging.Logger;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.IdClass;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.codehaus.jackson.annotate.JsonIgnore;
-import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 /**
@@ -72,47 +64,10 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 @IdClass(ProductOfferingPriceId.class)
 @Table(name = "CRI_PRODUCT_OFFERING_PRICE")
-public class ProductOfferingPrice extends AbstractEntity implements Serializable {
+public class ProductOfferingPrice extends AbstractCatalogEntity implements Serializable {
     private final static long serialVersionUID = 1L;
 
     private final static Logger logger = Logger.getLogger(ProductOfferingPrice.class.getName());
-
-    @Id
-    @Column(name = "CATALOG_ID", nullable = false)
-    @JsonIgnore
-    private String catalogId;
-
-    @Id
-    @Column(name = "CATALOG_VERSION", nullable = false)
-    @JsonIgnore
-    private Float catalogVersion;
-
-    @Id
-    @Column(name = "ID", nullable = false)
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
-
-    @Id
-    @Column(name = "VERSION", nullable = false)
-    private Float version;
-
-    @Column(name = "HREF", nullable = true)
-    private String href;
-
-    @Column(name = "NAME", nullable = true)
-    private String name;
-
-    @Column(name = "DESCRIPTION", nullable = true)
-    private String description;
-
-    @Column(name = "LAST_UPDATE", nullable = true)
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date lastUpdate;
-
-    @Column(name = "LIFECYCLE_STATUS", nullable = true)
-    private LifecycleStatus lifecycleStatus;
-
-    private TimeRange validFor;
 
     @Column(name = "PRICE_TYPE", nullable = true)
     private ProductOfferingPriceType priceType;
@@ -130,86 +85,6 @@ public class ProductOfferingPrice extends AbstractEntity implements Serializable
     private ProductOfferPriceAlteration productOfferPriceAlteration;
 
     public ProductOfferingPrice() {
-    }
-
-    public String getCatalogId() {
-        return catalogId;
-    }
-
-    public void setCatalogId(String catalogId) {
-        this.catalogId = catalogId;
-    }
-
-    public Float getCatalogVersion() {
-        return catalogVersion;
-    }
-
-    public void setCatalogVersion(Float catalogVersion) {
-        this.catalogVersion = catalogVersion;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public Float getVersion() {
-        return version;
-    }
-
-    public void setVersion(Float version) {
-        this.version = version;
-    }
-
-    public String getHref() {
-        return href;
-    }
-
-    public void setHref(String href) {
-        this.href = href;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Date getLastUpdate() {
-        return lastUpdate;
-    }
-
-    public void setLastUpdate(Date lastUpdate) {
-        this.lastUpdate = lastUpdate;
-    }
-
-    public LifecycleStatus getLifecycleStatus() {
-        return lifecycleStatus;
-    }
-
-    public void setLifecycleStatus(LifecycleStatus lifecycleStatus) {
-        this.lifecycleStatus = lifecycleStatus;
-    }
-
-    public TimeRange getValidFor() {
-        return validFor;
-    }
-
-    public void setValidFor(TimeRange validFor) {
-        this.validFor = validFor;
     }
 
     public ProductOfferingPriceType getPriceType() {
@@ -252,25 +127,12 @@ public class ProductOfferingPrice extends AbstractEntity implements Serializable
         this.productOfferPriceAlteration = productOfferPriceAlteration;
     }
 
-    @JsonProperty(value = "validFor")
-    public TimeRange validForToJson() {
-        return (validFor != null && validFor.isEmpty() == false) ? validFor : null;
-    }
-
     @Override
     public int hashCode() {
         int hash = 7;
 
-        hash = 59 * hash + (this.catalogId != null ? this.catalogId.hashCode() : 0);
-        hash = 59 * hash + (this.catalogVersion != null ? this.catalogVersion.hashCode() : 0);
-        hash = 59 * hash + (this.id != null ? this.id.hashCode() : 0);
-        hash = 59 * hash + (this.version != null ? this.version.hashCode() : 0);
-        hash = 59 * hash + (this.href != null ? this.href.hashCode() : 0);
-        hash = 59 * hash + (this.name != null ? this.name.hashCode() : 0);
-        hash = 59 * hash + (this.description != null ? this.description.hashCode() : 0);
-        hash = 59 * hash + (this.lastUpdate != null ? this.lastUpdate.hashCode() : 0);
-        hash = 59 * hash + (this.lifecycleStatus != null ? this.lifecycleStatus.hashCode() : 0);
-        hash = 59 * hash + (this.validFor != null ? this.validFor.hashCode() : 0);
+        hash = 59 * hash + super.hashCode();
+
         hash = 59 * hash + (this.priceType != null ? this.priceType.hashCode() : 0);
         hash = 59 * hash + (this.unitOfMeasure != null ? this.unitOfMeasure.hashCode() : 0);
         hash = 59 * hash + (this.price != null ? this.price.hashCode() : 0);
@@ -282,51 +144,11 @@ public class ProductOfferingPrice extends AbstractEntity implements Serializable
 
     @Override
     public boolean equals(Object object) {
-        if (object == null || getClass() != object.getClass()) {
+        if (super.equals(object) == false) {
             return false;
         }
 
         final ProductOfferingPrice other = (ProductOfferingPrice) object;
-        if (Utilities.areEqual(this.catalogId, other.catalogId) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.catalogVersion, other.catalogVersion) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.id, other.id) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.version, other.version) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.href, other.href) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.name, other.name) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.description, other.description) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.lastUpdate, other.lastUpdate) == false) {
-            return false;
-        }
-
-        if (this.lifecycleStatus != other.lifecycleStatus) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.validFor, other.validFor) == false) {
-            return false;
-        }
-
         if (this.priceType != other.priceType) {
             return false;
         }
@@ -352,35 +174,13 @@ public class ProductOfferingPrice extends AbstractEntity implements Serializable
 
     @Override
     public String toString() {
-        return "ProductOfferingPrice{" + "catalogId=" + catalogId + ", catalogVersion=" + catalogVersion + ", id=" + id + ", version=" + version + ", href=" + href + ", name=" + name + ", description=" + description + ", lastUpdate=" + lastUpdate + ", lifecycleStatus=" + lifecycleStatus + ", validFor=" + validFor + ", priceType=" + priceType + ", unitOfMeasure=" + unitOfMeasure + ", price=" + price + ", recurringChargePeriod=" + recurringChargePeriod + ", productOfferPriceAlteration=" + productOfferPriceAlteration + '}';
+        return "ProductOfferingPrice{<" + super.toString() + ">, priceType=" + priceType + ", unitOfMeasure=" + unitOfMeasure + ", price=" + price + ", recurringChargePeriod=" + recurringChargePeriod + ", productOfferPriceAlteration=" + productOfferPriceAlteration + '}';
     }
 
-    public boolean keysMatch(ProductOfferingPrice input) {
-        if (input == null) {
-            return false;
-        }
-
-        if (input == this) {
-            return true;
-        }
-
-        if (Utilities.areEqual(this.catalogId, input.catalogId) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.catalogVersion, input.catalogVersion) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.id, input.id) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.version, input.version) == false) {
-            return false;
-        }
-
-        return true;
+    @Override
+    @JsonIgnore
+    public Logger getLogger() {
+        return logger;
     }
 
     public void edit(ProductOfferingPrice input) {
@@ -388,29 +188,7 @@ public class ProductOfferingPrice extends AbstractEntity implements Serializable
             return;
         }
 
-        if (this.href == null) {
-            this.href = input.href;
-        }
-
-        if (this.name == null) {
-            this.name = input.name;
-        }
-
-        if (this.description == null) {
-            this.description = input.description;
-        }
-
-        if (this.lastUpdate == null) {
-            this.lastUpdate = input.lastUpdate;
-        }
-
-        if (this.lifecycleStatus == null) {
-            this.lifecycleStatus = input.lifecycleStatus;
-        }
-
-        if (this.validFor == null) {
-            this.validFor = input.validFor;
-        }
+        super.edit(input);
 
         if (this.priceType == null) {
             this.priceType = input.priceType;
@@ -437,13 +215,7 @@ public class ProductOfferingPrice extends AbstractEntity implements Serializable
     public boolean isValid() {
         logger.log(Level.FINE, "ProductOfferingPrice:valid ()");
 
-        if (Utilities.hasValue(this.name) == false) {
-            logger.log(Level.FINE, " invalid: name is required");
-            return false;
-        }
-
-        if (this.validFor != null && this.validFor.isValid() == false) {
-            logger.log(Level.FINE, " invalid: validFor");
+        if (super.isValid() == false) {
             return false;
         }
 
@@ -457,27 +229,18 @@ public class ProductOfferingPrice extends AbstractEntity implements Serializable
         }
     }
 
-    @PrePersist
-    private void onCreate() {
-        lastUpdate = new Date();
-    }
-
-    @PreUpdate
-    protected void onUpdate() {
-        lastUpdate = new Date();
-    }
-
     public static ProductOfferingPrice createProto() {
         ProductOfferingPrice productOfferingPrice = new ProductOfferingPrice();
 
-        productOfferingPrice.id = "id";
-        productOfferingPrice.version = 1.5f;
-        productOfferingPrice.href = "href";
-        productOfferingPrice.name = "name";
-        productOfferingPrice.description = "description";
-        productOfferingPrice.lastUpdate = new Date();
-        productOfferingPrice.lifecycleStatus = LifecycleStatus.ACTIVE;
-        productOfferingPrice.validFor = TimeRange.createProto();
+        productOfferingPrice.setId("id");
+        productOfferingPrice.setVersion(1.5f);
+        productOfferingPrice.setHref("href");
+        productOfferingPrice.setName("name");
+        productOfferingPrice.setDescription("description");
+        productOfferingPrice.setLastUpdate(new Date ());
+        productOfferingPrice.setLifecycleStatus(LifecycleStatus.ACTIVE);
+        productOfferingPrice.setValidFor(TimeRange.createProto ());
+
         productOfferingPrice.priceType = ProductOfferingPriceType.RECURRING;
         productOfferingPrice.unitOfMeasure = "unit of measure";
         productOfferingPrice.price = Price.createProto();

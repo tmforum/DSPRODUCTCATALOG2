@@ -1,6 +1,5 @@
 package org.tmf.dsmapi.catalog;
 
-import org.tmf.dsmapi.catalog.specification.SpecificationRelationship;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -12,20 +11,13 @@ import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.codehaus.jackson.annotate.JsonIgnore;
-import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.tmf.dsmapi.catalog.specification.SpecificationRelationship;
 
 /**
  *
@@ -152,47 +144,10 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 @IdClass(ResourceSpecificationId.class)
 @Table(name = "CRI_RESOURCE_SPECIFICATION")
-public class ResourceSpecification extends AbstractEntity implements Serializable {
+public class ResourceSpecification extends AbstractCatalogEntity implements Serializable {
     private final static long serialVersionUID = 1L;
 
     private final static Logger logger = Logger.getLogger(ResourceSpecification.class.getName());
-
-    @Id
-    @Column(name = "CATALOG_ID", nullable = false)
-    @JsonIgnore
-    private String catalogId;
-
-    @Id
-    @Column(name = "CATALOG_VERSION", nullable = false)
-    @JsonIgnore
-    private Float catalogVersion;
-
-    @Id
-    @Column(name = "ID", nullable = false)
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
-
-    @Id
-    @Column(name = "VERSION", nullable = false)
-    private Float version;
-
-    @Column(name = "HREF", nullable = true)
-    private String href;
-
-    @Column(name = "NAME", nullable = true)
-    private String name;
-
-    @Column(name = "DESCRIPTION", nullable = true)
-    private String description;
-
-    @Column(name = "LAST_UPDATE", nullable = true)
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date lastUpdate;
-
-    @Column(name = "LIFECYCLE_STATUS", nullable = true)
-    private LifecycleStatus lifecycleStatus;
-
-    private TimeRange validFor;
 
     @Column(name = "BRAND", nullable = true)
     private String brand;
@@ -240,86 +195,6 @@ public class ResourceSpecification extends AbstractEntity implements Serializabl
     public ResourceSpecification() {
     }
 
-    public String getCatalogId() {
-        return catalogId;
-    }
-
-    public void setCatalogId(String catalogId) {
-        this.catalogId = catalogId;
-    }
-
-    public Float getCatalogVersion() {
-        return catalogVersion;
-    }
-
-    public void setCatalogVersion(Float catalogVersion) {
-        this.catalogVersion = catalogVersion;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public Float getVersion() {
-        return version;
-    }
-
-    public void setVersion(Float version) {
-        this.version = version;
-    }
-
-    public String getHref() {
-        return href;
-    }
-
-    public void setHref(String href) {
-        this.href = href;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Date getLastUpdate() {
-        return lastUpdate;
-    }
-
-    public void setLastUpdate(Date lastUpdate) {
-        this.lastUpdate = lastUpdate;
-    }
-
-    public LifecycleStatus getLifecycleStatus() {
-        return lifecycleStatus;
-    }
-
-    public void setLifecycleStatus(LifecycleStatus lifecycleStatus) {
-        this.lifecycleStatus = lifecycleStatus;
-    }
-
-    public TimeRange getValidFor() {
-        return validFor;
-    }
-
-    public void setValidFor(TimeRange validFor) {
-        this.validFor = validFor;
-    }
-
     public String getBrand() {
         return brand;
     }
@@ -360,25 +235,12 @@ public class ResourceSpecification extends AbstractEntity implements Serializabl
         this.resourceSpecCharacteristic = resourceSpecCharacteristic;
     }
 
-    @JsonProperty(value = "validFor")
-    public TimeRange validForToJson() {
-        return (validFor != null && validFor.isEmpty() == false) ? validFor : null;
-    }
-
     @Override
     public int hashCode() {
         int hash = 7;
 
-        hash = 89 * hash + (this.catalogId != null ? this.catalogId.hashCode() : 0);
-        hash = 89 * hash + (this.catalogVersion != null ? this.catalogVersion.hashCode() : 0);
-        hash = 89 * hash + (this.id != null ? this.id.hashCode() : 0);
-        hash = 89 * hash + (this.version != null ? this.version.hashCode() : 0);
-        hash = 89 * hash + (this.href != null ? this.href.hashCode() : 0);
-        hash = 89 * hash + (this.name != null ? this.name.hashCode() : 0);
-        hash = 89 * hash + (this.description != null ? this.description.hashCode() : 0);
-        hash = 89 * hash + (this.lastUpdate != null ? this.lastUpdate.hashCode() : 0);
-        hash = 89 * hash + (this.lifecycleStatus != null ? this.lifecycleStatus.hashCode() : 0);
-        hash = 89 * hash + (this.validFor != null ? this.validFor.hashCode() : 0);
+        hash = 89 * hash + super.hashCode();
+
         hash = 89 * hash + (this.brand != null ? this.brand.hashCode() : 0);
         hash = 89 * hash + (this.attachment != null ? this.attachment.hashCode() : 0);
         hash = 89 * hash + (this.relatedParty != null ? this.relatedParty.hashCode() : 0);
@@ -390,51 +252,11 @@ public class ResourceSpecification extends AbstractEntity implements Serializabl
 
     @Override
     public boolean equals(Object object) {
-        if (object == null || this.getClass() != object.getClass()) {
+        if (super.equals(object) == false) {
             return false;
         }
 
         final ResourceSpecification other = (ResourceSpecification) object;
-        if (Utilities.areEqual(this.catalogId, other.catalogId) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.catalogVersion, other.catalogVersion) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.id, other.id) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.version, other.version) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.href, other.href) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.name, other.name) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.description, other.description) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.lastUpdate, other.lastUpdate) == false) {
-            return false;
-        }
-
-        if (this.lifecycleStatus != other.lifecycleStatus) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.validFor, other.validFor) == false) {
-            return false;
-        }
-
         if (Utilities.areEqual(this.brand, other.brand) == false) {
             return false;
         }
@@ -460,35 +282,13 @@ public class ResourceSpecification extends AbstractEntity implements Serializabl
 
     @Override
     public String toString() {
-        return "ResourceSpecification{" + "catalogId=" + catalogId + ", catalogVersion=" + catalogVersion + ", id=" + id + ", version=" + version + ", href=" + href + ", name=" + name + ", description=" + description + ", lastUpdate=" + lastUpdate + ", lifecycleStatus=" + lifecycleStatus + ", validFor=" + validFor + ", brand=" + brand + ", attachment=" + attachment + ", relatedParty=" + relatedParty + ", resourceSpecificationRelationship=" + resourceSpecificationRelationship + ", resourceSpecCharacteristic=" + resourceSpecCharacteristic + '}';
+        return "ResourceSpecification{<" + super.toString() + ">, brand=" + brand + ", attachment=" + attachment + ", relatedParty=" + relatedParty + ", resourceSpecificationRelationship=" + resourceSpecificationRelationship + ", resourceSpecCharacteristic=" + resourceSpecCharacteristic + '}';
     }
 
-    public boolean keysMatch(ResourceSpecification input) {
-        if (input == null) {
-            return false;
-        }
-
-        if (input == this) {
-            return true;
-        }
-
-        if (Utilities.areEqual(this.catalogId, input.catalogId) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.catalogVersion, input.catalogVersion) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.id, input.id) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.version, input.version) == false) {
-            return false;
-        }
-
-        return true;
+    @Override
+    @JsonIgnore
+    public Logger getLogger() {
+        return logger;
     }
 
     public void edit(ResourceSpecification input) {
@@ -496,29 +296,7 @@ public class ResourceSpecification extends AbstractEntity implements Serializabl
             return;
         }
 
-        if (this.href == null) {
-            this.href = input.href;
-        }
-
-        if (this.name == null) {
-            this.name = input.name;
-        }
-
-        if (this.description == null) {
-            this.description = input.description;
-        }
-
-        if (this.lastUpdate == null) {
-            this.lastUpdate = input.lastUpdate;
-        }
-
-        if (this.lifecycleStatus == null) {
-            this.lifecycleStatus = input.lifecycleStatus;
-        }
-
-        if (this.validFor == null) {
-            this.validFor = input.validFor;
-        }
+        super.edit(input);
 
         if (this.brand == null) {
             this.brand = input.brand;
@@ -545,13 +323,7 @@ public class ResourceSpecification extends AbstractEntity implements Serializabl
     public boolean isValid() {
         logger.log(Level.FINE, "ResourceSpecification:valid ()");
 
-        if (Utilities.hasValue(this.name) == false) {
-            logger.log(Level.FINE, " invalid: name is required");
-            return false;
-        }
-
-        if (this.validFor != null && this.validFor.isValid() == false) {
-            logger.log(Level.FINE, " invalid: validFor");
+        if (super.isValid() == false) {
             return false;
         }
 
@@ -562,27 +334,18 @@ public class ResourceSpecification extends AbstractEntity implements Serializabl
     public void getEnclosedEntities(int depth) {
     }
 
-    @PrePersist
-    private void onCreate() {
-        lastUpdate = new Date ();
-    }
-
-    @PreUpdate
-    protected void onUpdate() {
-        lastUpdate = new Date ();
-    }
-
     public static ResourceSpecification createProto() {
         ResourceSpecification resourceSpecification = new ResourceSpecification();
 
-        resourceSpecification.id = "id";
-        resourceSpecification.version = 2.9f;
-        resourceSpecification.href = "href";
-        resourceSpecification.name = "name";
-        resourceSpecification.description = "description";
-        resourceSpecification.lastUpdate = new Date();
-        resourceSpecification.lifecycleStatus = LifecycleStatus.ACTIVE;
-        resourceSpecification.validFor = TimeRange.createProto();
+        resourceSpecification.setId("id");
+        resourceSpecification.setVersion(2.9f);
+        resourceSpecification.setHref("href");
+        resourceSpecification.setName("name");
+        resourceSpecification.setDescription("description");
+        resourceSpecification.setLastUpdate(new Date ());
+        resourceSpecification.setLifecycleStatus(LifecycleStatus.ACTIVE);
+        resourceSpecification.setValidFor(TimeRange.createProto ());
+
         resourceSpecification.brand = "brand";
 
         resourceSpecification.attachment = new ArrayList<Attachment>();
