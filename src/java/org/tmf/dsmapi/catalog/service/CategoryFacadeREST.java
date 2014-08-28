@@ -39,7 +39,7 @@ public class CategoryFacadeREST {
 
     @EJB
     private CategoryFacade manager;
-    
+
     /*
      *
      */
@@ -59,6 +59,8 @@ public class CategoryFacadeREST {
             logger.log(Level.FINE, "input is required");
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
+
+        input.setDefaults();
 
         if (input.isValid() == false) {
             logger.log(Level.FINE, "input is not valid");

@@ -50,7 +50,6 @@ public class Category extends AbstractCatalogEntity implements Serializable {
     private Boolean isRoot;
 
     public Category() {
-        isRoot = true;
     }
 
     public String getParentId() {
@@ -108,6 +107,14 @@ public class Category extends AbstractCatalogEntity implements Serializable {
     @JsonIgnore
     public Logger getLogger() {
         return logger;
+    }
+
+    @Override
+    @JsonIgnore
+    public void setDefaults() {
+        if (isRoot == null) {
+            isRoot = true;
+        }
     }
 
     public void edit(Category input) {

@@ -89,7 +89,6 @@ public class Catalog extends AbstractEntity implements Serializable {
     private List<RelatedParty> relatedParty;
 
     public Catalog() {
-        setVersion(Catalog.getDefaultEntityVersion());
     }
 
     public CatalogType getType() {
@@ -166,6 +165,15 @@ public class Catalog extends AbstractEntity implements Serializable {
     @JsonIgnore
     public Logger getLogger() {
         return logger;
+    }
+
+    @Override
+    @JsonIgnore
+    public void setDefaults() {
+        if (getVersion() == null) {
+             setVersion(Catalog.getDefaultEntityVersion());
+        }
+
     }
 
     public void edit(Catalog input) {

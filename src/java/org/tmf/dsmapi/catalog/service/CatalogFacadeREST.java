@@ -46,7 +46,7 @@ public class CatalogFacadeREST {
      */
     public CatalogFacadeREST() {
     }
-    
+
     /*
      *
      */
@@ -61,6 +61,8 @@ public class CatalogFacadeREST {
            return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
+        input.setDefaults();
+        
         if (input.isValid() == false) {
             logger.log(Level.FINE, "input is not valid");
             return Response.status(Response.Status.BAD_REQUEST).build();

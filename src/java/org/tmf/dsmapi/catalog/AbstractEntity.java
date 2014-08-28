@@ -210,6 +210,10 @@ public abstract class AbstractEntity implements Serializable {
         return true;
     }
 
+    @JsonIgnore
+    public void setDefaults() {
+    }
+
     public void edit(AbstractEntity input) {
         if (input == null || input == this) {
             return;
