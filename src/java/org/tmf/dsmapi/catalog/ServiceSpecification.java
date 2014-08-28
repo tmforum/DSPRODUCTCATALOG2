@@ -175,7 +175,7 @@ import org.tmf.dsmapi.catalog.specification.SpecificationRelationship;
 @Entity
 @XmlRootElement
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
-@IdClass(ServiceSpecificationId.class)
+@IdClass(CatalogEntityId.class)
 @Table(name = "CRI_SERVICE_SPECIFICATION")
 public class ServiceSpecification extends AbstractCatalogEntity implements Serializable {
     private final static long serialVersionUID = 1L;

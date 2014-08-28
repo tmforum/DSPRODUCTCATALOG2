@@ -142,7 +142,7 @@ import org.tmf.dsmapi.catalog.specification.SpecificationRelationship;
 @Entity
 @XmlRootElement
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
-@IdClass(ResourceSpecificationId.class)
+@IdClass(CatalogEntityId.class)
 @Table(name = "CRI_RESOURCE_SPECIFICATION")
 public class ResourceSpecification extends AbstractCatalogEntity implements Serializable {
     private final static long serialVersionUID = 1L;

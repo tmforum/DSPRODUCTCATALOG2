@@ -62,7 +62,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 @Entity
 @XmlRootElement
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
-@IdClass(ProductOfferingPriceId.class)
+@IdClass(CatalogEntityId.class)
 @Table(name = "CRI_PRODUCT_OFFERING_PRICE")
 public class ProductOfferingPrice extends AbstractCatalogEntity implements Serializable {
     private final static long serialVersionUID = 1L;
