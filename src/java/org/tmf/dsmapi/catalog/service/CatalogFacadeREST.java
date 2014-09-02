@@ -272,7 +272,7 @@ public class CatalogFacadeREST {
         if (input.keysMatch(entity)) {
             input.setHref(buildHref_(uriInfo, input.getId(), input.getVersion()));
             manager.edit(input);
-            return Response.status(Response.Status.CREATED).entity(input).build();
+            return Response.status(Response.Status.CREATED).entity(entity).build();
         }
 
         manager.remove(entity);
@@ -318,7 +318,7 @@ public class CatalogFacadeREST {
         if (input.getVersion() == null) {
             input.setVersion(entity.getVersion());
             manager.edit(input);
-            return Response.status(Response.Status.CREATED).entity(input).build();
+            return Response.status(Response.Status.CREATED).entity(entity).build();
         }
 
         if (input.getVersion() <= entity.getVersion()) {

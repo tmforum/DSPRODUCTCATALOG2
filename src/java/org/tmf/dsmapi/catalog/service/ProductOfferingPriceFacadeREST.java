@@ -274,7 +274,7 @@ public class ProductOfferingPriceFacadeREST {
         if (input.keysMatch(entity)) {
             input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getVersion()));
             manager.edit(input);
-            return Response.status(Response.Status.CREATED).entity(input).build();
+            return Response.status(Response.Status.CREATED).entity(entity).build();
         }
 
         manager.remove(entity);
@@ -322,7 +322,7 @@ public class ProductOfferingPriceFacadeREST {
         if (input.getVersion() == null) {
             input.setVersion(entity.getVersion());
             manager.edit(input);
-            return Response.status(Response.Status.CREATED).entity(input).build();
+            return Response.status(Response.Status.CREATED).entity(entity).build();
         }
 
         if (input.getVersion() <= entity.getVersion()) {
