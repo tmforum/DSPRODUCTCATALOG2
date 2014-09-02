@@ -67,6 +67,11 @@ public class ServiceSpecificationFacadeREST {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
+        if (input.canLifecycleTransitionFrom (null) == false) {
+            logger.log(Level.FINE, "invalid lifecycleStatus: {0}", input.getLifecycleStatus());
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+
         input.setCatalogId(ServiceSpecification.getDefaultCatalogId());
         input.setCatalogVersion(ServiceSpecification.getDefaultCatalogVersion());
         manager.create(input);
@@ -258,6 +263,11 @@ public class ServiceSpecificationFacadeREST {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
+        if (input.canLifecycleTransitionFrom (entity.getLifecycleStatus()) == false) {
+            logger.log(Level.FINE, "invalid lifecycleStatus transition: {0} => {1}", new Object[]{entity.getLifecycleStatus(), input.getLifecycleStatus()});
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+
         input.setCatalogId(ServiceSpecification.getDefaultCatalogId());
         input.setCatalogVersion(ServiceSpecification.getDefaultCatalogVersion());
 
@@ -304,6 +314,11 @@ public class ServiceSpecificationFacadeREST {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
+        if (input.canLifecycleTransitionFrom (entity.getLifecycleStatus()) == false) {
+            logger.log(Level.FINE, "invalid lifecycleStatus transition: {0} => {1}", new Object[]{entity.getLifecycleStatus(), input.getLifecycleStatus()});
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+        
         if (input.getVersion() == null) {
             input.setVersion(entity.getVersion());
             manager.edit(input);

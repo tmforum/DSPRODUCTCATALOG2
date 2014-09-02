@@ -212,6 +212,9 @@ public abstract class AbstractEntity implements Serializable {
 
     @JsonIgnore
     public void setDefaults() {
+        if (lifecycleStatus == null) {
+            lifecycleStatus = LifecycleStatus.IN_STUDY;
+        }
     }
 
     public void edit(AbstractEntity input) {
@@ -261,6 +264,14 @@ public abstract class AbstractEntity implements Serializable {
         return true;
     }
 
+    public boolean canLifecycleTransitionFrom(LifecycleStatus fromStatus) {
+        if (lifecycleStatus == null) {
+            return false;
+        }
+
+        return (lifecycleStatus.canTransitionFrom(fromStatus));
+    }
+    
     public abstract void getEnclosedEntities(int depth);
 
     @PrePersist

@@ -34,6 +34,82 @@ public enum LifecycleStatus {
         return this.value;
     }
 
+    public boolean canTransitionFrom(LifecycleStatus currentStatus) {
+        if (this == currentStatus) {
+            return true;
+        }
+        
+        switch(this) {
+            case IN_STUDY: {
+                if (currentStatus == null) {
+                    return true;
+                }
+
+                return false;
+            }
+
+            case IN_DESIGN: {
+                if (currentStatus == null || currentStatus == IN_STUDY || currentStatus == IN_TEST) {
+                    return true;
+                }
+
+                return false;
+            }
+
+            case IN_TEST : {
+                if (currentStatus == null || currentStatus == IN_DESIGN) {
+                    return true;
+                }
+
+                return false;
+            }
+
+            case ACTIVE : {
+                if (currentStatus == null || currentStatus == IN_TEST) {
+                    return true;
+                }
+
+                return false;
+            }
+
+            case LAUNCHED : {
+                if (currentStatus == null || currentStatus == ACTIVE) {
+                    return true;
+                }
+
+                return false;
+            }
+
+            case RETIRED : {
+                if (currentStatus == ACTIVE || currentStatus == LAUNCHED) {
+                    return true;
+                }
+
+                return false;
+            }
+
+            case OBSOLETE : {
+                if (currentStatus == RETIRED) {
+                    return true;
+                }
+
+                return false;
+            }
+
+            case REJECTED : {
+                if (currentStatus == IN_TEST) {
+                    return true;
+                }
+
+                return false;
+            }
+
+            default : {
+                return false;
+            }
+        }
+    }
+
     @JsonCreator
     public static LifecycleStatus find(String value) {
         for (LifecycleStatus lifecycleStatus : values ()) {

@@ -170,10 +170,11 @@ public class Catalog extends AbstractEntity implements Serializable {
     @Override
     @JsonIgnore
     public void setDefaults() {
+        super.setDefaults();
+
         if (getVersion() == null) {
              setVersion(Catalog.getDefaultEntityVersion());
         }
-
     }
 
     public void edit(Catalog input) {

@@ -67,6 +67,11 @@ public class ServiceCandidateFacadeREST {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
+        if (input.canLifecycleTransitionFrom (null) == false) {
+            logger.log(Level.FINE, "invalid lifecycleStatus: {0}", input.getLifecycleStatus());
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+
         input.setCatalogId(ServiceCandidate.getDefaultCatalogId());
         input.setCatalogVersion(ServiceCandidate.getDefaultCatalogVersion());
         manager.create(input);
@@ -258,6 +263,11 @@ public class ServiceCandidateFacadeREST {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
+        if (input.canLifecycleTransitionFrom (entity.getLifecycleStatus()) == false) {
+            logger.log(Level.FINE, "invalid lifecycleStatus transition: {0} => {1}", new Object[]{entity.getLifecycleStatus(), input.getLifecycleStatus()});
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+
         input.setCatalogId(ServiceCandidate.getDefaultCatalogId());
         input.setCatalogVersion(ServiceCandidate.getDefaultCatalogVersion());
 
@@ -301,6 +311,11 @@ public class ServiceCandidateFacadeREST {
 
         if(entity.isValid() == false) {
             logger.log(Level.FINE, "patched ServiceCandidate would be invalid");
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+
+        if (input.canLifecycleTransitionFrom (entity.getLifecycleStatus()) == false) {
+            logger.log(Level.FINE, "invalid lifecycleStatus transition: {0} => {1}", new Object[]{entity.getLifecycleStatus(), input.getLifecycleStatus()});
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 

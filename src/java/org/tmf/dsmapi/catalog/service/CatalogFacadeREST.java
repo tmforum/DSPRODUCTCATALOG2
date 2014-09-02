@@ -62,9 +62,14 @@ public class CatalogFacadeREST {
         }
 
         input.setDefaults();
-        
+
         if (input.isValid() == false) {
             logger.log(Level.FINE, "input is not valid");
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+
+        if (input.canLifecycleTransitionFrom (null) == false) {
+            logger.log(Level.FINE, "invalid lifecycleStatus: {0}", input.getLifecycleStatus());
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
@@ -259,6 +264,11 @@ public class CatalogFacadeREST {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
+        if (input.canLifecycleTransitionFrom (entity.getLifecycleStatus()) == false) {
+            logger.log(Level.FINE, "invalid lifecycleStatus transition: {0} => {1}", new Object[]{entity.getLifecycleStatus(), input.getLifecycleStatus()});
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+
         if (input.keysMatch(entity)) {
             input.setHref(buildHref_(uriInfo, input.getId(), input.getVersion()));
             manager.edit(input);
@@ -297,6 +307,11 @@ public class CatalogFacadeREST {
 
         if(entity.isValid() == false) {
             logger.log(Level.FINE, "patched Catalog would be invalid");
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+
+        if (input.canLifecycleTransitionFrom (entity.getLifecycleStatus()) == false) {
+            logger.log(Level.FINE, "invalid lifecycleStatus transition: {0} => {1}", new Object[]{entity.getLifecycleStatus(), input.getLifecycleStatus()});
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
