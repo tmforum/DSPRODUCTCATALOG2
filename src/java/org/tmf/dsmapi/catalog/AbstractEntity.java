@@ -151,7 +151,7 @@ public abstract class AbstractEntity implements Serializable {
             return false;
         }
 
-        if (Utilities.areEqual(this.validFor, other.version) == false) {
+        if (Utilities.areEqual(this.version, other.version) == false) {
             return false;
         }
 
