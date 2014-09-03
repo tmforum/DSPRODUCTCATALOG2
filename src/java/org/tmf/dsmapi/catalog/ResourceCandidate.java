@@ -191,6 +191,7 @@ public class ResourceCandidate extends AbstractCatalogEntity implements Serializ
         }
     }
 
+    @Override
     @JsonIgnore
     public boolean isValid() {
         logger.log(Level.FINE, "ResourceCandidate:valid ()");

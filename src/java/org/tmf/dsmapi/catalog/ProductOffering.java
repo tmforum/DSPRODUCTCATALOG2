@@ -500,6 +500,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         }
     }
 
+    @Override
     @JsonIgnore
     public boolean isValid() {
         logger.log(Level.FINE, "ProductOffering:valid ()");

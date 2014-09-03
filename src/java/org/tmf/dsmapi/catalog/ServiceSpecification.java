@@ -406,6 +406,7 @@ public class ServiceSpecification extends AbstractCatalogEntity implements Seria
         }
     }
 
+    @Override
     @JsonIgnore
     public boolean isValid() {
         logger.log(Level.FINE, "ServiceSpecification:valid ()");

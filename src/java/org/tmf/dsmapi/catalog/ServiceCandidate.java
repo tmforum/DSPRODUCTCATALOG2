@@ -191,6 +191,7 @@ public class ServiceCandidate extends AbstractCatalogEntity implements Serializa
         }
     }
 
+    @Override
     @JsonIgnore
     public boolean isValid() {
         logger.log(Level.FINE, "ServiceCandidate:valid ()");

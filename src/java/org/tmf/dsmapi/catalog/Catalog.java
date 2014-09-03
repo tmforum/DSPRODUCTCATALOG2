@@ -197,6 +197,7 @@ public class Catalog extends AbstractEntity implements Serializable {
         }
     }
 
+    @Override
     @JsonIgnore
     public boolean isValid() {
         logger.log(Level.FINE, "Catalog:valid ()");

@@ -451,6 +451,7 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         }
     }
 
+    @Override
     @JsonIgnore
     public boolean isValid() {
         logger.log(Level.FINE, "ProductSpecification:valid ()");

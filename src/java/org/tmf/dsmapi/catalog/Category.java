@@ -135,6 +135,7 @@ public class Category extends AbstractCatalogEntity implements Serializable {
         }
     }
 
+    @Override
     @JsonIgnore
     public boolean isValid() {
         logger.log(Level.FINE, "Category:valid ()");

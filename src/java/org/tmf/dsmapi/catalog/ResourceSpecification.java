@@ -319,6 +319,7 @@ public class ResourceSpecification extends AbstractCatalogEntity implements Seri
         }
     }
 
+    @Override
     @JsonIgnore
     public boolean isValid() {
         logger.log(Level.FINE, "ResourceSpecification:valid ()");

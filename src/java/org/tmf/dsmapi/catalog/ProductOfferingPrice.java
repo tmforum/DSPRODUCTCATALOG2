@@ -211,6 +211,7 @@ public class ProductOfferingPrice extends AbstractCatalogEntity implements Seria
         }
     }
 
+    @Override
     @JsonIgnore
     public boolean isValid() {
         logger.log(Level.FINE, "ProductOfferingPrice:valid ()");
