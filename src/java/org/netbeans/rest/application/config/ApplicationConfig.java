@@ -28,8 +28,12 @@ public class ApplicationConfig extends Application {
         resources.add(org.tmf.dsmapi.catalog.service.CategoryInCatalogIdVersionFacadeREST.class);
         resources.add(org.tmf.dsmapi.catalog.service.JacksonConfigurator.class);
         resources.add(org.tmf.dsmapi.catalog.service.ProductOfferingFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.ProductOfferingInCatalogIdFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.ProductOfferingInCatalogIdVersionFacadeREST.class);
         resources.add(org.tmf.dsmapi.catalog.service.ProductOfferingPriceFacadeREST.class);
         resources.add(org.tmf.dsmapi.catalog.service.ProductSpecificationFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.ProductSpecificationInCatalogIdFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.ProductSpecificationInCatalogIdVersionFacadeREST.class);
         resources.add(org.tmf.dsmapi.catalog.service.ResourceCandidateFacadeREST.class);
         resources.add(org.tmf.dsmapi.catalog.service.ResourceSpecificationFacadeREST.class);
         resources.add(org.tmf.dsmapi.catalog.service.ServiceCandidateFacadeREST.class);
