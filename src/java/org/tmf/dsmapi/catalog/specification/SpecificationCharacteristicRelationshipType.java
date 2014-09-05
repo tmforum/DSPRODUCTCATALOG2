@@ -8,7 +8,8 @@ import org.codehaus.jackson.annotate.JsonValue;
  * @author bahman.barzideh
  *
  */
-public enum SpecificationRelationshipType {
+public enum SpecificationCharacteristicRelationshipType {
+    AGGREGATION ("aggregation"),
     MIGRATION   ("migration"),
     SUBSTITUTION("substitution"),
     DEPENDENCY  ("dependency"),
@@ -16,7 +17,7 @@ public enum SpecificationRelationshipType {
 
     private String value;
 
-    private SpecificationRelationshipType(String value) {
+    private SpecificationCharacteristicRelationshipType(String value) {
         this.value = value;
     }
 
@@ -31,10 +32,10 @@ public enum SpecificationRelationshipType {
     }
 
     @JsonCreator
-    public static SpecificationRelationshipType find(String value) {
-        for (SpecificationRelationshipType specificationRelationshipType : values ()) {
-            if (specificationRelationshipType.value.equals (value)) {
-                return (specificationRelationshipType);
+    public static SpecificationCharacteristicRelationshipType find(String value) {
+        for (SpecificationCharacteristicRelationshipType specificationCharacteristicRelationshipType : values ()) {
+            if (specificationCharacteristicRelationshipType.value.equals (value)) {
+                return (specificationCharacteristicRelationshipType);
             }
         }
 

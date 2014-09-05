@@ -34,7 +34,7 @@ public class SpecificationCharacteristicRelationship implements Serializable {
     private TimeRange validFor;
 
     @Column(name = "TYPE", nullable = true)
-    private SpecificationRelationshipType type;
+    private SpecificationCharacteristicRelationshipType type;
 
     public SpecificationCharacteristicRelationship() {
     }
@@ -55,11 +55,11 @@ public class SpecificationCharacteristicRelationship implements Serializable {
         this.validFor = validFor;
     }
 
-    public SpecificationRelationshipType getType() {
+    public SpecificationCharacteristicRelationshipType getType() {
         return type;
     }
 
-    public void setType(SpecificationRelationshipType type) {
+    public void setType(SpecificationCharacteristicRelationshipType type) {
         this.type = type;
     }
 
@@ -67,7 +67,7 @@ public class SpecificationCharacteristicRelationship implements Serializable {
     public TimeRange validForToJson() {
         return (validFor != null && validFor.isEmpty() == false) ? validFor : null;
     }
-    
+
     @Override
     public int hashCode() {
         int hash = 3;
@@ -116,7 +116,7 @@ public class SpecificationCharacteristicRelationship implements Serializable {
 
         specificationCharacteristicRelationship.id = "id";
         specificationCharacteristicRelationship.validFor = TimeRange.createProto();
-        specificationCharacteristicRelationship.type = SpecificationRelationshipType.DEPENDENCY;
+        specificationCharacteristicRelationship.type = SpecificationCharacteristicRelationshipType.DEPENDENCY;
 
         return specificationCharacteristicRelationship;
     }
