@@ -18,7 +18,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
  *
  * {
  *     "id": "42",
- *     "version": 1.2,
+ *     "version": "1.2",
  *     "href": "http://serverlocation:port/catalogManagement/category/42",
  *     "name": "Cloud Services",
  *     "description": "A category to hold all available cloud service offers",
@@ -160,7 +160,7 @@ public class Category extends AbstractCatalogEntity implements Serializable {
         Category category = new Category();
 
         category.setId("id");
-        category.setVersion(1.2f);
+        category.setVersion("1.2");
         category.setHref("href");
         category.setName("name");
         category.setDescription("description");

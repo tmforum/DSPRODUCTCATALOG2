@@ -102,7 +102,7 @@ public class CategoryFacadeREST {
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, Category input, @Context UriInfo uriInfo) {
+    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, Category input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "CategoryFacadeREST:update(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return update_(entityId, entityVersion, input, uriInfo);
@@ -128,7 +128,7 @@ public class CategoryFacadeREST {
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, Category input, @Context UriInfo uriInfo) {
+    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, Category input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "CategoryFacadeREST:edit(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return edit_(entityId, entityVersion, input, uriInfo);
@@ -150,7 +150,7 @@ public class CategoryFacadeREST {
      */
     @DELETE
     @Path("{entityId}:({entityVersion})")
-    public Response remove(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion) {
+    public Response remove(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion) {
         logger.log(Level.FINE, "CategoryFacadeREST:remove(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return remove_(entityId, entityVersion);
@@ -209,7 +209,7 @@ public class CategoryFacadeREST {
     @GET
     @Path("{entityId}:({entityVersion})")
     @Produces({MediaType.APPLICATION_JSON})
-    public Response find(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
+    public Response find(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "CategoryFacadeREST:find(entityId: {0}, entityVersion: {1}, depth: {2})", new Object[]{entityId, entityVersion, depth});
 
         return find_(entityId, entityVersion, depth, uriInfo);
@@ -243,7 +243,7 @@ public class CategoryFacadeREST {
     /*
      *
      */
-    private Response update_(String entityId, Float entityVersion, Category input, UriInfo uriInfo) {
+    private Response update_(String entityId, String entityVersion, Category input, UriInfo uriInfo) {
         logger.log(Level.FINE, "CategoryFacadeREST:update_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
@@ -289,7 +289,7 @@ public class CategoryFacadeREST {
     /*
      *
      */
-    private Response edit_(String entityId, Float entityVersion, Category input, UriInfo uriInfo) {
+    private Response edit_(String entityId, String entityVersion, Category input, UriInfo uriInfo) {
         logger.log(Level.FINE, "CategoryFacadeREST:edit_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
@@ -325,7 +325,7 @@ public class CategoryFacadeREST {
             return Response.status(Response.Status.CREATED).entity(entity).build();
         }
 
-        if (input.getVersion() <= entity.getVersion()) {
+        if (input.hasHigherVersionThan(entity) == false) {
             logger.log(Level.FINE, "specified version ({0}) must be higher than entity version ({1})", new Object[]{input.getVersion(), entity.getVersion()});
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
@@ -341,7 +341,7 @@ public class CategoryFacadeREST {
     /*
      *
      */
-    private Response remove_(String entityId, Float entityVersion) {
+    private Response remove_(String entityId, String entityVersion) {
         logger.log(Level.FINE, "CategoryFacadeREST:remove_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         List<Category> entities = manager.findById(Category.getDefaultCatalogId(), Category.getDefaultCatalogVersion(), entityId, entityVersion);
@@ -356,7 +356,7 @@ public class CategoryFacadeREST {
     /*
      *
      */
-    private Response find_(String entityId, Float entityVersion, int depth, UriInfo uriInfo) {
+    private Response find_(String entityId, String entityVersion, int depth, UriInfo uriInfo) {
         logger.log(Level.FINE, "CategoryFacadeREST:find_(entityId: {0}, entityVersion: {1}, depth: {2})", new Object[]{entityId, entityVersion, depth});
 
         List<Category> entities = manager.findById(Category.getDefaultCatalogId(), Category.getDefaultCatalogVersion(), entityId, entityVersion);

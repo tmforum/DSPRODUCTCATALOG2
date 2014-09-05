@@ -19,7 +19,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
  *
  * {
  *     "id": "15",
- *     "version": 1.5,
+ *     "version": "1.50",
  *     "href": "http://serverlocation:port/catalogManagement/productOfferingPrice/15",
  *     "name": "MonthlyPrice",
  *     "description": "Monthly Price",
@@ -234,7 +234,7 @@ public class ProductOfferingPrice extends AbstractCatalogEntity implements Seria
         ProductOfferingPrice productOfferingPrice = new ProductOfferingPrice();
 
         productOfferingPrice.setId("id");
-        productOfferingPrice.setVersion(1.5f);
+        productOfferingPrice.setVersion("1.50");
         productOfferingPrice.setHref("href");
         productOfferingPrice.setName("name");
         productOfferingPrice.setDescription("description");

@@ -426,7 +426,7 @@ public class ServiceSpecification extends AbstractCatalogEntity implements Seria
         ServiceSpecification serviceSpecification = new ServiceSpecification();
 
         serviceSpecification.setId("id");
-        serviceSpecification.setVersion(7.3f);
+        serviceSpecification.setVersion("7.3");
         serviceSpecification.setHref("href");
         serviceSpecification.setName("name");
         serviceSpecification.setDescription("description");

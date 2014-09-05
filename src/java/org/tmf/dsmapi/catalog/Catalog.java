@@ -25,7 +25,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
  *
  * {
  *     "id": "10",
- *     "version": 1.1,
+ *     "version": "1.1",
  *     "href": "http://serverlocation:port/catalogManagement/catalog/10",
  *     "name": "Catalog Wholesale Business",
  *     "description": "A catalog to hold categories, products, services, and resources",
@@ -39,7 +39,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
  *     "category": [
  *         {
  *             "id": "12",
- *             "version": 1.2,
+ *             "version": "1.2",
  *             "href": "http://serverlocation:port/catalogManagement/category/12",
  *             "name": "Cloud offerings",
  *             "description": " A category to hold all available cloud service offers "
@@ -116,9 +116,9 @@ public class Catalog extends AbstractEntity implements Serializable {
     }
 
     @JsonProperty(value = "version")
-    public Float versionToJson() {
-        Float version = getVersion ();
-        return (version != null && version >= 0.0f) ? version : null;
+    public String versionToJson() {
+        String version = getVersion ();
+        return (Catalog.getDefaultEntityVersion().equals(version) == false) ? version : null;
     }
 
     @Override
@@ -224,15 +224,15 @@ public class Catalog extends AbstractEntity implements Serializable {
         }
     }
 
-    public static Float getDefaultEntityVersion() {
-        return -1.0f;
+    public static String getDefaultEntityVersion() {
+        return "";
     }
 
     public static Catalog createProto() {
         Catalog catalog = new Catalog();
 
         catalog.setId("id");
-        catalog.setVersion(1.1f);
+        catalog.setVersion("1.1");
         catalog.setHref("href");
         catalog.setName("name");
         catalog.setDescription("description");

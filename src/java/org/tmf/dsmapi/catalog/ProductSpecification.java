@@ -25,7 +25,7 @@ import org.tmf.dsmapi.catalog.specification.SpecificationRelationship;
  *
  * {
  *     "id": "22",
- *     "version": 1.72,
+ *     "version": "1.72",
  *     "href": "http://serverlocation:port/catalogManagement/productSpecification/22",
  *     "name": "iPhone 42",
  *     "description": "Siri works on this iPhone",
@@ -494,7 +494,7 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         ProductSpecification productSpecification = new ProductSpecification();
 
         productSpecification.setId("id");
-        productSpecification.setVersion(1.72f);
+        productSpecification.setVersion("1.72");
         productSpecification.setHref("href");
         productSpecification.setName("name");
         productSpecification.setDescription("description");

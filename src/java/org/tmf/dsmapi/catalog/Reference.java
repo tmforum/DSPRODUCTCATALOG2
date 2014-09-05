@@ -4,6 +4,7 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Transient;
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.annotate.JsonUnwrapped;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
@@ -23,7 +24,11 @@ public class Reference implements Serializable {
     private String id;
 
     @Column(name = "VERSION", nullable = true)
-    private Float version;
+    private String version;
+
+    @Transient
+    @JsonIgnore
+    private ParsedVersion parsedVersion;
 
     @Column(name = "HREF", nullable = true)
     private String href;
@@ -50,12 +55,23 @@ public class Reference implements Serializable {
         this.id = id;
     }
 
-    public Float getVersion() {
+    public String getVersion() {
         return version;
     }
 
-    public void setVersion(Float version) {
-        this.version = version;
+    public void setVersion(String version) {
+        if (version == null) {
+            this.version = null;
+            this.parsedVersion = null;
+            return;
+        }
+
+        this.parsedVersion = new ParsedVersion();
+        this.version = parsedVersion.load(version);
+    }
+
+    public ParsedVersion getParsedVersion() {
+        return parsedVersion;
     }
 
     public String getHref() {
@@ -96,7 +112,7 @@ public class Reference implements Serializable {
     }
 
     @JsonProperty(value = "version")
-    public Float versionToJson() {
+    public String versionToJson() {
         return (entity == null) ? version : null;
     }
 
@@ -158,6 +174,11 @@ public class Reference implements Serializable {
         return true;
     }
 
+    @Override
+    public String toString() {
+        return "Reference{" + "id=" + id + ", version=" + version + ", parsedVersion=" + parsedVersion + ", href=" + href + ", name=" + name + ", description=" + description + ", entity=" + entity + '}';
+    }
+
     public void getEnitty(Class<? extends AbstractEntity> theClass, int depth) {
         try {
             entity = (AbstractEntity) CatalogClient.getObject(href, theClass, depth);
@@ -171,7 +192,7 @@ public class Reference implements Serializable {
         Reference reference = new Reference ();
 
         reference.id = "id";
-        reference.version = 1.6f;
+        reference.version = "1.6";
         reference.href = "href";
         reference.name = "name";
         reference.description = "description";

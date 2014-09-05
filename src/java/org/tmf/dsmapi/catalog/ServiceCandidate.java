@@ -26,7 +26,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
  *
  * {
  *     "id": "42",
- *     "version": 2.1,
+ *     "version": "2.1",
  *     "href": "http://serverlocation:port/catalogManagement/serviceCandidate/42",
  *     "name": "Virtual Storage Medium",
  *     "description": "Virtual Storage Medium",
@@ -39,7 +39,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
  *     "category": [
  *         {
  *             "id": "12",
- *             "version": 2.2,
+ *             "version": "2.2",
  *             "href": "http://serverlocation:port/catalogManagement/category/12",
  *             "name": "Cloud service"
  *         }
@@ -51,7 +51,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
  *     },
  *     "serviceSpecification": {
  *         "id": "13",
- *         "version": 1.2,
+ *         "version": "1.2",
  *         "href": "http://serverlocation:port/catalogManagement/serviceSpecification/13",
  *         "name": "specification 1"
  *     }
@@ -226,7 +226,7 @@ public class ServiceCandidate extends AbstractCatalogEntity implements Serializa
         ServiceCandidate serviceCandidate = new ServiceCandidate();
 
         serviceCandidate.setId("id");
-        serviceCandidate.setVersion(1.3f);
+        serviceCandidate.setVersion("1.3");
         serviceCandidate.setHref("href");
         serviceCandidate.setName("name");
         serviceCandidate.setDescription("description");

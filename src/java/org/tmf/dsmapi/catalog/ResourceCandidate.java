@@ -26,7 +26,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
  *
  * {
  *     "id": "42",
- *     "version": 2.8,
+ *     "version": "2.8",
  *     "href": "http://serverlocation:port/catalogManagement/resourceCandidate/42",
  *     "name": "Virtual Storage Medium",
  *     "description": "Virtual Storage Medium",
@@ -226,7 +226,7 @@ public class ResourceCandidate extends AbstractCatalogEntity implements Serializ
         ResourceCandidate resourceCandidate = new ResourceCandidate();
 
         resourceCandidate.setId("id");
-        resourceCandidate.setVersion(1.3f);
+        resourceCandidate.setVersion("1.3");
         resourceCandidate.setHref("href");
         resourceCandidate.setName("name");
         resourceCandidate.setDescription("description");

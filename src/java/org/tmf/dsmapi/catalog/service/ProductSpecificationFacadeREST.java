@@ -102,7 +102,7 @@ public class ProductSpecificationFacadeREST {
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, ProductSpecification input, @Context UriInfo uriInfo) {
+    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, ProductSpecification input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductSpecificationFacadeREST:update(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return update_(entityId, entityVersion, input, uriInfo);
@@ -128,7 +128,7 @@ public class ProductSpecificationFacadeREST {
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, ProductSpecification input, @Context UriInfo uriInfo) {
+    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, ProductSpecification input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductSpecificationFacadeREST:edit(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return edit_(entityId, entityVersion, input, uriInfo);
@@ -150,7 +150,7 @@ public class ProductSpecificationFacadeREST {
      */
     @DELETE
     @Path("{entityId}:({entityVersion})")
-    public Response remove(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion) {
+    public Response remove(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion) {
         logger.log(Level.FINE, "ProductSpecificationFacadeREST:remove(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return remove_(entityId, entityVersion);
@@ -209,7 +209,7 @@ public class ProductSpecificationFacadeREST {
     @GET
     @Path("{entityId}:({entityVersion})")
     @Produces({MediaType.APPLICATION_JSON})
-    public Response find(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
+    public Response find(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductSpecificationFacadeREST:find(entityId: {0}, entityVersion: {1}, depth: {2})", new Object[]{entityId, entityVersion, depth});
 
         return find_(entityId, entityVersion, depth, uriInfo);
@@ -243,7 +243,7 @@ public class ProductSpecificationFacadeREST {
     /*
      *
      */
-    private Response update_(String entityId, Float entityVersion, ProductSpecification input, UriInfo uriInfo) {
+    private Response update_(String entityId, String entityVersion, ProductSpecification input, UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductSpecificationFacadeREST:update_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
@@ -289,7 +289,7 @@ public class ProductSpecificationFacadeREST {
     /*
      *
      */
-    private Response edit_(String entityId, Float entityVersion, ProductSpecification input, UriInfo uriInfo) {
+    private Response edit_(String entityId, String entityVersion, ProductSpecification input, UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductSpecificationFacadeREST:edit_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
@@ -325,7 +325,7 @@ public class ProductSpecificationFacadeREST {
             return Response.status(Response.Status.CREATED).entity(entity).build();
         }
 
-        if (input.getVersion() <= entity.getVersion()) {
+        if (input.hasHigherVersionThan(entity) == false) {
             logger.log(Level.FINE, "specified version ({0}) must be higher than entity version ({1})", new Object[]{input.getVersion(), entity.getVersion()});
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
@@ -341,7 +341,7 @@ public class ProductSpecificationFacadeREST {
     /*
      *
      */
-    private Response remove_(String entityId, Float entityVersion) {
+    private Response remove_(String entityId, String entityVersion) {
         logger.log(Level.FINE, "ProductSpecificationFacadeREST:remove_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         List<ProductSpecification> entities = manager.findById(ProductSpecification.getDefaultCatalogId(), ProductSpecification.getDefaultCatalogVersion(), entityId, entityVersion);
@@ -356,7 +356,7 @@ public class ProductSpecificationFacadeREST {
     /*
      *
      */
-    private Response find_(String entityId, Float entityVersion, int depth, UriInfo uriInfo) {
+    private Response find_(String entityId, String entityVersion, int depth, UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductSpecificationFacadeREST:find_(entityId: {0}, entityVersion: {1}, depth: {2})", new Object[]{entityId, entityVersion, depth});
 
         List<ProductSpecification> entities = manager.findById(ProductSpecification.getDefaultCatalogId(), ProductSpecification.getDefaultCatalogVersion(), entityId, entityVersion);

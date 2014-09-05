@@ -26,7 +26,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
  *
  * {
  *     "id": "42",
- *     "version": 3.43,
+ *     "version": "3.43",
  *     "href": "http://serverlocation:port/catalogManagement/productOffering/42",
  *     "name": "Virtual Storage Medium",
  *     "description": "Virtual Storage Medium",
@@ -555,7 +555,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         ProductOffering productOffering = new ProductOffering();
 
         productOffering.setId("id");
-        productOffering.setVersion(3.43f);
+        productOffering.setVersion("3.43");
         productOffering.setHref("href");
         productOffering.setName("name");
         productOffering.setDescription("description");

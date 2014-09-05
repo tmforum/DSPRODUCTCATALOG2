@@ -25,7 +25,7 @@ import org.tmf.dsmapi.catalog.specification.SpecificationRelationship;
  *
  * {
  *     "id": "22",
- *     "version": 2.9,
+ *     "version": "2.9",
  *     "href": "http://serverlocation:port/catalogManagement/resourceSpecification/22",
  *     "name": "iPhone 42",
  *     "description": "Siri works on this iPhone",
@@ -339,7 +339,7 @@ public class ResourceSpecification extends AbstractCatalogEntity implements Seri
         ResourceSpecification resourceSpecification = new ResourceSpecification();
 
         resourceSpecification.setId("id");
-        resourceSpecification.setVersion(2.9f);
+        resourceSpecification.setVersion("2.9");
         resourceSpecification.setHref("href");
         resourceSpecification.setName("name");
         resourceSpecification.setDescription("description");

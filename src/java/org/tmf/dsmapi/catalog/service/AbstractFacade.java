@@ -108,7 +108,7 @@ public abstract class AbstractFacade<T> {
     }
     */
 
-    public List<T> findCatalogById(String catalogId, Float catalogVersion) {
+    public List<T> findCatalogById(String catalogId, String catalogVersion) {
         CriteriaBuilder criteriaBuilder = getEntityManager().getCriteriaBuilder();
         CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(entityClass);
         Root<T> table = criteriaQuery.from(entityClass);
@@ -119,7 +119,7 @@ public abstract class AbstractFacade<T> {
         Predicate propertyCondition = (catalogIdExpression != null) ? criteriaBuilder.equal(table.get("id"), catalogIdExpression) : null;
         condition = propertyCondition;
 
-        ParameterExpression<Float> catalogVersionExpression = (catalogVersion != null) ? criteriaBuilder.parameter(Float.class) : null;
+        ParameterExpression<String> catalogVersionExpression = (catalogVersion != null) ? criteriaBuilder.parameter(String.class) : null;
         propertyCondition = (catalogVersionExpression != null) ? criteriaBuilder.equal(table.get("version"), catalogVersionExpression) : null;
         condition = andPredicates(condition, propertyCondition);
 
@@ -138,7 +138,7 @@ public abstract class AbstractFacade<T> {
         return query.getResultList();
     }
 
-    public List<T> findById(String catalogId, Float catalogVersion, String entityId, Float entityVersion) {
+    public List<T> findById(String catalogId, String catalogVersion, String entityId, String entityVersion) {
         CriteriaBuilder criteriaBuilder = getEntityManager().getCriteriaBuilder();
         CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(entityClass);
         Root<T> table = criteriaQuery.from(entityClass);
@@ -149,7 +149,7 @@ public abstract class AbstractFacade<T> {
         Predicate propertyCondition = (catalogIdExpression != null) ? criteriaBuilder.equal(table.get("catalogId"), catalogIdExpression) : null;
         condition = propertyCondition;
 
-        ParameterExpression<Float> catalogVersionExpression = (catalogVersion != null) ? criteriaBuilder.parameter(Float.class) : null;
+        ParameterExpression<String> catalogVersionExpression = (catalogVersion != null) ? criteriaBuilder.parameter(String.class) : null;
         propertyCondition = (catalogVersionExpression != null) ? criteriaBuilder.equal(table.get("catalogVersion"), catalogVersionExpression) : null;
         condition = andPredicates(condition, propertyCondition);
 
@@ -157,7 +157,7 @@ public abstract class AbstractFacade<T> {
         propertyCondition = (entityIdExpression != null) ? criteriaBuilder.equal(table.get("id"), entityIdExpression) : null;
         condition = andPredicates(condition, propertyCondition);
 
-        ParameterExpression<Float> entityVersionExpression = (entityVersion != null) ? criteriaBuilder.parameter(Float.class) : null;
+        ParameterExpression<String> entityVersionExpression = (entityVersion != null) ? criteriaBuilder.parameter(String.class) : null;
         propertyCondition = (entityVersionExpression != null) ? criteriaBuilder.equal(table.get("version"), entityVersionExpression) : null;
         condition = andPredicates(condition, propertyCondition);
 

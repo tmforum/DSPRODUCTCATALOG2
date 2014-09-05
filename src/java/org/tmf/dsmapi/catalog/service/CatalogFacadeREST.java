@@ -101,7 +101,7 @@ public class CatalogFacadeREST {
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, Catalog input, @Context UriInfo uriInfo) {
+    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, Catalog input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "CatalogFacadeREST:update(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return update_(entityId, entityVersion, input, uriInfo);
@@ -127,7 +127,7 @@ public class CatalogFacadeREST {
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, Catalog input, @Context UriInfo uriInfo) {
+    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, Catalog input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "CatalogFacadeREST:edit(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return edit_(entityId, entityVersion, input, uriInfo);
@@ -149,7 +149,7 @@ public class CatalogFacadeREST {
      */
     @DELETE
     @Path("{entityId}:({entityVersion})")
-    public Response remove(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion) {
+    public Response remove(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion) {
         logger.log(Level.FINE, "CatalogFacadeREST:remove(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return remove_(entityId, entityVersion);
@@ -210,7 +210,7 @@ public class CatalogFacadeREST {
     @GET
     @Path("{entityId}:({entityVersion})")
     @Produces({MediaType.APPLICATION_JSON})
-    public Response findById(@PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
+    public Response findById(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "CatalogFacadeREST:find(entityId: {0}, entityVersion: {1}, depth: {2})", new Object[]{entityId, entityVersion, depth});
 
         return find_(entityId, entityVersion, depth, uriInfo);
@@ -244,7 +244,7 @@ public class CatalogFacadeREST {
     /*
      *
      */
-    private Response update_(String entityId, Float entityVersion, Catalog input, UriInfo uriInfo) {
+    private Response update_(String entityId, String entityVersion, Catalog input, UriInfo uriInfo) {
         logger.log(Level.FINE, "CatalogFacadeREST:update_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
@@ -287,7 +287,7 @@ public class CatalogFacadeREST {
     /*
      *
      */
-    private Response edit_(String entityId, Float entityVersion, Catalog input, UriInfo uriInfo) {
+    private Response edit_(String entityId, String entityVersion, Catalog input, UriInfo uriInfo) {
         logger.log(Level.FINE, "CatalogFacadeREST:edit_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
@@ -321,7 +321,7 @@ public class CatalogFacadeREST {
             return Response.status(Response.Status.CREATED).entity(entity).build();
         }
 
-        if (input.getVersion() <= entity.getVersion()) {
+        if (input.hasHigherVersionThan(entity) == false) {
             logger.log(Level.FINE, "specified version ({0}) must be higher than entity version ({1})", new Object[]{input.getVersion(), entity.getVersion()});
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
@@ -337,7 +337,7 @@ public class CatalogFacadeREST {
     /*
      *
      */
-    private Response remove_(String entityId, Float entityVersion) {
+    private Response remove_(String entityId, String entityVersion) {
         logger.log(Level.FINE, "CatalogFacadeREST:remove_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         List<Catalog> entities = manager.findCatalogById(entityId, entityVersion);
@@ -352,7 +352,7 @@ public class CatalogFacadeREST {
     /*
      *
      */
-    private Response find_(String entityId, Float entityVersion, int depth, UriInfo uriInfo) {
+    private Response find_(String entityId, String entityVersion, int depth, UriInfo uriInfo) {
         logger.log(Level.FINE, "CatalogFacadeREST:find_(entityId: {0}, entityVersion: {1}, depth: {2})", new Object[]{entityId, entityVersion, depth});
 
         List<Catalog> entities = manager.findCatalogById(entityId, entityVersion);
@@ -385,7 +385,7 @@ public class CatalogFacadeREST {
     /*
      *
      */
-    private String buildHref_(UriInfo uriInfo, String id, Float version) {
+    private String buildHref_(UriInfo uriInfo, String id, String version) {
         URI uri = (uriInfo != null) ? uriInfo.getBaseUri() : null;
         String basePath = (uri != null) ? uri.toString() : null;
         if (basePath == null) {
@@ -402,7 +402,7 @@ public class CatalogFacadeREST {
         }
 
         basePath += id;
-        if (version == null) {
+        if (version == null || version.length() <= 0) {
             return basePath;
         }
 

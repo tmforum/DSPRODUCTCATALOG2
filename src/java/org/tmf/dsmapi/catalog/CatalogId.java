@@ -11,12 +11,12 @@ public class CatalogId implements Serializable {
     private final static long serialVersionUID = 1L;
 
     private String id;
-    private Float version;
+    private String version;
 
     public CatalogId() {
     }
 
-    public CatalogId(String id, Float version) {
+    public CatalogId(String id, String version) {
         this.id = id;
         this.version = version;
     }
@@ -29,11 +29,11 @@ public class CatalogId implements Serializable {
         this.id = id;
     }
 
-    public Float getVersion() {
+    public String getVersion() {
         return version;
     }
 
-    public void setVersion(Float version) {
+    public void setVersion(String version) {
         this.version = version;
     }
 

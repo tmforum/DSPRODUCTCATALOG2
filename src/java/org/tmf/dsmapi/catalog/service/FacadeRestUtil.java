@@ -179,7 +179,7 @@ public class FacadeRestUtil {
         return fieldSet;
     }
 
-    public static String buildHref(UriInfo uriInfo, String entity, String id, Float version) {
+    public static String buildHref(UriInfo uriInfo, String entity, String id, String version) {
         URI uri = (uriInfo != null) ? uriInfo.getBaseUri() : null;
         String basePath = (uri != null) ? uri.toString() : null;
         if (basePath == null) {
@@ -196,7 +196,7 @@ public class FacadeRestUtil {
         }
 
         basePath += id;
-        if (version == null) {
+        if (version == null || version.length() <= 0) {
             return basePath;
         }
 

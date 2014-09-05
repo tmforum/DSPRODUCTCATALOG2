@@ -46,7 +46,7 @@ public class ProductOfferingPriceInCatalogIdVersionFacadeREST {
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response create(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") Float catalogVersion, ProductOfferingPrice input, @Context UriInfo uriInfo) {
+    public Response create(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, ProductOfferingPrice input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductOfferingPriceInCatalogIdVersionFacadeREST:create(catalogId: {0}, catalogVersion: {1})", new Object[]{catalogId, catalogVersion});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -59,7 +59,7 @@ public class ProductOfferingPriceInCatalogIdVersionFacadeREST {
     @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") Float catalogVersion, @PathParam("entityId") String entityId, ProductOfferingPrice input, @Context UriInfo uriInfo) {
+    public Response update(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, @PathParam("entityId") String entityId, ProductOfferingPrice input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductOfferingPriceInCatalogIdVersionFacadeREST:update(catalogId: {0}, catalogVersion: {1}, entityId: {2})", new Object[]{catalogId, catalogVersion, entityId});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -72,7 +72,7 @@ public class ProductOfferingPriceInCatalogIdVersionFacadeREST {
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") Float catalogVersion, @PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, ProductOfferingPrice input, @Context UriInfo uriInfo) {
+    public Response update(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, @PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, ProductOfferingPrice input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductOfferingPriceInCatalogIdVersionFacadeREST:update(catalogId: {0}, catalogVersion: {1}, entityId: {2}, entityVersion: {3})", new Object[]{catalogId, catalogVersion, entityId, entityVersion});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -85,7 +85,7 @@ public class ProductOfferingPriceInCatalogIdVersionFacadeREST {
     @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") Float catalogVersion, @PathParam("entityId") String entityId, ProductOfferingPrice input, @Context UriInfo uriInfo) {
+    public Response edit(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, @PathParam("entityId") String entityId, ProductOfferingPrice input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductOfferingPriceInCatalogIdVersionFacadeREST:edit(catalogId: {0}, catalogVersion: {1}, entityId: {2})", new Object[]{catalogId, catalogVersion, entityId});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -98,7 +98,7 @@ public class ProductOfferingPriceInCatalogIdVersionFacadeREST {
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") Float catalogVersion, @PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, ProductOfferingPrice input, @Context UriInfo uriInfo) {
+    public Response edit(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, @PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, ProductOfferingPrice input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductOfferingPriceInCatalogIdVersionFacadeREST:edit(catalogId: {0}, catalogVersion: {1}, entityId: {2}, entityVersion: {3})", new Object[]{catalogId, catalogVersion, entityId, entityVersion});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -109,7 +109,7 @@ public class ProductOfferingPriceInCatalogIdVersionFacadeREST {
      */
     @DELETE
     @Path("{entityId}")
-    public Response remove(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") Float catalogVersion, @PathParam("entityId") String entityId) {
+    public Response remove(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, @PathParam("entityId") String entityId) {
         logger.log(Level.FINE, "ProductOfferingPriceInCatalogIdVersionFacadeREST:remove(catalogId: {0}, catalogVersion: {1}, entityId: {2})", new Object[]{catalogId, catalogVersion, entityId});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -120,7 +120,7 @@ public class ProductOfferingPriceInCatalogIdVersionFacadeREST {
      */
     @DELETE
     @Path("{entityId}:({entityVersion})")
-    public Response remove(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") Float catalogVersion, @PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion) {
+    public Response remove(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, @PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion) {
         logger.log(Level.FINE, "ProductOfferingPriceInCatalogIdVersionFacadeREST:remove(catalogId: {0}, catalogVersion: {1}, entityId: {2}, entityVersion: {3})", new Object[]{catalogId, catalogVersion, entityId, entityVersion});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -131,7 +131,7 @@ public class ProductOfferingPriceInCatalogIdVersionFacadeREST {
      */
     @GET
     @Produces({MediaType.APPLICATION_JSON})
-    public Response find(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") Float catalogVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) throws BadUsageException {
+    public Response find(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) throws BadUsageException {
         logger.log(Level.FINE, "ProductOfferingPriceInCatalogIdVersionFacadeREST:find(catalogId: {0}, catalogVersion: {1}, depth: {2})", new Object[]{catalogId, catalogVersion, depth});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -143,7 +143,7 @@ public class ProductOfferingPriceInCatalogIdVersionFacadeREST {
     @GET
     @Path("{entityId}")
     @Produces({MediaType.APPLICATION_JSON})
-    public Response findById(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") Float catalogVersion, @PathParam("entityId") String entityId, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
+    public Response findById(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, @PathParam("entityId") String entityId, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductOfferingPriceInCatalogIdVersionFacadeREST:find(catalogId: {0}, catalogVersion: {1}, entityId: {2}, depth: {3})", new Object[]{catalogId, catalogVersion, entityId, depth});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -155,7 +155,7 @@ public class ProductOfferingPriceInCatalogIdVersionFacadeREST {
     @GET
     @Path("{entityId}:({entityVersion})")
     @Produces({MediaType.APPLICATION_JSON})
-    public Response find(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") Float catalogVersion, @PathParam("entityId") String entityId, @PathParam("entityVersion") Float entityVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
+    public Response find(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, @PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductOfferingPriceInCatalogIdVersionFacadeREST:find(catalogId: {0}, catalogVersion: {1}, entityId: {2}, entityVersion: {3}, depth: {4})", new Object[]{catalogId, catalogVersion, entityId, entityVersion, depth});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -167,7 +167,7 @@ public class ProductOfferingPriceInCatalogIdVersionFacadeREST {
     @GET
     @Path("admin/proto")
     @Produces({MediaType.APPLICATION_JSON})
-    public Response proto(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") Float catalogVersion) {
+    public Response proto(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion) {
         logger.log(Level.FINE, "ProductOfferingPriceInCatalogIdVersionFacadeREST:proto(catalogId: {0}, catalogVersion: {1})", new Object[]{catalogId, catalogVersion});
 
         return Response.ok(ProductOfferingPrice.createProto()).build();
@@ -179,7 +179,7 @@ public class ProductOfferingPriceInCatalogIdVersionFacadeREST {
     @GET
     @Path("admin/count")
     @Produces({MediaType.TEXT_PLAIN})
-    public Response count(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") Float catalogVersion) {
+    public Response count(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion) {
         logger.log(Level.FINE, "ProductOfferingPriceInCatalogIdVersionFacadeREST:count(catalogId: {0}, catalogVersion: {1})", new Object[]{catalogId, catalogVersion});
 
         return Response.status(Response.Status.FORBIDDEN).build();
