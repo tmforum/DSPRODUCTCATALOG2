@@ -69,22 +69,6 @@ public class ParsedVersion implements Serializable {
         return (majorVersion != null) ? true : false;
     }
 
-    public boolean isEqualTo(ParsedVersion other) {
-        if (other == null) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.majorVersion, other.majorVersion) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.minorVersion, other.minorVersion) == false) {
-            return false;
-        }
-
-        return true;
-    }
-
     public boolean isGreaterThan(ParsedVersion other) {
         if (this.isValid() == false) {
             throw new IllegalArgumentException ("invalid version object");
@@ -93,7 +77,7 @@ public class ParsedVersion implements Serializable {
         if (other == null || other.isValid() == false) {
             throw new IllegalArgumentException ("invalid other version object");
         }
-        
+
         int compare = this.majorVersion.compareTo(other.majorVersion);
         if (compare < 0) {
             return false;

@@ -13,7 +13,6 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonProperty;
 
@@ -34,10 +33,6 @@ public abstract class AbstractEntity implements Serializable {
     @Id
     @Column(name = "VERSION", nullable = false)
     private String version;
-
-    @Transient
-    @JsonIgnore
-    private ParsedVersion parsedVersion = new ParsedVersion();
 
     @Column(name = "HERF", nullable = true)
     private String href;
@@ -73,11 +68,9 @@ public abstract class AbstractEntity implements Serializable {
     }
 
     public void setVersion(String version) {
-        this.version = parsedVersion.load(version);
-    }
-
-    public ParsedVersion getParsedVersion() {
-        return parsedVersion;
+        this.version = version;
+        ParsedVersion parsedVersion = new ParsedVersion();
+        parsedVersion.load(this.version);
     }
 
     public String getHref() {
@@ -193,7 +186,7 @@ public abstract class AbstractEntity implements Serializable {
 
     @Override
     public String toString() {
-        return "AbstractEntity{" + "id=" + id + ", version=" + version + ", parsedVersion=" + parsedVersion + ", href=" + href + ", name=" + name + ", description=" + description + ", lastUpdate=" + lastUpdate + ", lifecycleStatus=" + lifecycleStatus + ", validFor=" + validFor + '}';
+        return "AbstractEntity{" + "id=" + id + ", version=" + version + ", href=" + href + ", name=" + name + ", description=" + description + ", lastUpdate=" + lastUpdate + ", lifecycleStatus=" + lifecycleStatus + ", validFor=" + validFor + '}';
     }
 
     @JsonIgnore
@@ -275,14 +268,16 @@ public abstract class AbstractEntity implements Serializable {
 
     public boolean hasHigherVersionThan(AbstractEntity other) {
         if (other == null) {
-            return false;
+            return true;
         }
 
-        if (this.parsedVersion == null) {
-            return false;
-        }
+        ParsedVersion thisVersion = new ParsedVersion();
+        thisVersion.load(this.version);
+        
+        ParsedVersion otherVersion = new ParsedVersion();
+        otherVersion.load(other.version);
 
-        return (this.parsedVersion.isGreaterThan(other.parsedVersion));
+        return (thisVersion.isGreaterThan(otherVersion));
     }
 
     public boolean canLifecycleTransitionFrom(LifecycleStatus fromStatus) {
