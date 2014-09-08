@@ -314,7 +314,7 @@ public abstract class AbstractEntity implements Serializable {
     }
 
     public static String getDefaultCatalogVersion() {
-        return "";
+        return "-1.0";
     }
 
 }
