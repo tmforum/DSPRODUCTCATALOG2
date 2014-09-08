@@ -6,8 +6,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.persistence.AttributeOverride;
-import javax.persistence.AttributeOverrides;
 import javax.persistence.CollectionTable;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
@@ -187,7 +185,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
-    private List<CatalogReference> channel;
+    private List<Channel> channel;
 
     @Embedded
     @ElementCollection
@@ -197,7 +195,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
-    private List<CatalogReference> place;
+    private List<Place> place;
 
     @Embedded
     @ElementCollection
@@ -317,19 +315,19 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         this.category = category;
     }
 
-    public List<CatalogReference> getChannel() {
+    public List<Channel> getChannel() {
         return channel;
     }
 
-    public void setChannel(List<CatalogReference> channel) {
+    public void setChannel(List<Channel> channel) {
         this.channel = channel;
     }
 
-    public List<CatalogReference> getPlace() {
+    public List<Place> getPlace() {
         return place;
     }
 
-    public void setPlace(List<CatalogReference> place) {
+    public void setPlace(List<Place> place) {
         this.place = place;
     }
 
@@ -561,11 +559,11 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         productOffering.category = new ArrayList<CatalogReference>();
         productOffering.category.add(CatalogReference.createProto());
 
-        productOffering.channel = new ArrayList<CatalogReference>();
-        productOffering.channel.add(CatalogReference.createProto());
+        productOffering.channel = new ArrayList<Channel>();
+        productOffering.channel.add(Channel.createProto());
 
-        productOffering.place = new ArrayList<CatalogReference>();
-        productOffering.place.add(CatalogReference.createProto());
+        productOffering.place = new ArrayList<Place>();
+        productOffering.place.add(Place.createProto());
 
         productOffering.bundledProductOffering = new ArrayList<CatalogReference>();
         productOffering.bundledProductOffering.add(CatalogReference.createProto());
