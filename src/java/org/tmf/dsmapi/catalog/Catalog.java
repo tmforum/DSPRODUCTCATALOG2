@@ -225,7 +225,7 @@ public class Catalog extends AbstractEntity implements Serializable {
     }
 
     public static String getDefaultEntityVersion() {
-        return "";
+        return "-1.0";
     }
 
     public static Catalog createProto() {
