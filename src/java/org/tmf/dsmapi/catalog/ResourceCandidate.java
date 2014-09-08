@@ -79,14 +79,7 @@ public class ResourceCandidate extends AbstractCatalogEntity implements Serializ
     private List<CatalogReference> category;
 
     @Embedded
-    @AttributeOverrides({
-        @AttributeOverride(name = "id", column = @Column(name = "SLA_ID")),
-        @AttributeOverride(name = "version", column = @Column(name = "SLA_VERSION")),
-        @AttributeOverride(name = "href", column = @Column(name = "SLA_HREF")),
-        @AttributeOverride(name = "name", column = @Column(name = "SLA_NAME")),
-        @AttributeOverride(name = "description", column = @Column(name = "SLA_DESCRIPTION"))
-    })
-    private CatalogReference serviceLevelAgreement;
+    private ServiceLevelAgreement serviceLevelAgreement;
 
     @Embedded
     @AttributeOverrides({
@@ -109,11 +102,11 @@ public class ResourceCandidate extends AbstractCatalogEntity implements Serializ
         this.category = category;
     }
 
-    public CatalogReference getServiceLevelAgreement() {
+    public ServiceLevelAgreement getServiceLevelAgreement() {
         return serviceLevelAgreement;
     }
 
-    public void setServiceLevelAgreement(CatalogReference serviceLevelAgreement) {
+    public void setServiceLevelAgreement(ServiceLevelAgreement serviceLevelAgreement) {
         this.serviceLevelAgreement = serviceLevelAgreement;
     }
 
@@ -237,7 +230,7 @@ public class ResourceCandidate extends AbstractCatalogEntity implements Serializ
         resourceCandidate.category = new ArrayList<CatalogReference>();
         resourceCandidate.category.add(CatalogReference.createProto());
 
-        resourceCandidate.serviceLevelAgreement = CatalogReference.createProto();
+        resourceCandidate.serviceLevelAgreement = ServiceLevelAgreement.createProto();
         resourceCandidate.resourceSpecification = CatalogReference.createProto();
 
         return resourceCandidate;

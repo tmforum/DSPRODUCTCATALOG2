@@ -210,14 +210,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
     private List<CatalogReference> bundledProductOffering;
 
     @Embedded
-    @AttributeOverrides({
-        @AttributeOverride(name = "id", column = @Column(name = "SLA_ID")),
-        @AttributeOverride(name = "version", column = @Column(name = "SLA_VERSION")),
-        @AttributeOverride(name = "href", column = @Column(name = "SLA_HREF")),
-        @AttributeOverride(name = "name", column = @Column(name = "SLA_NAME")),
-        @AttributeOverride(name = "description", column = @Column(name = "SLA_DESCRIPTION"))
-    })
-    private CatalogReference serviceLevelAgreement;
+    private ServiceLevelAgreement serviceLevelAgreement;
 
     @Embedded
     @ElementCollection
@@ -348,11 +341,11 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         this.bundledProductOffering = bundledProductOffering;
     }
 
-    public CatalogReference getServiceLevelAgreement() {
+    public ServiceLevelAgreement getServiceLevelAgreement() {
         return serviceLevelAgreement;
     }
 
-    public void setServiceLevelAgreement(CatalogReference serviceLevelAgreement) {
+    public void setServiceLevelAgreement(ServiceLevelAgreement serviceLevelAgreement) {
         this.serviceLevelAgreement = serviceLevelAgreement;
     }
 
@@ -577,7 +570,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         productOffering.bundledProductOffering = new ArrayList<CatalogReference>();
         productOffering.bundledProductOffering.add(CatalogReference.createProto());
 
-        productOffering.serviceLevelAgreement = CatalogReference.createProto();
+        productOffering.serviceLevelAgreement = ServiceLevelAgreement.createProto();
 
         productOffering.productSpecification = new ArrayList<CatalogReference>();
         productOffering.productSpecification.add(CatalogReference.createProto());
