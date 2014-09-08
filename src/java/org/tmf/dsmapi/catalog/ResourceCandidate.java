@@ -76,7 +76,7 @@ public class ResourceCandidate extends AbstractCatalogEntity implements Serializ
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
-    private List<Reference> category;
+    private List<CatalogReference> category;
 
     @Embedded
     @AttributeOverrides({
@@ -86,7 +86,7 @@ public class ResourceCandidate extends AbstractCatalogEntity implements Serializ
         @AttributeOverride(name = "name", column = @Column(name = "SLA_NAME")),
         @AttributeOverride(name = "description", column = @Column(name = "SLA_DESCRIPTION"))
     })
-    private Reference serviceLevelAgreement;
+    private CatalogReference serviceLevelAgreement;
 
     @Embedded
     @AttributeOverrides({
@@ -96,32 +96,32 @@ public class ResourceCandidate extends AbstractCatalogEntity implements Serializ
         @AttributeOverride(name = "name", column = @Column(name = "RESOURCE_SPEC_NAME")),
         @AttributeOverride(name = "description", column = @Column(name = "RESOURCE_SPEC_DESCRIPTION"))
     })
-    private Reference resourceSpecification;
+    private CatalogReference resourceSpecification;
 
     public ResourceCandidate() {
     }
 
-    public List<Reference> getCategory() {
+    public List<CatalogReference> getCategory() {
         return category;
     }
 
-    public void setCategory(List<Reference> category) {
+    public void setCategory(List<CatalogReference> category) {
         this.category = category;
     }
 
-    public Reference getServiceLevelAgreement() {
+    public CatalogReference getServiceLevelAgreement() {
         return serviceLevelAgreement;
     }
 
-    public void setServiceLevelAgreement(Reference serviceLevelAgreement) {
+    public void setServiceLevelAgreement(CatalogReference serviceLevelAgreement) {
         this.serviceLevelAgreement = serviceLevelAgreement;
     }
 
-    public Reference getResourceSpecification() {
+    public CatalogReference getResourceSpecification() {
         return resourceSpecification;
     }
 
-    public void setResourceSpecification(Reference resourceSpecification) {
+    public void setResourceSpecification(CatalogReference resourceSpecification) {
         this.resourceSpecification = resourceSpecification;
     }
 
@@ -212,7 +212,7 @@ public class ResourceCandidate extends AbstractCatalogEntity implements Serializ
         depth--;
 
         if (category != null) {
-            for (Reference reference : category) {
+            for (CatalogReference reference : category) {
                 reference.fetchEntity(Category.class, depth);
             }
         }
@@ -234,11 +234,11 @@ public class ResourceCandidate extends AbstractCatalogEntity implements Serializ
         resourceCandidate.setLifecycleStatus(LifecycleStatus.ACTIVE);
         resourceCandidate.setValidFor(TimeRange.createProto ());
 
-        resourceCandidate.category = new ArrayList<Reference>();
-        resourceCandidate.category.add(Reference.createProto());
+        resourceCandidate.category = new ArrayList<CatalogReference>();
+        resourceCandidate.category.add(CatalogReference.createProto());
 
-        resourceCandidate.serviceLevelAgreement = Reference.createProto();
-        resourceCandidate.resourceSpecification = Reference.createProto();
+        resourceCandidate.serviceLevelAgreement = CatalogReference.createProto();
+        resourceCandidate.resourceSpecification = CatalogReference.createProto();
 
         return resourceCandidate;
     }

@@ -17,7 +17,7 @@ import org.tmf.dsmapi.catalog.client.CatalogClient;
  */
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 @Embeddable
-public class Reference implements Serializable {
+public class CatalogReference implements Serializable {
     public final static long serialVersionUID = 1L;
 
     @Column(name = "ID", nullable = true)
@@ -43,7 +43,7 @@ public class Reference implements Serializable {
     @JsonUnwrapped
     private AbstractEntity entity;
 
-    public Reference() {
+    public CatalogReference() {
         entity = null;
     }
 
@@ -150,7 +150,7 @@ public class Reference implements Serializable {
             return false;
         }
 
-        final Reference other = (Reference) object;
+        final CatalogReference other = (CatalogReference) object;
         if (Utilities.areEqual(this.id, other.id) == false) {
             return false;
         }
@@ -188,17 +188,17 @@ public class Reference implements Serializable {
         }
     }
 
-    public static Reference createProto() {
-        Reference reference = new Reference ();
+    public static CatalogReference createProto() {
+        CatalogReference catalogReference = new CatalogReference ();
 
-        reference.id = "id";
-        reference.version = "1.6";
-        reference.href = "href";
-        reference.name = "name";
-        reference.description = "description";
-        reference.entity = null;
+        catalogReference.id = "id";
+        catalogReference.version = "1.6";
+        catalogReference.href = "href";
+        catalogReference.name = "name";
+        catalogReference.description = "description";
+        catalogReference.entity = null;
 
-        return reference;
+        return catalogReference;
     }
 
 }

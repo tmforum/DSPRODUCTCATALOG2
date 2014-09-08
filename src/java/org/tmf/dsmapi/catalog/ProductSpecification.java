@@ -214,7 +214,7 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
-    private List<Reference> bundledProductSpecification;
+    private List<CatalogReference> bundledProductSpecification;
 
     @Embedded
     @ElementCollection
@@ -234,7 +234,7 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
-    private List<Reference> serviceSpecification;
+    private List<CatalogReference> serviceSpecification;
 
     @Embedded
     @ElementCollection
@@ -244,7 +244,7 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
-    private List<Reference> resourceSpecification;
+    private List<CatalogReference> resourceSpecification;
 
     @Embedded
     @ElementCollection
@@ -291,11 +291,11 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         this.relatedParty = relatedParty;
     }
 
-    public List<Reference> getBundledProductSpecification() {
+    public List<CatalogReference> getBundledProductSpecification() {
         return bundledProductSpecification;
     }
 
-    public void setBundledProductSpecification(List<Reference> bundledProductSpecification) {
+    public void setBundledProductSpecification(List<CatalogReference> bundledProductSpecification) {
         this.bundledProductSpecification = bundledProductSpecification;
     }
 
@@ -307,19 +307,19 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         this.productSpecificationRelationship = productSpecificationRelationship;
     }
 
-    public List<Reference> getServiceSpecification() {
+    public List<CatalogReference> getServiceSpecification() {
         return serviceSpecification;
     }
 
-    public void setServiceSpecification(List<Reference> serviceSpecification) {
+    public void setServiceSpecification(List<CatalogReference> serviceSpecification) {
         this.serviceSpecification = serviceSpecification;
     }
 
-    public List<Reference> getResourceSpecification() {
+    public List<CatalogReference> getResourceSpecification() {
         return resourceSpecification;
     }
 
-    public void setResourceSpecification(List<Reference> resourceSpecification) {
+    public void setResourceSpecification(List<CatalogReference> resourceSpecification) {
         this.resourceSpecification = resourceSpecification;
     }
 
@@ -472,19 +472,19 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         depth--;
 
         if (bundledProductSpecification != null) {
-            for (Reference reference : bundledProductSpecification) {
+            for (CatalogReference reference : bundledProductSpecification) {
                 reference.fetchEntity(ProductSpecification.class, depth);
             }
         }
 
         if (serviceSpecification != null) {
-            for (Reference reference : serviceSpecification) {
+            for (CatalogReference reference : serviceSpecification) {
                 reference.fetchEntity(ServiceSpecification.class, depth);
             }
         }
 
         if (resourceSpecification != null) {
-            for (Reference reference : resourceSpecification) {
+            for (CatalogReference reference : resourceSpecification) {
                 reference.fetchEntity(ResourceSpecification.class, depth);
             }
         }
@@ -511,17 +511,17 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         productSpecification.relatedParty = new ArrayList<RelatedParty>();
         productSpecification.relatedParty.add(RelatedParty.createProto());
 
-        productSpecification.bundledProductSpecification = new ArrayList<Reference>();
-        productSpecification.bundledProductSpecification.add(Reference.createProto());
+        productSpecification.bundledProductSpecification = new ArrayList<CatalogReference>();
+        productSpecification.bundledProductSpecification.add(CatalogReference.createProto());
 
         productSpecification.productSpecificationRelationship = new ArrayList<SpecificationRelationship>();
         productSpecification.productSpecificationRelationship.add(SpecificationRelationship.createProto());
 
-        productSpecification.serviceSpecification = new ArrayList<Reference>();
-        productSpecification.serviceSpecification.add(Reference.createProto());
+        productSpecification.serviceSpecification = new ArrayList<CatalogReference>();
+        productSpecification.serviceSpecification.add(CatalogReference.createProto());
 
-        productSpecification.resourceSpecification = new ArrayList<Reference>();
-        productSpecification.resourceSpecification.add(Reference.createProto());
+        productSpecification.resourceSpecification = new ArrayList<CatalogReference>();
+        productSpecification.resourceSpecification.add(CatalogReference.createProto());
 
         productSpecification.productSpecCharacteristic = new ArrayList<ProductSpecCharacteristic>();
         productSpecification.productSpecCharacteristic.add(ProductSpecCharacteristic.createProto());

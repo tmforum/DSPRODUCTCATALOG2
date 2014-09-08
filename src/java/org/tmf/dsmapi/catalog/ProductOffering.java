@@ -177,7 +177,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
-    private List<Reference> category;
+    private List<CatalogReference> category;
 
     @Embedded
     @ElementCollection
@@ -187,7 +187,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
-    private List<Reference> channel;
+    private List<CatalogReference> channel;
 
     @Embedded
     @ElementCollection
@@ -197,7 +197,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
-    private List<Reference> place;
+    private List<CatalogReference> place;
 
     @Embedded
     @ElementCollection
@@ -207,7 +207,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
-    private List<Reference> bundledProductOffering;
+    private List<CatalogReference> bundledProductOffering;
 
     @Embedded
     @AttributeOverrides({
@@ -217,7 +217,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         @AttributeOverride(name = "name", column = @Column(name = "SLA_NAME")),
         @AttributeOverride(name = "description", column = @Column(name = "SLA_DESCRIPTION"))
     })
-    private Reference serviceLevelAgreement;
+    private CatalogReference serviceLevelAgreement;
 
     @Embedded
     @ElementCollection
@@ -227,7 +227,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
-    private List<Reference> productSpecification;
+    private List<CatalogReference> productSpecification;
 
     @Embedded
     @ElementCollection
@@ -237,7 +237,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
-    private List<Reference> serviceCandidate;
+    private List<CatalogReference> serviceCandidate;
 
     @Embedded
     @ElementCollection
@@ -247,7 +247,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
-    private List<Reference> resourceCandidate;
+    private List<CatalogReference> resourceCandidate;
 
     /*     "": [
      *     "productOfferingTerm": [
@@ -316,67 +316,67 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         this.isBundle = isBundle;
     }
 
-    public List<Reference> getCategory() {
+    public List<CatalogReference> getCategory() {
         return category;
     }
 
-    public void setCategory(List<Reference> category) {
+    public void setCategory(List<CatalogReference> category) {
         this.category = category;
     }
 
-    public List<Reference> getChannel() {
+    public List<CatalogReference> getChannel() {
         return channel;
     }
 
-    public void setChannel(List<Reference> channel) {
+    public void setChannel(List<CatalogReference> channel) {
         this.channel = channel;
     }
 
-    public List<Reference> getPlace() {
+    public List<CatalogReference> getPlace() {
         return place;
     }
 
-    public void setPlace(List<Reference> place) {
+    public void setPlace(List<CatalogReference> place) {
         this.place = place;
     }
 
-    public List<Reference> getBundledProductOffering() {
+    public List<CatalogReference> getBundledProductOffering() {
         return bundledProductOffering;
     }
 
-    public void setBundledProductOffering(List<Reference> bundledProductOffering) {
+    public void setBundledProductOffering(List<CatalogReference> bundledProductOffering) {
         this.bundledProductOffering = bundledProductOffering;
     }
 
-    public Reference getServiceLevelAgreement() {
+    public CatalogReference getServiceLevelAgreement() {
         return serviceLevelAgreement;
     }
 
-    public void setServiceLevelAgreement(Reference serviceLevelAgreement) {
+    public void setServiceLevelAgreement(CatalogReference serviceLevelAgreement) {
         this.serviceLevelAgreement = serviceLevelAgreement;
     }
 
-    public List<Reference> getProductSpecification() {
+    public List<CatalogReference> getProductSpecification() {
         return productSpecification;
     }
 
-    public void setProductSpecification(List<Reference> productSpecification) {
+    public void setProductSpecification(List<CatalogReference> productSpecification) {
         this.productSpecification = productSpecification;
     }
 
-    public List<Reference> getServiceCandidate() {
+    public List<CatalogReference> getServiceCandidate() {
         return serviceCandidate;
     }
 
-    public void setServiceCandidate(List<Reference> serviceCandidate) {
+    public void setServiceCandidate(List<CatalogReference> serviceCandidate) {
         this.serviceCandidate = serviceCandidate;
     }
 
-    public List<Reference> getResourceCandidate() {
+    public List<CatalogReference> getResourceCandidate() {
         return resourceCandidate;
     }
 
-    public void setResourceCandidate(List<Reference> resourceCandidate) {
+    public void setResourceCandidate(List<CatalogReference> resourceCandidate) {
         this.resourceCandidate = resourceCandidate;
     }
 
@@ -521,31 +521,31 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         depth--;
 
         if (category != null) {
-            for (Reference reference : category) {
+            for (CatalogReference reference : category) {
                 reference.fetchEntity(Category.class, depth);
             }
         }
 
         if (bundledProductOffering != null) {
-            for (Reference reference : bundledProductOffering) {
+            for (CatalogReference reference : bundledProductOffering) {
                 reference.fetchEntity(ProductOffering.class, depth);
             }
         }
 
         if (productSpecification != null) {
-            for (Reference reference : productSpecification) {
+            for (CatalogReference reference : productSpecification) {
                 reference.fetchEntity(ProductSpecification.class, depth);
             }
         }
 
         if (serviceCandidate != null) {
-            for (Reference reference : serviceCandidate) {
+            for (CatalogReference reference : serviceCandidate) {
                 reference.fetchEntity(ServiceCandidate.class, depth);
             }
         }
 
         if (resourceCandidate != null) {
-            for (Reference reference : resourceCandidate) {
+            for (CatalogReference reference : resourceCandidate) {
                 reference.fetchEntity(ResourceCandidate.class, depth);
             }
         }
@@ -565,28 +565,28 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
 
         productOffering.isBundle = true;
 
-        productOffering.category = new ArrayList<Reference>();
-        productOffering.category.add(Reference.createProto());
+        productOffering.category = new ArrayList<CatalogReference>();
+        productOffering.category.add(CatalogReference.createProto());
 
-        productOffering.channel = new ArrayList<Reference>();
-        productOffering.channel.add(Reference.createProto());
+        productOffering.channel = new ArrayList<CatalogReference>();
+        productOffering.channel.add(CatalogReference.createProto());
 
-        productOffering.place = new ArrayList<Reference>();
-        productOffering.place.add(Reference.createProto());
+        productOffering.place = new ArrayList<CatalogReference>();
+        productOffering.place.add(CatalogReference.createProto());
 
-        productOffering.bundledProductOffering = new ArrayList<Reference>();
-        productOffering.bundledProductOffering.add(Reference.createProto());
+        productOffering.bundledProductOffering = new ArrayList<CatalogReference>();
+        productOffering.bundledProductOffering.add(CatalogReference.createProto());
 
-        productOffering.serviceLevelAgreement = Reference.createProto();
+        productOffering.serviceLevelAgreement = CatalogReference.createProto();
 
-        productOffering.productSpecification = new ArrayList<Reference>();
-        productOffering.productSpecification.add(Reference.createProto());
+        productOffering.productSpecification = new ArrayList<CatalogReference>();
+        productOffering.productSpecification.add(CatalogReference.createProto());
 
-        productOffering.serviceCandidate = new ArrayList<Reference>();
-        productOffering.serviceCandidate.add(Reference.createProto());
+        productOffering.serviceCandidate = new ArrayList<CatalogReference>();
+        productOffering.serviceCandidate.add(CatalogReference.createProto());
 
-        productOffering.resourceCandidate = new ArrayList<Reference>();
-        productOffering.resourceCandidate.add(Reference.createProto());
+        productOffering.resourceCandidate = new ArrayList<CatalogReference>();
+        productOffering.resourceCandidate.add(CatalogReference.createProto());
 
         return productOffering;
     }

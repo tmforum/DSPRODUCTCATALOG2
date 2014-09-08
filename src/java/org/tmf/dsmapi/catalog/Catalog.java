@@ -78,7 +78,7 @@ public class Catalog extends AbstractEntity implements Serializable {
         @JoinColumn(name = "CATALOG_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "CATALOG_VERSION", referencedColumnName = "VERSION")
     })
-    private List<Reference> category;
+    private List<CatalogReference> category;
 
     @Embedded
     @ElementCollection
@@ -99,11 +99,11 @@ public class Catalog extends AbstractEntity implements Serializable {
         this.type = type;
     }
 
-    public List<Reference> getCategory() {
+    public List<CatalogReference> getCategory() {
         return category;
     }
 
-    public void setCategory(List<Reference> category) {
+    public void setCategory(List<CatalogReference> category) {
         this.category = category;
     }
 
@@ -218,7 +218,7 @@ public class Catalog extends AbstractEntity implements Serializable {
         depth--;
 
         if (category != null) {
-            for (Reference reference : category) {
+            for (CatalogReference reference : category) {
                 reference.fetchEntity(Category.class, depth);
             }
         }
@@ -242,8 +242,8 @@ public class Catalog extends AbstractEntity implements Serializable {
 
         catalog.type = CatalogType.PRODUCT_CATALOG;
 
-        catalog.category = new ArrayList<Reference>();
-        catalog.category.add(Reference.createProto());
+        catalog.category = new ArrayList<CatalogReference>();
+        catalog.category.add(CatalogReference.createProto());
 
         catalog.relatedParty = new ArrayList<RelatedParty>();
         catalog.relatedParty.add(RelatedParty.createProto());
