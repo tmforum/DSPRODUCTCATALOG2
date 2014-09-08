@@ -52,6 +52,11 @@ public class ParsedVersion implements Serializable {
         return true;
     }
 
+    @Override
+    public String toString() {
+        return "ParsedVersion{" + "majorVersion=" + majorVersion + ", minorVersion=" + minorVersion + '}';
+    }
+
     public String load(String input) {
         if (load_(input) == false) {
             throw new IllegalArgumentException("'" + input + "' is not a valid version.");
@@ -81,10 +86,14 @@ public class ParsedVersion implements Serializable {
     }
 
     public boolean isGreaterThan(ParsedVersion other) {
-        if (other == null || this.majorVersion == null) {
-            return false;
+        if (this.isValid() == false) {
+            throw new IllegalArgumentException ("invalid version object");
         }
 
+        if (other == null || other.isValid() == false) {
+            throw new IllegalArgumentException ("invalid other version object");
+        }
+        
         int compare = this.majorVersion.compareTo(other.majorVersion);
         if (compare < 0) {
             return false;
