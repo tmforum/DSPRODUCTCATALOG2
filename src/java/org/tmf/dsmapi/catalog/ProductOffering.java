@@ -522,31 +522,31 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
 
         if (category != null) {
             for (Reference reference : category) {
-                reference.getEnitty(Category.class, depth);
+                reference.fetchEntity(Category.class, depth);
             }
         }
 
         if (bundledProductOffering != null) {
             for (Reference reference : bundledProductOffering) {
-                reference.getEnitty(ProductOffering.class, depth);
+                reference.fetchEntity(ProductOffering.class, depth);
             }
         }
 
         if (productSpecification != null) {
             for (Reference reference : productSpecification) {
-                reference.getEnitty(ProductSpecification.class, depth);
+                reference.fetchEntity(ProductSpecification.class, depth);
             }
         }
 
         if (serviceCandidate != null) {
             for (Reference reference : serviceCandidate) {
-                reference.getEnitty(ServiceCandidate.class, depth);
+                reference.fetchEntity(ServiceCandidate.class, depth);
             }
         }
 
         if (resourceCandidate != null) {
             for (Reference reference : resourceCandidate) {
-                reference.getEnitty(ResourceCandidate.class, depth);
+                reference.fetchEntity(ResourceCandidate.class, depth);
             }
         }
     }

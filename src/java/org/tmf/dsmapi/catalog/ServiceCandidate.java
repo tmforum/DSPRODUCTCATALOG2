@@ -213,12 +213,12 @@ public class ServiceCandidate extends AbstractCatalogEntity implements Serializa
 
         if (category != null) {
             for (Reference reference : category) {
-                reference.getEnitty(Category.class, depth);
+                reference.fetchEntity(Category.class, depth);
             }
         }
 
         if (serviceSpecification != null) {
-            serviceSpecification.getEnitty(ServiceSpecification.class, depth);
+            serviceSpecification.fetchEntity(ServiceSpecification.class, depth);
         }
     }
 

@@ -473,19 +473,19 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
 
         if (bundledProductSpecification != null) {
             for (Reference reference : bundledProductSpecification) {
-                reference.getEnitty(ProductSpecification.class, depth);
+                reference.fetchEntity(ProductSpecification.class, depth);
             }
         }
 
         if (serviceSpecification != null) {
             for (Reference reference : serviceSpecification) {
-                reference.getEnitty(ServiceSpecification.class, depth);
+                reference.fetchEntity(ServiceSpecification.class, depth);
             }
         }
 
         if (resourceSpecification != null) {
             for (Reference reference : resourceSpecification) {
-                reference.getEnitty(ResourceSpecification.class, depth);
+                reference.fetchEntity(ResourceSpecification.class, depth);
             }
         }
     }

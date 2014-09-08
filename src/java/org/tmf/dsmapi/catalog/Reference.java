@@ -179,7 +179,7 @@ public class Reference implements Serializable {
         return "Reference{" + "id=" + id + ", version=" + version + ", parsedVersion=" + parsedVersion + ", href=" + href + ", name=" + name + ", description=" + description + ", entity=" + entity + '}';
     }
 
-    public void getEnitty(Class<? extends AbstractEntity> theClass, int depth) {
+    public void fetchEntity(Class<? extends AbstractEntity> theClass, int depth) {
         try {
             entity = (AbstractEntity) CatalogClient.getObject(href, theClass, depth);
         }
