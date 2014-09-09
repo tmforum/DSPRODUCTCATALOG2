@@ -240,19 +240,15 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
     })
     private List<CatalogReference> resourceCandidate;
 
-    /*     "": [
-     *     "productOfferingTerm": [
-     *         {
-     *             "name": "12 Month",
-     *             "description": "12 month contract",
-     *             "duration": "12",
-     *             "validFor": {
-     *                 "startDateTime": "2013-04-19T16:42:23-04:00",
-     *                 "endDateTime": "2013-06-19T00:00:00-04:00"
-     *             }
-     *         }
-     *     ],
-     *
+    @ElementCollection
+    @CollectionTable(name = "CRI_PRODUCT_OFFER_R_OFFERING_TERM", joinColumns = {
+        @JoinColumn(name = "CATALOG_ID", referencedColumnName = "CATALOG_ID"),
+        @JoinColumn(name = "CATALOG_VERSION", referencedColumnName = "CATALOG_VERSION"),
+        @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
+        @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
+    })
+    private List<ProductOfferingTerm> productOfferingTerm;
+    /*
      *     "productOfferingPrice": [
      *         {
      *             "id": "15",
@@ -371,6 +367,14 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         this.resourceCandidate = resourceCandidate;
     }
 
+    public List<ProductOfferingTerm> getProductOfferingTerm() {
+        return productOfferingTerm;
+    }
+
+    public void setProductOfferingTerm(List<ProductOfferingTerm> productOfferingTerm) {
+        this.productOfferingTerm = productOfferingTerm;
+    }
+
     @Override
     public int hashCode() {
         int hash = 5;
@@ -386,6 +390,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         hash = 73 * hash + (this.productSpecification != null ? this.productSpecification.hashCode() : 0);
         hash = 73 * hash + (this.serviceCandidate != null ? this.serviceCandidate.hashCode() : 0);
         hash = 73 * hash + (this.resourceCandidate != null ? this.resourceCandidate.hashCode() : 0);
+        hash = 73 * hash + (this.productOfferingTerm != null ? this.productOfferingTerm.hashCode() : 0);
 
         return hash;
     }
@@ -433,12 +438,16 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
             return false;
         }
 
+        if (Utilities.areEqual(this.productOfferingTerm, other.productOfferingTerm) == false) {
+            return false;
+        }
+
         return true;
     }
 
     @Override
     public String toString() {
-        return "ProductOffering{<" + super.toString() + ">, isBundle=" + isBundle + ", category=" + category + ", channel=" + channel + ", place=" + place + ", bundledProductOffering=" + bundledProductOffering + ", serviceLevelAgreement=" + serviceLevelAgreement + ", productSpecification=" + productSpecification + ", serviceCandidate=" + serviceCandidate + ", resourceCandidate=" + resourceCandidate + '}';
+        return "ProductOffering{<" + super.toString() + ">, isBundle=" + isBundle + ", category=" + category + ", channel=" + channel + ", place=" + place + ", bundledProductOffering=" + bundledProductOffering + ", serviceLevelAgreement=" + serviceLevelAgreement + ", productSpecification=" + productSpecification + ", serviceCandidate=" + serviceCandidate + ", resourceCandidate=" + resourceCandidate + ", productOfferingTerm=" + productOfferingTerm + '}';
     }
 
     @Override
@@ -488,6 +497,10 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
 
         if (this.resourceCandidate == null) {
             this.resourceCandidate = input.resourceCandidate;
+        }
+
+        if (this.productOfferingTerm == null) {
+            this.productOfferingTerm = input.productOfferingTerm;
         }
     }
 
@@ -579,6 +592,9 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         productOffering.resourceCandidate = new ArrayList<CatalogReference>();
         productOffering.resourceCandidate.add(CatalogReference.createProto());
 
+        productOffering.productOfferingTerm = new ArrayList<ProductOfferingTerm>();
+        productOffering.productOfferingTerm.add(ProductOfferingTerm.createProto());
+        
         return productOffering;
     }
 
