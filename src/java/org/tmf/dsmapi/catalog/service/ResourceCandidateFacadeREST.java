@@ -22,8 +22,10 @@ import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import org.codehaus.jackson.node.ObjectNode;
+import org.tmf.dsmapi.catalog.LifecycleStatus;
 import org.tmf.dsmapi.catalog.ResourceCandidate;
 import org.tmf.dsmapi.commons.exceptions.BadUsageException;
+import org.tmf.dsmapi.commons.exceptions.IllegalLifecycleStatusException;
 import org.tmf.dsmapi.commons.jaxrs.PATCH;
 
 /**
@@ -33,7 +35,7 @@ import org.tmf.dsmapi.commons.jaxrs.PATCH;
  */
 @Stateless
 @Path("resourceCandidate")
-public class ResourceCandidateFacadeREST {
+public class ResourceCandidateFacadeREST extends AbstractFacadeREST {
     private static final Logger logger = Logger.getLogger(ResourceCandidate.class.getName());
     private static final String RELATIVE_CONTEXT = "resourceCandidate";
 
@@ -49,10 +51,18 @@ public class ResourceCandidateFacadeREST {
     /*
      *
      */
+    @Override
+    public Logger getLogger() {
+        return logger;
+    }
+
+    /*
+     *
+     */
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response create(ResourceCandidate input, @Context UriInfo uriInfo) {
+    public Response create(ResourceCandidate input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ResourceCandidateFacadeREST:create()");
 
         if (input == null) {
@@ -69,7 +79,7 @@ public class ResourceCandidateFacadeREST {
 
         if (input.canLifecycleTransitionFrom (null) == false) {
             logger.log(Level.FINE, "invalid lifecycleStatus: {0}", input.getLifecycleStatus());
-            return Response.status(Response.Status.BAD_REQUEST).build();
+            throw new IllegalLifecycleStatusException(LifecycleStatus.transitionableStatues(null));
         }
 
         input.setCatalogId(ResourceCandidate.getDefaultCatalogId());
@@ -89,7 +99,7 @@ public class ResourceCandidateFacadeREST {
     @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("entityId") String entityId, ResourceCandidate input, @Context UriInfo uriInfo) {
+    public Response update(@PathParam("entityId") String entityId, ResourceCandidate input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ResourceCandidateFacadeREST:update(entityId: {0})", entityId);
 
         return update_(entityId, null, input, uriInfo);
@@ -102,7 +112,7 @@ public class ResourceCandidateFacadeREST {
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, ResourceCandidate input, @Context UriInfo uriInfo) {
+    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, ResourceCandidate input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ResourceCandidateFacadeREST:update(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return update_(entityId, entityVersion, input, uriInfo);
@@ -115,7 +125,7 @@ public class ResourceCandidateFacadeREST {
     @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("entityId") String entityId, ResourceCandidate input, @Context UriInfo uriInfo) {
+    public Response edit(@PathParam("entityId") String entityId, ResourceCandidate input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ResourceCandidateFacadeREST:edit(entityId: {0})", entityId);
 
         return edit_(entityId, null, input, uriInfo);
@@ -128,7 +138,7 @@ public class ResourceCandidateFacadeREST {
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, ResourceCandidate input, @Context UriInfo uriInfo) {
+    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, ResourceCandidate input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ResourceCandidateFacadeREST:edit(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return edit_(entityId, entityVersion, input, uriInfo);
@@ -243,7 +253,7 @@ public class ResourceCandidateFacadeREST {
     /*
      *
      */
-    private Response update_(String entityId, String entityVersion, ResourceCandidate input, UriInfo uriInfo) {
+    private Response update_(String entityId, String entityVersion, ResourceCandidate input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ResourceCandidateFacadeREST:update_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
@@ -263,10 +273,7 @@ public class ResourceCandidateFacadeREST {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        if (input.canLifecycleTransitionFrom (entity.getLifecycleStatus()) == false) {
-            logger.log(Level.FINE, "invalid lifecycleStatus transition: {0} => {1}", new Object[]{entity.getLifecycleStatus(), input.getLifecycleStatus()});
-            return Response.status(Response.Status.BAD_REQUEST).build();
-        }
+        validateLifecycleStatus(input, entity);
 
         input.setCatalogId(ResourceCandidate.getDefaultCatalogId());
         input.setCatalogVersion(ResourceCandidate.getDefaultCatalogVersion());
@@ -289,7 +296,7 @@ public class ResourceCandidateFacadeREST {
     /*
      *
      */
-    private Response edit_(String entityId, String entityVersion, ResourceCandidate input, UriInfo uriInfo) {
+    private Response edit_(String entityId, String entityVersion, ResourceCandidate input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ResourceCandidateFacadeREST:edit_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
@@ -320,10 +327,7 @@ public class ResourceCandidateFacadeREST {
             return Response.status(Response.Status.CREATED).entity(entity).build();
         }
 
-        if (input.canLifecycleTransitionFrom (entity.getLifecycleStatus()) == false) {
-            logger.log(Level.FINE, "invalid lifecycleStatus transition: {0} => {1}", new Object[]{entity.getLifecycleStatus(), input.getLifecycleStatus()});
-            return Response.status(Response.Status.BAD_REQUEST).build();
-        }
+        validateLifecycleStatus(input, entity);
 
         if (input.hasHigherVersionThan(entity) == false) {
             logger.log(Level.FINE, "specified version ({0}) must be higher than entity version ({1})", new Object[]{input.getVersion(), entity.getVersion()});

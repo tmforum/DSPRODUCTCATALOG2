@@ -1,5 +1,7 @@
 package org.tmf.dsmapi.catalog;
 
+import java.util.EnumSet;
+import java.util.Set;
 import org.codehaus.jackson.annotate.JsonCreator;
 import org.codehaus.jackson.annotate.JsonValue;
 
@@ -38,7 +40,7 @@ public enum LifecycleStatus {
         if (this == currentStatus) {
             return true;
         }
-        
+
         switch(this) {
             case IN_STUDY: {
                 if (currentStatus == null) {
@@ -106,6 +108,51 @@ public enum LifecycleStatus {
 
             default : {
                 return false;
+            }
+        }
+    }
+
+    public static Set<LifecycleStatus> transitionableStatues(LifecycleStatus lifecycleStatus) {
+
+        if (lifecycleStatus == null) {
+            return EnumSet.of(LifecycleStatus.IN_STUDY, LifecycleStatus.IN_DESIGN, LifecycleStatus.IN_TEST, LifecycleStatus.ACTIVE, LifecycleStatus.LAUNCHED);
+        }
+
+        switch (lifecycleStatus) {
+            case IN_STUDY: {
+                return EnumSet.of(LifecycleStatus.IN_DESIGN);
+            }
+
+            case IN_DESIGN: {
+                return EnumSet.of(LifecycleStatus.IN_TEST);
+            }
+
+            case IN_TEST : {
+                return EnumSet.of(LifecycleStatus.IN_DESIGN, LifecycleStatus.ACTIVE, LifecycleStatus.REJECTED);
+            }
+
+            case ACTIVE : {
+                return EnumSet.of(LifecycleStatus.LAUNCHED, LifecycleStatus.RETIRED);
+            }
+
+            case LAUNCHED : {
+                return EnumSet.of(LifecycleStatus.RETIRED);
+            }
+
+            case RETIRED : {
+                return EnumSet.of(LifecycleStatus.OBSOLETE);
+            }
+
+            case OBSOLETE : {
+                return null;
+            }
+
+            case REJECTED : {
+                return null;
+            }
+
+            default : {
+                return EnumSet.noneOf(LifecycleStatus.class);
             }
         }
     }

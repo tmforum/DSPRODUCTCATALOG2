@@ -28,7 +28,7 @@ import org.tmf.dsmapi.commons.jaxrs.PATCH;
  */
 @Stateless
 @Path("catalog/{catalogId}/serviceCandidate")
-public class ServiceCandidateInCatalogIdFacadeREST {
+public class ServiceCandidateInCatalogIdFacadeREST extends AbstractFacadeREST {
     private static final Logger logger = Logger.getLogger(ServiceCandidate.class.getName());
 
     @EJB
@@ -38,6 +38,14 @@ public class ServiceCandidateInCatalogIdFacadeREST {
      *
      */
     public ServiceCandidateInCatalogIdFacadeREST() {
+    }
+
+    /*
+     *
+     */
+    @Override
+    public Logger getLogger() {
+        return logger;
     }
 
     /*
