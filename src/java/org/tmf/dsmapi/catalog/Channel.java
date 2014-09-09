@@ -68,8 +68,6 @@ public class Channel implements Serializable {
         return hash;
     }
 
-
-
     @Override
     public boolean equals(Object object) {
         if (object == null || getClass() != object.getClass()) {
