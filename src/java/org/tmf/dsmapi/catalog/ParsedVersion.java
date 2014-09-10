@@ -54,7 +54,11 @@ public class ParsedVersion implements Serializable {
 
     @Override
     public String toString() {
-        return "ParsedVersion{" + "majorVersion=" + majorVersion + ", minorVersion=" + minorVersion + '}';
+        return "ParsedVersion{" + "majorVersion=" + majorVersion + ", minorVersion=" + minorVersion + "; isValid=" + isValid() + '}';
+    }
+
+    public boolean isValid() {
+        return (majorVersion != null) ? true : false;
     }
 
     public String load(String input) {
@@ -62,11 +66,15 @@ public class ParsedVersion implements Serializable {
             throw new IllegalArgumentException("'" + input + "' is not a valid version.");
         }
 
-        return format_();
+        return format();
     }
 
-    public boolean isValid() {
-        return (majorVersion != null) ? true : false;
+    public String format() {
+        if (majorVersion == null) {
+            return null;
+        }
+
+        return (majorVersion + "." + minorVersion);
     }
 
     public boolean isGreaterThan(ParsedVersion other) {
@@ -118,15 +126,6 @@ public class ParsedVersion implements Serializable {
         }
 
         return true;
-    }
-
-    private String format_() {
-        if (majorVersion == null) {
-            return null;
-        }
-
-        return (majorVersion + "." + minorVersion);
-
     }
 
     private void initialize_() {

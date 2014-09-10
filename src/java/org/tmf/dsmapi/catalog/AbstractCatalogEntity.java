@@ -4,6 +4,8 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import javax.persistence.PostLoad;
+import javax.persistence.Transient;
 import org.codehaus.jackson.annotate.JsonIgnore;
 
 /**
@@ -24,6 +26,10 @@ public abstract class AbstractCatalogEntity extends AbstractEntity implements Se
     @JsonIgnore
     private String catalogVersion;
 
+    @Transient
+    @JsonIgnore
+    private final ParsedVersion parsedCatalogVersion = new ParsedVersion();
+
     public AbstractCatalogEntity() {
     }
 
@@ -40,9 +46,11 @@ public abstract class AbstractCatalogEntity extends AbstractEntity implements Se
     }
 
     public void setCatalogVersion(String catalogVersion) {
-        this.catalogVersion = catalogVersion;
-        ParsedVersion parsedCatalogVersion = new ParsedVersion();
-        parsedCatalogVersion.load(this.catalogVersion);
+        this.catalogVersion = this.parsedCatalogVersion.load(catalogVersion);
+    }
+
+    public ParsedVersion getParsedCatalogVersion() {
+        return parsedCatalogVersion;
     }
 
     @Override
@@ -77,7 +85,7 @@ public abstract class AbstractCatalogEntity extends AbstractEntity implements Se
 
     @Override
     public String toString() {
-        return "AbstractCatalogEntity{" + "catalogId=" + catalogId + ", catalogVersion=" + catalogVersion + '}';
+        return "AbstractCatalogEntity{" + "catalogId=" + catalogId + ", catalogVersion=" + catalogVersion + ", parsedCatalogVersion=" + parsedCatalogVersion + '}';
     }
 
     public boolean keysMatch(AbstractEntity input) {
@@ -103,6 +111,13 @@ public abstract class AbstractCatalogEntity extends AbstractEntity implements Se
         }
 
         return true;
+    }
+
+    @PostLoad
+    @Override
+    protected void onLoad() {
+        super.onLoad();
+        this.catalogVersion = this.parsedCatalogVersion.load(this.catalogVersion);
     }
 
 }

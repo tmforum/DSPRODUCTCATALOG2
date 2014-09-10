@@ -9,10 +9,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import javax.persistence.PostLoad;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonProperty;
 
@@ -33,6 +35,10 @@ public abstract class AbstractEntity implements Serializable {
     @Id
     @Column(name = "VERSION", nullable = false)
     private String version;
+
+    @Transient
+    @JsonIgnore
+    private final ParsedVersion parsedVersion = new ParsedVersion();
 
     @Column(name = "HERF", nullable = true)
     private String href;
@@ -68,9 +74,11 @@ public abstract class AbstractEntity implements Serializable {
     }
 
     public void setVersion(String version) {
-        this.version = version;
-        ParsedVersion parsedVersion = new ParsedVersion();
-        parsedVersion.load(this.version);
+        this.version = this.parsedVersion.load(version);
+    }
+
+    public ParsedVersion getParsedVersion() {
+        return parsedVersion;
     }
 
     public String getHref() {
@@ -186,7 +194,7 @@ public abstract class AbstractEntity implements Serializable {
 
     @Override
     public String toString() {
-        return "AbstractEntity{" + "id=" + id + ", version=" + version + ", href=" + href + ", name=" + name + ", description=" + description + ", lastUpdate=" + lastUpdate + ", lifecycleStatus=" + lifecycleStatus + ", validFor=" + validFor + '}';
+        return "AbstractEntity{" + "id=" + id + ", version=" + version + ", parsedVersion=" + parsedVersion + ", href=" + href + ", name=" + name + ", description=" + description + ", lastUpdate=" + lastUpdate + ", lifecycleStatus=" + lifecycleStatus + ", validFor=" + validFor + '}';
     }
 
     @JsonIgnore
@@ -267,17 +275,7 @@ public abstract class AbstractEntity implements Serializable {
     }
 
     public boolean hasHigherVersionThan(AbstractEntity other) {
-        if (other == null) {
-            return true;
-        }
-
-        ParsedVersion thisVersion = new ParsedVersion();
-        thisVersion.load(this.version);
-        
-        ParsedVersion otherVersion = new ParsedVersion();
-        otherVersion.load(other.version);
-
-        return (thisVersion.isGreaterThan(otherVersion));
+        return (this.parsedVersion.isGreaterThan((other != null) ? other.parsedVersion : null));
     }
 
     public boolean canLifecycleTransitionFrom(LifecycleStatus fromStatus) {
@@ -298,6 +296,11 @@ public abstract class AbstractEntity implements Serializable {
     @PreUpdate
     protected void onUpdate() {
         lastUpdate = new Date ();
+    }
+
+    @PostLoad
+    protected void onLoad() {
+        this.version = this.parsedVersion.load(this.version);
     }
 
     public static String getDefaultEntityVersion () {
