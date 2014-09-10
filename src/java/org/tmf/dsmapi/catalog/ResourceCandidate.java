@@ -133,7 +133,7 @@ public class ResourceCandidate extends AbstractCatalogEntity implements Serializ
 
     @Override
     public boolean equals(Object object) {
-        if (super.equals(object) == false) {
+        if (object == null || getClass() != object.getClass() || super.equals(object) == false) {
             return false;
         }
 

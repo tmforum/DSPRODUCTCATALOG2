@@ -67,7 +67,7 @@ public abstract class AbstractCatalogEntity extends AbstractEntity implements Se
 
     @Override
     public boolean equals(Object object) {
-        if (super.equals(object) == false) {
+        if (object == null || getClass() != object.getClass() || super.equals(object) == false) {
             return false;
         }
 

@@ -397,7 +397,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
 
     @Override
     public boolean equals(Object object) {
-        if (super.equals(object) == false) {
+        if (object == null || getClass() != object.getClass() || super.equals(object) == false) {
             return false;
         }
 
@@ -594,7 +594,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
 
         productOffering.productOfferingTerm = new ArrayList<ProductOfferingTerm>();
         productOffering.productOfferingTerm.add(ProductOfferingTerm.createProto());
-        
+
         return productOffering;
     }
 
