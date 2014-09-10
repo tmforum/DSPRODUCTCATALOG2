@@ -221,7 +221,7 @@ public abstract class AbstractEntity implements Serializable {
     }
 
     @JsonIgnore
-    public void setDefaults() {
+    public void setCreateDefaults() {
         if (lifecycleStatus == null) {
             lifecycleStatus = LifecycleStatus.IN_STUDY;
         }

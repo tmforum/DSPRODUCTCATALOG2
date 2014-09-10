@@ -111,8 +111,8 @@ public class Category extends AbstractCatalogEntity implements Serializable {
 
     @Override
     @JsonIgnore
-    public void setDefaults() {
-        super.setDefaults();
+    public void setCreateDefaults() {
+        super.setCreateDefaults();
 
         if (isRoot == null) {
             isRoot = true;

@@ -71,7 +71,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST {
            return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        input.setDefaults();
+        input.setCreateDefaults();
 
         if (input.isValid() == false) {
             logger.log(Level.FINE, "input is not valid");

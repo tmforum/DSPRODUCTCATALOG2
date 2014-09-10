@@ -169,8 +169,8 @@ public class Catalog extends AbstractEntity implements Serializable {
 
     @Override
     @JsonIgnore
-    public void setDefaults() {
-        super.setDefaults();
+    public void setCreateDefaults() {
+        super.setCreateDefaults();
 
         if (getVersion() == null) {
              setVersion(Catalog.getDefaultEntityVersion());
