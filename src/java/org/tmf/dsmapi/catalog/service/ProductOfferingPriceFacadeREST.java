@@ -283,6 +283,11 @@ public class ProductOfferingPriceFacadeREST extends AbstractFacadeREST {
             return Response.status(Response.Status.CREATED).entity(entity).build();
         }
 
+        if (input.hasHigherVersionThan(entity) == false) {
+            logger.log(Level.FINE, "specified version ({0}) must be higher than entity version ({1})", new Object[]{input.getVersion(), entity.getVersion()});
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+
         manager.remove(entity);
         manager.create(input);
 
