@@ -38,7 +38,7 @@ public abstract class AbstractEntity implements Serializable {
 
     @Transient
     @JsonIgnore
-    private final ParsedVersion parsedVersion = new ParsedVersion();
+    private ParsedVersion parsedVersion;
 
     @Column(name = "HERF", nullable = true)
     private String href;
@@ -74,11 +74,17 @@ public abstract class AbstractEntity implements Serializable {
     }
 
     public void setVersion(String version) {
-        this.version = this.parsedVersion.load(version);
+        this.parsedVersion = new ParsedVersion(version);
+        this.version = this.parsedVersion.getInternalView();
     }
 
     public ParsedVersion getParsedVersion() {
         return parsedVersion;
+    }
+
+    public void setParsedVersion(ParsedVersion parsedVersion) {
+        this.parsedVersion = parsedVersion;
+        this.version = (this.parsedVersion != null) ? this.parsedVersion.getInternalView() : null;
     }
 
     public String getHref() {
@@ -129,6 +135,11 @@ public abstract class AbstractEntity implements Serializable {
         this.validFor = validFor;
     }
 
+    @JsonProperty(value = "version")
+    public String versionToJson() {
+        return (parsedVersion != null) ? parsedVersion.getExternalView() : null;
+    }
+
     @JsonProperty(value = "validFor")
     public TimeRange validForToJson() {
         return (validFor != null && validFor.isEmpty() == false) ? validFor : null;
@@ -140,6 +151,7 @@ public abstract class AbstractEntity implements Serializable {
 
         hash = 47 * hash + (this.id != null ? this.id.hashCode() : 0);
         hash = 47 * hash + (this.version != null ? this.version.hashCode() : 0);
+        hash = 47 * hash + (this.parsedVersion != null ? this.parsedVersion.hashCode() : 0);
         hash = 47 * hash + (this.href != null ? this.href.hashCode() : 0);
         hash = 47 * hash + (this.name != null ? this.name.hashCode() : 0);
         hash = 47 * hash + (this.description != null ? this.description.hashCode() : 0);
@@ -162,6 +174,10 @@ public abstract class AbstractEntity implements Serializable {
         }
 
         if (Utilities.areEqual(this.version, other.version) == false) {
+            return false;
+        }
+
+        if (Utilities.areEqual(this.parsedVersion, other.parsedVersion) == false) {
             return false;
         }
 
@@ -275,6 +291,10 @@ public abstract class AbstractEntity implements Serializable {
     }
 
     public boolean hasHigherVersionThan(AbstractEntity other) {
+        if (this.parsedVersion == null) {
+            throw new IllegalArgumentException ("invalid parsed version object");
+        }
+
         return (this.parsedVersion.isGreaterThan((other != null) ? other.parsedVersion : null));
     }
 
@@ -300,19 +320,8 @@ public abstract class AbstractEntity implements Serializable {
 
     @PostLoad
     protected void onLoad() {
-        this.version = this.parsedVersion.load(this.version);
-    }
-
-    public static String getDefaultEntityVersion () {
-        return "1.0";
-    }
-
-    public static String getDefaultCatalogId() {
-        return "";
-    }
-
-    public static String getDefaultCatalogVersion() {
-        return "-1.0";
+        this.parsedVersion = new ParsedVersion(this.version);
+        this.version = this.parsedVersion.getInternalView();
     }
 
 }

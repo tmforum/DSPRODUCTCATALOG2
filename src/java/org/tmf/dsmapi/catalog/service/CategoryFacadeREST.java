@@ -24,6 +24,7 @@ import javax.ws.rs.core.UriInfo;
 import org.codehaus.jackson.node.ObjectNode;
 import org.tmf.dsmapi.catalog.Category;
 import org.tmf.dsmapi.catalog.LifecycleStatus;
+import org.tmf.dsmapi.catalog.ParsedVersion;
 import org.tmf.dsmapi.commons.exceptions.BadUsageException;
 import org.tmf.dsmapi.commons.exceptions.IllegalLifecycleStatusException;
 import org.tmf.dsmapi.commons.jaxrs.PATCH;
@@ -82,11 +83,10 @@ public class CategoryFacadeREST extends AbstractFacadeREST {
             throw new IllegalLifecycleStatusException(LifecycleStatus.transitionableStatues(null));
         }
 
-        input.setCatalogId(Category.getDefaultCatalogId());
-        input.setCatalogVersion(Category.getDefaultCatalogVersion());
+        input.configureCatalogIdentifier();
         manager.create(input);
 
-        input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getVersion()));
+        input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getParsedVersion()));
         manager.edit(input);
 
         return Response.status(Response.Status.CREATED).entity(input).build();
@@ -112,7 +112,7 @@ public class CategoryFacadeREST extends AbstractFacadeREST {
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, Category input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, Category input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "CategoryFacadeREST:update(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return update_(entityId, entityVersion, input, uriInfo);
@@ -138,7 +138,7 @@ public class CategoryFacadeREST extends AbstractFacadeREST {
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, Category input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, Category input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "CategoryFacadeREST:edit(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return edit_(entityId, entityVersion, input, uriInfo);
@@ -160,7 +160,7 @@ public class CategoryFacadeREST extends AbstractFacadeREST {
      */
     @DELETE
     @Path("{entityId}:({entityVersion})")
-    public Response remove(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion) {
+    public Response remove(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion) {
         logger.log(Level.FINE, "CategoryFacadeREST:remove(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return remove_(entityId, entityVersion);
@@ -219,7 +219,7 @@ public class CategoryFacadeREST extends AbstractFacadeREST {
     @GET
     @Path("{entityId}:({entityVersion})")
     @Produces({MediaType.APPLICATION_JSON})
-    public Response find(@PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
+    public Response find(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "CategoryFacadeREST:find(entityId: {0}, entityVersion: {1}, depth: {2})", new Object[]{entityId, entityVersion, depth});
 
         return find_(entityId, entityVersion, depth, uriInfo);
@@ -253,7 +253,7 @@ public class CategoryFacadeREST extends AbstractFacadeREST {
     /*
      *
      */
-    private Response update_(String entityId, String entityVersion, Category input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    private Response update_(String entityId, ParsedVersion entityVersion, Category input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "CategoryFacadeREST:update_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
@@ -266,7 +266,7 @@ public class CategoryFacadeREST extends AbstractFacadeREST {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        List<Category> entities = manager.findById(Category.getDefaultCatalogId(), Category.getDefaultCatalogVersion(), entityId, entityVersion);
+        List<Category> entities = manager.findById(Category.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
         Category entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
         if (entity == null) {
             logger.log(Level.FINE, "requested Category [{0}, {1}] not found", new Object[]{entityId, entityVersion});
@@ -275,11 +275,10 @@ public class CategoryFacadeREST extends AbstractFacadeREST {
 
         validateLifecycleStatus(input, entity);
 
-        input.setCatalogId(Category.getDefaultCatalogId());
-        input.setCatalogVersion(Category.getDefaultCatalogVersion());
+        input.configureCatalogIdentifier();
 
         if (input.keysMatch(entity)) {
-            input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getVersion()));
+            input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getParsedVersion()));
             manager.edit(input);
             return Response.status(Response.Status.CREATED).entity(entity).build();
         }
@@ -287,7 +286,7 @@ public class CategoryFacadeREST extends AbstractFacadeREST {
         manager.remove(entity);
         manager.create(input);
 
-        input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getVersion()));
+        input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getParsedVersion()));
         manager.edit(input);
 
         return Response.status(Response.Status.CREATED).entity(input).build();
@@ -296,7 +295,7 @@ public class CategoryFacadeREST extends AbstractFacadeREST {
     /*
      *
      */
-    private Response edit_(String entityId, String entityVersion, Category input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    private Response edit_(String entityId, ParsedVersion entityVersion, Category input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "CategoryFacadeREST:edit_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
@@ -304,7 +303,7 @@ public class CategoryFacadeREST extends AbstractFacadeREST {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        List<Category> entities = manager.findById(Category.getDefaultCatalogId(), Category.getDefaultCatalogVersion(), entityId, entityVersion);
+        List<Category> entities = manager.findById(Category.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
         Category entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
         if (entity == null) {
             logger.log(Level.FINE, "requested Category [{0}, {1}] not found", new Object[]{entityId, entityVersion});
@@ -336,7 +335,7 @@ public class CategoryFacadeREST extends AbstractFacadeREST {
 
         manager.remove(entity);
 
-        input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getVersion()));
+        input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getParsedVersion()));
         manager.create(input);
 
         return Response.status(Response.Status.CREATED).entity(input).build();
@@ -345,10 +344,10 @@ public class CategoryFacadeREST extends AbstractFacadeREST {
     /*
      *
      */
-    private Response remove_(String entityId, String entityVersion) {
+    private Response remove_(String entityId, ParsedVersion entityVersion) {
         logger.log(Level.FINE, "CategoryFacadeREST:remove_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
-        List<Category> entities = manager.findById(Category.getDefaultCatalogId(), Category.getDefaultCatalogVersion(), entityId, entityVersion);
+        List<Category> entities = manager.findById(Category.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
@@ -360,10 +359,10 @@ public class CategoryFacadeREST extends AbstractFacadeREST {
     /*
      *
      */
-    private Response find_(String entityId, String entityVersion, int depth, UriInfo uriInfo) {
+    private Response find_(String entityId, ParsedVersion entityVersion, int depth, UriInfo uriInfo) {
         logger.log(Level.FINE, "CategoryFacadeREST:find_(entityId: {0}, entityVersion: {1}, depth: {2})", new Object[]{entityId, entityVersion, depth});
 
-        List<Category> entities = manager.findById(Category.getDefaultCatalogId(), Category.getDefaultCatalogVersion(), entityId, entityVersion);
+        List<Category> entities = manager.findById(Category.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }

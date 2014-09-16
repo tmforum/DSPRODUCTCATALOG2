@@ -66,8 +66,7 @@ public class CatalogReference implements Serializable {
             return;
         }
 
-        this.parsedVersion = new ParsedVersion();
-        this.version = parsedVersion.load(version);
+        this.parsedVersion = new ParsedVersion(version);
     }
 
     public ParsedVersion getParsedVersion() {

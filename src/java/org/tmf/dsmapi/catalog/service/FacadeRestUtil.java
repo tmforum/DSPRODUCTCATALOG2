@@ -18,6 +18,7 @@ import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.node.ArrayNode;
 import org.codehaus.jackson.node.ObjectNode;
+import org.tmf.dsmapi.catalog.ParsedVersion;
 
 /**
  *
@@ -29,6 +30,7 @@ public class FacadeRestUtil {
     private static PropertyUtilsBean pub = new PropertyUtilsBean();
     public static final String ALL_FIELDS = "all";
     public static final String ID_FIELD = "id";
+    public static final String VERSION_FIELD = "version";
     public static final String QUERY_KEY_FIELD = "fields";
     public static final String QUERY_KEY_FIELD_ESCAPE = ":";
 
@@ -179,7 +181,7 @@ public class FacadeRestUtil {
         return fieldSet;
     }
 
-    public static String buildHref(UriInfo uriInfo, String entity, String id, String version) {
+    public static String buildHref(UriInfo uriInfo, String entity, String id, ParsedVersion parsedVersion) {
         URI uri = (uriInfo != null) ? uriInfo.getBaseUri() : null;
         String basePath = (uri != null) ? uri.toString() : null;
         if (basePath == null) {
@@ -196,10 +198,12 @@ public class FacadeRestUtil {
         }
 
         basePath += id;
+        String version = (parsedVersion != null) ? parsedVersion.getExternalView() : null;
         if (version == null || version.length() <= 0) {
             return basePath;
         }
 
         return basePath + ":(" + version + ")";
     }
+
 }

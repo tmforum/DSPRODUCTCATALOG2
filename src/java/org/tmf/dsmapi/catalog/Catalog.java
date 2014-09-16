@@ -13,6 +13,7 @@ import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
+import javax.persistence.PostLoad;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.codehaus.jackson.annotate.JsonIgnore;
@@ -91,6 +92,16 @@ public class Catalog extends AbstractEntity implements Serializable {
     public Catalog() {
     }
 
+    @Override
+    public void setVersion(String version) {
+        if (Utilities.areEqual(ParsedVersion.ROOT_CATALOG_VERSION.getExternalView(), version) == true) {
+            super.setParsedVersion(ParsedVersion.ROOT_CATALOG_VERSION);
+            return;
+        }
+
+        super.setVersion(version);
+    }
+
     public CatalogType getType() {
         return type;
     }
@@ -113,12 +124,6 @@ public class Catalog extends AbstractEntity implements Serializable {
 
     public void setRelatedParty(List<RelatedParty> relatedParty) {
         this.relatedParty = relatedParty;
-    }
-
-    @JsonProperty(value = "version")
-    public String versionToJson() {
-        String version = getVersion ();
-        return (Catalog.getDefaultEntityVersion().equals(version) == false) ? version : null;
     }
 
     @Override
@@ -173,7 +178,7 @@ public class Catalog extends AbstractEntity implements Serializable {
         super.setCreateDefaults();
 
         if (getVersion() == null) {
-             setVersion(Catalog.getDefaultEntityVersion());
+             super.setParsedVersion(ParsedVersion.ROOT_CATALOG_VERSION);
         }
     }
 
@@ -224,8 +229,15 @@ public class Catalog extends AbstractEntity implements Serializable {
         }
     }
 
-    public static String getDefaultEntityVersion() {
-        return "-1.0";
+    @Override
+    @PostLoad
+    protected void onLoad() {
+        if (Utilities.areEqual(ParsedVersion.ROOT_CATALOG_VERSION.getInternalView(), this.getVersion()) == true) {
+            this.setParsedVersion(ParsedVersion.ROOT_CATALOG_VERSION);
+            return;
+        }
+
+        super.setVersion(getVersion());
     }
 
     public static Catalog createProto() {

@@ -24,6 +24,7 @@ import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import javax.ws.rs.core.MultivaluedMap;
+import org.tmf.dsmapi.catalog.ParsedVersion;
 import org.tmf.dsmapi.commons.exceptions.BadUsageException;
 import org.tmf.dsmapi.commons.exceptions.ExceptionType;
 
@@ -82,49 +83,30 @@ public abstract class AbstractFacade<T> {
     public T find(Object id) {
         return getEntityManager().find(entityClass, id);
     }
-/*
-    public List<T> findCatalogById(String catalogId) {
+
+    public List<T> findCatalogById(String catalogId, ParsedVersion parsedCatalogVersion) {
+        if (parsedCatalogVersion != null && parsedCatalogVersion.isValid() == false) {
+            return null;
+        }
+
+        String catalogVersion = (parsedCatalogVersion != null) ? parsedCatalogVersion.getInternalView() : null;
+
         CriteriaBuilder criteriaBuilder = getEntityManager().getCriteriaBuilder();
         CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(entityClass);
         Root<T> table = criteriaQuery.from(entityClass);
 
-        ParameterExpression<String> catalogIdExpression = null;
-        Predicate condition = null;
-        if (catalogId != null) {
-            catalogIdExpression = criteriaBuilder.parameter(String.class);
-            condition = criteriaBuilder.equal(table.get("id"), catalogIdExpression);
-        }
-
-        criteriaQuery.select(table).where(condition);
-        criteriaQuery.orderBy(criteriaBuilder.desc(table.get("version")));
-
-        TypedQuery<T> query = getEntityManager().createQuery(criteriaQuery);
-
-        if (catalogId != null) {
-            query.setParameter(catalogIdExpression, catalogId);
-        }
-
-        return query.getResultList();
-    }
-    */
-
-    public List<T> findCatalogById(String catalogId, String catalogVersion) {
-        CriteriaBuilder criteriaBuilder = getEntityManager().getCriteriaBuilder();
-        CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(entityClass);
-        Root<T> table = criteriaQuery.from(entityClass);
-
-        Predicate condition = null;
+        Predicate condition;
 
         ParameterExpression<String> catalogIdExpression = (catalogId != null) ? criteriaBuilder.parameter(String.class) : null;
-        Predicate propertyCondition = (catalogIdExpression != null) ? criteriaBuilder.equal(table.get("id"), catalogIdExpression) : null;
+        Predicate propertyCondition = (catalogIdExpression != null) ? criteriaBuilder.equal(table.get(FacadeRestUtil.ID_FIELD), catalogIdExpression) : null;
         condition = propertyCondition;
 
         ParameterExpression<String> catalogVersionExpression = (catalogVersion != null) ? criteriaBuilder.parameter(String.class) : null;
-        propertyCondition = (catalogVersionExpression != null) ? criteriaBuilder.equal(table.get("version"), catalogVersionExpression) : null;
+        propertyCondition = (catalogVersionExpression != null) ? criteriaBuilder.equal(table.get(FacadeRestUtil.VERSION_FIELD), catalogVersionExpression) : null;
         condition = andPredicates(condition, propertyCondition);
 
         criteriaQuery.select(table).where(condition);
-        criteriaQuery.orderBy(criteriaBuilder.desc (table.get("id")), criteriaBuilder.desc (table.get("version")));
+        criteriaQuery.orderBy(criteriaBuilder.desc (table.get(FacadeRestUtil.ID_FIELD)), criteriaBuilder.desc (table.get(FacadeRestUtil.VERSION_FIELD)));
 
         TypedQuery<T> query = getEntityManager().createQuery(criteriaQuery);
         if (catalogId != null) {
@@ -138,12 +120,24 @@ public abstract class AbstractFacade<T> {
         return query.getResultList();
     }
 
-    public List<T> findById(String catalogId, String catalogVersion, String entityId, String entityVersion) {
+    public List<T> findById(String catalogId, ParsedVersion parsedCatalogVersion, String entityId, ParsedVersion parsedEntityVersion) {
+        if (parsedCatalogVersion != null && parsedCatalogVersion.isValid() == false) {
+            return null;
+        }
+
+        String catalogVersion = (parsedCatalogVersion != null) ? parsedCatalogVersion.getInternalView() : null;
+
+        if (parsedEntityVersion != null && parsedEntityVersion.isValid() == false) {
+            return null;
+        }
+
+        String entityVersion = (parsedEntityVersion != null) ? parsedEntityVersion.getInternalView() : null;
+
         CriteriaBuilder criteriaBuilder = getEntityManager().getCriteriaBuilder();
         CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(entityClass);
         Root<T> table = criteriaQuery.from(entityClass);
 
-        Predicate condition = null;
+        Predicate condition;
 
         ParameterExpression<String> catalogIdExpression = (catalogId != null) ? criteriaBuilder.parameter(String.class) : null;
         Predicate propertyCondition = (catalogIdExpression != null) ? criteriaBuilder.equal(table.get("catalogId"), catalogIdExpression) : null;
@@ -154,15 +148,15 @@ public abstract class AbstractFacade<T> {
         condition = andPredicates(condition, propertyCondition);
 
         ParameterExpression<String> entityIdExpression = (entityId != null) ? criteriaBuilder.parameter(String.class) : null;
-        propertyCondition = (entityIdExpression != null) ? criteriaBuilder.equal(table.get("id"), entityIdExpression) : null;
+        propertyCondition = (entityIdExpression != null) ? criteriaBuilder.equal(table.get(FacadeRestUtil.ID_FIELD), entityIdExpression) : null;
         condition = andPredicates(condition, propertyCondition);
 
         ParameterExpression<String> entityVersionExpression = (entityVersion != null) ? criteriaBuilder.parameter(String.class) : null;
-        propertyCondition = (entityVersionExpression != null) ? criteriaBuilder.equal(table.get("version"), entityVersionExpression) : null;
+        propertyCondition = (entityVersionExpression != null) ? criteriaBuilder.equal(table.get(FacadeRestUtil.VERSION_FIELD), entityVersionExpression) : null;
         condition = andPredicates(condition, propertyCondition);
 
         criteriaQuery.select(table).where(condition);
-        criteriaQuery.orderBy(criteriaBuilder.desc (table.get("catalogId")), criteriaBuilder.desc (table.get("catalogVersion")), criteriaBuilder.desc (table.get("id")), criteriaBuilder.desc(table.get("version")));
+        criteriaQuery.orderBy(criteriaBuilder.desc (table.get("catalogId")), criteriaBuilder.desc (table.get("catalogVersion")), criteriaBuilder.desc (table.get(FacadeRestUtil.ID_FIELD)), criteriaBuilder.desc(table.get(FacadeRestUtil.VERSION_FIELD)));
 
         TypedQuery<T> query = getEntityManager().createQuery(criteriaQuery);
         if (catalogId != null) {
@@ -368,7 +362,7 @@ public abstract class AbstractFacade<T> {
         return enumValue;
     }
 
-    private Object convertStringValueToObject(String value, Class clazz) throws BadUsageException {
+    private Object convertStringValueToObject(String name, String value, Class clazz) throws BadUsageException {
         Object convertedValue = null;
         if (clazz.isEnum()) {
             convertedValue = safeEnumValueOf(clazz, value);
@@ -385,6 +379,14 @@ public abstract class AbstractFacade<T> {
             } catch (ParseException ex) {
                 convertedValue = null;
             }
+        } else if (String.class.equals(clazz) && FacadeRestUtil.VERSION_FIELD.equals(name)){
+            try {
+                ParsedVersion parsedVersion = new ParsedVersion(value);
+                convertedValue = parsedVersion.getInternalView();
+            }
+            catch (Exception ex) {
+                convertedValue = null;
+            }
         } else {
             convertedValue = value;
         }
@@ -399,7 +401,7 @@ public abstract class AbstractFacade<T> {
     // operators = and <> are compatibles with all types
     // operators < > <= >= are compatibles with numbers and dates
     // operator "LIKE" is compatible with String
-    private boolean classCompatibleWithOperator(Class clazz, Operator operator) {
+    private boolean classCompatibleWithOperator(String name, Class clazz, Operator operator) {
         if (operator == null) {
             return true;
         } else {
@@ -411,6 +413,10 @@ public abstract class AbstractFacade<T> {
                 case GTE:
                 case LT:
                 case LTE:
+                    if (String.class.equals(clazz) == true && FacadeRestUtil.VERSION_FIELD.equals(name)) {
+                        return true;
+                    }
+
                     return (Date.class.isAssignableFrom(clazz)
                             || (clazz.isPrimitive() && !clazz.equals(boolean.class))
                             || Number.class.isAssignableFrom(clazz));
@@ -428,15 +434,15 @@ public abstract class AbstractFacade<T> {
         // perform operation, default operation is equal
         if (operator == null) {
             Path<T> attribute = tt.get(name);
-            Object valueObject = convertStringValueToObject(value, attribute.getJavaType());
+            Object valueObject = convertStringValueToObject(name, value, attribute.getJavaType());
             System.out.println("### bp RETURN "+name+"="+value);
             return criteriaBuilder.equal(attribute, valueObject);
         } else {
             Class javaType = tt.getJavaType();
-            if (! classCompatibleWithOperator(javaType, operator)) {
+            if (! classCompatibleWithOperator(name, javaType, operator)) {
                 throw new BadUsageException(ExceptionType.BAD_USAGE_OPERATOR, operator.getValue()+" operator incompatible with field");
             }
-            Object valueObject = convertStringValueToObject(value, javaType);
+            Object valueObject = convertStringValueToObject(name, value, javaType);
             switch (operator) {
                 case GT:
                     return criteriaBuilder.greaterThan((Expression) tt, (Comparable) valueObject);
@@ -454,7 +460,7 @@ public abstract class AbstractFacade<T> {
                     return criteriaBuilder.like((Expression) tt, value.replace('*', '%'));
                 default: {
                     Path<T> attribute = tt.get(name);
-                    valueObject = convertStringValueToObject(value, attribute.getJavaType());
+                    valueObject = convertStringValueToObject(name, value, attribute.getJavaType());
                     return criteriaBuilder.equal(attribute, valueObject);
                 }
             }

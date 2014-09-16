@@ -17,6 +17,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
+import org.tmf.dsmapi.catalog.ParsedVersion;
 import org.tmf.dsmapi.catalog.ProductOffering;
 import org.tmf.dsmapi.commons.exceptions.BadUsageException;
 import org.tmf.dsmapi.commons.jaxrs.PATCH;
@@ -54,7 +55,7 @@ public class ProductOfferingInCatalogIdVersionFacadeREST extends AbstractFacadeR
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response create(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, ProductOffering input, @Context UriInfo uriInfo) {
+    public Response create(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") ParsedVersion catalogVersion, ProductOffering input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductOfferingInCatalogIdVersionFacadeREST:create(catalogId: {0}, catalogVersion: {1})", new Object[]{catalogId, catalogVersion});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -67,7 +68,7 @@ public class ProductOfferingInCatalogIdVersionFacadeREST extends AbstractFacadeR
     @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, @PathParam("entityId") String entityId, ProductOffering input, @Context UriInfo uriInfo) {
+    public Response update(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") ParsedVersion catalogVersion, @PathParam("entityId") String entityId, ProductOffering input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductOfferingInCatalogIdVersionFacadeREST:update(catalogId: {0}, catalogVersion: {1}, entityId: {2})", new Object[]{catalogId, catalogVersion, entityId});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -80,7 +81,7 @@ public class ProductOfferingInCatalogIdVersionFacadeREST extends AbstractFacadeR
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, @PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, ProductOffering input, @Context UriInfo uriInfo) {
+    public Response update(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") ParsedVersion catalogVersion, @PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, ProductOffering input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductOfferingInCatalogIdVersionFacadeREST:update(catalogId: {0}, catalogVersion: {1}, entityId: {2}, entityVersion: {3})", new Object[]{catalogId, catalogVersion, entityId, entityVersion});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -93,7 +94,7 @@ public class ProductOfferingInCatalogIdVersionFacadeREST extends AbstractFacadeR
     @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, @PathParam("entityId") String entityId, ProductOffering input, @Context UriInfo uriInfo) {
+    public Response edit(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") ParsedVersion catalogVersion, @PathParam("entityId") String entityId, ProductOffering input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductOfferingInCatalogIdVersionFacadeREST:edit(catalogId: {0}, catalogVersion: {1}, entityId: {2})", new Object[]{catalogId, catalogVersion, entityId});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -106,7 +107,7 @@ public class ProductOfferingInCatalogIdVersionFacadeREST extends AbstractFacadeR
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, @PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, ProductOffering input, @Context UriInfo uriInfo) {
+    public Response edit(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") ParsedVersion catalogVersion, @PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, ProductOffering input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductOfferingInCatalogIdVersionFacadeREST:edit(catalogId: {0}, catalogVersion: {1}, entityId: {2}, entityVersion: {3})", new Object[]{catalogId, catalogVersion, entityId, entityVersion});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -117,7 +118,7 @@ public class ProductOfferingInCatalogIdVersionFacadeREST extends AbstractFacadeR
      */
     @DELETE
     @Path("{entityId}")
-    public Response remove(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, @PathParam("entityId") String entityId) {
+    public Response remove(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") ParsedVersion catalogVersion, @PathParam("entityId") String entityId) {
         logger.log(Level.FINE, "ProductOfferingInCatalogIdVersionFacadeREST:remove(catalogId: {0}, catalogVersion: {1}, entityId: {2})", new Object[]{catalogId, catalogVersion, entityId});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -128,7 +129,7 @@ public class ProductOfferingInCatalogIdVersionFacadeREST extends AbstractFacadeR
      */
     @DELETE
     @Path("{entityId}:({entityVersion})")
-    public Response remove(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, @PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion) {
+    public Response remove(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") ParsedVersion catalogVersion, @PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion) {
         logger.log(Level.FINE, "ProductOfferingInCatalogIdVersionFacadeREST:remove(catalogId: {0}, catalogVersion: {1}, entityId: {2}, entityVersion: {3})", new Object[]{catalogId, catalogVersion, entityId, entityVersion});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -139,7 +140,7 @@ public class ProductOfferingInCatalogIdVersionFacadeREST extends AbstractFacadeR
      */
     @GET
     @Produces({MediaType.APPLICATION_JSON})
-    public Response find(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) throws BadUsageException {
+    public Response find(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") ParsedVersion catalogVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) throws BadUsageException {
         logger.log(Level.FINE, "ProductOfferingInCatalogIdVersionFacadeREST:find(catalogId: {0}, catalogVersion: {1}, depth: {2})", new Object[]{catalogId, catalogVersion, depth});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -151,7 +152,7 @@ public class ProductOfferingInCatalogIdVersionFacadeREST extends AbstractFacadeR
     @GET
     @Path("{entityId}")
     @Produces({MediaType.APPLICATION_JSON})
-    public Response findById(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, @PathParam("entityId") String entityId, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
+    public Response findById(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") ParsedVersion catalogVersion, @PathParam("entityId") String entityId, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductOfferingInCatalogIdVersionFacadeREST:find(catalogId: {0}, catalogVersion: {1}, entityId: {2}, depth: {3})", new Object[]{catalogId, catalogVersion, entityId, depth});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -163,7 +164,7 @@ public class ProductOfferingInCatalogIdVersionFacadeREST extends AbstractFacadeR
     @GET
     @Path("{entityId}:({entityVersion})")
     @Produces({MediaType.APPLICATION_JSON})
-    public Response find(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion, @PathParam("entityId") String entityId, @PathParam("entityVersion") String entityVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
+    public Response find(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") ParsedVersion catalogVersion, @PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, @QueryParam("depth") int depth, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductOfferingInCatalogIdVersionFacadeREST:find(catalogId: {0}, catalogVersion: {1}, entityId: {2}, entityVersion: {3}, depth: {4})", new Object[]{catalogId, catalogVersion, entityId, entityVersion, depth});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -175,7 +176,7 @@ public class ProductOfferingInCatalogIdVersionFacadeREST extends AbstractFacadeR
     @GET
     @Path("admin/proto")
     @Produces({MediaType.APPLICATION_JSON})
-    public Response proto(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion) {
+    public Response proto(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") ParsedVersion catalogVersion) {
         logger.log(Level.FINE, "ProductOfferingInCatalogIdVersionFacadeREST:proto(catalogId: {0}, catalogVersion: {1})", new Object[]{catalogId, catalogVersion});
 
         return Response.ok(ProductOffering.createProto()).build();
@@ -187,7 +188,7 @@ public class ProductOfferingInCatalogIdVersionFacadeREST extends AbstractFacadeR
     @GET
     @Path("admin/count")
     @Produces({MediaType.TEXT_PLAIN})
-    public Response count(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") String catalogVersion) {
+    public Response count(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") ParsedVersion catalogVersion) {
         logger.log(Level.FINE, "ProductOfferingInCatalogIdVersionFacadeREST:count(catalogId: {0}, catalogVersion: {1})", new Object[]{catalogId, catalogVersion});
 
         return Response.status(Response.Status.FORBIDDEN).build();

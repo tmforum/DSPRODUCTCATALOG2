@@ -16,6 +16,8 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 @MappedSuperclass
 public abstract class AbstractCatalogEntity extends AbstractEntity implements Serializable {
 
+    public final static String ROOT_CATALOG_ID = "";
+
     @Id
     @Column(name = "CATALOG_ID", nullable = false)
     @JsonIgnore
@@ -28,7 +30,7 @@ public abstract class AbstractCatalogEntity extends AbstractEntity implements Se
 
     @Transient
     @JsonIgnore
-    private final ParsedVersion parsedCatalogVersion = new ParsedVersion();
+    private ParsedVersion parsedCatalogVersion;
 
     public AbstractCatalogEntity() {
     }
@@ -46,11 +48,23 @@ public abstract class AbstractCatalogEntity extends AbstractEntity implements Se
     }
 
     public void setCatalogVersion(String catalogVersion) {
-        this.catalogVersion = this.parsedCatalogVersion.load(catalogVersion);
+        if (ParsedVersion.ROOT_CATALOG_VERSION.getExternalView().equals(catalogVersion) == true) {
+            this.parsedCatalogVersion = ParsedVersion.ROOT_CATALOG_VERSION;
+            this.catalogVersion = this.parsedCatalogVersion.getInternalView();
+            return;
+        }
+
+        this.parsedCatalogVersion = new ParsedVersion(catalogVersion);
+        this.catalogVersion = this.parsedCatalogVersion.getInternalView();
     }
 
     public ParsedVersion getParsedCatalogVersion() {
         return parsedCatalogVersion;
+    }
+
+    public void setParsedCatalogVersion(ParsedVersion parsedCatalogVersion) {
+        this.parsedCatalogVersion = parsedCatalogVersion;
+        this.catalogVersion = (this.parsedCatalogVersion != null) ? this.parsedCatalogVersion.getInternalView() : null;
     }
 
     @Override
@@ -61,6 +75,7 @@ public abstract class AbstractCatalogEntity extends AbstractEntity implements Se
 
         hash = 31 * hash + (this.catalogId != null ? this.catalogId.hashCode() : 0);
         hash = 31 * hash + (this.catalogVersion != null ? this.catalogVersion.hashCode() : 0);
+        hash = 31 * hash + (this.parsedCatalogVersion != null ? this.parsedCatalogVersion.hashCode() : 0);
 
         return hash;
     }
@@ -77,6 +92,10 @@ public abstract class AbstractCatalogEntity extends AbstractEntity implements Se
         }
 
         if (Utilities.areEqual(this.catalogVersion, other.catalogVersion) == false) {
+            return false;
+        }
+
+        if (Utilities.areEqual(this.parsedCatalogVersion, other.parsedCatalogVersion) == false) {
             return false;
         }
 
@@ -113,11 +132,24 @@ public abstract class AbstractCatalogEntity extends AbstractEntity implements Se
         return true;
     }
 
+    public void configureCatalogIdentifier(){
+        setCatalogId (ROOT_CATALOG_ID);
+        setParsedCatalogVersion(ParsedVersion.ROOT_CATALOG_VERSION);
+    }
+
     @PostLoad
     @Override
     protected void onLoad() {
         super.onLoad();
-        this.catalogVersion = this.parsedCatalogVersion.load(this.catalogVersion);
+
+        if (ParsedVersion.ROOT_CATALOG_VERSION.getInternalView().equals(this.catalogVersion) == true) {
+            this.parsedCatalogVersion = ParsedVersion.ROOT_CATALOG_VERSION;
+            this.catalogVersion = this.parsedCatalogVersion.getInternalView();
+            return;
+        }
+
+        this.parsedCatalogVersion = new ParsedVersion(catalogVersion);
+        this.catalogVersion = this.parsedCatalogVersion.getInternalView();
     }
 
 }
