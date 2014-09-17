@@ -67,6 +67,7 @@ public class CatalogReference implements Serializable {
         }
 
         this.parsedVersion = new ParsedVersion(version);
+        this.version = this.parsedVersion.getInternalView();
     }
 
     public ParsedVersion getParsedVersion() {
@@ -112,7 +113,15 @@ public class CatalogReference implements Serializable {
 
     @JsonProperty(value = "version")
     public String versionToJson() {
-        return (entity == null) ? version : null;
+        if (entity != null) {
+            return null;
+        }
+
+        if (parsedVersion == null && version != null) {
+            parsedVersion = new ParsedVersion(version);
+        }
+
+        return (parsedVersion != null) ? parsedVersion.getExternalView() : null;
     }
 
     @JsonProperty(value = "href")
