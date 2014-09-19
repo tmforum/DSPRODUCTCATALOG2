@@ -71,6 +71,10 @@ public class CatalogReference implements Serializable {
     }
 
     public ParsedVersion getParsedVersion() {
+        if (parsedVersion == null && version != null) {
+            parsedVersion = new ParsedVersion(version);
+        }
+
         return parsedVersion;
     }
 
@@ -117,11 +121,8 @@ public class CatalogReference implements Serializable {
             return null;
         }
 
-        if (parsedVersion == null && version != null) {
-            parsedVersion = new ParsedVersion(version);
-        }
-
-        return (parsedVersion != null) ? parsedVersion.getExternalView() : null;
+        ParsedVersion theParsedVersion = getParsedVersion();
+        return (theParsedVersion != null) ? theParsedVersion.getExternalView() : null;
     }
 
     @JsonProperty(value = "href")
