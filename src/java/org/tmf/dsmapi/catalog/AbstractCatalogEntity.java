@@ -48,17 +48,14 @@ public abstract class AbstractCatalogEntity extends AbstractEntity implements Se
     }
 
     public void setCatalogVersion(String catalogVersion) {
-        if (ParsedVersion.ROOT_CATALOG_VERSION.getExternalView().equals(catalogVersion) == true) {
-            this.parsedCatalogVersion = ParsedVersion.ROOT_CATALOG_VERSION;
-            this.catalogVersion = this.parsedCatalogVersion.getInternalView();
-            return;
-        }
-
-        this.parsedCatalogVersion = new ParsedVersion(catalogVersion);
-        this.catalogVersion = this.parsedCatalogVersion.getInternalView();
+        loadCatalogVersions(catalogVersion);
     }
 
     public ParsedVersion getParsedCatalogVersion() {
+        if (parsedCatalogVersion == null && catalogVersion != null) {
+            setCatalogVersion(catalogVersion);
+        }
+
         return parsedCatalogVersion;
     }
 
@@ -75,7 +72,6 @@ public abstract class AbstractCatalogEntity extends AbstractEntity implements Se
 
         hash = 31 * hash + (this.catalogId != null ? this.catalogId.hashCode() : 0);
         hash = 31 * hash + (this.catalogVersion != null ? this.catalogVersion.hashCode() : 0);
-        hash = 31 * hash + (this.parsedCatalogVersion != null ? this.parsedCatalogVersion.hashCode() : 0);
 
         return hash;
     }
@@ -95,10 +91,6 @@ public abstract class AbstractCatalogEntity extends AbstractEntity implements Se
             return false;
         }
 
-        if (Utilities.areEqual(this.parsedCatalogVersion, other.parsedCatalogVersion) == false) {
-            return false;
-        }
-
         return true;
     }
 
@@ -107,6 +99,7 @@ public abstract class AbstractCatalogEntity extends AbstractEntity implements Se
         return "AbstractCatalogEntity{" + "catalogId=" + catalogId + ", catalogVersion=" + catalogVersion + ", parsedCatalogVersion=" + parsedCatalogVersion + '}';
     }
 
+    @Override
     public boolean keysMatch(AbstractEntity input) {
         if (input == null) {
             return false;
@@ -142,9 +135,20 @@ public abstract class AbstractCatalogEntity extends AbstractEntity implements Se
     protected void onLoad() {
         super.onLoad();
 
-        if (ParsedVersion.ROOT_CATALOG_VERSION.getInternalView().equals(this.catalogVersion) == true) {
+        loadCatalogVersions(catalogVersion);
+
+    }
+
+    private void loadCatalogVersions(String catalogVersion) {
+        if (ParsedVersion.ROOT_CATALOG_VERSION.getInternalView().equals(catalogVersion) == true) {
             this.parsedCatalogVersion = ParsedVersion.ROOT_CATALOG_VERSION;
             this.catalogVersion = this.parsedCatalogVersion.getInternalView();
+            return;
+        }
+
+        if (catalogVersion == null) {
+            this.parsedCatalogVersion = null;
+            this.catalogVersion = null;
             return;
         }
 

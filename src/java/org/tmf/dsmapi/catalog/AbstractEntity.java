@@ -74,11 +74,21 @@ public abstract class AbstractEntity implements Serializable {
     }
 
     public void setVersion(String version) {
+        if (version == null) {
+            this.parsedVersion = null;
+            this.version = null;
+            return;
+        }
+
         this.parsedVersion = new ParsedVersion(version);
         this.version = this.parsedVersion.getInternalView();
     }
 
     public ParsedVersion getParsedVersion() {
+        if (parsedVersion == null && version != null) {
+            parsedVersion = new ParsedVersion(version);
+        }
+
         return parsedVersion;
     }
 
@@ -137,7 +147,8 @@ public abstract class AbstractEntity implements Serializable {
 
     @JsonProperty(value = "version")
     public String versionToJson() {
-        return (parsedVersion != null) ? parsedVersion.getExternalView() : null;
+        ParsedVersion thisParsedVersion = getParsedVersion();
+        return (thisParsedVersion != null) ? thisParsedVersion.getExternalView() : null;
     }
 
     @JsonProperty(value = "validFor")
@@ -151,7 +162,6 @@ public abstract class AbstractEntity implements Serializable {
 
         hash = 47 * hash + (this.id != null ? this.id.hashCode() : 0);
         hash = 47 * hash + (this.version != null ? this.version.hashCode() : 0);
-        hash = 47 * hash + (this.parsedVersion != null ? this.parsedVersion.hashCode() : 0);
         hash = 47 * hash + (this.href != null ? this.href.hashCode() : 0);
         hash = 47 * hash + (this.name != null ? this.name.hashCode() : 0);
         hash = 47 * hash + (this.description != null ? this.description.hashCode() : 0);
@@ -174,10 +184,6 @@ public abstract class AbstractEntity implements Serializable {
         }
 
         if (Utilities.areEqual(this.version, other.version) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.parsedVersion, other.parsedVersion) == false) {
             return false;
         }
 
@@ -291,11 +297,12 @@ public abstract class AbstractEntity implements Serializable {
     }
 
     public boolean hasHigherVersionThan(AbstractEntity other) {
-        if (this.parsedVersion == null) {
+        ParsedVersion thisParsedVersion = getParsedVersion();
+        if (thisParsedVersion == null) {
             throw new IllegalArgumentException ("invalid parsed version object");
         }
 
-        return (this.parsedVersion.isGreaterThan((other != null) ? other.parsedVersion : null));
+        return (thisParsedVersion.isGreaterThan((other != null) ? other.getParsedVersion() : null));
     }
 
     public boolean canLifecycleTransitionFrom(LifecycleStatus fromStatus) {
