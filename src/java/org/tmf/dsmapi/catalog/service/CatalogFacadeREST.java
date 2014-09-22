@@ -1,6 +1,5 @@
 package org.tmf.dsmapi.catalog.service;
 
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -22,7 +21,6 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
-import org.codehaus.jackson.node.ObjectNode;
 import org.tmf.dsmapi.catalog.Catalog;
 import org.tmf.dsmapi.catalog.LifecycleStatus;
 import org.tmf.dsmapi.catalog.ParsedVersion;
@@ -37,9 +35,8 @@ import org.tmf.dsmapi.commons.jaxrs.PATCH;
  */
 @Stateless
 @Path("catalog")
-public class CatalogFacadeREST extends AbstractFacadeREST {
+public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
     private static final Logger logger = Logger.getLogger(Catalog.class.getName());
-    private static final String RELATIVE_CONTEXT = "catalog";
 
     @EJB
     CatalogFacade manager;
@@ -48,6 +45,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST {
      *
      */
     public CatalogFacadeREST() {
+        super(Catalog.class);
     }
 
     /*
@@ -86,7 +84,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST {
 
         manager.create(input);
 
-        input.setHref(buildHref_(uriInfo, input.getId(), input.getParsedVersion()));
+        input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.edit(input);
 
         return Response.status(Response.Status.CREATED).entity(input).build();
@@ -177,7 +175,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST {
         MultivaluedMap<String, String> criteria = uriInfo.getQueryParameters();
 
         // Remove known parameters before running the query.
-        Set<String> outputFields = FacadeRestUtil.getFieldSet(criteria);
+        Set<String> outputFields = getFieldSet(criteria);
         criteria.remove("depth");
 
         Set<Catalog> entities = manager.find(criteria, Catalog.class);
@@ -189,18 +187,12 @@ public class CatalogFacadeREST extends AbstractFacadeREST {
             getEnclosedEntities_(entities, depth);
         }
 
-       if (outputFields.isEmpty() || outputFields.contains(FacadeRestUtil.ALL_FIELDS)) {
+       if (outputFields.isEmpty() || outputFields.contains(ServiceConstants.ALL_FIELDS)) {
            return Response.ok(entities).build();
        }
 
-       outputFields.add(FacadeRestUtil.ID_FIELD);
-       List<ObjectNode> nodeList = new ArrayList<ObjectNode>();
-       for (Catalog entity : entities) {
-           ObjectNode node = FacadeRestUtil.createNodeViewWithFields(entity, outputFields);
-           nodeList.add(node);
-       }
-
-       return Response.ok(nodeList).build();
+       ArrayList<Object> outputEntities = selectFields(entities, outputFields);
+       return Response.ok(outputEntities).build();
     }
 
     /*
@@ -278,7 +270,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST {
         validateLifecycleStatus(input, entity);
 
         if (input.keysMatch(entity)) {
-            input.setHref(buildHref_(uriInfo, input.getId(), input.getParsedVersion()));
+            input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
             manager.edit(input);
             return Response.status(Response.Status.CREATED).entity(entity).build();
         }
@@ -291,7 +283,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST {
         manager.remove(entity);
         manager.create(input);
 
-        input.setHref(buildHref_(uriInfo, input.getId(), input.getParsedVersion()));
+        input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.edit(input);
 
         return Response.status(Response.Status.CREATED).entity(input).build();
@@ -338,7 +330,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST {
 
         manager.remove(entity);
 
-        input.setHref(buildHref_(uriInfo, entity.getId(), entity.getParsedVersion()));
+        input.setHref(buildHref(uriInfo, entity.getId(), entity.getParsedVersion()));
         manager.create(input);
 
         return Response.status(Response.Status.CREATED).entity(input).build();
@@ -373,14 +365,13 @@ public class CatalogFacadeREST extends AbstractFacadeREST {
         Catalog entity = entities.get(0);
         entity.getEnclosedEntities(depth);
 
-        Set<String> outputFields = FacadeRestUtil.getFieldSet(uriInfo.getQueryParameters());
-        if (outputFields.isEmpty() || outputFields.contains(FacadeRestUtil.ALL_FIELDS)) {
+        Set<String> outputFields = getFieldSet(uriInfo.getQueryParameters());
+        if (outputFields.isEmpty() || outputFields.contains(ServiceConstants.ALL_FIELDS)) {
             return Response.ok(entity).build();
         }
 
-        outputFields.add(FacadeRestUtil.ID_FIELD);
-        ObjectNode node = FacadeRestUtil.createNodeViewWithFields(entity, outputFields);
-        return Response.ok(node).build();
+        Object outputEntity = selectFields(entity, outputFields);
+        return Response.ok(outputEntity).build();
     }
 
     /*
@@ -390,34 +381,6 @@ public class CatalogFacadeREST extends AbstractFacadeREST {
         for (Catalog entity : entities) {
             entity.getEnclosedEntities(depth);
         }
-    }
-
-    /*
-     *
-     */
-    private String buildHref_(UriInfo uriInfo, String id, ParsedVersion parsedVersion) {
-        URI uri = (uriInfo != null) ? uriInfo.getBaseUri() : null;
-        String basePath = (uri != null) ? uri.toString() : null;
-        if (basePath == null) {
-            return null;
-        }
-
-        if (basePath.endsWith("/") == false) {
-            basePath += "/";
-        }
-
-        basePath += CatalogFacadeREST.RELATIVE_CONTEXT + "/";
-        if (id == null || id.length() <= 0) {
-            return (basePath);
-        }
-
-        basePath += id;
-        String version = (parsedVersion != null) ? parsedVersion.getExternalView() : null;
-        if (version == null || version.length() <= 0) {
-            return basePath;
-        }
-
-        return basePath + ":(" + version + ")";
     }
 
 }

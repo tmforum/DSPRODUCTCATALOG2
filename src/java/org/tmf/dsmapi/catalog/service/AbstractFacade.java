@@ -98,15 +98,15 @@ public abstract class AbstractFacade<T> {
         Predicate condition;
 
         ParameterExpression<String> catalogIdExpression = (catalogId != null) ? criteriaBuilder.parameter(String.class) : null;
-        Predicate propertyCondition = (catalogIdExpression != null) ? criteriaBuilder.equal(table.get(FacadeRestUtil.ID_FIELD), catalogIdExpression) : null;
+        Predicate propertyCondition = (catalogIdExpression != null) ? criteriaBuilder.equal(table.get(ServiceConstants.ID_FIELD), catalogIdExpression) : null;
         condition = propertyCondition;
 
         ParameterExpression<String> catalogVersionExpression = (catalogVersion != null) ? criteriaBuilder.parameter(String.class) : null;
-        propertyCondition = (catalogVersionExpression != null) ? criteriaBuilder.equal(table.get(FacadeRestUtil.VERSION_FIELD), catalogVersionExpression) : null;
+        propertyCondition = (catalogVersionExpression != null) ? criteriaBuilder.equal(table.get(ServiceConstants.VERSION_FIELD), catalogVersionExpression) : null;
         condition = andPredicates(condition, propertyCondition);
 
         criteriaQuery.select(table).where(condition);
-        criteriaQuery.orderBy(criteriaBuilder.desc (table.get(FacadeRestUtil.ID_FIELD)), criteriaBuilder.desc (table.get(FacadeRestUtil.VERSION_FIELD)));
+        criteriaQuery.orderBy(criteriaBuilder.desc (table.get(ServiceConstants.ID_FIELD)), criteriaBuilder.desc (table.get(ServiceConstants.VERSION_FIELD)));
 
         TypedQuery<T> query = getEntityManager().createQuery(criteriaQuery);
         if (catalogId != null) {
@@ -148,15 +148,15 @@ public abstract class AbstractFacade<T> {
         condition = andPredicates(condition, propertyCondition);
 
         ParameterExpression<String> entityIdExpression = (entityId != null) ? criteriaBuilder.parameter(String.class) : null;
-        propertyCondition = (entityIdExpression != null) ? criteriaBuilder.equal(table.get(FacadeRestUtil.ID_FIELD), entityIdExpression) : null;
+        propertyCondition = (entityIdExpression != null) ? criteriaBuilder.equal(table.get(ServiceConstants.ID_FIELD), entityIdExpression) : null;
         condition = andPredicates(condition, propertyCondition);
 
         ParameterExpression<String> entityVersionExpression = (entityVersion != null) ? criteriaBuilder.parameter(String.class) : null;
-        propertyCondition = (entityVersionExpression != null) ? criteriaBuilder.equal(table.get(FacadeRestUtil.VERSION_FIELD), entityVersionExpression) : null;
+        propertyCondition = (entityVersionExpression != null) ? criteriaBuilder.equal(table.get(ServiceConstants.VERSION_FIELD), entityVersionExpression) : null;
         condition = andPredicates(condition, propertyCondition);
 
         criteriaQuery.select(table).where(condition);
-        criteriaQuery.orderBy(criteriaBuilder.desc (table.get("catalogId")), criteriaBuilder.desc (table.get("catalogVersion")), criteriaBuilder.desc (table.get(FacadeRestUtil.ID_FIELD)), criteriaBuilder.desc(table.get(FacadeRestUtil.VERSION_FIELD)));
+        criteriaQuery.orderBy(criteriaBuilder.desc (table.get("catalogId")), criteriaBuilder.desc (table.get("catalogVersion")), criteriaBuilder.desc (table.get(ServiceConstants.ID_FIELD)), criteriaBuilder.desc(table.get(ServiceConstants.VERSION_FIELD)));
 
         TypedQuery<T> query = getEntityManager().createQuery(criteriaQuery);
         if (catalogId != null) {
@@ -379,7 +379,7 @@ public abstract class AbstractFacade<T> {
             } catch (ParseException ex) {
                 convertedValue = null;
             }
-        } else if (String.class.equals(clazz) && FacadeRestUtil.VERSION_FIELD.equals(name)){
+        } else if (String.class.equals(clazz) && ServiceConstants.VERSION_FIELD.equals(name)){
             try {
                 ParsedVersion parsedVersion = new ParsedVersion(value);
                 convertedValue = parsedVersion.getInternalView();
@@ -413,7 +413,7 @@ public abstract class AbstractFacade<T> {
                 case GTE:
                 case LT:
                 case LTE:
-                    if (String.class.equals(clazz) == true && FacadeRestUtil.VERSION_FIELD.equals(name)) {
+                    if (String.class.equals(clazz) == true && ServiceConstants.VERSION_FIELD.equals(name)) {
                         return true;
                     }
 

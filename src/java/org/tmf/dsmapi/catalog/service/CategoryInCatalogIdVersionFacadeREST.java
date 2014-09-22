@@ -29,7 +29,7 @@ import org.tmf.dsmapi.commons.jaxrs.PATCH;
  */
 @Stateless
 @Path("catalog/{catalogId}:({catalogVersion})/category")
-public class CategoryInCatalogIdVersionFacadeREST extends AbstractFacadeREST {
+public class CategoryInCatalogIdVersionFacadeREST extends AbstractFacadeREST<Category> {
     private static final Logger logger = Logger.getLogger(Category.class.getName());
 
     @EJB
@@ -39,6 +39,7 @@ public class CategoryInCatalogIdVersionFacadeREST extends AbstractFacadeREST {
      *
      */
     public CategoryInCatalogIdVersionFacadeREST() {
+        super(Category.class);
     }
 
     /*
@@ -57,7 +58,7 @@ public class CategoryInCatalogIdVersionFacadeREST extends AbstractFacadeREST {
     @Produces({MediaType.APPLICATION_JSON})
     public Response create(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") ParsedVersion catalogVersion, Category input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "CategoryInCatalogIdVersionFacadeREST:create(catalogId: {0}, catalogVersion: {1})", new Object[]{catalogId, catalogVersion});
-
+System.out.println ("calling the thing from id/version:" + this.getRelativeEntityContext());
         return Response.status(Response.Status.FORBIDDEN).build();
     }
 

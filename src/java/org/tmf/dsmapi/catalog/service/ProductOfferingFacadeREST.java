@@ -21,7 +21,6 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
-import org.codehaus.jackson.node.ObjectNode;
 import org.tmf.dsmapi.catalog.LifecycleStatus;
 import org.tmf.dsmapi.catalog.ParsedVersion;
 import org.tmf.dsmapi.catalog.ProductOffering;
@@ -36,9 +35,8 @@ import org.tmf.dsmapi.commons.jaxrs.PATCH;
  */
 @Stateless
 @Path("productOffering")
-public class ProductOfferingFacadeREST extends AbstractFacadeREST {
+public class ProductOfferingFacadeREST extends AbstractFacadeREST<ProductOffering> {
     private static final Logger logger = Logger.getLogger(ProductOffering.class.getName());
-    private static final String RELATIVE_CONTEXT = "productOffering";
 
     @EJB
     private ProductOfferingFacade manager;
@@ -47,6 +45,7 @@ public class ProductOfferingFacadeREST extends AbstractFacadeREST {
      *
      */
     public ProductOfferingFacadeREST() {
+        super(ProductOffering.class);
     }
 
     /*
@@ -86,7 +85,7 @@ public class ProductOfferingFacadeREST extends AbstractFacadeREST {
         input.configureCatalogIdentifier();
         manager.create(input);
 
-        input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getParsedVersion()));
+        input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.edit(input);
 
         return Response.status(Response.Status.CREATED).entity(input).build();
@@ -177,7 +176,7 @@ public class ProductOfferingFacadeREST extends AbstractFacadeREST {
         MultivaluedMap<String, String> criteria = uriInfo.getQueryParameters();
 
         // Remove known parameters before running the query.
-        Set<String> outputFields = FacadeRestUtil.getFieldSet(criteria);
+        Set<String> outputFields = getFieldSet(criteria);
         criteria.remove("depth");
 
         Set<ProductOffering> entities = manager.find(criteria, ProductOffering.class);
@@ -187,18 +186,12 @@ public class ProductOfferingFacadeREST extends AbstractFacadeREST {
 
         getEnclosedEntities_ (entities, depth);
 
-        if (outputFields.isEmpty() || outputFields.contains(FacadeRestUtil.ALL_FIELDS)) {
+        if (outputFields.isEmpty() || outputFields.contains(ServiceConstants.ALL_FIELDS)) {
             return Response.ok(entities).build();
         }
 
-        outputFields.add(FacadeRestUtil.ID_FIELD);
-        List<ObjectNode> nodeList = new ArrayList<ObjectNode>();
-        for (ProductOffering entity : entities) {
-            ObjectNode node = FacadeRestUtil.createNodeViewWithFields(entity, outputFields);
-            nodeList.add(node);
-        }
-
-        return Response.ok(nodeList).build ();
+       ArrayList<Object> outputEntities = selectFields(entities, outputFields);
+       return Response.ok(outputEntities).build();
     }
 
     /*
@@ -278,7 +271,7 @@ public class ProductOfferingFacadeREST extends AbstractFacadeREST {
         input.configureCatalogIdentifier();
 
         if (input.keysMatch(entity)) {
-            input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getParsedVersion()));
+            input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
             manager.edit(input);
             return Response.status(Response.Status.CREATED).entity(entity).build();
         }
@@ -291,7 +284,7 @@ public class ProductOfferingFacadeREST extends AbstractFacadeREST {
         manager.remove(entity);
         manager.create(input);
 
-        input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getParsedVersion()));
+        input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.edit(input);
 
         return Response.status(Response.Status.CREATED).entity(input).build();
@@ -340,7 +333,7 @@ public class ProductOfferingFacadeREST extends AbstractFacadeREST {
 
         manager.remove(entity);
 
-        input.setHref(FacadeRestUtil.buildHref(uriInfo, RELATIVE_CONTEXT, input.getId(), input.getParsedVersion()));
+        input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.create(input);
 
         return Response.status(Response.Status.CREATED).entity(input).build();
@@ -375,14 +368,13 @@ public class ProductOfferingFacadeREST extends AbstractFacadeREST {
         ProductOffering entity = entities.get(0);
         entity.getEnclosedEntities(depth);
 
-        Set<String> outputFields = FacadeRestUtil.getFieldSet(uriInfo.getQueryParameters());
-        if (outputFields.isEmpty() || outputFields.contains(FacadeRestUtil.ALL_FIELDS)) {
+        Set<String> outputFields = getFieldSet(uriInfo.getQueryParameters());
+        if (outputFields.isEmpty() || outputFields.contains(ServiceConstants.ALL_FIELDS)) {
             return Response.ok(entity).build();
         }
 
-        outputFields.add(FacadeRestUtil.ID_FIELD);
-        ObjectNode node = FacadeRestUtil.createNodeViewWithFields(entity, outputFields);
-        return Response.ok(node).build();
+        Object outputEntity = selectFields(entity, outputFields);
+        return Response.ok(outputEntity).build();
     }
 
     /*
