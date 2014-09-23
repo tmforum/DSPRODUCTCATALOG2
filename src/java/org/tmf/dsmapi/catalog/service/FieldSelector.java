@@ -28,7 +28,6 @@ public class FieldSelector {
     }
 
     public Object selectFields(Object input, Set<String> pathNames) {
-        System.out.println ("----> create:" + pathNames);
         if (input == null) {
             return null;
         }
@@ -46,7 +45,6 @@ public class FieldSelector {
         }
 
         Object output = createObject(input);
-        System.out.println ("output is:" + output);
         if (output == null) {
             return null;
         }

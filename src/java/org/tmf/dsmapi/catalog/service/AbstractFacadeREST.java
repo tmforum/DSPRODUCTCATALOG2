@@ -138,7 +138,6 @@ public abstract class AbstractFacadeREST<T> {
 
        ArrayList<Object> outputEntities = new ArrayList<Object>();
        for (T entity : inputEntities) {
-           System.out.println ("ENTITY: " + entity);
            outputEntities.add(fieldSelector.selectFields(entity, outputFields));
        }
 
