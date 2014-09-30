@@ -8,7 +8,6 @@ import java.util.HashSet;
 import java.util.Set;
 import org.apache.commons.beanutils.PropertyUtilsBean;
 import org.codehaus.jackson.annotate.JsonIgnore;
-import org.codehaus.jackson.annotate.JsonProperty;
 
 /**
  *
@@ -261,51 +260,6 @@ public class FieldSelector {
 
                 childNames.add(childName);
             }
-        }
-    }
-
-    private class ClassFields {
-        private final HashMap<String, Field> fields = new HashMap<String, Field>();
-        private final HashMap<String, String> jsonNames = new HashMap<String, String>();
-
-        private ClassFields(Class theClass) {
-            getAllFields(theClass);
-        }
-
-        public String getInternalFieldName(String externalName) {
-            if (externalName == null) {
-                return null;
-            }
-
-            String internalFieldName = jsonNames.get(externalName);
-            return (internalFieldName != null) ? internalFieldName : externalName;
-        }
-
-        private void getAllFields(Class theClass) {
-            if (theClass == null || theClass == Object.class) {
-                return;
-            }
-
-            Field classFields [] = theClass.getDeclaredFields();
-            for (Field classField : classFields) {
-                String fieldName = classField.getName();
-                if (fieldName == null) {
-                    continue;
-                }
-
-                if (fields.containsKey(fieldName) == true) {
-                    continue;
-                }
-
-                fields.put(fieldName, classField);
-
-                JsonProperty jsonProperty = classField.getAnnotation(JsonProperty.class);
-                if (jsonProperty != null) {
-                    jsonNames.put(jsonProperty.value(), fieldName);
-                }
-            }
-
-            getAllFields(theClass.getSuperclass());
         }
     }
 
