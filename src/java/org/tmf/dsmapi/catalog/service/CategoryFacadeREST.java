@@ -179,7 +179,7 @@ public class CategoryFacadeREST extends AbstractFacadeREST<Category> {
         Set<String> outputFields = getFieldSet(queryParameterParser);
         queryParameterParser.removeTagWithValues("depth");
 
-        Set<Category> entities = manager.find(queryParameterParser.getTagsWithValue(), Category.class);
+        Set<Category> entities = manager.find(queryParameterParser.getTagsWithValue());
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }

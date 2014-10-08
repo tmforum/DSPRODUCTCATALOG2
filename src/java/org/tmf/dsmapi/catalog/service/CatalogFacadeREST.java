@@ -178,7 +178,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
         Set<String> outputFields = getFieldSet(queryParameterParser);
         queryParameterParser.removeTagWithValues("depth");
 
-        Set<Catalog> entities = manager.find(queryParameterParser.getTagsWithValue(), Catalog.class);
+        Set<Catalog> entities = manager.find(queryParameterParser.getTagsWithValue());
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }

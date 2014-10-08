@@ -179,7 +179,7 @@ public class ResourceCandidateFacadeREST extends AbstractFacadeREST<ResourceCand
         Set<String> outputFields = getFieldSet(queryParameterParser);
         queryParameterParser.removeTagWithValues("depth");
 
-        Set<ResourceCandidate> entities = manager.find(queryParameterParser.getTagsWithValue(), ResourceCandidate.class);
+        Set<ResourceCandidate> entities = manager.find(queryParameterParser.getTagsWithValue());
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }

@@ -179,7 +179,7 @@ public class ServiceCandidateFacadeREST extends AbstractFacadeREST<ServiceCandid
         Set<String> outputFields = getFieldSet(queryParameterParser);
         queryParameterParser.removeTagWithValues("depth");
 
-        Set<ServiceCandidate> entities = manager.find(queryParameterParser.getTagsWithValue(), ServiceCandidate.class);
+        Set<ServiceCandidate> entities = manager.find(queryParameterParser.getTagsWithValue());
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }

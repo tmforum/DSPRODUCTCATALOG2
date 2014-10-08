@@ -36,7 +36,7 @@ import org.tmf.dsmapi.commons.criteria.Operator;
  */
 public abstract class AbstractFacade<T> {
 
-    private Class<T> entityClass;
+    private final Class<T> entityClass;
 
     public AbstractFacade(Class<T> entityClass) {
         this.entityClass = entityClass;
@@ -189,14 +189,14 @@ public abstract class AbstractFacade<T> {
         return getEntityManager().getCriteriaBuilder().and(firstPredicate, secondPredicate);
     }
 
-    public Set<T> find(MultivaluedMap<String, String> inputCriteria, Class<T> clazz) throws BadUsageException {
+    public Set<T> find(MultivaluedMap<String, String> inputCriteria) throws BadUsageException {
         List<T> results;
 
         if (inputCriteria == null || inputCriteria.isEmpty() == true) {
             results = findAll();
         }
         else {
-            results = findByCriteria(inputCriteria, clazz);
+            results = findByCriteria(inputCriteria);
         }
 
         if (results == null) {
@@ -221,13 +221,13 @@ public abstract class AbstractFacade<T> {
         return q.getResultList();
     }
 
-    private List<T> findByCriteria(MultivaluedMap<String, String> inputCriteria, Class<T> clazz) throws BadUsageException {
+    private List<T> findByCriteria(MultivaluedMap<String, String> inputCriteria) throws BadUsageException {
 
         ClassFieldsCache classFieldsCache = new ClassFieldsCache();
 
         Criteria criteria = new Criteria();
         criteria.load(inputCriteria);
-        criteria.validateAndNormalize(classFieldsCache, clazz);
+        criteria.validateAndNormalize(classFieldsCache, entityClass);
 
         Map<List<NodeNames>, LeafNode> map = criteria.getCriteria();
 

@@ -179,7 +179,7 @@ public class ProductOfferingPriceFacadeREST extends AbstractFacadeREST<ProductOf
         Set<String> outputFields = getFieldSet(queryParameterParser);
         queryParameterParser.removeTagWithValues("depth");
 
-        Set<ProductOfferingPrice> entities = manager.find(queryParameterParser.getTagsWithValue(), ProductOfferingPrice.class);
+        Set<ProductOfferingPrice> entities = manager.find(queryParameterParser.getTagsWithValue());
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
