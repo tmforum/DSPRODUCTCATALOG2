@@ -180,6 +180,12 @@ public class ParsedVersion implements Serializable {
             return false;
         }
 
+        // prevent whitespace & leading zeros in the minor version
+        if (String.valueOf(minorVersion).equals(parts [1]) == false) {
+            initialize_();
+            return false;
+        }
+
         return true;
     }
 
