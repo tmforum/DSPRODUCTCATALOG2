@@ -139,14 +139,19 @@ public class Category extends AbstractCatalogEntity implements Serializable {
     @Override
     @JsonIgnore
     public boolean isValid() {
-        logger.log(Level.FINE, "Category:valid ()");
+        logger.log(Level.FINE, "Category:isValid ()");
 
         if (super.isValid() == false) {
             return false;
         }
 
-        if (this.isRoot == Boolean.FALSE && Utilities.hasValue(this.parentId) == false) {
+        if (this.isRoot == Boolean.FALSE && Utilities.hasValue(parentId) == false) {
             logger.log(Level.FINE, " invalid: parentId must be specified when isRoot is false");
+            return false;
+        }
+
+        if (this.isRoot == Boolean.TRUE && parentId != null) {
+            logger.log(Level.FINE, " invalid: parentId must not be specififed when isRoot is true");
             return false;
         }
 
