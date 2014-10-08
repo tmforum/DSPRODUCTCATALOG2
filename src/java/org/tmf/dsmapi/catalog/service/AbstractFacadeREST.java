@@ -9,11 +9,11 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ws.rs.Path;
-import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.UriInfo;
 import org.tmf.dsmapi.catalog.AbstractEntity;
 import org.tmf.dsmapi.catalog.LifecycleStatus;
-import org.tmf.dsmapi.catalog.ParsedVersion;
+import org.tmf.dsmapi.commons.ParsedVersion;
+import org.tmf.dsmapi.commons.QueryParameterParser;
 import org.tmf.dsmapi.commons.exceptions.IllegalLifecycleStatusException;
 
 /**
@@ -106,21 +106,26 @@ public abstract class AbstractFacadeREST<T> {
     /*
      *
      */
-    public Set<String> getFieldSet(MultivaluedMap<String, String> criteria) {
+    public Set<String> getFieldSet(QueryParameterParser queryParameterParser) {
         Set<String> fieldSet = new HashSet<String>();
-        if (criteria != null) {
-            List<String> queryParameterField = criteria.remove(ServiceConstants.QUERY_KEY_FIELD_ESCAPE + ServiceConstants.QUERY_KEY_FIELD);
-            if (queryParameterField == null) {
-                queryParameterField = criteria.remove(ServiceConstants.QUERY_KEY_FIELD);
-            }
-            if (queryParameterField != null && !queryParameterField.isEmpty()) {
-                String queryParameterValue = queryParameterField.get(0);
-                if (queryParameterValue != null) {
-                    String[] tokenArray = queryParameterValue.split(",");
-                    fieldSet.addAll(Arrays.asList(tokenArray));
-                }
-            }
+        if (queryParameterParser == null) {
+            return fieldSet;
         }
+
+        for (String fieldList : queryParameterParser.getTagsWithNoValue()) {
+            fieldSet.addAll(breakFieldList(fieldList));
+        }
+
+        List<String> queryParameterField = queryParameterParser.removeTagWithValues(ServiceConstants.QUERY_KEY_FIELD_ESCAPE + ServiceConstants.QUERY_KEY_FIELD);
+        if (queryParameterField == null) {
+            queryParameterField = queryParameterParser.removeTagWithValues(ServiceConstants.QUERY_KEY_FIELD);
+        }
+
+        if (queryParameterField != null && !queryParameterField.isEmpty()) {
+            String queryParameterValue = queryParameterField.get(0);
+            fieldSet.addAll(breakFieldList(queryParameterValue));
+        }
+
         return fieldSet;
     }
 
@@ -142,6 +147,15 @@ public abstract class AbstractFacadeREST<T> {
        }
 
        return outputEntities;
+    }
+
+    private List<String> breakFieldList(String input) {
+        if (input == null) {
+            return new ArrayList<String>();
+        }
+
+        String [] tokenArray = input.split(",");
+        return Arrays.asList(tokenArray);
     }
 
 }
