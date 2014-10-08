@@ -8,6 +8,7 @@ import java.util.HashSet;
 import java.util.Set;
 import org.apache.commons.beanutils.PropertyUtilsBean;
 import org.codehaus.jackson.annotate.JsonIgnore;
+import org.tmf.dsmapi.commons.ClassFields;
 
 /**
  *
@@ -139,7 +140,7 @@ public class FieldSelector {
                 results = processCollection(collection, childPaths);
             }
             else {
-                results = this.processObject(fieldValue, childPaths);
+                results = processObject(fieldValue, childPaths);
             }
 
             if (results == null) {

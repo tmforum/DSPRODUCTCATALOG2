@@ -9,6 +9,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.tmf.dsmapi.catalog.specification.CharacteristicValueType;
 import org.tmf.dsmapi.catalog.specification.SpecificationCharacteristicRelationship;
 import org.tmf.dsmapi.catalog.specification.SpecificationCharacteristicValue;
+import org.tmf.dsmapi.commons.Utilities;
 
 /**
  *

@@ -17,6 +17,9 @@ import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonProperty;
+import org.tmf.dsmapi.commons.ParsedVersion;
+import org.tmf.dsmapi.commons.Utilities;
+import org.tmf.dsmapi.commons.annotation.VersionProperty;
 
 /**
  *
@@ -34,6 +37,7 @@ public abstract class AbstractEntity implements Serializable {
 
     @Id
     @Column(name = "VERSION", nullable = false)
+    @VersionProperty
     private String version;
 
     @Transient

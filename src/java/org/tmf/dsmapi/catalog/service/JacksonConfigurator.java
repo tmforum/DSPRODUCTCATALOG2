@@ -1,7 +1,7 @@
 package org.tmf.dsmapi.catalog.service;
 
-import javax.ws.rs.core.MediaType;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.ext.ContextResolver;
 import javax.ws.rs.ext.Provider;
 import org.codehaus.jackson.map.ObjectMapper;

@@ -9,6 +9,9 @@ import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.annotate.JsonUnwrapped;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.tmf.dsmapi.catalog.client.CatalogClient;
+import org.tmf.dsmapi.commons.ParsedVersion;
+import org.tmf.dsmapi.commons.Utilities;
+import org.tmf.dsmapi.commons.annotation.VersionProperty;
 
 /**
  *
@@ -24,6 +27,7 @@ public class CatalogReference implements Serializable {
     private String id;
 
     @Column(name = "VERSION", nullable = true)
+    @VersionProperty
     private String version;
 
     @Transient

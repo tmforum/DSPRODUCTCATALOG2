@@ -9,6 +9,7 @@ import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.tmf.dsmapi.commons.Utilities;
 
 /**
  *

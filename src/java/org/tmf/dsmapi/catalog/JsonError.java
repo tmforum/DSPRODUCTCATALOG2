@@ -23,12 +23,12 @@ public class JsonError {
         this.error = error;
         this.detail = detail;
     }
-    
+
     public JsonError(ExceptionBean error, String detail, List<KeyValue> keyValue) {
         this.error = error;
         this.detail = detail;
         this.keyValue = keyValue;
-    }    
+    }
 
     /**
      * @return the type

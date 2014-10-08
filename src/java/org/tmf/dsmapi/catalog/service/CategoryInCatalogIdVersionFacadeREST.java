@@ -18,7 +18,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import org.tmf.dsmapi.catalog.Category;
-import org.tmf.dsmapi.catalog.ParsedVersion;
+import org.tmf.dsmapi.commons.ParsedVersion;
 import org.tmf.dsmapi.commons.exceptions.BadUsageException;
 import org.tmf.dsmapi.commons.jaxrs.PATCH;
 
@@ -58,7 +58,7 @@ public class CategoryInCatalogIdVersionFacadeREST extends AbstractFacadeREST<Cat
     @Produces({MediaType.APPLICATION_JSON})
     public Response create(@PathParam("catalogId") String catalogId, @PathParam("catalogVersion") ParsedVersion catalogVersion, Category input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "CategoryInCatalogIdVersionFacadeREST:create(catalogId: {0}, catalogVersion: {1})", new Object[]{catalogId, catalogVersion});
-System.out.println ("calling the thing from id/version:" + this.getRelativeEntityContext());
+
         return Response.status(Response.Status.FORBIDDEN).build();
     }
 

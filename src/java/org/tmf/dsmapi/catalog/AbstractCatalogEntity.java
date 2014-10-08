@@ -7,6 +7,9 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.PostLoad;
 import javax.persistence.Transient;
 import org.codehaus.jackson.annotate.JsonIgnore;
+import org.tmf.dsmapi.commons.ParsedVersion;
+import org.tmf.dsmapi.commons.Utilities;
+import org.tmf.dsmapi.commons.annotation.VersionProperty;
 
 /**
  *
@@ -26,6 +29,7 @@ public abstract class AbstractCatalogEntity extends AbstractEntity implements Se
     @Id
     @Column(name = "CATALOG_VERSION", nullable = false)
     @JsonIgnore
+    @VersionProperty
     private String catalogVersion;
 
     @Transient

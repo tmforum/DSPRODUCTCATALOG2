@@ -7,7 +7,7 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.tmf.dsmapi.catalog.TimeRange;
-import org.tmf.dsmapi.catalog.Utilities;
+import org.tmf.dsmapi.commons.Utilities;
 
 /**
  *

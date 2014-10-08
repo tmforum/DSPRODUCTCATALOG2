@@ -3,7 +3,7 @@ package org.tmf.dsmapi.catalog.specification;
 import java.io.Serializable;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.tmf.dsmapi.catalog.TimeRange;
-import org.tmf.dsmapi.catalog.Utilities;
+import org.tmf.dsmapi.commons.Utilities;
 
 /**
  *

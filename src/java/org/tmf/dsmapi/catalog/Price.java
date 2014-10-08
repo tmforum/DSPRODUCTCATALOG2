@@ -5,6 +5,7 @@ import java.util.logging.Logger;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.tmf.dsmapi.commons.Utilities;
 
 /**
  *
@@ -125,5 +126,5 @@ public class Price implements Serializable {
 
         return price;
     }
-    
+
 }

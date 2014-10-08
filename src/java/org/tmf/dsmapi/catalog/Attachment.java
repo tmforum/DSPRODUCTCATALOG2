@@ -3,8 +3,8 @@ package org.tmf.dsmapi.catalog;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.tmf.dsmapi.commons.Utilities;
 
 /**
  *

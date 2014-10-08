@@ -6,6 +6,7 @@ import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.tmf.dsmapi.commons.Utilities;
 
 /**
  *

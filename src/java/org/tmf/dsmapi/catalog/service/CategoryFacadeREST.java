@@ -18,12 +18,12 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import org.tmf.dsmapi.catalog.Category;
 import org.tmf.dsmapi.catalog.LifecycleStatus;
-import org.tmf.dsmapi.catalog.ParsedVersion;
+import org.tmf.dsmapi.commons.ParsedVersion;
+import org.tmf.dsmapi.commons.QueryParameterParser;
 import org.tmf.dsmapi.commons.exceptions.BadUsageException;
 import org.tmf.dsmapi.commons.exceptions.IllegalLifecycleStatusException;
 import org.tmf.dsmapi.commons.jaxrs.PATCH;
@@ -173,13 +173,13 @@ public class CategoryFacadeREST extends AbstractFacadeREST<Category> {
     public Response find(@QueryParam("depth") int depth, @Context UriInfo uriInfo) throws BadUsageException {
         logger.log(Level.FINE, "CategoryFacadeREST:find(depth: {0})", depth);
 
-        MultivaluedMap<String, String> criteria = uriInfo.getQueryParameters();
+        QueryParameterParser queryParameterParser = new QueryParameterParser(uriInfo.getRequestUri().getQuery());
 
         // Remove known parameters before running the query.
-        Set<String> outputFields = getFieldSet(criteria);
-        criteria.remove("depth");
+        Set<String> outputFields = getFieldSet(queryParameterParser);
+        queryParameterParser.removeTagWithValues("depth");
 
-        Set<Category> entities = manager.find(criteria, Category.class);
+        Set<Category> entities = manager.find(queryParameterParser.getTagsWithValue(), Category.class);
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
@@ -368,7 +368,9 @@ public class CategoryFacadeREST extends AbstractFacadeREST<Category> {
         Category entity = entities.get(0);
         entity.getEnclosedEntities(depth);
 
-        Set<String> outputFields = getFieldSet(uriInfo.getQueryParameters());
+        QueryParameterParser queryParameterParser = new QueryParameterParser(uriInfo.getRequestUri().getQuery());
+        Set<String> outputFields = getFieldSet(queryParameterParser);
+
         if (outputFields.isEmpty() || outputFields.contains(ServiceConstants.ALL_FIELDS)) {
             return Response.ok(entity).build();
         }

@@ -1,4 +1,4 @@
-package org.tmf.dsmapi.catalog;
+package org.tmf.dsmapi.commons;
 
 /**
  *
