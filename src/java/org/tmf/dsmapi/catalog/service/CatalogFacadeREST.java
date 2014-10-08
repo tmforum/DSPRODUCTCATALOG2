@@ -310,7 +310,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
         input.edit(entity);
         input.setId(entity.getId());
 
-        if(entity.isValid() == false) {
+        if(input.isValid() == false) {
             logger.log(Level.FINE, "patched Catalog would be invalid");
             return Response.status(Response.Status.BAD_REQUEST).build();
         }

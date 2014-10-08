@@ -313,7 +313,7 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
         input.setCatalogVersion(entity.getCatalogVersion());
         input.setId(entity.getId());
 
-        if(entity.isValid() == false) {
+        if(input.isValid() == false) {
             logger.log(Level.FINE, "patched ResourceSpecification would be invalid");
             return Response.status(Response.Status.BAD_REQUEST).build();
         }

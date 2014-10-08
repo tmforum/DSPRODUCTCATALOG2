@@ -313,7 +313,7 @@ public class ProductOfferingPriceFacadeREST extends AbstractFacadeREST<ProductOf
         input.setCatalogVersion(entity.getCatalogVersion());
         input.setId(entity.getId());
 
-        if(entity.isValid() == false) {
+        if (input.isValid() == false) {
             logger.log(Level.FINE, "patched ProductOfferingPrice would be invalid");
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
