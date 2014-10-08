@@ -34,6 +34,11 @@ public abstract class AbstractFacadeREST<T> {
     /*
      *
      */
+    public abstract Logger getLogger();
+
+    /*
+     *
+     */
     public String getRelativeEntityContext() {
         Path path = getClass().getAnnotation(Path.class);
         String value = (path != null) ? path.value() :  null;
@@ -44,11 +49,6 @@ public abstract class AbstractFacadeREST<T> {
         int index = value.lastIndexOf("/");
         return (index >= 0) ? value.substring(index + 1) : value;
     }
-
-    /*
-     *
-     */
-    public abstract Logger getLogger();
 
     /*
      *
@@ -113,7 +113,7 @@ public abstract class AbstractFacadeREST<T> {
         }
 
         for (String fieldList : queryParameterParser.getTagsWithNoValue()) {
-            fieldSet.addAll(breakFieldList(fieldList));
+            fieldSet.addAll(breakFieldList_(fieldList));
         }
 
         List<String> queryParameterField = queryParameterParser.removeTagWithValues(ServiceConstants.QUERY_KEY_FIELD_ESCAPE + ServiceConstants.QUERY_KEY_FIELD);
@@ -123,7 +123,7 @@ public abstract class AbstractFacadeREST<T> {
 
         if (queryParameterField != null && !queryParameterField.isEmpty()) {
             String queryParameterValue = queryParameterField.get(0);
-            fieldSet.addAll(breakFieldList(queryParameterValue));
+            fieldSet.addAll(breakFieldList_(queryParameterValue));
         }
 
         return fieldSet;
@@ -149,12 +149,12 @@ public abstract class AbstractFacadeREST<T> {
        return outputEntities;
     }
 
-    private List<String> breakFieldList(String input) {
+    private List<String> breakFieldList_(String input) {
         if (input == null) {
             return new ArrayList<String>();
         }
 
-        String [] tokenArray = input.split(",");
+        String tokenArray [] = input.split(",");
         return Arrays.asList(tokenArray);
     }
 
