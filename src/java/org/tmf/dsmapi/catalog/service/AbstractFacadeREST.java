@@ -115,10 +115,6 @@ public abstract class AbstractFacadeREST<T> {
             return fieldSet;
         }
 
-        for (String fieldList : queryParameterParser.getTagsWithNoValue()) {
-            fieldSet.addAll(breakFieldList_(fieldList));
-        }
-
         List<String> queryParameterField = queryParameterParser.removeTagWithValues(ServiceConstants.QUERY_KEY_FIELD_ESCAPE + ServiceConstants.QUERY_KEY_FIELD);
         if (queryParameterField == null) {
             queryParameterField = queryParameterParser.removeTagWithValues(ServiceConstants.QUERY_KEY_FIELD);
