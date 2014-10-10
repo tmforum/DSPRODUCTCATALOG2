@@ -183,9 +183,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        if (depth > 0) {
-            getEnclosedEntities_(entities, depth);
-        }
+        getReferencedEntities(entities, depth);
 
        if (outputFields.isEmpty() || outputFields.contains(ServiceConstants.ALL_FIELDS)) {
            return Response.ok(entities).build();
@@ -363,7 +361,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
         }
 
         Catalog entity = entities.get(0);
-        entity.getEnclosedEntities(depth);
+        getReferencedEntities(entity, depth);
 
         QueryParameterParser queryParameterParser = new QueryParameterParser(uriInfo.getRequestUri().getQuery());
         Set<String> outputFields = getFieldSet(queryParameterParser);
@@ -374,15 +372,6 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
 
         Object outputEntity = selectFields(entity, outputFields);
         return Response.ok(outputEntity).build();
-    }
-
-    /*
-     *
-     */
-    private void getEnclosedEntities_(Set<Catalog> entities, int depth) {
-        for (Catalog entity : entities) {
-            entity.getEnclosedEntities(depth);
-        }
     }
 
 }

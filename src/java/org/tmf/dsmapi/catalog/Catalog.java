@@ -20,6 +20,7 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.tmf.dsmapi.commons.ParsedVersion;
 import org.tmf.dsmapi.commons.Utilities;
+import org.tmf.dsmapi.commons.annotation.EntityReferenceProperty;
 
 /**
  *
@@ -80,6 +81,7 @@ public class Catalog extends AbstractEntity implements Serializable {
         @JoinColumn(name = "CATALOG_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "CATALOG_VERSION", referencedColumnName = "VERSION")
     })
+    @EntityReferenceProperty(classId=Category.class)
     private List<CatalogReference> category;
 
     @Embedded
@@ -213,21 +215,6 @@ public class Catalog extends AbstractEntity implements Serializable {
         }
 
         return true;
-    }
-
-    @Override
-    public void getEnclosedEntities(int depth) {
-        if (depth <= AbstractEntity.MINIMUM_DEPTH) {
-            return;
-        }
-
-        depth--;
-
-        if (category != null) {
-            for (CatalogReference reference : category) {
-                reference.fetchEntity(Category.class, depth);
-            }
-        }
     }
 
     @Override

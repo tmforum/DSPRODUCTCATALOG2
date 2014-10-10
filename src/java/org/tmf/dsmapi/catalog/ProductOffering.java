@@ -18,6 +18,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.tmf.dsmapi.commons.Utilities;
+import org.tmf.dsmapi.commons.annotation.EntityReferenceProperty;
 
 /**
  *
@@ -176,6 +177,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
+    @EntityReferenceProperty(classId=Category.class)
     private List<CatalogReference> category;
 
     @Embedded
@@ -206,6 +208,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
+    @EntityReferenceProperty(classId=ProductOffering.class)
     private List<CatalogReference> bundledProductOffering;
 
     @Embedded
@@ -219,6 +222,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
+    @EntityReferenceProperty(classId=ProductSpecification.class)
     private List<CatalogReference> productSpecification;
 
     @Embedded
@@ -229,6 +233,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
+    @EntityReferenceProperty(classId=ServiceCandidate.class)
     private List<CatalogReference> serviceCandidate;
 
     @Embedded
@@ -239,6 +244,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
+    @EntityReferenceProperty(classId=ResourceCandidate.class)
     private List<CatalogReference> resourceCandidate;
 
     @ElementCollection
@@ -515,45 +521,6 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         }
 
         return true;
-    }
-
-    @Override
-    public void getEnclosedEntities(int depth) {
-        if (depth <= AbstractEntity.MINIMUM_DEPTH) {
-            return;
-        }
-
-        depth--;
-
-        if (category != null) {
-            for (CatalogReference reference : category) {
-                reference.fetchEntity(Category.class, depth);
-            }
-        }
-
-        if (bundledProductOffering != null) {
-            for (CatalogReference reference : bundledProductOffering) {
-                reference.fetchEntity(ProductOffering.class, depth);
-            }
-        }
-
-        if (productSpecification != null) {
-            for (CatalogReference reference : productSpecification) {
-                reference.fetchEntity(ProductSpecification.class, depth);
-            }
-        }
-
-        if (serviceCandidate != null) {
-            for (CatalogReference reference : serviceCandidate) {
-                reference.fetchEntity(ServiceCandidate.class, depth);
-            }
-        }
-
-        if (resourceCandidate != null) {
-            for (CatalogReference reference : resourceCandidate) {
-                reference.fetchEntity(ResourceCandidate.class, depth);
-            }
-        }
     }
 
     public static ProductOffering createProto() {

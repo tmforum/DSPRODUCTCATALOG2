@@ -28,7 +28,6 @@ import org.tmf.dsmapi.commons.annotation.VersionProperty;
  */
 @MappedSuperclass
 public abstract class AbstractEntity implements Serializable {
-    public final static int MINIMUM_DEPTH = 1;
 
     @Id
     @Column(name = "ID", nullable = false)
@@ -316,8 +315,6 @@ public abstract class AbstractEntity implements Serializable {
 
         return (lifecycleStatus.canTransitionFrom(fromStatus));
     }
-
-    public abstract void getEnclosedEntities(int depth);
 
     @PrePersist
     private void onCreate() {

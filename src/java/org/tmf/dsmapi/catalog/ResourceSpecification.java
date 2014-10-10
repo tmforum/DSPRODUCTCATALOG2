@@ -332,10 +332,6 @@ public class ResourceSpecification extends AbstractCatalogEntity implements Seri
         return true;
     }
 
-    @Override
-    public void getEnclosedEntities(int depth) {
-    }
-
     public static ResourceSpecification createProto() {
         ResourceSpecification resourceSpecification = new ResourceSpecification();
 

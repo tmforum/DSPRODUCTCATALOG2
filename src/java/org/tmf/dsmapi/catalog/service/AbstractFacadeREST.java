@@ -14,6 +14,7 @@ import org.tmf.dsmapi.catalog.AbstractEntity;
 import org.tmf.dsmapi.catalog.LifecycleStatus;
 import org.tmf.dsmapi.commons.ParsedVersion;
 import org.tmf.dsmapi.commons.QueryParameterParser;
+import org.tmf.dsmapi.commons.ReferencedEntityGetter;
 import org.tmf.dsmapi.commons.exceptions.IllegalLifecycleStatusException;
 
 /**
@@ -23,12 +24,14 @@ import org.tmf.dsmapi.commons.exceptions.IllegalLifecycleStatusException;
  */
 public abstract class AbstractFacadeREST<T> {
     private final FieldSelector fieldSelector;
+    private final ReferencedEntityGetter<T> referencedEntityGetter;
 
     /*
      *
      */
     protected AbstractFacadeREST(Class theClass) throws IllegalArgumentException {
         fieldSelector = new FieldSelector(theClass);
+        referencedEntityGetter = new ReferencedEntityGetter<T>(theClass);
     }
 
     /*
@@ -127,6 +130,20 @@ public abstract class AbstractFacadeREST<T> {
         }
 
         return fieldSet;
+    }
+
+    /*
+     *
+     */
+    protected void getReferencedEntities(T entity, int depth) {
+        referencedEntityGetter.getReferencedEntities(entity, depth);
+    }
+
+    /*
+     *
+     */
+    protected void getReferencedEntities(Set<T> entities, int depth) {
+        referencedEntityGetter.getReferencedEntities(entities, depth);
     }
 
     /*

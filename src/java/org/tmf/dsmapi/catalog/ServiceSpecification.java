@@ -419,10 +419,6 @@ public class ServiceSpecification extends AbstractCatalogEntity implements Seria
         return true;
     }
 
-    @Override
-    public void getEnclosedEntities(int depth) {
-    }
-
     public static ServiceSpecification createProto() {
         ServiceSpecification serviceSpecification = new ServiceSpecification();
 

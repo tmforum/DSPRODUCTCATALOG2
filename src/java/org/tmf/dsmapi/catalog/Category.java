@@ -158,10 +158,6 @@ public class Category extends AbstractCatalogEntity implements Serializable {
         return true;
     }
 
-    @Override
-    public void getEnclosedEntities(int depth) {
-    }
-
     public static Category createProto() {
         Category category = new Category();
 

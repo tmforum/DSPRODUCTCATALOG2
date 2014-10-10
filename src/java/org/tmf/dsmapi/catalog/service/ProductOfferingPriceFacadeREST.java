@@ -184,7 +184,7 @@ public class ProductOfferingPriceFacadeREST extends AbstractFacadeREST<ProductOf
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        getEnclosedEntities_ (entities, depth);
+        getReferencedEntities(entities, depth);
 
         if (outputFields.isEmpty() || outputFields.contains(ServiceConstants.ALL_FIELDS)) {
             return Response.ok(entities).build();
@@ -366,7 +366,7 @@ public class ProductOfferingPriceFacadeREST extends AbstractFacadeREST<ProductOf
         }
 
         ProductOfferingPrice entity = entities.get(0);
-        entity.getEnclosedEntities(depth);
+        getReferencedEntities(entity, depth);
 
         QueryParameterParser queryParameterParser = new QueryParameterParser(uriInfo.getRequestUri().getQuery());
         Set<String> outputFields = getFieldSet(queryParameterParser);
@@ -377,15 +377,6 @@ public class ProductOfferingPriceFacadeREST extends AbstractFacadeREST<ProductOf
 
         Object outputEntity = selectFields(entity, outputFields);
         return Response.ok(outputEntity).build();
-    }
-
-    /*
-     *
-     */
-    private void getEnclosedEntities_ (Set<ProductOfferingPrice> entities, int depth) {
-        for (ProductOfferingPrice entity : entities) {
-            entity.getEnclosedEntities(depth);
-        }
     }
 
 }

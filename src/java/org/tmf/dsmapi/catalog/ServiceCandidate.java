@@ -20,6 +20,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.tmf.dsmapi.commons.Utilities;
+import org.tmf.dsmapi.commons.annotation.EntityReferenceProperty;
 
 /**
  *
@@ -77,6 +78,7 @@ public class ServiceCandidate extends AbstractCatalogEntity implements Serializa
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
+    @EntityReferenceProperty(classId=Category.class)
     private List<CatalogReference> category;
 
     @Embedded
@@ -90,6 +92,7 @@ public class ServiceCandidate extends AbstractCatalogEntity implements Serializa
         @AttributeOverride(name = "name", column = @Column(name = "SERVICE_SPEC_NAME")),
         @AttributeOverride(name = "description", column = @Column(name = "SERVICE_SPEC_DESCRIPTION"))
     })
+    @EntityReferenceProperty(classId=ServiceSpecification.class)
     private CatalogReference serviceSpecification;
 
     public ServiceCandidate() {
@@ -195,25 +198,6 @@ public class ServiceCandidate extends AbstractCatalogEntity implements Serializa
         }
 
         return true;
-    }
-
-    @Override
-    public void getEnclosedEntities(int depth) {
-        if (depth <= AbstractEntity.MINIMUM_DEPTH) {
-            return;
-        }
-
-        depth--;
-
-        if (category != null) {
-            for (CatalogReference reference : category) {
-                reference.fetchEntity(Category.class, depth);
-            }
-        }
-
-        if (serviceSpecification != null) {
-            serviceSpecification.fetchEntity(ServiceSpecification.class, depth);
-        }
     }
 
     public static ServiceCandidate createProto() {

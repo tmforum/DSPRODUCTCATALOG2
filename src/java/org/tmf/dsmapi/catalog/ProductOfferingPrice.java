@@ -224,13 +224,6 @@ public class ProductOfferingPrice extends AbstractCatalogEntity implements Seria
         return true;
     }
 
-    @Override
-    public void getEnclosedEntities(int depth) {
-        if (depth <= AbstractEntity.MINIMUM_DEPTH) {
-            return;
-        }
-    }
-
     public static ProductOfferingPrice createProto() {
         ProductOfferingPrice productOfferingPrice = new ProductOfferingPrice();
 

@@ -19,6 +19,7 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.tmf.dsmapi.catalog.specification.SpecificationRelationship;
 import org.tmf.dsmapi.commons.Utilities;
+import org.tmf.dsmapi.commons.annotation.EntityReferenceProperty;
 
 /**
  *
@@ -215,6 +216,7 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
+    @EntityReferenceProperty(classId=ProductSpecification.class)
     private List<CatalogReference> bundledProductSpecification;
 
     @Embedded
@@ -235,6 +237,7 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
+    @EntityReferenceProperty(classId=ServiceSpecification.class)
     private List<CatalogReference> serviceSpecification;
 
     @Embedded
@@ -245,6 +248,7 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
+    @EntityReferenceProperty(classId=ResourceSpecification.class)
     private List<CatalogReference> resourceSpecification;
 
     @Embedded
@@ -462,33 +466,6 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         }
 
         return true;
-    }
-
-    @Override
-    public void getEnclosedEntities(int depth) {
-        if (depth <= AbstractEntity.MINIMUM_DEPTH) {
-            return;
-        }
-
-        depth--;
-
-        if (bundledProductSpecification != null) {
-            for (CatalogReference reference : bundledProductSpecification) {
-                reference.fetchEntity(ProductSpecification.class, depth);
-            }
-        }
-
-        if (serviceSpecification != null) {
-            for (CatalogReference reference : serviceSpecification) {
-                reference.fetchEntity(ServiceSpecification.class, depth);
-            }
-        }
-
-        if (resourceSpecification != null) {
-            for (CatalogReference reference : resourceSpecification) {
-                reference.fetchEntity(ResourceSpecification.class, depth);
-            }
-        }
     }
 
     public static ProductSpecification createProto() {

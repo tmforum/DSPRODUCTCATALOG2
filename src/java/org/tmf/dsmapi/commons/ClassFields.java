@@ -5,6 +5,8 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.tmf.dsmapi.commons.annotation.VersionProperty;
 
@@ -23,6 +25,10 @@ public class ClassFields {
             throw new IllegalArgumentException ("theClass is required");
 
         getAllFields(theClass);
+    }
+
+    public Set<String> getExternalFieldNames() {
+        return new HashSet<String>(fields.keySet());
     }
 
     public boolean fieldExists(String externalName) {

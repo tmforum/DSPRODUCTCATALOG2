@@ -9,6 +9,7 @@ import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.annotate.JsonUnwrapped;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.tmf.dsmapi.catalog.client.CatalogClient;
+import org.tmf.dsmapi.commons.AbstractEntityReference;
 import org.tmf.dsmapi.commons.ParsedVersion;
 import org.tmf.dsmapi.commons.Utilities;
 import org.tmf.dsmapi.commons.annotation.VersionProperty;
@@ -20,7 +21,7 @@ import org.tmf.dsmapi.commons.annotation.VersionProperty;
  */
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 @Embeddable
-public class CatalogReference implements Serializable {
+public class CatalogReference extends AbstractEntityReference implements Serializable {
     public final static long serialVersionUID = 1L;
 
     @Column(name = "ID", nullable = true)
@@ -192,13 +193,8 @@ public class CatalogReference implements Serializable {
         return "Reference{" + "id=" + id + ", version=" + version + ", parsedVersion=" + parsedVersion + ", href=" + href + ", name=" + name + ", description=" + description + ", entity=" + entity + '}';
     }
 
-    public void fetchEntity(Class<? extends AbstractEntity> theClass, int depth) {
-        try {
-            entity = (AbstractEntity) CatalogClient.getObject(href, theClass, depth);
-        }
-        catch(Exception ex) {
-            entity = null;
-        }
+    public void fetchEntity(Class theClass, int depth) {
+        entity = (AbstractEntity) CatalogClient.getObject(href, theClass, depth);
     }
 
     public static CatalogReference createProto() {

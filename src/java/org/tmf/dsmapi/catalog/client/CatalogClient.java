@@ -6,6 +6,7 @@ import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 import com.sun.jersey.api.json.JSONConfiguration;
 import javax.ws.rs.core.MediaType;
+import org.tmf.dsmapi.catalog.service.ServiceConstants;
 
 /**
  *
@@ -24,8 +25,9 @@ public class CatalogClient {
         Client client = Client.create(config);
         WebResource webResource = client.resource(href);
 
-        if (depth > 0)
+        if (depth > ServiceConstants.MINIMUM_DEPTH_VALUE) {
             webResource = webResource.queryParam("depth", String.valueOf(depth));
+        }
 
         return webResource.accept(MediaType.APPLICATION_JSON_TYPE).get(theClass);
     }
