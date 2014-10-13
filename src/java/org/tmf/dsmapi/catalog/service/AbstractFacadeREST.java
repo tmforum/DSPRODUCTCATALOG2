@@ -12,6 +12,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.UriInfo;
 import org.tmf.dsmapi.catalog.AbstractEntity;
 import org.tmf.dsmapi.catalog.LifecycleStatus;
+import org.tmf.dsmapi.commons.FieldSelector;
 import org.tmf.dsmapi.commons.ParsedVersion;
 import org.tmf.dsmapi.commons.QueryParameterParser;
 import org.tmf.dsmapi.commons.ReferencedEntityGetter;
