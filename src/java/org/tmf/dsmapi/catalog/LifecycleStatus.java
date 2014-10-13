@@ -165,7 +165,7 @@ public enum LifecycleStatus {
             }
         }
 
-        return (null);
+        throw new IllegalArgumentException ("'" + value + "' is not a valid LifecycleStatus value; valid values are: " + EnumSet.allOf(LifecycleStatus.class));
     }
 
 }
