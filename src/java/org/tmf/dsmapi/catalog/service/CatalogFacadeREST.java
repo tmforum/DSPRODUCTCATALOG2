@@ -328,7 +328,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
 
         manager.remove(entity);
 
-        input.setHref(buildHref(uriInfo, entity.getId(), entity.getParsedVersion()));
+        input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.create(input);
 
         return Response.status(Response.Status.CREATED).entity(input).build();
