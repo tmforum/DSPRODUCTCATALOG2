@@ -9,6 +9,7 @@ import java.util.Set;
 import org.apache.commons.beanutils.PropertyUtilsBean;
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.tmf.dsmapi.commons.ClassFields;
+import org.tmf.dsmapi.commons.ClassFieldsCache;
 
 /**
  *
@@ -18,7 +19,7 @@ import org.tmf.dsmapi.commons.ClassFields;
 public class FieldSelector {
     private final Class theClass;
 
-    private final HashMap<Class, ClassFields> classFieldsCache = new HashMap<Class, ClassFields>();
+    private final ClassFieldsCache classFieldsCache = new ClassFieldsCache();
     private final HashMap<Class, SetMethods> setMethodsCache = new HashMap<Class, SetMethods>();
 
     private static PropertyUtilsBean propertyUtilsBean = new PropertyUtilsBean();
@@ -50,7 +51,7 @@ public class FieldSelector {
         }
 
         PathNames pathNames = new PathNames(requestedPathNames);
-        ClassFields classFields = getClassFields(input.getClass());
+        ClassFields classFields = classFieldsCache.get(input.getClass());
         SetMethods setMethods = getSetMethods(input.getClass());
 
         boolean outputChanged = processSimpleFields(output, input, pathNames, classFields, setMethods);
@@ -67,17 +68,6 @@ public class FieldSelector {
         catch (Exception ex) {
             return null;
         }
-    }
-
-    private ClassFields getClassFields(Class theClass) {
-        ClassFields classFields = classFieldsCache.get(theClass);
-        if (classFields != null) {
-            return classFields;
-        }
-
-        classFields = new ClassFields(theClass);
-        classFieldsCache.put(theClass, classFields);
-        return classFields;
     }
 
     private SetMethods getSetMethods(Class theClass) {
