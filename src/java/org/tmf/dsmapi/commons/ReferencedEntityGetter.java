@@ -58,7 +58,7 @@ public class ReferencedEntityGetter<T> {
             String internalFieldName = classFields.getInternalFieldName(externalFieldName);
             Class fieldDataClass = classFields.getValueType(externalFieldName);
             if (fieldDataClass == null) {
-                logger.log(Level.SEVERE, "createReferenceFields_() - Could not get data type for '{0}'", externalFieldName);
+                logger.log(Level.SEVERE, "createReferenceFields_() - Could not get data type for {0}", externalFieldName);
                 continue;
             }
 
@@ -68,7 +68,7 @@ public class ReferencedEntityGetter<T> {
 
             Class entityClass = getEntityClass_(classFields, externalFieldName);
             if (entityClass == null) {
-                logger.log(Level.SEVERE, "createReferenceFields_() - Could not get the entity class for '{0}'", externalFieldName);
+                logger.log(Level.SEVERE, "createReferenceFields_() - Could not get the entity class for {0}", externalFieldName);
                 continue;
             }
 
@@ -98,7 +98,7 @@ public class ReferencedEntityGetter<T> {
         }
 
         if (entity.getClass() != theClass) {
-            logger.log(Level.SEVERE, "getReferencedEntities_() - entity is a '{0}'; must be a '{1}'", new Object[]{entity.getClass(), theClass});
+            logger.log(Level.SEVERE, "getReferencedEntities_() - entity is a {0}; must be a {1}", new Object[]{entity.getClass(), theClass});
             return;
         }
 
@@ -119,29 +119,57 @@ public class ReferencedEntityGetter<T> {
         }
 
         if (fieldValue.getClass().isArray() == true) {
-            logger.log(Level.SEVERE, "getOneReferencedEntity_() - not dealing with Arrays yet");
+            getArrayReferencedEntity_(fieldValue, entityClass, depth);
             return;
         }
 
         if (Collection.class.isAssignableFrom(fieldValue.getClass()) == true) {
-            getReferencedEntityCollection_((Collection) fieldValue, entityClass, depth);
+            getCollectionReferencedEntity_(fieldValue, entityClass, depth);
             return;
         }
 
-        logger.log(Level.SEVERE, "getOneReferencedEntity_() - Don't know how to deal with the '{0}' field based on its data type", internalFieldName);
+        logger.log(Level.SEVERE, "getOneReferencedEntity_() - Don't know how to deal with the {0} field based on its data type", internalFieldName);
     }
 
     private Object getReferenceValue_(T entity, String internalFieldName) {
         try {
             return propertyUtilsBean.getNestedProperty(entity, internalFieldName);
         } catch (Exception ex) {
-            logger.log(Level.SEVERE, "getReferenceValue_() - Failed to get value for '{0}'; Exception: {1}", new Object[] {internalFieldName, ex});
+            logger.log(Level.SEVERE, "getReferenceValue_() - Failed to get value for {0}; Exception: {1}", new Object[] {internalFieldName, ex});
             return null;
         }
     }
 
-    private void getReferencedEntityCollection_(Collection entityReferenceCollection, Class entityClass, int depth) {
-        for (Object entityReference : entityReferenceCollection) {
+    private void getArrayReferencedEntity_(Object fieldValue, Class entityClass, int depth) {
+        AbstractEntityReference entityReferences [];
+        try {
+            entityReferences = (AbstractEntityReference []) fieldValue;
+        }
+        catch (Exception ex) {
+            logger.log(Level.SEVERE, "getArrayReferenceEntity_() - failed to cast value to array; Exception: {0}", ex);
+            return;
+        }
+
+        if (entityReferences == null || entityReferences.length <= 0) {
+            return;
+        }
+
+        for (int index = 0; index < entityReferences.length; index++) {
+            getReferencedEntity_(entityReferences [index], entityClass, depth);
+        }
+    }
+
+    private void getCollectionReferencedEntity_(Object objectValue, Class entityClass, int depth) {
+        Collection entityReferences;
+        try {
+            entityReferences = (Collection) objectValue;
+        }
+        catch (Exception ex) {
+            logger.log(Level.SEVERE, "getCollectionReferencedEntity_() - failed to cast value to collection; Exception: {0}", ex);
+            return;
+        }
+
+        for (Object entityReference : entityReferences) {
             if (entityReference == null || (entityReference instanceof AbstractEntityReference) == false) {
                 continue;
             }
