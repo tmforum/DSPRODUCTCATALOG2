@@ -158,6 +158,11 @@ public class LeafNode extends AbstractNode {
 
         if (dataClass.isPrimitive() == true || Number.class.isAssignableFrom(dataClass) == true) {
             normalizeNumber();
+            return;
+        }
+
+        if (dataClass.isEnum() == true) {
+            normalizeEnumeration(dataClass);
         }
     }
 
@@ -194,4 +199,20 @@ public class LeafNode extends AbstractNode {
         }
     }
 
+    private void normalizeEnumeration(Class dataClass) throws BadUsageException {
+        Object values [] = dataClass.getEnumConstants();
+        if (values == null) {
+            System.err.println ("got no enumeration values");
+            return;
+        }
+
+        for (Operator operator : operations.keySet()) {
+            if (operator == Operator.REG_EXP) {
+                continue;
+            }
+
+            Operation operation = operations.get(operator);
+            operation.normalizeValuesAsEnumeration(values);
+        }
+    }
 }

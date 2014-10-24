@@ -74,6 +74,33 @@ public class Operation {
         }
     }
 
+    public void normalizeValuesAsEnumeration(Object enumeratedValues []) throws BadUsageException {
+        if (enumeratedValues == null || enumeratedValues.length <= 0) {
+            return;
+        }
+
+        for (OperationValue value : values) {
+            String inputValue = value.getInputValue();
+            if (inputValue == null) {
+                value.setObjectValue(null);
+                continue;
+            }
+
+            for (Object object : enumeratedValues) {
+                if (object == null || (object instanceof Enum) == false) {
+                    continue;
+                }
+
+                if (inputValue.equals(object.toString ()) == false) {
+                    continue;
+                }
+
+                value.setObjectValue((Comparable) object);
+                break;
+            }
+        }
+    }
+
     @Override
     public String toString() {
         return "Operation{" + "operator=" + operator + ", values=" + values + '}';
