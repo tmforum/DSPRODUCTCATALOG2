@@ -96,6 +96,29 @@
 			],
 			"collection_name": "Category",
 			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259"
+		},
+		{
+			"id": "139e70ab-2343-10cd-4282-45f169dc33dc",
+			"name": "025 - DELETE",
+			"description": "",
+			"order": [
+				"c7e0ea55-94ef-f8e5-fb4b-49d0ede19dd5",
+				"444c1cf5-fee0-baf2-3ac2-45a260c419ae",
+				"1c8ba24b-5360-64a0-97df-808dfac5cb7c",
+				"d5ed05bb-4481-bd7a-b453-8d476b2e85d2",
+				"72b086d8-1fd2-722b-382a-0dbf3e08bcdd",
+				"34b68c87-bed9-a667-d33d-2382bd28ce0e",
+				"dee7a14b-2891-c2ea-cbf9-8eb160f072b9",
+				"98be9c51-dc47-537c-4367-324ec45922bf",
+				"32b165c1-2343-0dc2-0e57-93cddfac9d61",
+				"3119a442-98b2-673e-7b11-753aa34a85b9",
+				"c2755728-5460-b0ad-0413-017648d9c9a1",
+				"44f0be12-160a-54c9-e54e-9c310580c10d",
+				"4d05beac-08a5-3eaf-4bb8-ca32900eafae",
+				"5cccff6d-1d2c-88e4-2286-64f11ff10d76"
+			],
+			"collection_name": "Category",
+			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259"
 		}
 	],
 	"timestamp": 1410525262088,
@@ -268,6 +291,89 @@
 			],
 			"synced": false,
 			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42 new\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41 new\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services new\",\n    \"description\": \"A category to hold all available cloud service offers new\"\n}"
+		},
+		{
+			"id": "1c8ba24b-5360-64a0-97df-808dfac5cb7c",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414158241647,
+			"name": "B-025-030 - [200]",
+			"description": "Get the entity list before delete.\n",
+			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 186,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 13:44:04 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[{\"id\":\"CATGR-002\",\"version\":\"2.0\"},{\"id\":\"CATGR-001\",\"version\":\"2.0\"},{\"id\":\"3\",\"version\":\"1.0\"},{\"id\":\"CATG-001\",\"version\":\"1.0\"},{\"id\":\"CATG-001\",\"version\":\"1.1\"},{\"id\":\"CATG-001\",\"version\":\"11.0\"},{\"id\":\"CATG-001\",\"version\":\"2.0\"},{\"id\":\"CATG-001\",\"version\":\"1.10\"},{\"id\":\"CATG-052\",\"version\":\"2.5\"}]",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "03d9e965-7357-160a-3ff3-a638950cfbe4",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
 		},
 		{
 			"id": "1ce6dba3-75d1-d86e-a487-047f1afff4e0",
@@ -709,6 +815,162 @@
 			"synced": false
 		},
 		{
+			"id": "3119a442-98b2-673e-7b11-753aa34a85b9",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"name": "B-025-100 - [200]",
+			"description": "Delete latest version (2.0)\n",
+			"descriptionFormat": "html",
+			"time": 1414164523730,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 264,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "0",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 15:29:44 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "fd4a8eed-296c-cdc6-ed92-bbb1774e0ae3",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "DELETE",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"tests": "",
+			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"synced": false
+		},
+		{
+			"id": "32b165c1-2343-0dc2-0e57-93cddfac9d61",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"name": "B-025-090 - [200]",
+			"description": "Delete latest version (11.0)\n",
+			"descriptionFormat": "html",
+			"time": 1414164523730,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 103,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "0",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 15:28:53 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "47fefd3c-abce-81a9-2ff0-de1795144680",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "DELETE",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"tests": "",
+			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"synced": false
+		},
+		{
 			"id": "34438b8b-7b3d-c405-cb41-4148ecf486a7",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
 			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
@@ -786,6 +1048,83 @@
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 			"synced": false,
 			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"Retired\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+		},
+		{
+			"id": "34b68c87-bed9-a667-d33d-2382bd28ce0e",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.0)",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414164246650,
+			"name": "B-025-060 - [200]",
+			"description": "Delete lowest version\n",
+			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 106,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "0",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 15:24:01 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "229868bf-b304-0db8-6ca2-1b35205fa495",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.0)",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "DELETE",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
 		},
 		{
 			"id": "4083e4a9-9505-19a6-eb73-22b9b8bf030d",
@@ -962,6 +1301,167 @@
 			"rawModeData": "{\n\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\",\n        \"startDateTime\": \"2013-04-19T16:44:23-04:00\"\n    }\n}"
 		},
 		{
+			"id": "444c1cf5-fee0-baf2-3ac2-45a260c419ae",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/WRONG-ID",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"name": "B-025-020 - [404]",
+			"description": "Invalid entity ID.\n",
+			"descriptionFormat": "html",
+			"time": 1414157684895,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 404,
+						"name": "Not Found",
+						"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+					},
+					"time": 161,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "1098",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/html",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 13:34:54 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 404 - Not Found</h1><hr/><p><b>type</b> Status report</p><p><b>message</b>Not Found</p><p><b>description</b>The requested resource (Not Found) is not available.</p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "6e1c82e4-f317-a135-0bdc-af4f593debfe",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/WRONG-ID",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "DELETE",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"tests": "",
+			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"synced": false
+		},
+		{
+			"id": "44f0be12-160a-54c9-e54e-9c310580c10d",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414164815911,
+			"name": "B-025-120 - [200]",
+			"description": "Delete latest version (1.10)\n",
+			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 114,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "0",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 15:33:39 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "d079c191-c911-1c69-1ad9-6325db810e85",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "DELETE",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
+		},
+		{
 			"id": "46b7a03e-fd35-d0c2-2e1b-2f70164b4ca5",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
 			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
@@ -1135,6 +1635,147 @@
 			"synced": false
 		},
 		{
+			"id": "4d05beac-08a5-3eaf-4bb8-ca32900eafae",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414164858346,
+			"name": "B-025-130 - [404]",
+			"description": "All CATG-001 are gone.\n",
+			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 114,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "0",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 15:33:39 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "d079c191-c911-1c69-1ad9-6325db810e85",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "DELETE",
+						"tests": "",
+						"version": 2
+					}
+				},
+				{
+					"status": "",
+					"responseCode": {
+						"code": 404,
+						"name": "Not Found",
+						"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+					},
+					"time": 90,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "1098",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/html",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 15:34:21 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 404 - Not Found</h1><hr/><p><b>type</b> Status report</p><p><b>message</b>Not Found</p><p><b>description</b>The requested resource (Not Found) is not available.</p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "de658873-d695-c780-5354-1674c5300d72",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "DELETE",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
+		},
+		{
 			"id": "4ff6910d-a738-0ca9-d9a9-5b90de400fc7",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
 			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?id=CATG-001&depth=10",
@@ -1298,6 +1939,90 @@
 					}
 				}
 			],
+			"synced": false
+		},
+		{
+			"id": "5cccff6d-1d2c-88e4-2286-64f11ff10d76",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"name": "B-025-140 [ [200]",
+			"description": "all CATG-nnn should be gone.\n",
+			"descriptionFormat": "html",
+			"time": 1414164460849,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 83,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 15:35:20 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[{\"id\":\"CATGR-002\",\"version\":\"2.0\"},{\"id\":\"CATGR-001\",\"version\":\"2.0\"},{\"id\":\"3\",\"version\":\"1.0\"}]",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "bad511cd-cdc5-9f9b-b01a-1c5ae5344c9b",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"tests": "",
+			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 			"synced": false
 		},
 		{
@@ -1978,6 +2703,84 @@
 			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"1.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
 		},
 		{
+			"id": "72b086d8-1fd2-722b-382a-0dbf3e08bcdd",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.5)",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"name": "B-020-050 -[200]",
+			"description": "latest (and only) version deleted by specifying version\n",
+			"descriptionFormat": "html",
+			"time": 1414158445859,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 146,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "0",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 13:47:33 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "45aee18a-ceb7-5339-913c-c2f0956e5708",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.5)",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "DELETE",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"tests": "",
+			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"synced": false
+		},
+		{
 			"id": "8ca530a1-3b38-05c7-71ea-11461549547a",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
 			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/admin/proto",
@@ -2234,6 +3037,90 @@
 			],
 			"synced": false,
 			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+		},
+		{
+			"id": "98be9c51-dc47-537c-4367-324ec45922bf",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"name": "B-025-080 [ [200]",
+			"description": "list of remaining CATG-001.  Should have 1.10, 2.0, 11.0\n",
+			"descriptionFormat": "html",
+			"time": 1414164460849,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 99,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 15:28:04 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[{\"id\":\"CATGR-002\",\"version\":\"2.0\"},{\"id\":\"CATGR-001\",\"version\":\"2.0\"},{\"id\":\"3\",\"version\":\"1.0\"},{\"id\":\"CATG-001\",\"version\":\"11.0\"},{\"id\":\"CATG-001\",\"version\":\"2.0\"},{\"id\":\"CATG-001\",\"version\":\"1.10\"}]",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "6246b023-8da9-bd25-1584-f7c16d207e34",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"tests": "",
+			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"synced": false
 		},
 		{
 			"id": "9f96512f-f84e-ce30-b56b-a408919de539",
@@ -2811,6 +3698,179 @@
 			"synced": false
 		},
 		{
+			"id": "c2755728-5460-b0ad-0413-017648d9c9a1",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"name": "B-025-110 [ [200]",
+			"description": "list of remaining CATG-001.  Should have 1.10\n",
+			"descriptionFormat": "html",
+			"time": 1414164460849,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 106,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 15:30:44 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[{\"id\":\"CATGR-002\",\"version\":\"2.0\"},{\"id\":\"CATGR-001\",\"version\":\"2.0\"},{\"id\":\"3\",\"version\":\"1.0\"},{\"id\":\"CATG-001\",\"version\":\"1.10\"}]",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "34d7a718-06d3-498a-2531-c312f2304a93",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"tests": "",
+			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"synced": false
+		},
+		{
+			"id": "c7e0ea55-94ef-f8e5-fb4b-49d0ede19dd5",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414157569612,
+			"name": "B-025-010 - [405]",
+			"description": "Bad call (missing entity ID).\n",
+			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 405,
+						"name": "Method Not Allowed",
+						"detail": "A request was made of a resource using a request method not supported by that resource; for example, using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource."
+					},
+					"time": 141,
+					"headers": [
+						{
+							"name": "Allow",
+							"key": "Allow",
+							"value": "POST,GET,OPTIONS,HEAD",
+							"description": "Valid actions for a specified resource. To be used for a 405 Method not allowed"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "1153",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/html",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 13:33:04 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 405 - Method Not Allowed</h1><hr/><p><b>type</b> Status report</p><p><b>message</b>Method Not Allowed</p><p><b>description</b>The specified HTTP method is not allowed for the requested resource (Method Not Allowed).</p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "104adf31-2d1b-d276-8549-fa572120b2ed",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "DELETE",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
+		},
+		{
 			"id": "ca7c1eb0-a925-6293-4ddc-9fd88e8d4afe",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
 			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
@@ -3237,6 +4297,167 @@
 			"synced": false
 		},
 		{
+			"id": "d5ed05bb-4481-bd7a-b453-8d476b2e85d2",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(9.0)",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"name": "B-025-040 - [404]",
+			"description": "Entity not found (wrong version).\n",
+			"descriptionFormat": "html",
+			"time": 1414158341060,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 404,
+						"name": "Not Found",
+						"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+					},
+					"time": 91,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "1098",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/html",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 13:45:58 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 404 - Not Found</h1><hr/><p><b>type</b> Status report</p><p><b>message</b>Not Found</p><p><b>description</b>The requested resource (Not Found) is not available.</p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "d6aeb7d9-1414-5ad7-1210-6164a7ed76f4",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(9.0)",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "DELETE",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"tests": "",
+			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"synced": false
+		},
+		{
+			"id": "dee7a14b-2891-c2ea-cbf9-8eb160f072b9",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.1)",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414164392643,
+			"name": "B-025-070 - [200]",
+			"description": "Delete entity in the middle: (versions are 1.1, 2.0, 1.10 and 11.0)\n",
+			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 109,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "0",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 15:26:35 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "b65a1772-b30a-a353-195e-dc288a3ab35c",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.1)",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "DELETE",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
+		},
+		{
 			"id": "e162da9f-2e16-cd4b-a344-f20126e6caa0",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
 			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(20.4)",
@@ -3502,25 +4723,19 @@
 			"version": 2,
 			"tests": "",
 			"time": 1414100275053,
-			"name": "B-020-060 - [400]",
-			"description": "Get version, validFor, lifecycleStatus for all entities whose lifecycleStatus is higher than or same as In Test\n\ngte comparison not allowed for enumeration.",
+			"name": "B-020-060 - [200]",
+			"description": "Get version, validFor, lifecycleStatus for all entities whose lifecycleStatus is higher than or same as In Test\n",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 			"responses": [
 				{
 					"status": "",
 					"responseCode": {
-						"code": 400,
-						"name": "Bad Request",
-						"detail": "The request cannot be fulfilled due to bad syntax."
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 76,
+					"time": 94,
 					"headers": [
-						{
-							"name": "Connection",
-							"key": "Connection",
-							"value": "close",
-							"description": "Options that are desired for the connection"
-						},
 						{
 							"name": "Content-Type",
 							"key": "Content-Type",
@@ -3530,7 +4745,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Fri, 24 Oct 2014 13:26:07 GMT",
+							"value": "Fri, 24 Oct 2014 15:39:54 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -3554,7 +4769,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"error\":{\"code\":\"4011\",\"title\":\"Wrong operator usage\"},\"detail\":\"gte operator incompatible with field\"}",
+					"text": "[{\"id\":\"CATG-001\",\"version\":\"1.1\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2017-04-19T20:42:24.000+0000\"}},{\"id\":\"CATG-001\",\"version\":\"11.0\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"}},{\"id\":\"CATG-001\",\"version\":\"2.0\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2012-04-19T20:44:23.000+0000\",\"endDateTime\":\"2014-04-19T20:44:23.000+0000\"}},{\"id\":\"CATG-001\",\"version\":\"1.10\",\"lifecycleStatus\":\"Active\"},{\"id\":\"CATG-052\",\"version\":\"2.5\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2014-04-19T20:44:23.000+0000\"}}]",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -3563,7 +4778,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "9274bc92-1a27-ee5b-94c5-441a2d55d332",
+					"id": "505aa38d-29d4-d2ee-f9d7-8646902fd03f",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?lifecycleStatus.gte=In%20Test&fields=version%2ClifecycleStatus%2CvalidFor",
@@ -3753,25 +4968,19 @@
 			"version": 2,
 			"tests": "",
 			"time": 1414100207445,
-			"name": "B-020-050 - [400]",
-			"description": "Get version, validFor, lifecycleStatus for all entities whose lifecycleStatus is higher than In Test\n\nGreater than comparison not allowed for enumeration.",
+			"name": "B-020-050 - [200]",
+			"description": "Get version, validFor, lifecycleStatus for all entities whose lifecycleStatus is higher than In Test\n",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 			"responses": [
 				{
 					"status": "",
 					"responseCode": {
-						"code": 400,
-						"name": "Bad Request",
-						"detail": "The request cannot be fulfilled due to bad syntax."
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 85,
+					"time": 90,
 					"headers": [
-						{
-							"name": "Connection",
-							"key": "Connection",
-							"value": "close",
-							"description": "Options that are desired for the connection"
-						},
 						{
 							"name": "Content-Type",
 							"key": "Content-Type",
@@ -3781,7 +4990,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Fri, 24 Oct 2014 13:23:19 GMT",
+							"value": "Fri, 24 Oct 2014 15:39:27 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -3805,7 +5014,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"error\":{\"code\":\"4011\",\"title\":\"Wrong operator usage\"},\"detail\":\"gt operator incompatible with field\"}",
+					"text": "[{\"id\":\"CATG-001\",\"version\":\"11.0\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"}},{\"id\":\"CATG-001\",\"version\":\"2.0\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2012-04-19T20:44:23.000+0000\",\"endDateTime\":\"2014-04-19T20:44:23.000+0000\"}},{\"id\":\"CATG-001\",\"version\":\"1.10\",\"lifecycleStatus\":\"Active\"}]",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -3814,8 +5023,8 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "e2fc2cb6-aa40-4eb7-c3cf-b061f259b3e6",
-					"name": "Response",
+					"id": "c5f1046a-495b-09b6-3c6a-4cdf0a572166",
+					"name": "Resposne",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?lifecycleStatus.gt=In%20Test&fields=version%2ClifecycleStatus%2CvalidFor",
 						"pathVariables": {},
