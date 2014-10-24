@@ -107,6 +107,10 @@ public class LeafNode extends AbstractNode {
                         break;
                     }
 
+                    if (dataClass.isEnum() == true) {
+                        break;
+                    }
+
                     if (dataClass.isPrimitive() == true && dataClass.equals(boolean.class) == false) {
                         break;
                     }
