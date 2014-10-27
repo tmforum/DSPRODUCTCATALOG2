@@ -86,11 +86,11 @@ public class ServiceCandidate extends AbstractCatalogEntity implements Serializa
 
     @Embedded
     @AttributeOverrides({
-        @AttributeOverride(name = "id", column = @Column(name = "SERVICE_SPEC_ID")),
-        @AttributeOverride(name = "version", column = @Column(name = "SERVICE_SPEC_VERSION")),
-        @AttributeOverride(name = "href", column = @Column(name = "SERVICE_SPEC_HREF")),
-        @AttributeOverride(name = "name", column = @Column(name = "SERVICE_SPEC_NAME")),
-        @AttributeOverride(name = "description", column = @Column(name = "SERVICE_SPEC_DESCRIPTION"))
+        @AttributeOverride(name = "referencedId", column = @Column(name = "SERVICE_SPEC_ID")),
+        @AttributeOverride(name = "referencedVersion", column = @Column(name = "SERVICE_SPEC_VERSION")),
+        @AttributeOverride(name = "referencedHref", column = @Column(name = "SERVICE_SPEC_HREF")),
+        @AttributeOverride(name = "referencedName", column = @Column(name = "SERVICE_SPEC_NAME")),
+        @AttributeOverride(name = "referencedDescription", column = @Column(name = "SERVICE_SPEC_DESCRIPTION"))
     })
     @EntityReferenceProperty(classId=ServiceSpecification.class)
     private CatalogReference serviceSpecification;

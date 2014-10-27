@@ -18,31 +18,45 @@ import org.tmf.dsmapi.commons.annotation.VersionProperty;
  *
  * @author bahman.barzideh
  *
+ * The prefix 'referenced' was added to the property names of this class to work
+ * around an issue in the platform.  Without the prefix, you could not update the
+ * id & version fields of entity properties that were of this class.  For example,
+ * attempting to update or edit the ResourceCandidate.category[n].version would
+ * throw an exception.  The exception would claim the operation was attempting to
+ * update a key field (the real key field is named ENTITY_VERSION in the database).
+ * The 'referenced' prefix fixes this issue while making this class a bit uglier
+ * than it needs to be.
+ *
  */
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 @Embeddable
 public class CatalogReference extends AbstractEntityReference implements Serializable {
     public final static long serialVersionUID = 1L;
 
-    @Column(name = "ID", nullable = true)
-    private String id;
+    @Column(name = "REFERENCED_ID", nullable = true)
+    @JsonProperty(value = "id")
+    private String referencedId;
 
-    @Column(name = "VERSION", nullable = true)
+    @Column(name = "REFERENCED_VERSION", nullable = true)
+    @JsonProperty(value = "version")
     @VersionProperty
-    private String version;
+    private String referencedVersion;
 
     @Transient
     @JsonIgnore
     private ParsedVersion parsedVersion;
 
-    @Column(name = "HREF", nullable = true)
-    private String href;
+    @Column(name = "REFERENCED_HREF", nullable = true)
+    @JsonProperty(value = "href")
+    private String referencedHref;
 
-    @Column(name = "NAME", nullable = true)
-    private String name;
+    @Column(name = "REFERENCED_NAME", nullable = true)
+    @JsonProperty(value = "name")
+    private String referencedName;
 
-    @Column(name = "DESCRIPTION", nullable = true)
-    private String description;
+    @Column(name = "REFERENCED_DESCRIPTION", nullable = true)
+    @JsonProperty(value = "description")
+    private String referencedDescription;
 
     @Transient
     @JsonUnwrapped
@@ -52,59 +66,59 @@ public class CatalogReference extends AbstractEntityReference implements Seriali
         entity = null;
     }
 
-    public String getId() {
-        return id;
+    public String getReferencedId() {
+        return referencedId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setReferencedId(String referencedId) {
+        this.referencedId = referencedId;
     }
 
-    public String getVersion() {
-        return version;
+    public String getReferencedVersion() {
+        return referencedVersion;
     }
 
-    public void setVersion(String version) {
-        if (version == null) {
-            this.version = null;
+    public void setReferencedVersion(String referencedVersion) {
+        if (referencedVersion == null) {
+            this.referencedVersion = null;
             this.parsedVersion = null;
             return;
         }
 
-        this.parsedVersion = new ParsedVersion(version);
-        this.version = this.parsedVersion.getInternalView();
+        this.parsedVersion = new ParsedVersion(referencedVersion);
+        this.referencedVersion = this.parsedVersion.getInternalView();
     }
 
     public ParsedVersion getParsedVersion() {
-        if (parsedVersion == null && version != null) {
-            parsedVersion = new ParsedVersion(version);
+        if (parsedVersion == null && referencedVersion != null) {
+            parsedVersion = new ParsedVersion(referencedVersion);
         }
 
         return parsedVersion;
     }
 
-    public String getHref() {
-        return href;
+    public String getReferencedHref() {
+        return referencedHref;
     }
 
-    public void setHref(String href) {
-        this.href = href;
+    public void setReferencedHref(String referencedHref) {
+        this.referencedHref = referencedHref;
     }
 
-    public String getName() {
-        return name;
+    public String getReferencedName() {
+        return referencedName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setReferencedName(String referencedName) {
+        this.referencedName = referencedName;
     }
 
-    public String getDescription() {
-        return description;
+    public String getReferencedDescription() {
+        return referencedDescription;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setReferencedDescription(String referencedDescription) {
+        this.referencedDescription = referencedDescription;
     }
 
     public AbstractEntity getEntity() {
@@ -117,7 +131,7 @@ public class CatalogReference extends AbstractEntityReference implements Seriali
 
     @JsonProperty(value = "id")
     public String idToJson() {
-        return (entity == null) ? id : null;
+        return (entity == null) ? referencedId : null;
     }
 
     @JsonProperty(value = "version")
@@ -132,28 +146,28 @@ public class CatalogReference extends AbstractEntityReference implements Seriali
 
     @JsonProperty(value = "href")
     public String hrefToJson() {
-        return (entity == null) ? href : null;
+        return (entity == null) ? referencedHref : null;
     }
 
     @JsonProperty(value = "name")
     public String nameToJson() {
-        return (entity == null) ? name : null;
+        return (entity == null) ? referencedName : null;
     }
 
     @JsonProperty(value = "description")
     public String descriptionToJson() {
-        return (entity == null) ? description : null;
+        return (entity == null) ? referencedDescription : null;
     }
 
     @Override
     public int hashCode() {
         int hash = 5;
 
-        hash = 53 * hash + (this.id != null ? this.id.hashCode() : 0);
-        hash = 53 * hash + (this.version != null ? this.version.hashCode() : 0);
-        hash = 53 * hash + (this.href != null ? this.href.hashCode() : 0);
-        hash = 53 * hash + (this.name != null ? this.name.hashCode() : 0);
-        hash = 53 * hash + (this.description != null ? this.description.hashCode() : 0);
+        hash = 53 * hash + (this.referencedId != null ? this.referencedId.hashCode() : 0);
+        hash = 53 * hash + (this.referencedVersion != null ? this.referencedVersion.hashCode() : 0);
+        hash = 53 * hash + (this.referencedHref != null ? this.referencedHref.hashCode() : 0);
+        hash = 53 * hash + (this.referencedName != null ? this.referencedName.hashCode() : 0);
+        hash = 53 * hash + (this.referencedDescription != null ? this.referencedDescription.hashCode() : 0);
 
         return hash;
     }
@@ -165,23 +179,23 @@ public class CatalogReference extends AbstractEntityReference implements Seriali
         }
 
         final CatalogReference other = (CatalogReference) object;
-        if (Utilities.areEqual(this.id, other.id) == false) {
+        if (Utilities.areEqual(this.referencedId, other.referencedId) == false) {
             return false;
         }
 
-        if (Utilities.areEqual(this.version, other.version) == false) {
+        if (Utilities.areEqual(this.referencedVersion, other.referencedVersion) == false) {
             return false;
         }
 
-        if (Utilities.areEqual(this.href, other.href) == false) {
+        if (Utilities.areEqual(this.referencedHref, other.referencedHref) == false) {
             return false;
         }
 
-        if (Utilities.areEqual(this.name, other.name) == false) {
+        if (Utilities.areEqual(this.referencedName, other.referencedName) == false) {
             return false;
         }
 
-        if (Utilities.areEqual(this.description, other.description) == false) {
+        if (Utilities.areEqual(this.referencedDescription, other.referencedDescription) == false) {
             return false;
         }
 
@@ -190,21 +204,22 @@ public class CatalogReference extends AbstractEntityReference implements Seriali
 
     @Override
     public String toString() {
-        return "Reference{" + "id=" + id + ", version=" + version + ", parsedVersion=" + parsedVersion + ", href=" + href + ", name=" + name + ", description=" + description + ", entity=" + entity + '}';
+        return "Reference{" + "referencedId=" + referencedId + ", referencedVersion=" + referencedVersion + ", parsedVersion=" + parsedVersion + ", referencedHref=" + referencedHref + ", referencedName=" + referencedName + ", referencedDescription=" + referencedDescription + ", entity=" + entity + '}';
     }
 
+    @Override
     public void fetchEntity(Class theClass, int depth) {
-        entity = (AbstractEntity) CatalogClient.getObject(href, theClass, depth);
+        entity = (AbstractEntity) CatalogClient.getObject(referencedHref, theClass, depth);
     }
 
     public static CatalogReference createProto() {
         CatalogReference catalogReference = new CatalogReference ();
 
-        catalogReference.id = "id";
-        catalogReference.version = "1.6";
-        catalogReference.href = "href";
-        catalogReference.name = "name";
-        catalogReference.description = "description";
+        catalogReference.referencedId = "id";
+        catalogReference.referencedVersion = "1.6";
+        catalogReference.referencedHref = "href";
+        catalogReference.referencedName = "name";
+        catalogReference.referencedDescription = "description";
         catalogReference.entity = null;
 
         return catalogReference;

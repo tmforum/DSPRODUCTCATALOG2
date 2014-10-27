@@ -86,11 +86,11 @@ public class ResourceCandidate extends AbstractCatalogEntity implements Serializ
 
     @Embedded
     @AttributeOverrides({
-        @AttributeOverride(name = "id", column = @Column(name = "RESOURCE_SPEC_ID")),
-        @AttributeOverride(name = "version", column = @Column(name = "RESOURCE_SPEC_VERSION")),
-        @AttributeOverride(name = "href", column = @Column(name = "RESOURCE_SPEC_HREF")),
-        @AttributeOverride(name = "name", column = @Column(name = "RESOURCE_SPEC_NAME")),
-        @AttributeOverride(name = "description", column = @Column(name = "RESOURCE_SPEC_DESCRIPTION"))
+        @AttributeOverride(name = "referencedId", column = @Column(name = "RESOURCE_SPEC_ID")),
+        @AttributeOverride(name = "referencedVersion", column = @Column(name = "RESOURCE_SPEC_VERSION")),
+        @AttributeOverride(name = "referencedHref", column = @Column(name = "RESOURCE_SPEC_HREF")),
+        @AttributeOverride(name = "referencedName", column = @Column(name = "RESOURCE_SPEC_NAME")),
+        @AttributeOverride(name = "referencedDescription", column = @Column(name = "RESOURCE_SPEC_DESCRIPTION"))
     })
     @EntityReferenceProperty(classId=ResourceSpecification.class)
     private CatalogReference resourceSpecification;
