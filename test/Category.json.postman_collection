@@ -2432,12 +2432,83 @@
 			"method": "PUT",
 			"data": [],
 			"dataMode": "raw",
-			"name": "B-010-070 - [500]",
+			"name": "B-010-070 - [400]",
 			"description": "change isRoot to true; leave parentId as is.\n\n",
 			"descriptionFormat": "html",
 			"time": 1414074891191,
 			"version": 2,
-			"responses": [],
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 400,
+						"name": "Bad Request",
+						"detail": "The request cannot be fulfilled due to bad syntax."
+					},
+					"time": 130,
+					"headers": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "1123",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/html",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Sat, 25 Oct 2014 15:29:57 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 400 - Bad Request</h1><hr/><p><b>type</b> Status report</p><p><b>message</b>Bad Request</p><p><b>description</b>The request sent by the client was syntactically incorrect (Bad Request).</p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "2d7d00b6-cba5-ecb7-ab1e-6a5e8f54b87c",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
+						"pathVariables": {},
+						"data": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"1.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "PUT",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 			"synced": false,
@@ -2624,7 +2695,7 @@
 			"version": 2,
 			"tests": "",
 			"time": 1414074805666,
-			"name": "B-010-060 - [500]",
+			"name": "B-010-060 - [400]",
 			"description": "Change version to 1.1;\n\n-----\nError: new version is lower than existing.\n",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 			"responses": [
@@ -3461,16 +3532,17 @@
 			"id": "ac3c27d3-cbf9-6373-cc72-30ec366de7f1",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
 			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.6)",
-			"pathVariables": {},
 			"preRequestScript": "",
+			"pathVariables": {},
 			"method": "PATCH",
 			"data": [],
 			"dataMode": "raw",
-			"name": "B-015-110 - [500]",
-			"description": "Missing body;\n\nDows not makes it to the application.",
-			"descriptionFormat": "html",
-			"time": 1414086558649,
 			"version": 2,
+			"tests": "",
+			"time": 1414251097786,
+			"name": "B-015-110 - [500]",
+			"description": "Missing body;\n\nDoes not makes it to the application.",
+			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 			"responses": [
 				{
 					"status": "",
@@ -3531,8 +3603,6 @@
 					}
 				}
 			],
-			"tests": "",
-			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 			"synced": false,
 			"rawModeData": ""
 		},
