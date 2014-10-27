@@ -1,0 +1,2370 @@
+{
+	"id": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+	"name": "ResourceCandidate",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"id": "b1f6b694-6bb2-5f5a-3521-6317fb87dac7",
+			"name": "001 - POST",
+			"description": "",
+			"order": [
+				"5c880488-8955-9d78-18c2-5b6a1011e6ee",
+				"043adea6-6813-f247-9aeb-2398cfcacb76",
+				"5287f395-b577-0701-20fa-d6aea31fa39a",
+				"79307334-347e-f5dd-825f-038c5066c1a3",
+				"2da6618a-4804-80b6-530a-60adb3b41e28"
+			],
+			"collection_name": "ResourceCandidate",
+			"collection_id": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8"
+		},
+		{
+			"id": "0b6f30c1-0351-c649-6195-83beb833150e",
+			"name": "005 - GET",
+			"description": "",
+			"order": [
+				"0faa1b49-9a07-5542-c6f4-26398212517a",
+				"44ce580a-34f9-39e5-818a-6b6e5acc1940"
+			],
+			"collection_name": "ResourceCandidate",
+			"collection_id": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8"
+		},
+		{
+			"id": "6c7f714c-200c-9823-6332-9e5de7e58cec",
+			"name": "010 - PUT",
+			"description": "",
+			"order": [
+				"d5fbd5d5-545e-453d-3ea3-041152e8c30a",
+				"3666056d-5878-cefb-22c5-095bd22d20a8",
+				"bd0fe299-7faf-297d-86f7-b028fcc9b846"
+			],
+			"collection_name": "ResourceCandidate",
+			"collection_id": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8"
+		},
+		{
+			"id": "fc3d7f52-4266-9626-80e9-a126bd570be5",
+			"name": "015 - PATCH",
+			"description": "",
+			"order": [
+				"d21dc316-3feb-9b70-0742-39596bbfdc5c",
+				"28f308c9-1e94-a487-d0ad-3a6c511b4885",
+				"3c8e8e7e-00a0-c45b-a3a7-8a0623e7d203"
+			],
+			"collection_name": "ResourceCandidate",
+			"collection_id": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8"
+		},
+		{
+			"id": "a040aabd-494b-c206-42b5-afaee5879a22",
+			"name": "P-020 - GET - Advanced",
+			"description": "",
+			"order": [
+				"e0efc5ba-c031-a0b2-7708-7ed68a46f1e3",
+				"6a060aa2-12f2-4ea9-b251-1d9f83f789d9",
+				"c4a2a596-8ea9-1b34-e27b-f5307655ad92",
+				"89f82db9-c891-42b0-4c9c-5db4829082b0",
+				"9b3ae8f5-631c-9290-9432-2dcfedc1a9e6",
+				"04142918-3b3b-d9d0-4853-a92ef09880c3",
+				"c62b305a-7f5b-8bf6-65b8-b9be2f5a1ae4",
+				"00213592-ca5b-f86a-be95-ceb890dbd99e",
+				"306994f6-b8b5-591d-027d-b536a427364d",
+				"a21f2f6d-6081-651a-9fc2-72b2fffd49d7"
+			],
+			"collection_name": "ResourceCandidate",
+			"collection_id": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8"
+		},
+		{
+			"id": "f55b7a8f-5d98-c0c4-805c-5c9b37850637",
+			"name": "P-025-010",
+			"description": "",
+			"order": [
+				"ab52a9cd-6171-7229-bbb4-2b08ba5ebb9d",
+				"98252eb1-f27d-9961-485d-61011c8e4eda",
+				"91be2736-fe19-4167-9fe0-c61c012fb30c",
+				"f195f67a-7d95-2d2e-0372-f8cb92e00c3e",
+				"77b9e270-fdd1-6253-8d38-25a257c21900"
+			],
+			"collection_name": "ResourceCandidate",
+			"collection_id": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8"
+		}
+	],
+	"timestamp": 1414184913370,
+	"synced": false,
+	"requests": [
+		{
+			"id": "00213592-ca5b-f86a-be95-ceb890dbd99e",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate?depth=2&fields=category",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414422252163,
+			"name": "P-020-080 - [200]",
+			"description": "Get with depth=2; specify category only.\n\n---\nreturns only id & category.\n\n\n",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 1411,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 15:04:15 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[{\"id\":\"3\",\"category\":[{\"id\":\"12\",\"version\":\"2.0\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/12\",\"name\":\"Cloud offerings\"}]},{\"id\":\"RCAN-001\",\"category\":[{\"id\":\"CATGR15\",\"version\":\"2.7\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR15:(2.7)\",\"name\":\"Cloud offerings\"},{\"id\":\"CATGR14\",\"version\":\"2.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR14:(2.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-27T14:32:43.361+0000\",\"lifecycleStatus\":\"In Design\",\"isRoot\":true}]},{\"id\":\"RCAN-001\",\"category\":[{\"id\":\"CATGR14\",\"version\":\"2.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR14:(2.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-27T14:32:43.361+0000\",\"lifecycleStatus\":\"In Design\",\"isRoot\":true},{\"id\":\"15\",\"version\":\"2.7\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/15\",\"name\":\"Cloud offerings\"}]}]",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "3d2b40f2-cac0-24db-ec83-fce9b53a077e",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate?depth=2&fields=category",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
+		},
+		{
+			"id": "04142918-3b3b-d9d0-4853-a92ef09880c3",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate?depth=3",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"name": "P-020-060 - [200]",
+			"description": "Get with depth=3;\n\n---\nGet category & resource spec for some.\n\n",
+			"descriptionFormat": "html",
+			"time": 1414421625871,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 1466,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 14:53:53 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[{\"id\":\"3\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/3:(2.0)\",\"name\":\"Virtual Storage Medium\",\"description\":\"Virtual Storage Medium\",\"lastUpdate\":\"2014-10-25T15:33:28.021+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"},\"category\":[{\"id\":\"12\",\"version\":\"2.0\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/12\",\"name\":\"Cloud offerings\"}],\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"resourceSpecification\":{\"id\":\"13\",\"version\":\"1.1\",\"href\":\"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\"name\":\"specification 1\"}},{\"id\":\"RCAN-001\",\"version\":\"1.90\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.90)\",\"name\":\"Virtual Storage Medium\",\"description\":\"Virtual Storage Medium\",\"lastUpdate\":\"2014-10-27T14:52:39.553+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"},\"category\":[{\"id\":\"CATGR15\",\"version\":\"2.7\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR15:(2.7)\",\"name\":\"Cloud offerings\"},{\"id\":\"CATGR14\",\"version\":\"2.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR14:(2.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-27T14:32:43.361+0000\",\"lifecycleStatus\":\"In Design\",\"isRoot\":true}],\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"resourceSpecification\":{\"id\":\"RSPEC22\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/RSPEC22:(2.0)\",\"name\":\"iPhone 42\",\"description\":\"Siri works on this iPhone\",\"lastUpdate\":\"2014-10-27T14:42:05.454+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"},\"brand\":\"Apple\",\"attachment\":[{\"id\":\"22\",\"href\":\"http://serverlocation:port/documentManagment/attachment/22\",\"type\":\"Picture\",\"url\":\"http://xxxxx\"}],\"relatedParty\":[{\"id\":\"1234\",\"href\":\"http ://serverLocation:port/partyManagement/partyRole/1234\",\"role\":\"Owner\"}],\"resourceSpecificationRelationship\":[{\"id\":\"RSPEC23\",\"href\":\" http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/RSPEC23\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"type\":\"dependency\"}],\"resourceSpecCharacteristic\":[{\"id\":\"54\",\"name\":\"Screen Size\",\"description\":\"Screen size\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"valueType\":\"number\",\"configurable\":false,\"resourceSpecCharRelationship\":[{\"id\":\"43\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"type\":\"dependency\"}],\"resourceSpecCharacteristicValue\":[{\"valueType\":\"number\",\"value\":\"4.2\",\"unitOfMeasure\":\"inches\",\"valueFrom\":\"\",\"valueTo\":\"\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"default\":true}]},{\"id\":\"55\",\"name\":\"Colour\",\"description\":\"Colour\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"valueType\":\"string\",\"configurable\":true,\"resourceSpecCharacteristicValue\":[{\"valueType\":\"string\",\"value\":\"Black\",\"unitOfMeasure\":\"\",\"valueFrom\":\"\",\"valueTo\":\"\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"default\":true},{\"valueType\":\"string\",\"value\":\"White\",\"unitOfMeasure\":\"\",\"valueFrom\":\"\",\"valueTo\":\"\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"default\":false}]}]}},{\"id\":\"RCAN-001\",\"version\":\"1.10\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.10)\",\"name\":\"Virtual Storage Medium-New\",\"description\":\"Virtual Storage Medium-new\",\"lastUpdate\":\"2014-10-27T14:45:10.174+0000\",\"lifecycleStatus\":\"Launched\",\"validFor\":{\"endDateTime\":\"2015-06-19T04:00:00.000+0000\"},\"category\":[{\"id\":\"CATGR14\",\"version\":\"2.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR14:(2.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-27T14:32:43.361+0000\",\"lifecycleStatus\":\"In Design\",\"isRoot\":true},{\"id\":\"15\",\"version\":\"2.7\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/15\",\"name\":\"Cloud offerings\"}],\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"resourceSpecification\":{\"id\":\"RSPEC22\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/RSPEC22:(2.0)\",\"name\":\"iPhone 42\",\"description\":\"Siri works on this iPhone\",\"lastUpdate\":\"2014-10-27T14:42:05.454+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"},\"brand\":\"Apple\",\"attachment\":[{\"id\":\"22\",\"href\":\"http://serverlocation:port/documentManagment/attachment/22\",\"type\":\"Picture\",\"url\":\"http://xxxxx\"}],\"relatedParty\":[{\"id\":\"1234\",\"href\":\"http ://serverLocation:port/partyManagement/partyRole/1234\",\"role\":\"Owner\"}],\"resourceSpecificationRelationship\":[{\"id\":\"RSPEC23\",\"href\":\" http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/RSPEC23\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"type\":\"dependency\"}],\"resourceSpecCharacteristic\":[{\"id\":\"54\",\"name\":\"Screen Size\",\"description\":\"Screen size\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"valueType\":\"number\",\"configurable\":false,\"resourceSpecCharRelationship\":[{\"id\":\"43\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"type\":\"dependency\"}],\"resourceSpecCharacteristicValue\":[{\"valueType\":\"number\",\"value\":\"4.2\",\"unitOfMeasure\":\"inches\",\"valueFrom\":\"\",\"valueTo\":\"\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"default\":true}]},{\"id\":\"55\",\"name\":\"Colour\",\"description\":\"Colour\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"valueType\":\"string\",\"configurable\":true,\"resourceSpecCharacteristicValue\":[{\"valueType\":\"string\",\"value\":\"Black\",\"unitOfMeasure\":\"\",\"valueFrom\":\"\",\"valueTo\":\"\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"default\":true},{\"valueType\":\"string\",\"value\":\"White\",\"unitOfMeasure\":\"\",\"valueFrom\":\"\",\"valueTo\":\"\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"default\":false}]}]}}]",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "82f60012-2956-839b-e641-6a52474541ca",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate?depth=3",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"tests": "",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"synced": false
+		},
+		{
+			"id": "043adea6-6813-f247-9aeb-2398cfcacb76",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/42",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414185598597,
+			"name": "P-001-020 - [405]",
+			"description": "Bad URL - has ID at end.",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 405,
+						"name": "Method Not Allowed",
+						"detail": "A request was made of a resource using a request method not supported by that resource; for example, using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource."
+					},
+					"time": 99,
+					"headers": [
+						{
+							"name": "Allow",
+							"key": "Allow",
+							"value": "PATCH,GET,DELETE,OPTIONS,HEAD,PUT",
+							"description": "Valid actions for a specified resource. To be used for a 405 Method not allowed"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "1153",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/html",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 21:19:59 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 405 - Method Not Allowed</h1><hr/><p><b>type</b> Status report</p><p><b>message</b>Method Not Allowed</p><p><b>description</b>The specified HTTP method is not allowed for the requested resource (Method Not Allowed).</p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "16233287-9c53-4e89-ec7f-eb046a74c37b",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/42",
+						"pathVariables": {},
+						"data": "{\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"2.0\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud offerings\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "POST",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"2.0\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud offerings\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+		},
+		{
+			"id": "0faa1b49-9a07-5542-c6f4-26398212517a",
+			"headers": "Accept: text/plain\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/admin/count",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414186247394,
+			"name": "P-005-010 - [200]",
+			"description": "GET count\n\n-----\n\nShould return at least 3",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 130,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/plain",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 21:29:19 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "3",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "7a88558e-eef8-6bd2-5b33-d163e4f08951",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/admin/count",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: text/plain\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
+		},
+		{
+			"id": "28f308c9-1e94-a487-d0ad-3a6c511b4885",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.10)",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PATCH",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414419408971,
+			"name": "P-015-020 - [400]",
+			"description": "RCAN-001 (older version - 1.10)\n\nAdd new category\ntransition lifecycleStatus\n\nversion specified but not changed.\n\n-----\nError: version should either not be specified in the body or should be higher.",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 400,
+						"name": "Bad Request",
+						"detail": "The request cannot be fulfilled due to bad syntax."
+					},
+					"time": 169,
+					"headers": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "1123",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/html",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 14:16:53 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 400 - Bad Request</h1><hr/><p><b>type</b> Status report</p><p><b>message</b>Bad Request</p><p><b>description</b>The request sent by the client was syntactically incorrect (Bad Request).</p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "8751e536-f930-fb18-1192-6c55a41bc96f",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.10)",
+						"pathVariables": {},
+						"data": "{\n\t\"version\": \"1.10\",\n  \"lifecycleStatus\": \"Launched\",\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"14\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/14\",\n\t\t\t\"version\": \"2.1\",\n\t\t\t\"name\": \"Cloud offerings-modified\"\n\t\t},\n      {\n\t\t\t\"id\": \"15\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/15\",\n\t\t\t\"version\": \"2.7\",\n\t\t\t\"name\": \"Cloud offerings\"\n\t\t}\n\t]\n}\n",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "PATCH",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n\t\"version\": \"1.10\",\n  \"lifecycleStatus\": \"Launched\",\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"14\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/14\",\n\t\t\t\"version\": \"2.1\",\n\t\t\t\"name\": \"Cloud offerings-modified\"\n\t\t},\n      {\n\t\t\t\"id\": \"15\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/15\",\n\t\t\t\"version\": \"2.7\",\n\t\t\t\"name\": \"Cloud offerings\"\n\t\t}\n\t]\n}\n"
+		},
+		{
+			"id": "2da6618a-4804-80b6-530a-60adb3b41e28",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414185850330,
+			"name": "P-001-050 - [201]",
+			"description": "RCAN-001:(1.90)\n",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
+					},
+					"time": 157,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 21:24:13 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":\"RCAN-001\",\"version\":\"1.90\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.90)\",\"name\":\"Virtual Storage Medium\",\"description\":\"Virtual Storage Medium\",\"lastUpdate\":\"2014-10-24T21:24:13.031+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"},\"category\":[{\"id\":\"12\",\"version\":\"2.0\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/12\",\"name\":\"Cloud offerings\"}],\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"resourceSpecification\":{\"id\":\"13\",\"version\":\"1.1\",\"href\":\"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\"name\":\"specification 1\"}}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "77e66866-fa14-6aaf-3b09-fb28529d1e84",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate",
+						"pathVariables": {},
+						"data": "{\n  \"id\": \"RCAN-001\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"1.90\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud offerings\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "POST",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n  \"id\": \"RCAN-001\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"1.90\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud offerings\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+		},
+		{
+			"id": "306994f6-b8b5-591d-027d-b536a427364d",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate?lifecycleStatus.gte=Active&resourceSpecification.version.gt=2.01",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414429689234,
+			"name": "P-020-090 - [500]",
+			"description": "criteria search on resource specification data\n\n----\nbad version (2.01).",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 500,
+						"name": "Internal Server Error",
+						"detail": "A generic error message, given when no more specific message is suitable."
+					},
+					"time": 213,
+					"headers": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "1513",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/html",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 17:08:11 GMT",
+							"description": "The date and time that the message was sent"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 500 - </h1><hr/><p><b>type</b> Exception report</p><p><b>message</b></p><p><b>description</b>The server encountered an internal error () that prevented it from fulfilling this request.</p><p><b>exception</b> <pre>javax.servlet.ServletException: java.lang.IllegalArgumentException: '2.01' is not a valid version.</pre></p><p><b>root cause</b> <pre>java.lang.IllegalArgumentException: '2.01' is not a valid version.</pre></p><p><b>note</b> <u>The full stack traces of the exception and its root causes are available in the GlassFish Server Open Source Edition 3.1.2.2 logs.</u></p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "c76c97bf-aff9-e6a8-2eb8-fc08c40e7193",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate?lifecycleStatus.gte=Active&resourceSpecification.version.gt=2.01",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
+		},
+		{
+			"id": "3666056d-5878-cefb-22c5-095bd22d20a8",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414245068931,
+			"name": "P-010-020 - [201]",
+			"description": "RCAN-001 (latest version - 1.90)\n\nupdate data in the category & resource Specification.\n--- \naccepted (version is same as current).",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
+					},
+					"time": 180,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Sat, 25 Oct 2014 15:34:31 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":\"RCAN-001\",\"version\":\"1.90\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.90)\",\"name\":\"Virtual Storage Medium\",\"description\":\"Virtual Storage Medium\",\"lastUpdate\":\"2014-10-25T15:34:31.326+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"},\"category\":[{\"id\":\"13\",\"version\":\"2.1\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/13\",\"name\":\"Cloud offerings-modified\"}],\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"resourceSpecification\":{\"id\":\"14\",\"version\":\"1.10\",\"href\":\"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\"name\":\"specification 12\"}}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "05ca50fe-23db-6990-f98f-559d4112bdb1",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001",
+						"pathVariables": {},
+						"data": "{\n  \"id\": \"RCAN-001\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"1.90\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"13\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/13\",\n\t\t\t\"version\": \"2.1\",\n\t\t\t\"name\": \"Cloud offerings-modified\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"14\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 12\",\n\t\t\"version\": \"1.10\"\n\t}\n}\n",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "PUT",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n  \"id\": \"RCAN-001\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"1.90\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"13\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/13\",\n\t\t\t\"version\": \"2.1\",\n\t\t\t\"name\": \"Cloud offerings-modified\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"14\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 12\",\n\t\t\"version\": \"1.10\"\n\t}\n}\n"
+		},
+		{
+			"id": "3c8e8e7e-00a0-c45b-a3a7-8a0623e7d203",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.10)",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PATCH",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414419470251,
+			"name": "P-015-030 - [201]",
+			"description": "RCAN-001 (older version - 1.10)\n\nAdd new category\ntransition lifecycleStatus\n\nversion not specified in the body.\n\n-----\naccepted - version not changed.",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
+					},
+					"time": 221,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 14:17:54 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":\"RCAN-001\",\"version\":\"1.10\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.10)\",\"name\":\"Virtual Storage Medium-New\",\"description\":\"Virtual Storage Medium-new\",\"lastUpdate\":\"2014-10-27T14:17:54.740+0000\",\"lifecycleStatus\":\"Launched\",\"validFor\":{\"endDateTime\":\"2015-06-19T04:00:00.000+0000\"},\"category\":[{\"id\":\"14\",\"version\":\"2.1\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/14\",\"name\":\"Cloud offerings-modified\"},{\"id\":\"15\",\"version\":\"2.7\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/15\",\"name\":\"Cloud offerings\"}],\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"resourceSpecification\":{\"id\":\"24\",\"version\":\"1.11\",\"href\":\"http://serverlocation:port/catalogManagement/resourceSpecification/24\",\"name\":\"specification 14\"}}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "8e6931b4-e8e9-ed24-1794-3d335be6ad36",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.10)",
+						"pathVariables": {},
+						"data": "{\n  \"lifecycleStatus\": \"Launched\",\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"14\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/14\",\n\t\t\t\"version\": \"2.1\",\n\t\t\t\"name\": \"Cloud offerings-modified\"\n\t\t},\n      {\n\t\t\t\"id\": \"15\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/15\",\n\t\t\t\"version\": \"2.7\",\n\t\t\t\"name\": \"Cloud offerings\"\n\t\t}\n\t]\n}\n",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "PATCH",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n  \"lifecycleStatus\": \"Launched\",\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"14\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/14\",\n\t\t\t\"version\": \"2.1\",\n\t\t\t\"name\": \"Cloud offerings-modified\"\n\t\t},\n      {\n\t\t\t\"id\": \"15\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/15\",\n\t\t\t\"version\": \"2.7\",\n\t\t\t\"name\": \"Cloud offerings\"\n\t\t}\n\t]\n}\n"
+		},
+		{
+			"id": "44ce580a-34f9-39e5-818a-6b6e5acc1940",
+			"headers": "Accept: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/admin/proto",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414186259357,
+			"name": "P-005-020 - [200]",
+			"description": "GET proto",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 84,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 21:31:04 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":\"id\",\"version\":\"1.3\",\"href\":\"href\",\"name\":\"name\",\"description\":\"description\",\"lastUpdate\":\"2014-10-24T21:31:04.555+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"1970-01-01T00:00:00.000+0000\",\"endDateTime\":\"2014-10-24T21:31:04.555+0000\"},\"category\":[{\"id\":\"id\",\"version\":\"1.6\",\"href\":\"href\",\"name\":\"name\",\"description\":\"description\"}],\"serviceLevelAgreement\":{\"id\":\"id\",\"href\":\"href\",\"name\":\"name\"},\"resourceSpecification\":{\"id\":\"id\",\"version\":\"1.6\",\"href\":\"href\",\"name\":\"name\",\"description\":\"description\"}}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "0a375ae6-3dff-4ff7-dee0-a92b446fe63a",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/admin/proto",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
+		},
+		{
+			"id": "5287f395-b577-0701-20fa-d6aea31fa39a",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414186079058,
+			"name": "P-001-030 - [201]",
+			"description": "RCAN-001:(1.9)\n",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
+					},
+					"time": 145,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 21:21:48 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":\"RCAN-001\",\"version\":\"1.9\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.9)\",\"name\":\"Virtual Storage Medium\",\"description\":\"Virtual Storage Medium\",\"lastUpdate\":\"2014-10-24T21:21:48.467+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"},\"category\":[{\"id\":\"12\",\"version\":\"2.0\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/12\",\"name\":\"Cloud offerings\"}],\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"resourceSpecification\":{\"id\":\"13\",\"version\":\"1.1\",\"href\":\"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\"name\":\"specification 1\"}}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "0e509fb8-90b5-341d-f256-bb1d348e7ffa",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate",
+						"pathVariables": {},
+						"data": "{\n  \"id\": \"RCAN-001\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"1.9\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud offerings\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "POST",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n  \"id\":\"RCAN-001\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"1.9\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud offerings\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+		},
+		{
+			"id": "5c880488-8955-9d78-18c2-5b6a1011e6ee",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414185387131,
+			"name": "P-001-010 - [201]",
+			"description": "Auto generated ID",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [],
+			"synced": false,
+			"rawModeData": "{\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"2.0\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud offerings\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+		},
+		{
+			"id": "6a060aa2-12f2-4ea9-b251-1d9f83f789d9",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"name": "P-020-020 - [201]",
+			"description": "Add a valid category for reference.\n",
+			"descriptionFormat": "html",
+			"time": 1414420286594,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
+					},
+					"time": 221,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 14:32:43 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":\"CATGR14\",\"version\":\"2.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR14:(2.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-27T14:32:43.361+0000\",\"lifecycleStatus\":\"In Design\",\"isRoot\":true}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "5530cd44-ba84-813f-a5e0-1de922891d40",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+						"pathVariables": {},
+						"data": "{\n  \"id\":\"CATGR14\",\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"2.1\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\",\n  \"lifecycleStatus\": \"In Design\"\n}",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "POST",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"tests": "",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"synced": false,
+			"rawModeData": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"1.0\",\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\",\n  \"lifecycleStatus\": \"In Design\"\n}"
+		},
+		{
+			"id": "77b9e270-fdd1-6253-8d38-25a257c21900",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate?fields=id%2Cversion%2ClifecycleStatus%2ClastUpdate",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414430535280,
+			"name": "P-025-50 - [200]",
+			"description": "Check on the deletes.\n\nAll RCAN-001 version are gone.\n",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 113,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 17:22:16 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[{\"id\":\"3\",\"version\":\"2.0\",\"lastUpdate\":\"2014-10-25T15:33:28.021+0000\",\"lifecycleStatus\":\"Active\"}]",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "2d440c50-e6ef-ccfd-1740-c868cde32fe3",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate?fields=id%2Cversion%2ClifecycleStatus%2ClastUpdate",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
+		},
+		{
+			"id": "79307334-347e-f5dd-825f-038c5066c1a3",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414185751055,
+			"name": "P-001-040 - [500]",
+			"description": "RCAN-001:(1.9)\n\nError - entity exists.",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 500,
+						"name": "Internal Server Error",
+						"detail": "A generic error message, given when no more specific message is suitable."
+					},
+					"time": 525,
+					"headers": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "3819",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/html",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 21:22:36 GMT",
+							"description": "The date and time that the message was sent"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 500 - </h1><hr/><p><b>type</b> Exception report</p><p><b>message</b></p><p><b>description</b>The server encountered an internal error () that prevented it from fulfilling this request.</p><p><b>exception</b> <pre>javax.servlet.ServletException: javax.transaction.RollbackException: Transaction marked for rollback.</pre></p><p><b>root cause</b> <pre>javax.transaction.RollbackException: Transaction marked for rollback.</pre></p><p><b>root cause</b> <pre>Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.2.v20111125-r10461): org.eclipse.persistence.exceptions.DatabaseException\r\nInternal Exception: java.sql.SQLIntegrityConstraintViolationException: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL141023095555390' defined on 'CRI_RESOURCE_CANDIDATE'.\r\nError Code: -1\r\nCall: INSERT INTO CRI_RESOURCE_CANDIDATE (ID, CATALOG_ID, CATALOG_VERSION, VERSION, DESCRIPTION, HERF, LAST_UPDATE, LIFECYCLE_STATUS, NAME, RESOURCE_SPEC_ID, RESOURCE_SPEC_VERSION, RESOURCE_SPEC_DESCRIPTION, RESOURCE_SPEC_HREF, RESOURCE_SPEC_NAME, SLA_HREF, SLA_ID, SLA_NAME, END_DATE_TIME, START_DATE_TIME) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)\r\n\tbind =&gt; [19 parameters bound]\r\nQuery: InsertObjectQuery(ResourceCandidate{&lt;AbstractCatalogEntity{catalogId=, catalogVersion=, parsedCatalogVersion=ParsedVersion{majorVersion=null, minorVersion=null, externalView=, internalView=, valid=true}}&gt;, category={[Reference{id=12, version=000002.0, parsedVersion=null, href=http://serverlocation:port/catalogManagement/resourceCategory/12, name=Cloud offerings, description=null, entity=null}]}, serviceLevelAgreement=ServiceLevelAgreement{id=28, href=http://serverlocation:port/slaManagement/serviceLevelAgreement/28, name=Standard SLA}, resourceSpecification=Reference{id=13, version=000001.1, parsedVersion=ParsedVersion{majorVersion=1, minorVersion=1, externalView=1.1, internalView=000001.1, valid=true}, href=http://serverlocation:port/catalogManagement/resourceSpecification/13, name=specification 1, description=null, entity=null}})</pre></p><p><b>root cause</b> <pre>java.sql.SQLIntegrityConstraintViolationException: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL141023095555390' defined on 'CRI_RESOURCE_CANDIDATE'.</pre></p><p><b>root cause</b> <pre>org.apache.derby.client.am.SqlException: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL141023095555390' defined on 'CRI_RESOURCE_CANDIDATE'.</pre></p><p><b>note</b> <u>The full stack traces of the exception and its root causes are available in the GlassFish Server Open Source Edition 3.1.2.2 logs.</u></p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "bb2bf760-8f8f-5328-c22f-b3fedb628051",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate",
+						"pathVariables": {},
+						"data": "{\n  \"id\": \"RCAN-001\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"1.9\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud offerings\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "POST",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n  \"id\": \"RCAN-001\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"1.9\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud offerings\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+		},
+		{
+			"id": "89f82db9-c891-42b0-4c9c-5db4829082b0",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.10)",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PATCH",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414421092267,
+			"name": "P-020-040 - [201]",
+			"description": "Update RCAN001:1.10 to have corect references for a category & resource specification.",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
+					},
+					"time": 175,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 14:45:10 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":\"RCAN-001\",\"version\":\"1.10\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.10)\",\"name\":\"Virtual Storage Medium-New\",\"description\":\"Virtual Storage Medium-new\",\"lastUpdate\":\"2014-10-27T14:45:10.174+0000\",\"lifecycleStatus\":\"Launched\",\"validFor\":{\"endDateTime\":\"2015-06-19T04:00:00.000+0000\"},\"category\":[{\"id\":\"CATGR14\",\"version\":\"2.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR14:(2.1)\",\"name\":\"Cloud offerings\"},{\"id\":\"15\",\"version\":\"2.7\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/15\",\"name\":\"Cloud offerings\"}],\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"resourceSpecification\":{\"id\":\"RSPEC22\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/RSPEC22:(2.0)\",\"name\":\"specification 22\"}}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "f8f99a92-54bd-b1b6-e796-8b623eb4d511",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.10)",
+						"pathVariables": {},
+						"data": "{\n    \"category\": [\n        {\n            \"id\": \"CATGR14\",\n            \"version\": \"2.1\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR14:(2.1)\",\n            \"name\": \"Cloud offerings\"\n        },\n        {\n            \"id\": \"15\",\n            \"version\": \"2.7\",\n            \"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/15\",\n            \"name\": \"Cloud offerings\"\n        }\n    ],\n    \"resourceSpecification\": {\n        \"id\": \"RSPEC22\",\n        \"version\": \"2.0\",\n        \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/RSPEC22:(2.0)\",\n        \"name\": \"specification 22\"\n    }\n}",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "PATCH",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n    \"category\": [\n        {\n            \"id\": \"CATGR14\",\n            \"version\": \"2.1\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR14:(2.1)\",\n            \"name\": \"Cloud offerings\"\n        },\n        {\n            \"id\": \"15\",\n            \"version\": \"2.7\",\n            \"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/15\",\n            \"name\": \"Cloud offerings\"\n        }\n    ],\n    \"resourceSpecification\": {\n        \"id\": \"RSPEC22\",\n        \"version\": \"2.0\",\n        \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/RSPEC22:(2.0)\",\n        \"name\": \"specification 22\"\n    }\n}"
+		},
+		{
+			"id": "91be2736-fe19-4167-9fe0-c61c012fb30c",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.10)",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414430191901,
+			"name": "P-025-030 - [200]",
+			"description": "Delete an older version\n\n",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 232,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "0",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 17:16:35 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "f3c4e9b1-e708-0330-c59b-dd9e01f63601",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.10)",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "DELETE",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
+		},
+		{
+			"id": "98252eb1-f27d-9961-485d-61011c8e4eda",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/NONSUCH",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414430167054,
+			"name": "P-025-020 - [404]",
+			"description": "Delete entity that does not exist.\n\n",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 404,
+						"name": "Not Found",
+						"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+					},
+					"time": 101,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "1098",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/html",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 17:16:09 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 404 - Not Found</h1><hr/><p><b>type</b> Status report</p><p><b>message</b>Not Found</p><p><b>description</b>The requested resource (Not Found) is not available.</p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "8ffc812d-9532-89f6-a9cf-e6e6767e181f",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/NONSUCH",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "DELETE",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
+		},
+		{
+			"id": "9b3ae8f5-631c-9290-9432-2dcfedc1a9e6",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PATCH",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414421558165,
+			"name": "P-020-050 - [201]",
+			"description": "Update RCAN001:1.90 to have corect references for category & resource specification.\nPATCH done on latest version\n",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
+					},
+					"time": 163,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 14:52:39 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":\"RCAN-001\",\"version\":\"1.90\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.90)\",\"name\":\"Virtual Storage Medium\",\"description\":\"Virtual Storage Medium\",\"lastUpdate\":\"2014-10-27T14:52:39.553+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"},\"category\":[{\"id\":\"CATGR15\",\"version\":\"2.7\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR15:(2.7)\",\"name\":\"Cloud offerings\"},{\"id\":\"CATGR14\",\"version\":\"2.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR14:(2.1)\",\"name\":\"Cloud offerings\"}],\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"resourceSpecification\":{\"id\":\"RSPEC22\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/RSPEC22:(2.0)\",\"name\":\"specification 22\"}}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "81acf252-b339-fb29-bb81-18e8fc30e521",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001",
+						"pathVariables": {},
+						"data": "{\n    \"category\": [\n\n        {\n            \"id\": \"CATGR15\",\n            \"version\": \"2.7\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR15:(2.7)\",\n            \"name\": \"Cloud offerings\"\n        },\n        {\n            \"id\": \"CATGR14\",\n            \"version\": \"2.1\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR14:(2.1)\",\n            \"name\": \"Cloud offerings\"\n        }\n    ],\n    \"resourceSpecification\": {\n        \"id\": \"RSPEC22\",\n        \"version\": \"2.0\",\n        \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/RSPEC22:(2.0)\",\n        \"name\": \"specification 22\"\n    }\n}",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "PATCH",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n    \"category\": [\n\n        {\n            \"id\": \"CATGR15\",\n            \"version\": \"2.7\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR15:(2.7)\",\n            \"name\": \"Cloud offerings\"\n        },\n        {\n            \"id\": \"CATGR14\",\n            \"version\": \"2.1\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR14:(2.1)\",\n            \"name\": \"Cloud offerings\"\n        }\n    ],\n    \"resourceSpecification\": {\n        \"id\": \"RSPEC22\",\n        \"version\": \"2.0\",\n        \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/RSPEC22:(2.0)\",\n        \"name\": \"specification 22\"\n    }\n}"
+		},
+		{
+			"id": "a21f2f6d-6081-651a-9fc2-72b2fffd49d7",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate?lifecycleStatus.gte=Active&resourceSpecification.version.gt=1.9",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414429748705,
+			"name": "P-020-100 - [200]",
+			"description": "criteria search on resource specification data\n\n",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 103,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 17:09:13 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[{\"id\":\"RCAN-001\",\"version\":\"1.90\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.90)\",\"name\":\"Virtual Storage Medium\",\"description\":\"Virtual Storage Medium\",\"lastUpdate\":\"2014-10-27T14:52:39.553+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"},\"category\":[{\"id\":\"CATGR15\",\"version\":\"2.7\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR15:(2.7)\",\"name\":\"Cloud offerings\"},{\"id\":\"CATGR14\",\"version\":\"2.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR14:(2.1)\",\"name\":\"Cloud offerings\"}],\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"resourceSpecification\":{\"id\":\"RSPEC22\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/RSPEC22:(2.0)\",\"name\":\"specification 22\"}},{\"id\":\"RCAN-001\",\"version\":\"1.10\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.10)\",\"name\":\"Virtual Storage Medium-New\",\"description\":\"Virtual Storage Medium-new\",\"lastUpdate\":\"2014-10-27T14:45:10.174+0000\",\"lifecycleStatus\":\"Launched\",\"validFor\":{\"endDateTime\":\"2015-06-19T04:00:00.000+0000\"},\"category\":[{\"id\":\"15\",\"version\":\"2.7\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/15\",\"name\":\"Cloud offerings\"},{\"id\":\"CATGR14\",\"version\":\"2.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR14:(2.1)\",\"name\":\"Cloud offerings\"}],\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"resourceSpecification\":{\"id\":\"RSPEC22\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/RSPEC22:(2.0)\",\"name\":\"specification 22\"}}]",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "cff098cd-faa7-74e1-f624-603ad09b228f",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate?lifecycleStatus.gte=Active&resourceSpecification.version.gt=1.9",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
+		},
+		{
+			"id": "ab52a9cd-6171-7229-bbb4-2b08ba5ebb9d",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414429921824,
+			"name": "P-025-010 - [405]",
+			"description": "bad URL(missing ID).\n\n",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 405,
+						"name": "Method Not Allowed",
+						"detail": "A request was made of a resource using a request method not supported by that resource; for example, using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource."
+					},
+					"time": 143,
+					"headers": [
+						{
+							"name": "Allow",
+							"key": "Allow",
+							"value": "POST,GET,OPTIONS,HEAD",
+							"description": "Valid actions for a specified resource. To be used for a 405 Method not allowed"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "1153",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/html",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 17:12:17 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 405 - Method Not Allowed</h1><hr/><p><b>type</b> Status report</p><p><b>message</b>Method Not Allowed</p><p><b>description</b>The specified HTTP method is not allowed for the requested resource (Method Not Allowed).</p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "dfa753d4-cdb0-d70f-df08-f5fee56d6de3",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "DELETE",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
+		},
+		{
+			"id": "bd0fe299-7faf-297d-86f7-b028fcc9b846",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.9)",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414418363711,
+			"name": "P-010-030 - [201]",
+			"description": "RCAN-001 (latest version - 1.90)\n\nAdd new category\n--- \naccepted (version is same as current).",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
+					},
+					"time": 122,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 14:01:33 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":\"RCAN-001\",\"version\":\"1.90\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.90)\",\"name\":\"Virtual Storage Medium\",\"description\":\"Virtual Storage Medium\",\"lastUpdate\":\"2014-10-27T14:01:33.482+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"},\"category\":[{\"id\":\"13\",\"version\":\"2.1\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/13\",\"name\":\"Cloud offerings-modified\"},{\"id\":\"15\",\"version\":\"2.9\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/15\",\"name\":\"Cloud offerings\"}],\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"resourceSpecification\":{\"id\":\"14\",\"version\":\"1.10\",\"href\":\"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\"name\":\"specification 12\"}}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "b1eb988d-1a08-3f91-5433-1e0cce06c2a6",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.90)",
+						"pathVariables": {},
+						"data": "{\n  \"id\": \"RCAN-001\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"1.90\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"13\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/13\",\n\t\t\t\"version\": \"2.1\",\n\t\t\t\"name\": \"Cloud offerings-modified\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"15\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/15\",\n\t\t\t\"version\": \"2.9\",\n\t\t\t\"name\": \"Cloud offerings\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"14\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 12\",\n\t\t\"version\": \"1.10\"\n\t}\n}\n",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "PUT",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n  \"id\": \"RCAN-001\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"1.90\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"13\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/13\",\n\t\t\t\"version\": \"2.1\",\n\t\t\t\"name\": \"Cloud offerings-modified\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"15\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/15\",\n\t\t\t\"version\": \"2.9\",\n\t\t\t\"name\": \"Cloud offerings\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"14\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 12\",\n\t\t\"version\": \"1.10\"\n\t}\n}\n"
+		},
+		{
+			"id": "c4a2a596-8ea9-1b34-e27b-f5307655ad92",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414420923707,
+			"name": "P-020-030 - [201]",
+			"description": "Add a valid resource specification for reference.\n",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
+					},
+					"time": 132,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 14:42:05 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":\"RSPEC22\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/RSPEC22:(2.0)\",\"name\":\"iPhone 42\",\"description\":\"Siri works on this iPhone\",\"lastUpdate\":\"2014-10-27T14:42:05.454+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"},\"brand\":\"Apple\",\"attachment\":[{\"id\":\"22\",\"href\":\"http://serverlocation:port/documentManagment/attachment/22\",\"type\":\"Picture\",\"url\":\"http://xxxxx\"}],\"relatedParty\":[{\"id\":\"1234\",\"href\":\"http ://serverLocation:port/partyManagement/partyRole/1234\",\"role\":\"Owner\"}],\"resourceSpecificationRelationship\":[{\"id\":\"RSPEC23\",\"href\":\" http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/RSPEC23\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"type\":\"dependency\"}],\"resourceSpecCharacteristic\":[{\"id\":\"54\",\"name\":\"Screen Size\",\"description\":\"Screen size\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"valueType\":\"number\",\"configurable\":false,\"resourceSpecCharRelationship\":[{\"id\":\"43\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"type\":\"dependency\"}],\"resourceSpecCharacteristicValue\":[{\"valueType\":\"number\",\"value\":\"4.2\",\"unitOfMeasure\":\"inches\",\"valueFrom\":\"\",\"valueTo\":\"\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"default\":true}]},{\"id\":\"55\",\"name\":\"Colour\",\"description\":\"Colour\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"valueType\":\"string\",\"configurable\":true,\"resourceSpecCharacteristicValue\":[{\"valueType\":\"string\",\"value\":\"Black\",\"unitOfMeasure\":\"\",\"valueFrom\":\"\",\"valueTo\":\"\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"default\":true},{\"valueType\":\"string\",\"value\":\"White\",\"unitOfMeasure\":\"\",\"valueFrom\":\"\",\"valueTo\":\"\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"default\":false}]}]}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "697b44e7-49f0-a726-f403-78bd6ea61890",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification",
+						"pathVariables": {},
+						"data": "{\n    \"id\": \"RSPEC22\",\n    \"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/22\",\n    \"name\": \"iPhone 42\",\n    \"description\": \"Siri works on this iPhone\",\n    \"brand\": \"Apple\",\n    \"version\": \"2.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n    },\n    \"attachment\": [\n        {\n            \"id\": \"22\",\n            \"href\": \"http://serverlocation:port/documentManagment/attachment/22\",\n            \"type\": \"Picture\",\n            \"url\": \"http://xxxxx\"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        }\n    ],\n    \"resourceSpecificationRelationship\": [\n        {\n            \"type\": \"dependency\",\n            \"id\": \"RSPEC23\",\n            \"href\": \" http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/RSPEC23\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"resourceSpecCharacteristic\": [\n        {\n            \"id\": \"54\",\n            \"name\": \"Screen Size\",\n            \"description\": \"Screen size\",\n            \"valueType\": \"number\",\n            \"configurable\": false,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"resourceSpecCharRelationship\": [\n                {\n                    \"type\": \"dependency\",\n                    \"id\": \"43\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ],\n            \"resourceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"number\",\n                    \"default\": true,\n                    \"value\": \"4.2\",\n                    \"unitOfMeasure\": \"inches\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": \"55\",\n            \"name\": \"Colour\",\n            \"description\": \"Colour\",\n            \"valueType\": \"string\",\n            \"configurable\": true,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"resourceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"string\",\n                    \"default\": true,\n                    \"value\": \"Black\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                },\n                {\n                    \"valueType\": \"string\",\n                    \"default\": false,\n                    \"value\": \"White\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        }\n    ]\n}",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "POST",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n    \"id\": \"RSPEC22\",\n    \"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/22\",\n    \"name\": \"iPhone 42\",\n    \"description\": \"Siri works on this iPhone\",\n    \"brand\": \"Apple\",\n    \"version\": \"2.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n    },\n    \"attachment\": [\n        {\n            \"id\": \"22\",\n            \"href\": \"http://serverlocation:port/documentManagment/attachment/22\",\n            \"type\": \"Picture\",\n            \"url\": \"http://xxxxx\"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        }\n    ],\n    \"resourceSpecificationRelationship\": [\n        {\n            \"type\": \"dependency\",\n            \"id\": \"RSPEC23\",\n            \"href\": \" http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/RSPEC23\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"resourceSpecCharacteristic\": [\n        {\n            \"id\": \"54\",\n            \"name\": \"Screen Size\",\n            \"description\": \"Screen size\",\n            \"valueType\": \"number\",\n            \"configurable\": false,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"resourceSpecCharRelationship\": [\n                {\n                    \"type\": \"dependency\",\n                    \"id\": \"43\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ],\n            \"resourceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"number\",\n                    \"default\": true,\n                    \"value\": \"4.2\",\n                    \"unitOfMeasure\": \"inches\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": \"55\",\n            \"name\": \"Colour\",\n            \"description\": \"Colour\",\n            \"valueType\": \"string\",\n            \"configurable\": true,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"resourceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"string\",\n                    \"default\": true,\n                    \"value\": \"Black\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                },\n                {\n                    \"valueType\": \"string\",\n                    \"default\": false,\n                    \"value\": \"White\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        }\n    ]\n}"
+		},
+		{
+			"id": "c62b305a-7f5b-8bf6-65b8-b9be2f5a1ae4",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate?depth=2&fields=category.lifecycleStatus",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414422363176,
+			"name": "P-020-070 - [200]",
+			"description": "Get with depth=2; specify category.lifecycleStatus only.\n\n---\nreturns only id.\n\nReqeust for category.lifecycleStatus is ignored.\n",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 1264,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 15:06:06 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[{\"id\":\"3\"},{\"id\":\"RCAN-001\"},{\"id\":\"RCAN-001\"}]",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "b3453e43-5e5f-2c5b-25cb-ab49303250b4",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate?depth=2&fields=category.lifecycleStatus",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
+		},
+		{
+			"id": "d21dc316-3feb-9b70-0742-39596bbfdc5c",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.9)",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PATCH",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414419109971,
+			"name": "P-015-010 - [201]",
+			"description": "RCAN-001 (older version - 1.9)\n\nupdate data in the category & resource Specification, SLA, validFor, and body.\n--- \naccepted (version is higher than current).\n\nupdates to lastUpdate & href are ignored.",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
+					},
+					"time": 278,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 14:11:55 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":\"RCAN-001\",\"version\":\"1.10\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.10)\",\"name\":\"Virtual Storage Medium-New\",\"description\":\"Virtual Storage Medium-new\",\"lastUpdate\":\"2014-10-27T14:11:55.510+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"endDateTime\":\"2015-06-19T04:00:00.000+0000\"},\"category\":[{\"id\":\"14\",\"version\":\"2.1\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/14\",\"name\":\"Cloud offerings-modified\"}],\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"resourceSpecification\":{\"id\":\"24\",\"version\":\"1.11\",\"href\":\"http://serverlocation:port/catalogManagement/resourceSpecification/24\",\"name\":\"specification 14\"}}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "a3b7d159-2f5e-3efd-1612-6c6245499de1",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.9)",
+						"pathVariables": {},
+						"data": "{\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium-New\",\n\t\"description\": \"Virtual Storage Medium-new\",\n\t\"version\": \"1.10\",\n\t\"lastUpdate\": \"2015-04-19T16:42:23-04:00\",\n\t\"validFor\": {\n\t\t\"endDateTime\": \"2015-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"14\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/14\",\n\t\t\t\"version\": \"2.1\",\n\t\t\t\"name\": \"Cloud offerings-modified\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"24\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/24\",\n\t\t\"name\": \"specification 14\",\n\t\t\"version\": \"1.11\"\n\t}\n}\n",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "PATCH",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium-New\",\n\t\"description\": \"Virtual Storage Medium-new\",\n\t\"version\": \"1.10\",\n\t\"lastUpdate\": \"2015-04-19T16:42:23-04:00\",\n\t\"validFor\": {\n\t\t\"endDateTime\": \"2015-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"14\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/14\",\n\t\t\t\"version\": \"2.1\",\n\t\t\t\"name\": \"Cloud offerings-modified\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"24\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/24\",\n\t\t\"name\": \"specification 14\",\n\t\t\"version\": \"1.11\"\n\t}\n}\n"
+		},
+		{
+			"id": "d5fbd5d5-545e-453d-3ea3-041152e8c30a",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414186608733,
+			"name": "P-010-010 - [400]",
+			"description": "RCAN-001 (latest version - 1.90)\n\nupdate data in the category & resource Specification.\n--- \nerror: version is too low (1.89)",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 400,
+						"name": "Bad Request",
+						"detail": "The request cannot be fulfilled due to bad syntax."
+					},
+					"time": 157,
+					"headers": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "1123",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/html",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 24 Oct 2014 21:36:52 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 400 - Bad Request</h1><hr/><p><b>type</b> Status report</p><p><b>message</b>Bad Request</p><p><b>description</b>The request sent by the client was syntactically incorrect (Bad Request).</p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "d1563ab9-c977-6776-25e2-257b5b2b82be",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001",
+						"pathVariables": {},
+						"data": "{\n  \"id\": \"RCAN-001\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"1.89\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"13\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/13\",\n\t\t\t\"version\": \"2.1\",\n\t\t\t\"name\": \"Cloud offerings-modified\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 12\",\n\t\t\"version\": \"1.10\"\n\t}\n}\n",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "PUT",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n  \"id\": \"RCAN-001\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"1.89\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"13\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCategory/13\",\n\t\t\t\"version\": \"2.1\",\n\t\t\t\"name\": \"Cloud offerings-modified\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 12\",\n\t\t\"version\": \"1.10\"\n\t}\n}\n"
+		},
+		{
+			"id": "e0efc5ba-c031-a0b2-7708-7ed68a46f1e3",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate?depth=3",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414419963327,
+			"name": "P-020-010 - [200]",
+			"description": "Get with depth=3;\n\n---\ndepth has no effect; none of the referenced entities exist.\n",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 1591,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 14:26:06 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[{\"id\":\"3\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/3:(2.0)\",\"name\":\"Virtual Storage Medium\",\"description\":\"Virtual Storage Medium\",\"lastUpdate\":\"2014-10-25T15:33:28.021+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"},\"category\":[{\"id\":\"12\",\"version\":\"2.0\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/12\",\"name\":\"Cloud offerings\"}],\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"resourceSpecification\":{\"id\":\"13\",\"version\":\"1.1\",\"href\":\"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\"name\":\"specification 1\"}},{\"id\":\"RCAN-001\",\"version\":\"1.90\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.90)\",\"name\":\"Virtual Storage Medium\",\"description\":\"Virtual Storage Medium\",\"lastUpdate\":\"2014-10-27T14:01:33.482+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"},\"category\":[{\"id\":\"13\",\"version\":\"2.1\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/13\",\"name\":\"Cloud offerings-modified\"},{\"id\":\"15\",\"version\":\"2.9\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/15\",\"name\":\"Cloud offerings\"}],\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"resourceSpecification\":{\"id\":\"14\",\"version\":\"1.10\",\"href\":\"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\"name\":\"specification 12\"}},{\"id\":\"RCAN-001\",\"version\":\"1.10\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001:(1.10)\",\"name\":\"Virtual Storage Medium-New\",\"description\":\"Virtual Storage Medium-new\",\"lastUpdate\":\"2014-10-27T14:17:54.740+0000\",\"lifecycleStatus\":\"Launched\",\"validFor\":{\"endDateTime\":\"2015-06-19T04:00:00.000+0000\"},\"category\":[{\"id\":\"14\",\"version\":\"2.1\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/14\",\"name\":\"Cloud offerings-modified\"},{\"id\":\"15\",\"version\":\"2.7\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCategory/15\",\"name\":\"Cloud offerings\"}],\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"resourceSpecification\":{\"id\":\"24\",\"version\":\"1.11\",\"href\":\"http://serverlocation:port/catalogManagement/resourceSpecification/24\",\"name\":\"specification 14\"}}]",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "parsed",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "c01a058a-94da-de25-9885-eb55e8bb4d78",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate?depth=3",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
+		},
+		{
+			"id": "f195f67a-7d95-2d2e-0372-f8cb92e00c3e",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414430421641,
+			"name": "P-025-040 - [200]",
+			"description": "Delete the latest (and only version).\n\n",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 126,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "0",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Oct 2014 17:20:27 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "6fc3a49a-3383-0788-a0e5-7bdeadfa6443",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/RCAN-001",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "DELETE",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
+		}
+	]
+}
