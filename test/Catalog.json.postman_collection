@@ -2103,7 +2103,7 @@
 		{
 			"id": "6bf7a07d-9877-f2d6-8798-cc4de9fb7e11",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version,id,category&depth=1",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version%2Cid%2Ccategory",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -2111,7 +2111,7 @@
 			"dataMode": "params",
 			"version": 2,
 			"tests": "",
-			"time": 1413403222420,
+			"time": 1414250733578,
 			"name": "A-025-030 - [200]",
 			"description": "Returns version, id, and category (reference values only) for all catalogs.\n\n",
 			"collectionId": "1deb8d7e-9715-3968-c288-7d89c626c166",
