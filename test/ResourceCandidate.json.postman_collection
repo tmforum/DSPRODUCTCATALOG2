@@ -55,7 +55,7 @@
 		},
 		{
 			"id": "a040aabd-494b-c206-42b5-afaee5879a22",
-			"name": "P-020 - GET - Advanced",
+			"name": "020 - GET - Advanced",
 			"description": "",
 			"order": [
 				"e0efc5ba-c031-a0b2-7708-7ed68a46f1e3",
@@ -74,7 +74,7 @@
 		},
 		{
 			"id": "f55b7a8f-5d98-c0c4-805c-5c9b37850637",
-			"name": "P-025-010",
+			"name": "025 - DELETE",
 			"description": "",
 			"order": [
 				"ab52a9cd-6171-7229-bbb4-2b08ba5ebb9d",
