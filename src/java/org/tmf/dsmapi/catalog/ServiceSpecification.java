@@ -142,7 +142,7 @@ import org.tmf.dsmapi.commons.Utilities;
  *                     }
  *                 }
  *             ],
- *             "ServiceSpecCharacteristicValue": [
+ *             "serviceSpecCharacteristicValue": [
  *                 {
  *                     "valueType": "string",
  *                     "default": true,
