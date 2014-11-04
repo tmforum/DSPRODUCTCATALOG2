@@ -16,6 +16,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.tmf.dsmapi.catalog.specification.RequiredSpecification;
 import org.tmf.dsmapi.catalog.specification.SpecificationRelationship;
@@ -303,6 +304,36 @@ public class ServiceSpecification extends AbstractCatalogEntity implements Seria
 
     public void setServiceSpecCharacteristic(List<ServiceSpecCharacteristic> serviceSpecCharacteristic) {
         this.serviceSpecCharacteristic = serviceSpecCharacteristic;
+    }
+
+    @JsonProperty(value = "attachment")
+    public List<Attachment> attachmentToJson() {
+        return (attachment != null && attachment.size() > 0) ? attachment : null;
+    }
+
+    @JsonProperty(value = "relatedParty")
+    public List<RelatedParty> relatedPartyToJson() {
+        return (relatedParty != null && relatedParty.size() > 0) ? relatedParty : null;
+    }
+
+    @JsonProperty(value = "serviceSpecificationRelationship")
+    public List<SpecificationRelationship> serviceSpecificationRelationshipToJson() {
+        return (serviceSpecificationRelationship != null && serviceSpecificationRelationship.size() > 0) ? serviceSpecificationRelationship : null;
+    }
+
+    @JsonProperty(value = "requiredServiceSpecification")
+    public List<RequiredSpecification> requiredServiceSpecificationToJson() {
+        return (requiredServiceSpecification != null && requiredServiceSpecification.size() > 0) ? requiredServiceSpecification : null;
+    }
+
+    @JsonProperty(value = "requiredResourceSpecification")
+    public List<RequiredSpecification> requiredResourceSpecificationToJson() {
+        return (requiredResourceSpecification != null && requiredResourceSpecification.size() > 0) ? requiredResourceSpecification : null;
+    }
+
+    @JsonProperty(value = "serviceSpecCharacteristic")
+    public List<ServiceSpecCharacteristic> serviceSpecCharacteristicToJson() {
+        return (serviceSpecCharacteristic != null && serviceSpecCharacteristic.size() > 0) ? serviceSpecCharacteristic : null;
     }
 
     @Override

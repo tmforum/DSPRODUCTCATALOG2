@@ -138,6 +138,16 @@ public class ResourceSpecCharacteristic implements Serializable {
         return (validFor != null && validFor.isEmpty() == false) ? validFor : null;
     }
 
+    @JsonProperty(value = "resourceSpecCharRelationship")
+    public List<SpecificationCharacteristicRelationship> resourceSpecCharRelationshipToJson() {
+        return (resourceSpecCharRelationship != null && resourceSpecCharRelationship.size() > 0) ? resourceSpecCharRelationship : null;
+    }
+
+    @JsonProperty(value = "resourceSpecCharacteristicValue")
+    public List<SpecificationCharacteristicValue> resourceSpecCharacteristicValueToJson() {
+        return (resourceSpecCharacteristicValue != null && resourceSpecCharacteristicValue.size() > 0) ? resourceSpecCharacteristicValue : null;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;

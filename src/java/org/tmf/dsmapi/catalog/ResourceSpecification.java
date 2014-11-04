@@ -16,6 +16,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.tmf.dsmapi.catalog.specification.SpecificationRelationship;
 import org.tmf.dsmapi.commons.Utilities;
@@ -234,6 +235,26 @@ public class ResourceSpecification extends AbstractCatalogEntity implements Seri
 
     public void setResourceSpecCharacteristic(List<ResourceSpecCharacteristic> resourceSpecCharacteristic) {
         this.resourceSpecCharacteristic = resourceSpecCharacteristic;
+    }
+
+    @JsonProperty(value = "attachment")
+    public List<Attachment> attachmentToJson() {
+        return (attachment != null && attachment.size() > 0) ? attachment : null;
+    }
+
+    @JsonProperty(value = "relatedParty")
+    public List<RelatedParty> relatedPartyToJson() {
+        return (relatedParty != null && relatedParty.size() > 0) ? relatedParty : null;
+    }
+
+    @JsonProperty(value = "resourceSpecificationRelationship")
+    public List<SpecificationRelationship> resourceSpecificationRelationshipToJson() {
+        return (resourceSpecificationRelationship != null && resourceSpecificationRelationship.size() > 0) ? resourceSpecificationRelationship : null;
+    }
+
+    @JsonProperty(value = "resourceSpecCharacteristic")
+    public List<ResourceSpecCharacteristic> resourceSpecCharacteristicToJson() {
+        return (resourceSpecCharacteristic != null && resourceSpecCharacteristic.size() > 0) ? resourceSpecCharacteristic : null;
     }
 
     @Override

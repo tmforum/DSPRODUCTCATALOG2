@@ -138,6 +138,16 @@ public class ServiceSpecCharacteristic implements Serializable {
         return (validFor != null && validFor.isEmpty() == false) ? validFor : null;
     }
 
+    @JsonProperty(value = "serviceSpecCharRelationship")
+    public List<SpecificationCharacteristicRelationship> serviceSpecCharRelationshipToJson() {
+        return (serviceSpecCharRelationship != null && serviceSpecCharRelationship.size() > 0) ? serviceSpecCharRelationship : null;
+    }
+
+    @JsonProperty(value = "serviceSpecCharacteristicValue")
+    public List<SpecificationCharacteristicValue> serviceSpecCharacteristicValueToJson() {
+        return (serviceSpecCharacteristicValue != null && serviceSpecCharacteristicValue.size() > 0) ? serviceSpecCharacteristicValue : null;
+    }
+
     @Override
     public int hashCode() {
         int hash = 5;

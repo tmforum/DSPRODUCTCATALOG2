@@ -18,6 +18,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.tmf.dsmapi.commons.Utilities;
 import org.tmf.dsmapi.commons.annotation.EntityReferenceProperty;
@@ -120,6 +121,11 @@ public class ServiceCandidate extends AbstractCatalogEntity implements Serializa
 
     public void setServiceSpecification(CatalogReference serviceSpecification) {
         this.serviceSpecification = serviceSpecification;
+    }
+
+    @JsonProperty(value = "category")
+    public List<CatalogReference> categoryToJson() {
+        return (category != null && category.size() > 0) ? category : null;
     }
 
     @Override
