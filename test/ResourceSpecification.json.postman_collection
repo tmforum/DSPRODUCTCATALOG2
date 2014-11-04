@@ -25,7 +25,8 @@
 			"order": [
 				"415862d5-97ed-675b-90d7-9f487aaaccd3",
 				"f8c79907-3204-3a2f-22c1-c25aa3ca4bba",
-				"b692d239-a980-f41d-b93f-edefa4352d6c"
+				"b692d239-a980-f41d-b93f-edefa4352d6c",
+				"1b0b7a6c-5e76-a6d8-3a2e-fbf3ec4b9baa"
 			],
 			"collection_name": "ResourceSpecification",
 			"collection_id": "e82b2943-781f-2840-21be-8637253fbb4b"
@@ -95,6 +96,84 @@
 			"collectionId": "e82b2943-781f-2840-21be-8637253fbb4b",
 			"responses": [],
 			"synced": false
+		},
+		{
+			"id": "1b0b7a6c-5e76-a6d8-3a2e-fbf3ec4b9baa",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/RSPEC-002:(3.1)",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414590903409,
+			"name": "R-005-040 - [201] - BUG - DOES NOT WORK",
+			"description": "Update the Characteristics list (add one/delete one.",
+			"collectionId": "e82b2943-781f-2840-21be-8637253fbb4b",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 500,
+						"name": "Internal Server Error",
+						"detail": "A generic error message, given when no more specific message is suitable."
+					},
+					"time": 684,
+					"headers": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "3969",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/html",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Wed, 29 Oct 2014 13:54:09 GMT",
+							"description": "The date and time that the message was sent"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 500 - </h1><hr/><p><b>type</b> Exception report</p><p><b>message</b></p><p><b>description</b>The server encountered an internal error () that prevented it from fulfilling this request.</p><p><b>exception</b> <pre>javax.servlet.ServletException: javax.transaction.RollbackException: Transaction marked for rollback.</pre></p><p><b>root cause</b> <pre>javax.transaction.RollbackException: Transaction marked for rollback.</pre></p><p><b>root cause</b> <pre>Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.2.v20111125-r10461): org.eclipse.persistence.exceptions.DatabaseException\r\nInternal Exception: java.sql.SQLSyntaxErrorException: Comparisons between 'BLOB' and 'BLOB' are not supported. Types must be comparable. String types must also have matching collation. If collation does not match, a possible solution is to cast operands to force them to the default collation (e.g. SELECT tablename FROM sys.systables WHERE CAST(tablename AS VARCHAR(128)) = 'T1')\r\nError Code: -1\r\nCall: DELETE FROM CRI_RESOURCE_SPEC_R_CHARACTERISTIC WHERE (((((((((((((CONFIGURABLE = ?) AND (DESCRIPTION = ?)) AND (ID = ?)) AND (NAME = ?)) AND (RESOURCESPECCHARRELATIONSHIP = ?)) AND (RESOURCESPECCHARACTERISTICVALUE = ?)) AND (VALUETYPE = ?)) AND (END_DATE_TIME IS NULL)) AND (START_DATE_TIME = ?)) AND (CATALOG_ID = ?)) AND (CATALOG_VERSION = ?)) AND (ENTITY_ID = ?)) AND (ENTITY_VERSION = ?))\r\n\tbind =&gt; [12 parameters bound]\r\nQuery: DeleteObjectQuery(ResourceSpecCharacteristic{id=54, name=Screen Size, description=Screen size, validFor=TimeRange{startDateTime=Fri Apr 19 16:42:23 EDT 2013, endDateTime=null}, valueType=number, configurable=false, resourceSpecCharRelationship=[SpecificationCharacteristicRelationship{id=43, validFor=TimeRange{startDateTime=Fri Apr 19 16:42:23 EDT 2013, endDateTime=null}, type=dependency}], resourceSpecCharacteristicValue=[SpecificationCharacteristicValue{valueType=number, defaultValue=true, value=4.2, unitOfMeasure=inches, valueFrom=, valueTo=, validFor=TimeRange{startDateTime=Fri Apr 19 16:42:23 EDT 2013, endDateTime=null}}]})</pre></p><p><b>root cause</b> <pre>java.sql.SQLSyntaxErrorException: Comparisons between 'BLOB' and 'BLOB' are not supported. Types must be comparable. String types must also have matching collation. If collation does not match, a possible solution is to cast operands to force them to the default collation (e.g. SELECT tablename FROM sys.systables WHERE CAST(tablename AS VARCHAR(128)) = 'T1')</pre></p><p><b>root cause</b> <pre>org.apache.derby.client.am.SqlException: Comparisons between 'BLOB' and 'BLOB' are not supported. Types must be comparable. String types must also have matching collation. If collation does not match, a possible solution is to cast operands to force them to the default collation (e.g. SELECT tablename FROM sys.systables WHERE CAST(tablename AS VARCHAR(128)) = 'T1')</pre></p><p><b>note</b> <u>The full stack traces of the exception and its root causes are available in the GlassFish Server Open Source Edition 3.1.2.2 logs.</u></p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "7e5465cc-4985-dac7-2ae6-4826ec5c26f9",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/RSPEC-002:(3.1)",
+						"pathVariables": {},
+						"data": "{\n    \"id\": \"RSPEC-002\",\n    \"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/22\",\n    \"name\": \"iPhone 43\",\n    \"description\": \"Siri should work on this iPhone\",\n    \"brand\": \"Apple\",\n    \"version\": \"3.1\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2017-06-19T00:00:00-04:00\"\n    },\n    \"attachment\": [\n        {\n            \"id\": \"22\",\n            \"href\": \"http://serverlocation:port/documentManagment/attachment/22\",\n            \"type\": \"Picture\",\n            \"url\": \"http://xxxxx\"\n        },\n        {\n            \"id\": \"23\",\n            \"href\": \"http://serverlocation:port/documentManagment/attachment/23\",\n            \"type\": \"Picture\",\n            \"url\": \"http://xxxxx\"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"role\": \"User\",\n            \"id\": \"1235\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1235\"\n        }\n    ],\n    \"resourceSpecificationRelationship\": [\n        {\n            \"type\": \"dependency\",\n            \"id\": \"15\",\n            \"href\": \" http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/R15\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": null\n            }\n        }\n    ],\n    \"resourceSpecCharacteristic\": [\n        {\n            \"id\": \"55\",\n            \"name\": \"Color\",\n            \"description\": \"Color\",\n            \"valueType\": \"string\",\n            \"configurable\": true,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"resourceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"string\",\n                    \"default\": true,\n                    \"value\": \"Black\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                },\n                {\n                    \"valueType\": \"string\",\n                    \"default\": false,\n                    \"value\": \"White\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                },\n                {\n                    \"valueType\": \"string\",\n                    \"default\": false,\n                    \"value\": \"Gold\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": \"57\",\n            \"name\": \"Storage Capacity\",\n            \"description\": \"Storage Capacity\",\n            \"valueType\": \"number\",\n            \"configurable\": false,\n            \"validFor\": {\n                \"endDateTime\": \"2017-04-19T16:42:23-04:00\"\n            },\n            \"resourceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"number\",\n                    \"default\": true,\n                    \"value\": \"16\",\n                    \"unitOfMeasure\": \"GB\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\"\n                    }\n                },\n                {\n                    \"valueType\": \"number\",\n                    \"value\": \"64\",\n                    \"unitOfMeasure\": \"GB\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\"\n                    }\n                },\n                {\n                    \"valueType\": \"number\",\n                    \"default\": false,\n                    \"value\": \"128\",\n                    \"unitOfMeasure\": \"GB\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\"\n                    }\n                }\n            ]\n        }\n    ]\n}",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "PUT",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n    \"id\": \"RSPEC-002\",\n    \"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/22\",\n    \"name\": \"iPhone 43\",\n    \"description\": \"Siri should work on this iPhone\",\n    \"brand\": \"Apple\",\n    \"version\": \"3.1\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2017-06-19T00:00:00-04:00\"\n    },\n    \"attachment\": [\n        {\n            \"id\": \"22\",\n            \"href\": \"http://serverlocation:port/documentManagment/attachment/22\",\n            \"type\": \"Picture\",\n            \"url\": \"http://xxxxx\"\n        },\n        {\n            \"id\": \"23\",\n            \"href\": \"http://serverlocation:port/documentManagment/attachment/23\",\n            \"type\": \"Picture\",\n            \"url\": \"http://xxxxx\"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"role\": \"User\",\n            \"id\": \"1235\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1235\"\n        }\n    ],\n    \"resourceSpecificationRelationship\": [\n        {\n            \"type\": \"dependency\",\n            \"id\": \"15\",\n            \"href\": \" http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/R15\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": null\n            }\n        }\n    ],\n    \"resourceSpecCharacteristic\": [\n        {\n            \"id\": \"55\",\n            \"name\": \"Color\",\n            \"description\": \"Color\",\n            \"valueType\": \"string\",\n            \"configurable\": true,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"resourceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"string\",\n                    \"default\": true,\n                    \"value\": \"Black\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                },\n                {\n                    \"valueType\": \"string\",\n                    \"default\": false,\n                    \"value\": \"White\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                },\n                {\n                    \"valueType\": \"string\",\n                    \"default\": false,\n                    \"value\": \"Gold\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": \"57\",\n            \"name\": \"Storage Capacity\",\n            \"description\": \"Storage Capacity\",\n            \"valueType\": \"number\",\n            \"configurable\": false,\n            \"validFor\": {\n                \"endDateTime\": \"2017-04-19T16:42:23-04:00\"\n            },\n            \"resourceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"number\",\n                    \"default\": true,\n                    \"value\": \"16\",\n                    \"unitOfMeasure\": \"GB\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\"\n                    }\n                },\n                {\n                    \"valueType\": \"number\",\n                    \"value\": \"64\",\n                    \"unitOfMeasure\": \"GB\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\"\n                    }\n                },\n                {\n                    \"valueType\": \"number\",\n                    \"default\": false,\n                    \"value\": \"128\",\n                    \"unitOfMeasure\": \"GB\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\"\n                    }\n                }\n            ]\n        }\n    ]\n}"
 		},
 		{
 			"id": "21d8d04d-519c-6a30-a2f1-b1ec0bda2536",
