@@ -10,6 +10,8 @@
 			"description": "",
 			"order": [
 				"5c880488-8955-9d78-18c2-5b6a1011e6ee",
+				"b3319153-4769-564e-6977-0f27ac2f4b08",
+				"95b8fb67-fcc5-afbd-4817-e2b7bc70b5a6",
 				"043adea6-6813-f247-9aeb-2398cfcacb76",
 				"5287f395-b577-0701-20fa-d6aea31fa39a",
 				"79307334-347e-f5dd-825f-038c5066c1a3",
@@ -1443,6 +1445,90 @@
 			"synced": false
 		},
 		{
+			"id": "95b8fb67-fcc5-afbd-4817-e2b7bc70b5a6",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1415198129160,
+			"name": "P-001-016 - [201]",
+			"description": "no aggregate lists",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
+					},
+					"time": 150,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Wed, 05 Nov 2014 14:35:27 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":\"8\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/8:(2.0)\",\"name\":\"Virtual Storage Medium\",\"description\":\"Virtual Storage Medium\",\"lastUpdate\":\"2014-11-05T14:35:27.909+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"},\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"resourceSpecification\":{\"id\":\"13\",\"version\":\"1.1\",\"href\":\"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\"name\":\"specification 1\"}}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "8e72b4cc-3d03-258c-1f0f-f827e06f183f",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate",
+						"pathVariables": {},
+						"data": "{\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"2.0\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "POST",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"2.0\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+		},
+		{
 			"id": "98252eb1-f27d-9961-485d-61011c8e4eda",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
 			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/NONSUCH",
@@ -1780,6 +1866,90 @@
 				}
 			],
 			"synced": false
+		},
+		{
+			"id": "b3319153-4769-564e-6977-0f27ac2f4b08",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1415198073509,
+			"name": "P-001-015 - [201]",
+			"description": "Empty aggregate lists",
+			"collectionId": "3bc5578d-5817-da20-9eaf-e6203e5ef3c8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
+					},
+					"time": 191,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Wed, 05 Nov 2014 14:34:37 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":\"7\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate/7:(2.0)\",\"name\":\"Virtual Storage Medium\",\"description\":\"Virtual Storage Medium\",\"lastUpdate\":\"2014-11-05T14:34:37.055+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"},\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"resourceSpecification\":{\"id\":\"13\",\"version\":\"1.1\",\"href\":\"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\"name\":\"specification 1\"}}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "f831e1d7-78aa-1d62-71c7-5598b651a38e",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceCandidate",
+						"pathVariables": {},
+						"data": "{\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"2.0\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "POST",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n\t\"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"version\": \"2.0\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"resourceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
 		},
 		{
 			"id": "bd0fe299-7faf-297d-86f7-b028fcc9b846",

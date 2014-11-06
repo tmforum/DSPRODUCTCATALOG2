@@ -12,6 +12,8 @@
 				"4f2710ae-aa00-6ea6-264c-b5a6e8931758",
 				"f50139e7-45d7-279c-5995-4f80b87ad264",
 				"7b77cfee-ed9a-f753-fdb2-c367e1c3d65e",
+				"4a23faa7-5ef2-5d95-e2ee-1845946bf04f",
+				"4e2c0254-43a0-0046-9761-42d448898d8b",
 				"3b3bd2e9-99cc-151a-5fbc-701ee80f35f1",
 				"32befd24-f4c9-c5bd-9bdd-90dfe8f418d8",
 				"dcab4822-0069-5ae6-3b43-22bb16616b70",
@@ -357,7 +359,7 @@
 			"tests": "",
 			"time": 1414602934488,
 			"name": "V-001-070 - [200]",
-			"description": "Search for all SSPEC-010.\n\n-----\n\nshould return 3 entities.\n",
+			"description": "Search for all SSPEC-010.\n\n-----\n\nshould return 3 (non auto-gen id) entities.\n",
 			"collectionId": "ec8f82e8-33dd-163d-6693-a8e6e5bf3576",
 			"responses": [
 				{
@@ -846,6 +848,109 @@
 			"synced": false
 		},
 		{
+			"id": "4a23faa7-5ef2-5d95-e2ee-1845946bf04f",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1415198753975,
+			"name": "V-001-035 - [201]",
+			"description": "Empty aggregate lists.\n",
+			"collectionId": "ec8f82e8-33dd-163d-6693-a8e6e5bf3576",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
+					},
+					"time": 262,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Wed, 05 Nov 2014 14:45:56 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":\"11\",\"version\":\"200.100\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/11:(200.100)\",\"name\":\"iPhone 42\",\"description\":\"Siri works on this iPhone\",\"lastUpdate\":\"2014-11-05T14:45:56.203+0000\",\"lifecycleStatus\":\"In Study\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"},\"brand\":\"Apple\"}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "dc618459-122b-f432-6a02-fcd8d366aa25",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification",
+						"pathVariables": {},
+						"data": "{\n    \"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/22\",\n    \"version\": \"200.100\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"In Study\",\n    \"name\": \"iPhone 42\",\n    \"description\": \"Siri works on this iPhone\",\n    \"brand\": \"Apple\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n    },\n    \"attachment\": [\n\n    ],\n    \"relatedParty\": [\n  \n    ],\n    \"serviceSpecificationRelationship\": [\n   \n    ],\n    \"requiredServiceSpecification\": [\n     \n    ],\n    \"requiredResourceSpecification\": [\n    \n    ],\n    \"serviceSpecCharacteristic\": [\n    \n    ]\n}",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "POST",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n    \"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/22\",\n    \"version\": \"200.100\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"In Study\",\n    \"name\": \"iPhone 42\",\n    \"description\": \"Siri works on this iPhone\",\n    \"brand\": \"Apple\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n    },\n    \"attachment\": [\n\n    ],\n    \"relatedParty\": [\n  \n    ],\n    \"serviceSpecificationRelationship\": [\n   \n    ],\n    \"requiredServiceSpecification\": [\n     \n    ],\n    \"requiredResourceSpecification\": [\n    \n    ],\n    \"serviceSpecCharacteristic\": [\n    \n    ]\n}"
+		},
+		{
+			"id": "4e2c0254-43a0-0046-9761-42d448898d8b",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1415198784206,
+			"name": "V-001-036 - [201]",
+			"description": "No aggregate lists.\n",
+			"collectionId": "ec8f82e8-33dd-163d-6693-a8e6e5bf3576",
+			"responses": [],
+			"synced": false,
+			"rawModeData": "{\n    \"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/22\",\n    \"version\": \"200.100\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"In Study\",\n    \"name\": \"iPhone 42\",\n    \"description\": \"Siri works on this iPhone\",\n    \"brand\": \"Apple\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n    }\n\n}"
+		},
+		{
 			"id": "4f2710ae-aa00-6ea6-264c-b5a6e8931758",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
 			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC1:(12.0)",
@@ -1198,7 +1303,7 @@
 			"dataMode": "raw",
 			"version": 2,
 			"tests": "",
-			"time": 1414602456885,
+			"time": 1415204611031,
 			"name": "V-001-030 - [201]",
 			"description": "auto generated ID;\n",
 			"collectionId": "ec8f82e8-33dd-163d-6693-a8e6e5bf3576",

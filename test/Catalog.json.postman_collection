@@ -10,6 +10,8 @@
 			"description": "",
 			"order": [
 				"a11ea3c3-4ecf-7318-5a11-f7889ba4ba28",
+				"2c1afd64-cb2f-4c75-a3fc-1bcd91666966",
+				"2db59a2e-3a2c-69a9-f841-35167c8ea29b",
 				"0acdfbe2-21a4-815f-6760-ef727504b547",
 				"f930c75d-9ab7-97ed-76f0-cb4c3cf54484",
 				"c5225de2-7799-da26-53be-a9d1668a4fa3",
@@ -798,6 +800,174 @@
 			],
 			"synced": false,
 			"rawModeData": "{\n\n  \"lifecycleStatus\": \"Launched\"\n}"
+		},
+		{
+			"id": "2c1afd64-cb2f-4c75-a3fc-1bcd91666966",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1415197909875,
+			"name": "A-001-015 - [201]",
+			"description": "Auto generated ID.\nEmpty aggregate lists.",
+			"collectionId": "1deb8d7e-9715-3968-c288-7d89c626c166",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
+					},
+					"time": 211,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Wed, 05 Nov 2014 14:31:52 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":\"5\",\"version\":\"\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/5\",\"name\":\"Catalog Wholesale Business\",\"description\":\"Contains Wholesale products, services, and resources for Businesses\",\"lastUpdate\":\"2014-11-05T14:31:52.683+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2014-04-19T20:42:23.000+0000\"},\"type\":\"Product Catalog\"}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "e213115d-9e46-675d-215e-d37036bd6391",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+						"pathVariables": {},
+						"data": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"category\": [\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"relatedParty\": [\n\n    ]\n}",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "POST",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"category\": [\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"relatedParty\": [\n\n    ]\n}"
+		},
+		{
+			"id": "2db59a2e-3a2c-69a9-f841-35167c8ea29b",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1415197949035,
+			"name": "A-001-016 - [201]",
+			"description": "Auto generated ID.\nNo laggregate lists.",
+			"collectionId": "1deb8d7e-9715-3968-c288-7d89c626c166",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
+					},
+					"time": 123,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Wed, 05 Nov 2014 14:32:30 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":\"6\",\"version\":\"\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/6\",\"name\":\"Catalog Wholesale Business\",\"description\":\"Contains Wholesale products, services, and resources for Businesses\",\"lastUpdate\":\"2014-11-05T14:32:30.547+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2014-04-19T20:42:23.000+0000\"},\"type\":\"Product Catalog\"}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "c340eb47-0d57-7091-e1a9-7f6b33765d3d",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+						"pathVariables": {},
+						"data": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    }\n}",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "POST",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    }\n}"
 		},
 		{
 			"id": "2fa907d7-a6c1-b850-34ce-5772ceebac6c",

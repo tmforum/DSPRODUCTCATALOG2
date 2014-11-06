@@ -10,6 +10,8 @@
 			"description": "",
 			"order": [
 				"2eeb1bd7-3a8c-0acf-91c2-0b8569094e9f",
+				"35246039-536a-1bfe-2480-5c4ea5bbc297",
+				"5f894645-ddc8-945f-ced5-9b1340de515b",
 				"cc537878-2670-c207-805e-ebb735218a3a",
 				"d63bb5b9-65d4-93ff-e903-4866f99e7b0d",
 				"9bf66027-6b43-5432-e2da-8213cd73e1d7",
@@ -343,6 +345,90 @@
 			"rawModeData": "{\n    \"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/22\",\n    \"name\": \"iPhone 42\",\n    \"description\": \"Siri works on this iPhone\",\n    \"brand\": \"Apple\",\n    \"version\": \"1.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n    },\n    \"attachment\": [\n        {\n            \"id\": \"22\",\n            \"href\": \"http://serverlocation:port/documentManagment/attachment/22\",\n            \"type\": \"Picture\",\n            \"url\": \"http://xxxxx\"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        }\n    ],\n    \"resourceSpecificationRelationship\": [\n        {\n            \"type\": \"dependency\",\n            \"id\": \"15\",\n            \"href\": \" http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/R15\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"resourceSpecCharacteristic\": [\n        {\n            \"id\": \"54\",\n            \"name\": \"Screen Size\",\n            \"description\": \"Screen size\",\n            \"valueType\": \"number\",\n            \"configurable\": false,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"resourceSpecCharRelationship\": [\n                {\n                    \"type\": \"dependency\",\n                    \"id\": \"43\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ],\n            \"resourceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"number\",\n                    \"default\": true,\n                    \"value\": \"4.2\",\n                    \"unitOfMeasure\": \"inches\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": \"55\",\n            \"name\": \"Colour\",\n            \"description\": \"Colour\",\n            \"valueType\": \"string\",\n            \"configurable\": true,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"resourceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"string\",\n                    \"default\": true,\n                    \"value\": \"Black\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                },\n                {\n                    \"valueType\": \"string\",\n                    \"default\": false,\n                    \"value\": \"White\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        }\n    ]\n}"
 		},
 		{
+			"id": "35246039-536a-1bfe-2480-5c4ea5bbc297",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1415198451940,
+			"name": "R-001-015 - [201]",
+			"description": "Empty aggregate lists\n",
+			"collectionId": "e82b2943-781f-2840-21be-8637253fbb4b",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
+					},
+					"time": 208,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Wed, 05 Nov 2014 14:40:57 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":\"9\",\"version\":\"1.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/9:(1.0)\",\"name\":\"iPhone 42\",\"description\":\"Siri works on this iPhone\",\"lastUpdate\":\"2014-11-05T14:40:57.300+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"},\"brand\":\"Apple\"}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "f5573d5f-de67-e723-8745-a49763ee0d12",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification",
+						"pathVariables": {},
+						"data": "{\n    \"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/22\",\n    \"name\": \"iPhone 42\",\n    \"description\": \"Siri works on this iPhone\",\n    \"brand\": \"Apple\",\n    \"version\": \"1.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n    },\n    \"attachment\": [\n    ],\n    \"relatedParty\": [\n    ],\n    \"resourceSpecificationRelationship\": [\n    ],\n    \"resourceSpecCharacteristic\": [\n    ]\n}",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "POST",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n    \"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/22\",\n    \"name\": \"iPhone 42\",\n    \"description\": \"Siri works on this iPhone\",\n    \"brand\": \"Apple\",\n    \"version\": \"1.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n    },\n    \"attachment\": [\n    ],\n    \"relatedParty\": [\n    ],\n    \"resourceSpecificationRelationship\": [\n    ],\n    \"resourceSpecCharacteristic\": [\n    ]\n}"
+		},
+		{
 			"id": "415862d5-97ed-675b-90d7-9f487aaaccd3",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
 			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification",
@@ -517,6 +603,90 @@
 			"rawModeData": "{\n\n    \"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/22\",\n    \"name\": \"iPhone 43-mod\",\n    \"description\": \"Siri should work on this iPhone-mod\",\n    \"brand\": \"Apple, Inc.\",\n    \"version\": \"3.1\",\n    \"lastUpdate\": \"2019-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2016-06-19T00:00:00-04:00\"\n    },\n    \"attachment\": [\n        {\n            \"id\": \"23\",\n            \"href\": \"http://serverlocation:port/documentManagment/attachment/23\",\n            \"type\": \"Picture\",\n            \"url\": \"http://xxxxx\"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"role\": \"User\",\n            \"id\": \"1235\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1235\"\n        }\n    ],\n \n    \"resourceSpecCharacteristic\": [\n\n        {\n            \"id\": \"55\",\n            \"name\": \"Color\",\n            \"description\": \"Color\",\n            \"valueType\": \"string\",\n            \"configurable\": true,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"resourceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"string\",\n                    \"default\": true,\n                    \"value\": \"Black\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                },\n                {\n                    \"valueType\": \"string\",\n                    \"default\": false,\n                    \"value\": \"White\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                },\n                {\n                    \"valueType\": \"string\",\n                    \"default\": false,\n                    \"value\": \"Gold\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        }\n    ]\n}"
 		},
 		{
+			"id": "5f894645-ddc8-945f-ced5-9b1340de515b",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1415198516699,
+			"name": "R-001-016 - [201]",
+			"description": "No aggregate lists\n",
+			"collectionId": "e82b2943-781f-2840-21be-8637253fbb4b",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
+					},
+					"time": 128,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Wed, 05 Nov 2014 14:42:01 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":\"10\",\"version\":\"1.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification/10:(1.0)\",\"name\":\"iPhone 42\",\"description\":\"Siri works on this iPhone\",\"lastUpdate\":\"2014-11-05T14:42:01.232+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"},\"brand\":\"Apple\"}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "1c41f882-3f22-9f2c-9546-25e79726d9f7",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification",
+						"pathVariables": {},
+						"data": "{\n    \"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/22\",\n    \"name\": \"iPhone 42\",\n    \"description\": \"Siri works on this iPhone\",\n    \"brand\": \"Apple\",\n    \"version\": \"1.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n    }\n}",
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "POST",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false,
+			"rawModeData": "{\n    \"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/22\",\n    \"name\": \"iPhone 42\",\n    \"description\": \"Siri works on this iPhone\",\n    \"brand\": \"Apple\",\n    \"version\": \"1.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n    }\n}"
+		},
+		{
 			"id": "662a9eca-4d06-058c-0386-8152bf0d22fb",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
 			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification",
@@ -528,7 +698,7 @@
 			"version": 2,
 			"tests": "",
 			"time": 1414503486350,
-			"name": "R-001-040 - [201",
+			"name": "R-001-040 - [201]",
 			"description": "RSPEC-002/3.0\n",
 			"collectionId": "e82b2943-781f-2840-21be-8637253fbb4b",
 			"responses": [],
