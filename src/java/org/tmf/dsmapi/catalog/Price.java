@@ -1,6 +1,7 @@
 package org.tmf.dsmapi.catalog;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.logging.Logger;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -27,13 +28,13 @@ public class Price implements Serializable {
     private final static Logger logger = Logger.getLogger(ProductOfferingPrice.class.getName());
 
     @Column(name = "TAX_INCLUDED_AMOUNT", nullable = true)
-    String taxIncludedAmount;
+    BigDecimal taxIncludedAmount;
 
     @Column(name = "DUTY_FREE_AMOUNT", nullable = true)
-    String dutyFreeAmount;
+    BigDecimal dutyFreeAmount;
 
     @Column(name = "TAX_RATE", nullable = true)
-    String taxRate;
+    BigDecimal taxRate;
 
     @Column(name = "CURRENCY_CODE", nullable = true)
     String currencyCode;
@@ -41,27 +42,27 @@ public class Price implements Serializable {
     public Price() {
     }
 
-    public String getTaxIncludedAmount() {
+    public BigDecimal getTaxIncludedAmount() {
         return taxIncludedAmount;
     }
 
-    public void setTaxIncludedAmount(String taxIncludedAmount) {
+    public void setTaxIncludedAmount(BigDecimal taxIncludedAmount) {
         this.taxIncludedAmount = taxIncludedAmount;
     }
 
-    public String getDutyFreeAmount() {
+    public BigDecimal getDutyFreeAmount() {
         return dutyFreeAmount;
     }
 
-    public void setDutyFreeAmount(String dutyFreeAmount) {
+    public void setDutyFreeAmount(BigDecimal dutyFreeAmount) {
         this.dutyFreeAmount = dutyFreeAmount;
     }
 
-    public String getTaxRate() {
+    public BigDecimal getTaxRate() {
         return taxRate;
     }
 
-    public void setTaxRate(String taxRate) {
+    public void setTaxRate(BigDecimal taxRate) {
         this.taxRate = taxRate;
     }
 
@@ -119,9 +120,9 @@ public class Price implements Serializable {
     public static Price createProto() {
         Price price = new Price();
 
-        price.taxIncludedAmount = "tax included amount";
-        price.dutyFreeAmount = "duty free amount";
-        price.taxRate = "tax rate";
+        price.taxIncludedAmount = new BigDecimal (13.00);
+        price.dutyFreeAmount = new BigDecimal (12.20);
+        price.taxRate = new BigDecimal (14.01);
         price.currencyCode = "currency code";
 
         return price;
