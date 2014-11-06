@@ -1,5 +1,7 @@
 package org.tmf.dsmapi.commons;
 
+import java.util.List;
+
 /**
  *
  * @author baman.barzideh
@@ -24,6 +26,14 @@ public class Utilities {
         }
 
         if (input.trim().length() <= 0) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public static boolean hasContents(List<?> input) {
+        if (input == null || input.size() <= 0) {
             return false;
         }
 

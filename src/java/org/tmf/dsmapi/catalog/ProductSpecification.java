@@ -16,6 +16,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.tmf.dsmapi.catalog.specification.SpecificationRelationship;
 import org.tmf.dsmapi.commons.Utilities;
@@ -217,7 +218,7 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
     @EntityReferenceProperty(classId=ProductSpecification.class)
-    private List<CatalogReference> bundledProductSpecification;
+    private List<BundledProductReference> bundledProductSpecification;
 
     @Embedded
     @ElementCollection
@@ -296,11 +297,11 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         this.relatedParty = relatedParty;
     }
 
-    public List<CatalogReference> getBundledProductSpecification() {
+    public List<BundledProductReference> getBundledProductSpecification() {
         return bundledProductSpecification;
     }
 
-    public void setBundledProductSpecification(List<CatalogReference> bundledProductSpecification) {
+    public void setBundledProductSpecification(List<BundledProductReference> bundledProductSpecification) {
         this.bundledProductSpecification = bundledProductSpecification;
     }
 
@@ -334,6 +335,41 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
 
     public void setProductSpecCharacteristic(List<ProductSpecCharacteristic> productSpecCharacteristic) {
         this.productSpecCharacteristic = productSpecCharacteristic;
+    }
+
+    @JsonProperty(value = "attachment")
+    public List<Attachment> attachmentToJson() {
+        return (attachment != null && attachment.size() > 0) ? attachment : null;
+    }
+
+    @JsonProperty(value = "relatedParty")
+    public List<RelatedParty> relatedPartyToJson() {
+        return (relatedParty != null && relatedParty.size() > 0) ? relatedParty : null;
+    }
+
+    @JsonProperty(value = "bundledProductSpecification")
+    public List<BundledProductReference> bundledProductSpecificationToJson() {
+        return (bundledProductSpecification != null && bundledProductSpecification.size() > 0) ? bundledProductSpecification : null;
+    }
+
+    @JsonProperty(value = "productSpecificationRelationship")
+    public List<SpecificationRelationship> productSpecificationRelationshipToJson() {
+        return (productSpecificationRelationship != null && productSpecificationRelationship.size() > 0) ? productSpecificationRelationship : null;
+    }
+
+    @JsonProperty(value = "serviceSpecification")
+    public List<CatalogReference> serviceSpecificationToJson() {
+        return (serviceSpecification != null && serviceSpecification.size() > 0) ? serviceSpecification : null;
+    }
+
+    @JsonProperty(value = "resourceSpecification")
+    public List<CatalogReference> resourceSpecificationToJson() {
+        return (resourceSpecification != null && resourceSpecification.size() > 0) ? resourceSpecification : null;
+    }
+
+    @JsonProperty(value = "productSpecCharacteristic")
+    public List<ProductSpecCharacteristic> productSpecCharacteristicToJson() {
+        return (productSpecCharacteristic != null && productSpecCharacteristic.size() > 0) ? productSpecCharacteristic : null;
     }
 
     @Override
@@ -412,6 +448,16 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         return logger;
     }
 
+    @Override
+    @JsonIgnore
+    public void setCreateDefaults() {
+        super.setCreateDefaults();
+
+        if (isBundle == null) {
+            isBundle = false;
+        }
+    }
+
     public void edit(ProductSpecification input) {
         if (input == null || input == this) {
             return;
@@ -465,6 +511,19 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
             return false;
         }
 
+        if (this.isBundle == Boolean.TRUE) {
+            if (Utilities.hasContents(this.bundledProductSpecification) == false) {
+                logger.log(Level.FINE, " invalid: bundledProductSpecification must be specified when isBundle is true");
+                return false;
+            }
+        }
+        else {
+            if (Utilities.hasContents(this.bundledProductSpecification) == true) {
+                logger.log(Level.FINE, " invalid: bundledProductSpecification must not be specififed when isBundle is false");
+                return false;
+            }
+        }
+
         return true;
     }
 
@@ -489,8 +548,8 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         productSpecification.relatedParty = new ArrayList<RelatedParty>();
         productSpecification.relatedParty.add(RelatedParty.createProto());
 
-        productSpecification.bundledProductSpecification = new ArrayList<CatalogReference>();
-        productSpecification.bundledProductSpecification.add(CatalogReference.createProto());
+        productSpecification.bundledProductSpecification = new ArrayList<BundledProductReference>();
+        productSpecification.bundledProductSpecification.add(BundledProductReference.createProto());
 
         productSpecification.productSpecificationRelationship = new ArrayList<SpecificationRelationship>();
         productSpecification.productSpecificationRelationship.add(SpecificationRelationship.createProto());

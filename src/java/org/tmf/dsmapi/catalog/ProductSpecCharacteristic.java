@@ -138,6 +138,16 @@ public class ProductSpecCharacteristic implements Serializable {
         return (validFor != null && validFor.isEmpty() == false) ? validFor : null;
     }
 
+    @JsonProperty(value = "productSpecCharRelationship")
+    public List<SpecificationCharacteristicRelationship> productSpecCharRelationshipToJson() {
+        return (productSpecCharRelationship != null && productSpecCharRelationship.size() > 0) ? productSpecCharRelationship : null;
+    }
+
+    @JsonProperty(value = "productSpecCharacteristicValue")
+    public List<SpecificationCharacteristicValue> productSpecCharacteristicValueToJson() {
+        return (productSpecCharacteristicValue != null && productSpecCharacteristicValue.size() > 0) ? productSpecCharacteristicValue : null;
+    }
+
     @Override
     public int hashCode() {
         int hash = 5;
