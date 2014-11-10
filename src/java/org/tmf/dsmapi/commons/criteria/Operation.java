@@ -14,7 +14,7 @@ import org.tmf.dsmapi.commons.exceptions.ExceptionType;
  *
  */
 public class Operation {
-    private static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
+    private static final SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssX");
 
     private Operator operator;
     private HashSet<OperationValue> values = new HashSet<OperationValue>();
@@ -65,7 +65,7 @@ public class Operation {
     public void normalizeValuesAsDate() throws BadUsageException {
         for (OperationValue value : values) {
             try {
-                value.setObjectValue(formatter.parse(value.getInputValue()));
+                value.setObjectValue(dateFormatter.parse(value.getInputValue()));
             }
             catch (Exception ex) {
                 System.err.println ("Failed to parse '" + value.getInputValue() + "' as Date");
