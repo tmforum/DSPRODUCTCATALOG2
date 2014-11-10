@@ -322,6 +322,7 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
 
         if (input.getVersion() == null) {
             input.setVersion(entity.getVersion());
+            input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
             manager.edit(input);
             return Response.status(Response.Status.CREATED).entity(entity).build();
         }
