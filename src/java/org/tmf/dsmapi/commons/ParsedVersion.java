@@ -16,6 +16,9 @@ public class ParsedVersion implements Serializable {
     private static final int MAX_MAJOR_VERSION = 999999;
     private static final DecimalFormat majorVersionInternalFormat = new DecimalFormat("000000");
 
+    private static final int MAX_MINOR_VERSION = 999;
+    private static final DecimalFormat minorVersionInternalFormat = new DecimalFormat("000");
+
     private Integer majorVersion;
     private Integer minorVersion;
 
@@ -42,6 +45,10 @@ public class ParsedVersion implements Serializable {
 
         if (majorVersion > MAX_MAJOR_VERSION) {
             throw new IllegalArgumentException ("Major version, " + majorVersion + ", is too large; maximum value=" + MAX_MAJOR_VERSION);
+        }
+
+        if (minorVersion > MAX_MINOR_VERSION) {
+            throw new IllegalArgumentException ("Minor version, " + minorVersion + ", is too large; maximum value=" + MAX_MINOR_VERSION);
         }
 
         this.externalView = createExternalView_();
@@ -148,7 +155,7 @@ public class ParsedVersion implements Serializable {
     }
 
     private String createInternalView_() {
-        return (majorVersionInternalFormat.format(majorVersion) + "." + minorVersion);
+        return (majorVersionInternalFormat.format(majorVersion) + "." + minorVersionInternalFormat.format(minorVersion));
     }
 
     private String createExternalView_() {
@@ -176,12 +183,6 @@ public class ParsedVersion implements Serializable {
             minorVersion = Integer.parseInt(parts [1]);
         }
         catch (Exception ex) {
-            initialize_();
-            return false;
-        }
-
-        // prevent whitespace & leading zeros in the minor version
-        if (String.valueOf(minorVersion).equals(parts [1]) == false) {
             initialize_();
             return false;
         }
