@@ -119,6 +119,10 @@ public class LeafNode extends AbstractNode {
                         break;
                     }
 
+                    if (Date.class.isAssignableFrom(dataClass) == true) {
+                        break;
+                    }
+                    
                     throw new BadUsageException(ExceptionType.BAD_USAGE_OPERATOR, operator.getValue() + " operator incompatible with field");
                 }
 
