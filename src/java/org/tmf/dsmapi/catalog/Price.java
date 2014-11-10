@@ -2,7 +2,6 @@ package org.tmf.dsmapi.catalog;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.logging.Logger;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
@@ -24,8 +23,6 @@ import org.tmf.dsmapi.commons.Utilities;
 @Embeddable
 public class Price implements Serializable {
     private final static long serialVersionUID = 1L;
-
-    private final static Logger logger = Logger.getLogger(ProductOfferingPrice.class.getName());
 
     @Column(name = "TAX_INCLUDED_AMOUNT", nullable = true)
     BigDecimal taxIncludedAmount;
