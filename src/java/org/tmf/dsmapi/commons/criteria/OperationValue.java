@@ -34,4 +34,8 @@ public class OperationValue {
         return (objectValue != null) ? objectValue : inputValue;
     }
 
+    @Override
+    public String toString() {
+        return "OperationValue{" + "inputValue=" + inputValue + ", objectValue=" + objectValue + '}';
+    }
 }
