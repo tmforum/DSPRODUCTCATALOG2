@@ -16,6 +16,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.tmf.dsmapi.commons.Utilities;
 import org.tmf.dsmapi.commons.annotation.EntityReferenceProperty;
@@ -209,7 +210,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
     @EntityReferenceProperty(classId=ProductOffering.class)
-    private List<CatalogReference> bundledProductOffering;
+    private List<BundledProductReference> bundledProductOffering;
 
     @Embedded
     private ServiceLevelAgreement serviceLevelAgreement;
@@ -255,49 +256,16 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
     private List<ProductOfferingTerm> productOfferingTerm;
-    /*
-     *     "productOfferingPrice": [
-     *         {
-     *             "id": "15",
-     *             "href": "http://serverlocation:port/catalogManagement/productOfferingPrice/15",
-     *             "name": "Monthly Price",
-     *             "description": "monthlyprice",
-     *             "validFor": {
-     *                 "startDateTime": "2013-04-19T16:42:23-04:00",
-     *                 "endDateTime": "2013-06-19T00:00:00-04:00"
-     *             },
-     *             "priceType": "recurring",
-     *             "unitOfMeasure": "",
-     *             "price": {
-     *                 "taxIncludedAmount": "12.00",
-     *                 "dutyFreeAmount": "10.00",
-     *                 "taxRate": "20.00",
-     *                 "currencyCode": "EUR"
-     *             },
-     *             "recurringChargePeriod": "monthly"
-     *         },
-     *         {
-     *             "id": "17",
-     *             "href": "http://serverlocation:port/catalogManagement/productOfferingPrice/17",
-     *             "name": "Usage Price",
-     *             "description": "usageprice",
-     *             "validFor": {
-     *                 "startDateTime": "2013-04-19T16:42:23-04:00",
-     *                 "endDateTime": "2013-06-19T00:00:00-04:00"
-     *             },
-     *             "priceType": "usage",
-     *             "unitOfMeasure": "second",
-     *             "price": {
-     *                 "taxIncludedAmount": "12.00",
-     *                 "dutyFreeAmount": "10.00",
-     *                 "taxRate": "20.00",
-     *                 "currencyCode": "EUR"
-     *             },
-     *             "recurringChargePeriod": ""
-     *         }
-     *     ]
-     * }
-     */
+
+    @Embedded
+    @ElementCollection
+    @CollectionTable(name = "CRI_PRODUCT_OFFER_R_PRICE", joinColumns = {
+        @JoinColumn(name = "CATALOG_ID", referencedColumnName = "CATALOG_ID"),
+        @JoinColumn(name = "CATALOG_VERSION", referencedColumnName = "CATALOG_VERSION"),
+        @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
+        @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
+    })
+    private List<ProductOfferingEmbeddedPriceData> productOfferingPrice;
 
     public ProductOffering() {
     }
@@ -334,11 +302,11 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         this.place = place;
     }
 
-    public List<CatalogReference> getBundledProductOffering() {
+    public List<BundledProductReference> getBundledProductOffering() {
         return bundledProductOffering;
     }
 
-    public void setBundledProductOffering(List<CatalogReference> bundledProductOffering) {
+    public void setBundledProductOffering(List<BundledProductReference> bundledProductOffering) {
         this.bundledProductOffering = bundledProductOffering;
     }
 
@@ -382,6 +350,59 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         this.productOfferingTerm = productOfferingTerm;
     }
 
+    public List<ProductOfferingEmbeddedPriceData> getProductOfferingPrice() {
+        return productOfferingPrice;
+    }
+
+    public void setProductOfferingPrice(List<ProductOfferingEmbeddedPriceData> productOfferingPrice) {
+        this.productOfferingPrice = productOfferingPrice;
+    }
+
+    @JsonProperty(value = "category")
+    public List<CatalogReference> categoryToJson() {
+        return (category != null && category.size() > 0) ? category : null;
+    }
+
+    @JsonProperty(value = "channel")
+    public List<Channel> channelToJson() {
+        return (channel != null && channel.size() > 0) ? channel : null;
+    }
+
+    @JsonProperty(value = "place")
+    public List<Place> placeToJson() {
+        return (place != null && place.size() > 0) ? place : null;
+    }
+
+    @JsonProperty(value = "bundledProductOffering")
+    public List<BundledProductReference> bundledProductOfferingToJson() {
+        return (bundledProductOffering != null && bundledProductOffering.size() > 0) ? bundledProductOffering : null;
+    }
+
+    @JsonProperty(value = "productSpecification")
+    public List<CatalogReference> productSpecificationToJson() {
+        return (productSpecification != null && productSpecification.size() > 0) ? productSpecification : null;
+    }
+
+    @JsonProperty(value = "serviceCandidate")
+    public List<CatalogReference> serviceCandidateToJson() {
+        return (serviceCandidate != null && serviceCandidate.size() > 0) ? serviceCandidate : null;
+    }
+
+    @JsonProperty(value = "resourceCandidate")
+    public List<CatalogReference> resourceCandidateToJson() {
+        return (resourceCandidate != null && resourceCandidate.size() > 0) ? resourceCandidate : null;
+    }
+
+    @JsonProperty(value = "productOfferingTerm")
+    public List<ProductOfferingTerm> productOfferingTermToJson() {
+        return (productOfferingTerm != null && productOfferingTerm.size() > 0) ? productOfferingTerm : null;
+    }
+
+    @JsonProperty(value = "productOfferingPrice")
+    public List<ProductOfferingEmbeddedPriceData> productOfferingPriceToJson() {
+        return (productOfferingPrice != null && productOfferingPrice.size() > 0) ? productOfferingPrice : null;
+    }
+
     @Override
     public int hashCode() {
         int hash = 5;
@@ -398,6 +419,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         hash = 73 * hash + (this.serviceCandidate != null ? this.serviceCandidate.hashCode() : 0);
         hash = 73 * hash + (this.resourceCandidate != null ? this.resourceCandidate.hashCode() : 0);
         hash = 73 * hash + (this.productOfferingTerm != null ? this.productOfferingTerm.hashCode() : 0);
+        hash = 73 * hash + (this.productOfferingPrice != null ? this.productOfferingPrice.hashCode() : 0);
 
         return hash;
     }
@@ -449,18 +471,32 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
             return false;
         }
 
+        if (Utilities.areEqual(this.productOfferingPrice, other.productOfferingPrice) == false) {
+            return false;
+        }
+
         return true;
     }
 
     @Override
     public String toString() {
-        return "ProductOffering{<" + super.toString() + ">, isBundle=" + isBundle + ", category=" + category + ", channel=" + channel + ", place=" + place + ", bundledProductOffering=" + bundledProductOffering + ", serviceLevelAgreement=" + serviceLevelAgreement + ", productSpecification=" + productSpecification + ", serviceCandidate=" + serviceCandidate + ", resourceCandidate=" + resourceCandidate + ", productOfferingTerm=" + productOfferingTerm + '}';
+        return "ProductOffering{<" + super.toString() + ">, isBundle=" + isBundle + ", category=" + category + ", channel=" + channel + ", place=" + place + ", bundledProductOffering=" + bundledProductOffering + ", serviceLevelAgreement=" + serviceLevelAgreement + ", productSpecification=" + productSpecification + ", serviceCandidate=" + serviceCandidate + ", resourceCandidate=" + resourceCandidate + ", productOfferingTerm=" + productOfferingTerm + ", productOfferingPrice=" + productOfferingPrice + '}';
     }
 
     @Override
     @JsonIgnore
     public Logger getLogger() {
         return logger;
+    }
+
+    @Override
+    @JsonIgnore
+    public void setCreateDefaults() {
+        super.setCreateDefaults();
+
+        if (isBundle == null) {
+            isBundle = false;
+        }
     }
 
     public void edit(ProductOffering input) {
@@ -509,6 +545,10 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         if (this.productOfferingTerm == null) {
             this.productOfferingTerm = input.productOfferingTerm;
         }
+
+        if (this.productOfferingPrice == null) {
+            this.productOfferingPrice = input.productOfferingPrice;
+        }
     }
 
     @Override
@@ -518,6 +558,19 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
 
         if (super.isValid() == false) {
             return false;
+        }
+
+        if (this.isBundle == Boolean.TRUE) {
+            if (Utilities.hasContents(this.bundledProductOffering) == false) {
+                logger.log(Level.FINE, " invalid: bundledProductOffering must be specified when isBundle is true");
+                return false;
+            }
+        }
+        else {
+            if (Utilities.hasContents(this.bundledProductOffering) == true) {
+                logger.log(Level.FINE, " invalid: bundledProductOffering must not be specififed when isBundle is false");
+                return false;
+            }
         }
 
         return true;
@@ -546,8 +599,8 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         productOffering.place = new ArrayList<Place>();
         productOffering.place.add(Place.createProto());
 
-        productOffering.bundledProductOffering = new ArrayList<CatalogReference>();
-        productOffering.bundledProductOffering.add(CatalogReference.createProto());
+        productOffering.bundledProductOffering = new ArrayList<BundledProductReference>();
+        productOffering.bundledProductOffering.add(BundledProductReference.createProto());
 
         productOffering.serviceLevelAgreement = ServiceLevelAgreement.createProto();
 
@@ -562,6 +615,9 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
 
         productOffering.productOfferingTerm = new ArrayList<ProductOfferingTerm>();
         productOffering.productOfferingTerm.add(ProductOfferingTerm.createProto());
+
+        productOffering.productOfferingPrice = new ArrayList<ProductOfferingEmbeddedPriceData>();
+        productOffering.productOfferingPrice.add(ProductOfferingEmbeddedPriceData.createProto());
 
         return productOffering;
     }
