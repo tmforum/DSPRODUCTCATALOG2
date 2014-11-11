@@ -108,13 +108,14 @@ public class FieldSelector {
     private boolean processComplexFields (Object output, Object input, PathNames pathNames, ClassFields classFields, SetMethods setMethods) {
         boolean outputChanged = false;
         for (String rootName : pathNames.getRootNames()) {
-            Object fieldValue = getFieldValue (input, rootName);
+            String internalRootName = classFields.getInternalFieldName(rootName);
+            Object fieldValue = getFieldValue (input, internalRootName);
             if (fieldValue == null) {
                 continue;
             }
 
             Set<String> childPaths = pathNames.getPathsForRootName(rootName);
-            Method setMethod = setMethods.get(classFields.getInternalFieldName(rootName));
+            Method setMethod = setMethods.get(internalRootName);
             if (setMethod == null) {
                 continue;
             }
@@ -208,6 +209,11 @@ public class FieldSelector {
 
         public Set<String> getPathsForRootName(String rootName){
             return complexPaths.get(rootName);
+        }
+
+        @Override
+        public String toString() {
+            return "PathNames{" + "simplePaths=" + simplePaths + ", complexPaths=" + complexPaths + '}';
         }
 
         private void buildSimplePaths(Set<String> paths) {
