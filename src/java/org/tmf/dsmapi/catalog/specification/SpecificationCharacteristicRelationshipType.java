@@ -1,7 +1,9 @@
 package org.tmf.dsmapi.catalog.specification;
 
+import java.util.EnumSet;
 import org.codehaus.jackson.annotate.JsonCreator;
 import org.codehaus.jackson.annotate.JsonValue;
+import org.tmf.dsmapi.commons.exceptions.InvalidEnumeratedValueException;
 
 /**
  *
@@ -31,15 +33,27 @@ public enum SpecificationCharacteristicRelationshipType {
         return this.value;
     }
 
-    @JsonCreator
     public static SpecificationCharacteristicRelationshipType find(String value) {
-        for (SpecificationCharacteristicRelationshipType specificationCharacteristicRelationshipType : values ()) {
-            if (specificationCharacteristicRelationshipType.value.equals (value)) {
-                return (specificationCharacteristicRelationshipType);
+        for (SpecificationCharacteristicRelationshipType specificationCharacteristicRelationshipType : values()) {
+            if (specificationCharacteristicRelationshipType.value.equals(value)) {
+                return specificationCharacteristicRelationshipType;
             }
         }
 
-        return (null);
+        return null;
     }
 
+    @JsonCreator
+    public static SpecificationCharacteristicRelationshipType fromJson(String value) throws InvalidEnumeratedValueException {
+        if (value == null) {
+            return null;
+        }
+
+        SpecificationCharacteristicRelationshipType enumeratedValue = SpecificationCharacteristicRelationshipType.find(value);
+        if (enumeratedValue != null) {
+            return enumeratedValue;
+        }
+
+        throw new InvalidEnumeratedValueException(value, EnumSet.allOf(SpecificationCharacteristicRelationshipType.class));
+    }
 }

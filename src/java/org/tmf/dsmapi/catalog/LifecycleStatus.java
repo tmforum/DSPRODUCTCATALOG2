@@ -4,6 +4,7 @@ import java.util.EnumSet;
 import java.util.Set;
 import org.codehaus.jackson.annotate.JsonCreator;
 import org.codehaus.jackson.annotate.JsonValue;
+import org.tmf.dsmapi.commons.exceptions.InvalidEnumeratedValueException;
 
 /**
  *
@@ -157,15 +158,27 @@ public enum LifecycleStatus {
         }
     }
 
-    @JsonCreator
     public static LifecycleStatus find(String value) {
-        for (LifecycleStatus lifecycleStatus : values ()) {
-            if (lifecycleStatus.value.equals (value)) {
-                return (lifecycleStatus);
+        for (LifecycleStatus lifecycleStatus : values()) {
+            if (lifecycleStatus.value.equals(value)) {
+                return lifecycleStatus;
             }
         }
 
-        throw new IllegalArgumentException ("'" + value + "' is not a valid LifecycleStatus value; valid values are: " + EnumSet.allOf(LifecycleStatus.class));
+        return null;
     }
 
+    @JsonCreator
+    public static LifecycleStatus fromJson(String value) throws InvalidEnumeratedValueException {
+        if (value == null) {
+            return null;
+        }
+
+        LifecycleStatus enumeratedValue = LifecycleStatus.find(value);
+        if (enumeratedValue != null) {
+            return enumeratedValue;
+        }
+
+        throw new InvalidEnumeratedValueException(value, EnumSet.allOf(LifecycleStatus.class));
+    }
 }

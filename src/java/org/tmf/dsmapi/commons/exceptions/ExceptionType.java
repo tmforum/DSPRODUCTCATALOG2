@@ -12,7 +12,9 @@ public enum ExceptionType {
     ILLEGAL_LIFECYCLE_STATUS_INIT(new ExceptionBean("4021", "Bad initial status")),
     ILLEGAL_LIFECYCLE_STATUS_TRANSITION(new ExceptionBean("4022", "Invalid status transition")),
     ILLEGAL_LIFECYCLE_STATUS_FINAL(new ExceptionBean("4023", "Final status; No transitons allowed")),
+    BAD_ENUMERATION_VALUE(new ExceptionBean("4024", "Unrecognized value")),
     UNKNOWN_RESOURCE(new ExceptionBean("4041", "Unknown resource"));
+
     private ExceptionBean info;
 
     ExceptionType(ExceptionBean info) {

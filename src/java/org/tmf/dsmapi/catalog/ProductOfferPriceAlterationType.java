@@ -1,7 +1,9 @@
 package org.tmf.dsmapi.catalog;
 
+import java.util.EnumSet;
 import org.codehaus.jackson.annotate.JsonCreator;
 import org.codehaus.jackson.annotate.JsonValue;
+import org.tmf.dsmapi.commons.exceptions.InvalidEnumeratedValueException;
 
 /**
  *
@@ -29,15 +31,27 @@ public enum ProductOfferPriceAlterationType {
         return this.value;
     }
 
-    @JsonCreator
     public static ProductOfferPriceAlterationType find(String value) {
-        for (ProductOfferPriceAlterationType productOfferingPriceAlterationType : values ()) {
-            if (productOfferingPriceAlterationType.value.equals (value)) {
-                return (productOfferingPriceAlterationType);
+        for (ProductOfferPriceAlterationType productOfferingPriceAlterationType : values()) {
+            if (productOfferingPriceAlterationType.value.equals(value)) {
+                return productOfferingPriceAlterationType;
             }
         }
 
-        return (null);
+        return null;
     }
 
+    @JsonCreator
+    public static ProductOfferPriceAlterationType fromJson(String value) throws InvalidEnumeratedValueException {
+        if (value == null) {
+            return null;
+        }
+
+        ProductOfferPriceAlterationType enumeratedValue = ProductOfferPriceAlterationType.find(value);
+        if (enumeratedValue != null) {
+            return enumeratedValue;
+        }
+
+        throw new InvalidEnumeratedValueException(value, EnumSet.allOf(ProductOfferPriceAlterationType.class));
+    }
 }
