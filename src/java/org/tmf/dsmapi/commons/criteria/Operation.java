@@ -52,7 +52,7 @@ public class Operation {
 
     public void normalizeValuesAsNumber() throws BadUsageException {
         for (OperationValue value : values) {
-            try {
+         try {
                 value.setObjectValue((Comparable) NumberFormat.getInstance().parse(value.getInputValue()));
             }
             catch (Exception ex) {
