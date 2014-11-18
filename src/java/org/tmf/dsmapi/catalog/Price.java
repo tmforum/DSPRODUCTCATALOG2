@@ -4,7 +4,9 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.tmf.dsmapi.commons.OutputUtilities;
 import org.tmf.dsmapi.commons.Utilities;
 
 /**
@@ -69,6 +71,21 @@ public class Price implements Serializable {
 
     public void setCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
+    }
+
+    @JsonProperty(value = "taxIncludedAmount")
+    public String taxIncludedAmountToJson() {
+        return OutputUtilities.formatCurrency(taxIncludedAmount);
+    }
+
+    @JsonProperty(value = "dutyFreeAmount")
+    public String dutyFreeAmountToJson() {
+        return OutputUtilities.formatCurrency(dutyFreeAmount);
+    }
+
+    @JsonProperty(value = "taxRate")
+    public String taxRateToJson() {
+        return OutputUtilities.formatCurrency(taxRate);
     }
 
     @Override
