@@ -447,6 +447,24 @@ public class ServiceSpecification extends AbstractCatalogEntity implements Seria
             return false;
         }
 
+        if (validateCharacteristics() == false) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public boolean validateCharacteristics() {
+        if (Utilities.hasContents(this.serviceSpecCharacteristic) == false) {
+            return true;
+        }
+
+        for (ServiceSpecCharacteristic characteristic : this.serviceSpecCharacteristic) {
+            if (characteristic.isValid() == false) {
+                return false;
+            }
+        }
+
         return true;
     }
 

@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Embeddable;
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.tmf.dsmapi.catalog.specification.CharacteristicValueType;
@@ -211,6 +212,34 @@ public class ProductSpecCharacteristic implements Serializable {
         return "ProductSpecCharacteristic{" + "id=" + id + ", name=" + name + ", description=" + description + ", valueType=" + valueType + ", configurable=" + configurable + ", validFor=" + validFor + ", productSpecCharRelationship=" + productSpecCharRelationship + ", productSpecCharacteristicValue=" + productSpecCharacteristicValue + '}';
     }
 
+    @JsonIgnore
+    public boolean isValid() {
+        if (validateCharacteristicValues() == false) {
+            return false;
+        }
+
+        return true;
+    }
+
+    private boolean validateCharacteristicValues() {
+        if (Utilities.hasContents(this.productSpecCharacteristicValue) == false) {
+            return true;
+        }
+
+        int defaultCount = 0;
+        for (SpecificationCharacteristicValue characteristicValue : this.productSpecCharacteristicValue) {
+            if (characteristicValue.getDefaultValue() == Boolean.TRUE) {
+                defaultCount++;
+            }
+        }
+
+        if (defaultCount > 1) {
+            return false;
+        }
+
+        return true;
+    }
+    
     public static ProductSpecCharacteristic createProto() {
         ProductSpecCharacteristic productSpecCharacteristic = new ProductSpecCharacteristic();
 

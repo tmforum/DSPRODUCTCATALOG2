@@ -350,6 +350,24 @@ public class ResourceSpecification extends AbstractCatalogEntity implements Seri
             return false;
         }
 
+        if (validateCharacteristics() == false) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public boolean validateCharacteristics() {
+        if (Utilities.hasContents(this.resourceSpecCharacteristic) == false) {
+            return true;
+        }
+
+        for (ResourceSpecCharacteristic characteristic : this.resourceSpecCharacteristic) {
+            if (characteristic.isValid() == false) {
+                return false;
+            }
+        }
+
         return true;
     }
 

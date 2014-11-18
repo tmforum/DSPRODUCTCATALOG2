@@ -511,6 +511,18 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
             return false;
         }
 
+        if (validateIsBundle() == false) {
+            return false;
+        }
+
+        if (validateCharacteristics() == false) {
+            return false;
+        }
+
+        return true;
+    }
+
+    private boolean validateIsBundle() {
         if (this.isBundle == Boolean.TRUE) {
             if (Utilities.hasContents(this.bundledProductSpecification) == false) {
                 logger.log(Level.FINE, " invalid: bundledProductSpecification must be specified when isBundle is true");
@@ -524,6 +536,20 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
             }
         }
 
+        return true;
+    }
+
+    public boolean validateCharacteristics() {
+        if (Utilities.hasContents(this.productSpecCharacteristic) == false) {
+            return true;
+        }
+
+        for (ProductSpecCharacteristic characteristic : this.productSpecCharacteristic) {
+            if (characteristic.isValid() == false) {
+                return false;
+            }
+        }
+        
         return true;
     }
 

@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Embeddable;
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.tmf.dsmapi.catalog.specification.CharacteristicValueType;
@@ -209,6 +210,34 @@ public class ResourceSpecCharacteristic implements Serializable {
     @Override
     public String toString() {
         return "ResourceSpecCharacteristic{" + "id=" + id + ", name=" + name + ", description=" + description + ", validFor=" + validFor + ", valueType=" + valueType + ", configurable=" + configurable + ", resourceSpecCharRelationship=" + resourceSpecCharRelationship + ", resourceSpecCharacteristicValue=" + resourceSpecCharacteristicValue + '}';
+    }
+
+    @JsonIgnore
+    public boolean isValid() {
+        if (validateCharacteristicValues() == false) {
+            return false;
+        }
+
+        return true;
+    }
+
+    private boolean validateCharacteristicValues() {
+        if (Utilities.hasContents(this.resourceSpecCharacteristicValue) == false) {
+            return true;
+        }
+
+        int defaultCount = 0;
+        for (SpecificationCharacteristicValue characteristicValue : this.resourceSpecCharacteristicValue) {
+            if (characteristicValue.getDefaultValue() == Boolean.TRUE) {
+                defaultCount++;
+            }
+        }
+
+        if (defaultCount > 1) {
+            return false;
+        }
+
+        return true;
     }
 
     public static ResourceSpecCharacteristic createProto() {
