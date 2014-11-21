@@ -1,7 +1,9 @@
-package org.tmf.dsmapi.commons.exceptions;
+package org.tmf.dsmapi.catalog.exception;
 
 import java.util.Set;
 import org.tmf.dsmapi.catalog.entity.LifecycleStatus;
+import org.tmf.dsmapi.commons.exceptions.ExceptionType;
+import org.tmf.dsmapi.commons.exceptions.FunctionalException;
 
 /**
  *

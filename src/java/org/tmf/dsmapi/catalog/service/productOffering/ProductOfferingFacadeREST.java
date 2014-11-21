@@ -22,12 +22,12 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import org.tmf.dsmapi.catalog.entity.LifecycleStatus;
 import org.tmf.dsmapi.catalog.entity.product.ProductOffering;
+import org.tmf.dsmapi.catalog.exception.IllegalLifecycleStatusException;
 import org.tmf.dsmapi.catalog.service.AbstractFacadeREST;
 import org.tmf.dsmapi.catalog.service.ServiceConstants;
 import org.tmf.dsmapi.commons.ParsedVersion;
 import org.tmf.dsmapi.commons.QueryParameterParser;
 import org.tmf.dsmapi.commons.exceptions.BadUsageException;
-import org.tmf.dsmapi.commons.exceptions.IllegalLifecycleStatusException;
 import org.tmf.dsmapi.commons.jaxrs.PATCH;
 
 /**
