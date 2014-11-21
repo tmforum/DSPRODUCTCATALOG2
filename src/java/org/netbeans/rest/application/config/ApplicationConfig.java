@@ -21,33 +21,32 @@ public class ApplicationConfig extends Application {
      */
     private Set<Class<?>> getRestResourceClasses() {
         Set<Class<?>> resources = new java.util.HashSet<Class<?>>();
-        resources.add(org.tmf.dsmapi.catalog.service.BadUsageExceptionMapper.class);
-        resources.add(org.tmf.dsmapi.catalog.service.CatalogFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.CategoryFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.CategoryInCatalogIdFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.CategoryInCatalogIdVersionFacadeREST.class);
         resources.add(org.tmf.dsmapi.catalog.service.JacksonConfigurator.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ProductOfferingFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ProductOfferingInCatalogIdFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ProductOfferingInCatalogIdVersionFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ProductOfferingPriceFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ProductOfferingPriceInCatalogIdFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ProductOfferingPriceInCatalogIdVersionFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ProductSpecificationFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ProductSpecificationInCatalogIdFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ProductSpecificationInCatalogIdVersionFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ResourceCandidateFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ResourceCandidateInCatalogIdFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ResourceCandidateInCatalogIdVersionFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ResourceSpecificationFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ResourceSpecificationInCatalogIdFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ResourceSpecificationInCatalogIdVersionFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ServiceCandidateFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ServiceCandidateInCatalogIdFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ServiceCandidateInCatalogIdVersionFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ServiceSpecificationFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ServiceSpecificationInCatalogIdFacadeREST.class);
-        resources.add(org.tmf.dsmapi.catalog.service.ServiceSpecificationInCatalogIdVersionFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.catalog.CatalogFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.category.CategoryFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.category.CategoryInCatalogIdFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.category.CategoryInCatalogIdVersionFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.productOffering.ProductOfferingFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.productOffering.ProductOfferingInCatalogIdFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.productOffering.ProductOfferingInCatalogIdVersionFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.productOfferingPrice.ProductOfferingPriceFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.productOfferingPrice.ProductOfferingPriceInCatalogIdFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.productOfferingPrice.ProductOfferingPriceInCatalogIdVersionFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.productSpecification.ProductSpecificationFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.productSpecification.ProductSpecificationInCatalogIdFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.productSpecification.ProductSpecificationInCatalogIdVersionFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.resourceCandidate.ResourceCandidateFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.resourceCandidate.ResourceCandidateInCatalogIdFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.resourceCandidate.ResourceCandidateInCatalogIdVersionFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.resourceSpecification.ResourceSpecificationFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.resourceSpecification.ResourceSpecificationInCatalogIdFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.resourceSpecification.ResourceSpecificationInCatalogIdVersionFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.serviceCandidate.ServiceCandidateFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.serviceCandidate.ServiceCandidateInCatalogIdFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.serviceCandidate.ServiceCandidateInCatalogIdVersionFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.serviceSpecification.ServiceSpecificationFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.serviceSpecification.ServiceSpecificationInCatalogIdFacadeREST.class);
+        resources.add(org.tmf.dsmapi.catalog.service.serviceSpecification.ServiceSpecificationInCatalogIdVersionFacadeREST.class);
         // following code can be used to customize Jersey 1.x JSON provider:
         try {
             Class jacksonProvider = Class.forName("org.codehaus.jackson.jaxrs.JacksonJsonProvider");

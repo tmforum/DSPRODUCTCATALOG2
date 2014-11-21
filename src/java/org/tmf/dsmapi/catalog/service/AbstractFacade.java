@@ -20,14 +20,14 @@ import javax.persistence.criteria.Root;
 import javax.ws.rs.core.MultivaluedMap;
 import org.tmf.dsmapi.commons.ClassFieldsCache;
 import org.tmf.dsmapi.commons.ParsedVersion;
-import org.tmf.dsmapi.commons.exceptions.BadUsageException;
-import org.tmf.dsmapi.commons.exceptions.ExceptionType;
 import org.tmf.dsmapi.commons.criteria.Criteria;
 import org.tmf.dsmapi.commons.criteria.LeafNode;
 import org.tmf.dsmapi.commons.criteria.NodeNames;
 import org.tmf.dsmapi.commons.criteria.Operation;
 import org.tmf.dsmapi.commons.criteria.OperationValue;
 import org.tmf.dsmapi.commons.criteria.Operator;
+import org.tmf.dsmapi.commons.exceptions.BadUsageException;
+import org.tmf.dsmapi.commons.exceptions.ExceptionType;
 
 /**
  *

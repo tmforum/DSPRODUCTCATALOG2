@@ -1,7 +1,6 @@
 package org.tmf.dsmapi.commons.exceptions;
 
 import java.util.EnumSet;
-import java.util.Set;
 
 /**
  *
