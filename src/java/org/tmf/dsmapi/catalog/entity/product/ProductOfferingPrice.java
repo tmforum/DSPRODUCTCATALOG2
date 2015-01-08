@@ -1,35 +1,23 @@
 package org.tmf.dsmapi.catalog.entity.product;
 
 import java.io.Serializable;
-import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.IdClass;
-import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlRootElement;
-import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
-import org.tmf.dsmapi.catalog.entity.AbstractCatalogEntity;
-import org.tmf.dsmapi.catalog.entity.CatalogEntityId;
-import org.tmf.dsmapi.catalog.entity.LifecycleStatus;
 import org.tmf.dsmapi.catalog.entity.TimeRange;
 import org.tmf.dsmapi.commons.Utilities;
 
 /**
  *
- * @author pierregauthier
+ * @author bahman.barzideh
  *
  * {
- *     "id": "15",
- *     "version": "1.50",
- *     "href": "http://serverlocation:port/catalogManagement/productOfferingPrice/15",
- *     "name": "MonthlyPrice",
- *     "description": "Monthly Price",
- *     "lastUpdate": "2013-04-19T16:42:23-04:00",
- *     "lifecycleStatus": "Active",
+ *     "name": "Monthly Price",
+ *     "description": "monthlyprice",
  *     "validFor": {
  *         "startDateTime": "2013-04-19T16:42:23-04:00",
  *         "endDateTime": "2013-06-19T00:00:00-04:00"
@@ -40,39 +28,46 @@ import org.tmf.dsmapi.commons.Utilities;
  *         "taxIncludedAmount": "12.00",
  *         "dutyFreeAmount": "10.00",
  *         "taxRate": "20.00",
- *         "currencyCode": "EUR"
+ *         "currencyCode": "EUR",
+ *         "percentage": 0
  *     },
- *     "recurringChargePeriod": "month",
- *     "productOfferPriceAlteration": {
- *         "id": "15",
- *         "href": " http://serverlocation:port/catalogManagement/productOfferPriceAlteration/15",
- *         "name": "Shipping Discount",
- *         "description": "One time shipping discount",
- *         "validFor": {
- *             "startDateTime": "2013-04-19T16:42:23-04:00",
- *             "endDateTime": ""
- *         },
- *         "priceType": "One Time discount",
- *         "unitOfMeasure": "",
- *         "price": {
- *             "percentage": "100%"
- *         },
- *         "recurringChargePeriod": "",
- *         "applicationDuration": "",
- *         "priceCondition": "apply if total amount of the order is greater than 300.00"
- *     }
+ *     "recurringChargePeriod": "monthly",
+ *      "productOfferPriceAlteration": {
+ *          "name": "Shipping Discount",
+ *          "description": "One time shipping discount",
+ *          "validFor": {
+ *              "startDateTime": "2013-04-19T16:42:23.0Z"
+ *          },
+ *          "priceType": "One Time discount",
+ *          "unitOfMeasure": "",
+ *          "price": {
+ *              "percentage": 100
+ *          },
+ *          "recurringChargePeriod": "",
+ *          "priceCondition": "apply if total amount of the  order is greater than 300.00"
+ *      }
  * }
  *
  */
-@Entity
-@XmlRootElement
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
-@IdClass(CatalogEntityId.class)
-@Table(name = "CRI_PRODUCT_OFFERING_PRICE")
-public class ProductOfferingPrice extends AbstractCatalogEntity implements Serializable {
+@Embeddable
+public class ProductOfferingPrice implements Serializable {
     private final static long serialVersionUID = 1L;
 
-    private final static Logger logger = Logger.getLogger(ProductOfferingPrice.class.getName());
+    @Column(name = "PRICE_NAME", nullable = true)
+    @JsonProperty(value = "name")
+    private String priceName;
+
+    @Column(name = "PRICE_DESCRIPTION", nullable = true)
+    @JsonProperty(value = "description")
+    private String priceDescription;
+
+    @AttributeOverrides({
+        @AttributeOverride(name = "startDateTime", column = @Column(name = "PRICE_START_DATE_TIME")),
+        @AttributeOverride(name = "endDateTime", column = @Column(name = "PRICE_END_DATE_TIME"))
+    })
+    @JsonProperty(value = "validFor")
+    private TimeRange priceValidFor;
 
     @Column(name = "PRICE_TYPE", nullable = true)
     private ProductOfferingPriceType priceType;
@@ -88,8 +83,32 @@ public class ProductOfferingPrice extends AbstractCatalogEntity implements Seria
 
     @Embedded
     private ProductOfferPriceAlteration productOfferPriceAlteration;
-
+    
     public ProductOfferingPrice() {
+    }
+
+    public String getPriceName() {
+        return priceName;
+    }
+
+    public void setPriceName(String priceName) {
+        this.priceName = priceName;
+    }
+
+    public String getPriceDescription() {
+        return priceDescription;
+    }
+
+    public void setPriceDescription(String priceDescription) {
+        this.priceDescription = priceDescription;
+    }
+
+    public TimeRange getPriceValidFor() {
+        return priceValidFor;
+    }
+
+    public void setPriceValidFor(TimeRange priceValidFor) {
+        this.priceValidFor = priceValidFor;
     }
 
     public ProductOfferingPriceType getPriceType() {
@@ -136,24 +155,37 @@ public class ProductOfferingPrice extends AbstractCatalogEntity implements Seria
     public int hashCode() {
         int hash = 7;
 
-        hash = 59 * hash + super.hashCode();
-
-        hash = 59 * hash + (this.priceType != null ? this.priceType.hashCode() : 0);
-        hash = 59 * hash + (this.unitOfMeasure != null ? this.unitOfMeasure.hashCode() : 0);
-        hash = 59 * hash + (this.price != null ? this.price.hashCode() : 0);
-        hash = 59 * hash + (this.recurringChargePeriod != null ? this.recurringChargePeriod.hashCode() : 0);
-        hash = 59 * hash + (this.productOfferPriceAlteration != null ? this.productOfferPriceAlteration.hashCode() : 0);
+        hash = 37 * hash + (this.priceName != null ? this.priceName.hashCode() : 0);
+        hash = 37 * hash + (this.priceDescription != null ? this.priceDescription.hashCode() : 0);
+        hash = 37 * hash + (this.priceValidFor != null ? this.priceValidFor.hashCode() : 0);
+        hash = 37 * hash + (this.priceType != null ? this.priceType.hashCode() : 0);
+        hash = 37 * hash + (this.unitOfMeasure != null ? this.unitOfMeasure.hashCode() : 0);
+        hash = 37 * hash + (this.price != null ? this.price.hashCode() : 0);
+        hash = 37 * hash + (this.recurringChargePeriod != null ? this.recurringChargePeriod.hashCode() : 0);
+        hash = 37 * hash + (this.productOfferPriceAlteration != null ? this.productOfferPriceAlteration.hashCode() : 0);
 
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
-        if (object == null || getClass() != object.getClass() || super.equals(object) == false) {
+        if (object == null || getClass() != object.getClass()) {
             return false;
         }
 
         final ProductOfferingPrice other = (ProductOfferingPrice) object;
+        if (Utilities.areEqual(this.priceName, other.priceName) == false) {
+            return false;
+        }
+
+        if (Utilities.areEqual(this.priceDescription, other.priceDescription) == false) {
+            return false;
+        }
+
+        if (Utilities.areEqual(this.priceValidFor, other.priceValidFor) == false) {
+            return false;
+        }
+
         if (this.priceType != other.priceType) {
             return false;
         }
@@ -173,79 +205,28 @@ public class ProductOfferingPrice extends AbstractCatalogEntity implements Seria
         if (Utilities.areEqual(this.productOfferPriceAlteration, other.productOfferPriceAlteration) == false) {
             return false;
         }
-
+        
         return true;
     }
 
     @Override
     public String toString() {
-        return "ProductOfferingPrice{<" + super.toString() + ">, priceType=" + priceType + ", unitOfMeasure=" + unitOfMeasure + ", price=" + price + ", recurringChargePeriod=" + recurringChargePeriod + ", productOfferPriceAlteration=" + productOfferPriceAlteration + '}';
-    }
-
-    @Override
-    @JsonIgnore
-    public Logger getLogger() {
-        return logger;
-    }
-
-    public void edit(ProductOfferingPrice input) {
-        if (input == null || input == this) {
-            return;
-        }
-
-        super.edit(input);
-
-        if (this.priceType == null) {
-            this.priceType = input.priceType;
-        }
-
-        if (this.unitOfMeasure == null) {
-            this.unitOfMeasure = input.unitOfMeasure;
-        }
-
-        if (this.price == null) {
-            this.price = input.price;
-        }
-
-        if (this.recurringChargePeriod == null) {
-            this.recurringChargePeriod = input.recurringChargePeriod;
-        }
-
-        if (this.productOfferPriceAlteration == null) {
-            this.productOfferPriceAlteration = input.productOfferPriceAlteration;
-        }
-    }
-
-    @Override
-    @JsonIgnore
-    public boolean isValid() {
-        logger.log(Level.FINE, "ProductOfferingPrice:valid ()");
-
-        if (super.isValid() == false) {
-            return false;
-        }
-
-        return true;
+        return "ProductOfferingPrice{" + "priceName=" + priceName + ", priceDescription=" + priceDescription + ", priceValidFor=" + priceValidFor + ", priceType=" + priceType + ", unitOfMeasure=" + unitOfMeasure + ", price=" + price + ", recurringChargePeriod=" + recurringChargePeriod + ", productOfferPriceAlteration=" + productOfferPriceAlteration + '}';
     }
 
     public static ProductOfferingPrice createProto() {
         ProductOfferingPrice productOfferingPrice = new ProductOfferingPrice();
 
-        productOfferingPrice.setId("id");
-        productOfferingPrice.setVersion("1.50");
-        productOfferingPrice.setHref("href");
-        productOfferingPrice.setName("name");
-        productOfferingPrice.setDescription("description");
-        productOfferingPrice.setLastUpdate(new Date ());
-        productOfferingPrice.setLifecycleStatus(LifecycleStatus.ACTIVE);
-        productOfferingPrice.setValidFor(TimeRange.createProto ());
+        productOfferingPrice.priceName = "name";
+        productOfferingPrice.priceDescription = "description";
+        productOfferingPrice.priceValidFor = TimeRange.createProto ();
 
         productOfferingPrice.priceType = ProductOfferingPriceType.RECURRING;
         productOfferingPrice.unitOfMeasure = "unit of measure";
         productOfferingPrice.price = Price.createProto();
         productOfferingPrice.recurringChargePeriod = "recurring charge period";
         productOfferingPrice.productOfferPriceAlteration = ProductOfferPriceAlteration.createProto();
-
+        
         return productOfferingPrice;
     }
 

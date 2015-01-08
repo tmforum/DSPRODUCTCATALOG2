@@ -6,6 +6,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
 import javax.persistence.CollectionTable;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
@@ -88,14 +90,12 @@ import org.tmf.dsmapi.commons.annotation.EntityReferenceProperty;
  *         "href": "http://serverlocation:port/slaManagement/serviceLevelAgreement/28",
  *         "name": "Standard SLA"
  *     },
- *     "productSpecification": [
- *         {
- *             "id": "13",
- *             "href": "http://serverlocation:port/catalogManagement/productSpecification/13",
- *             "version": "2.0",
- *             "name": "specification product 1"
- *         }
- *     ],
+ *     "productSpecification": {
+ *         "id": "13",
+ *         "href": "http://serverlocation:port/catalogManagement/productSpecification/13",
+ *         "version": "2.0",
+ *         "name": "specification product 1"
+ *     },
  *     "serviceCandidate": [
  *         {
  *             "id": "13",
@@ -125,8 +125,6 @@ import org.tmf.dsmapi.commons.annotation.EntityReferenceProperty;
  *     ],
  *     "productOfferingPrice": [
  *         {
- *             "id": "15",
- *             "href": "http://serverlocation:port/catalogManagement/productOfferingPrice/15",
  *             "name": "Monthly Price",
  *             "description": "monthlyprice",
  *             "validFor": {
@@ -139,13 +137,12 @@ import org.tmf.dsmapi.commons.annotation.EntityReferenceProperty;
  *                 "taxIncludedAmount": "12.00",
  *                 "dutyFreeAmount": "10.00",
  *                 "taxRate": "20.00",
- *                 "currencyCode": "EUR"
+ *                 "currencyCode": "EUR",
+ *                 "percentage": 0
  *             },
  *             "recurringChargePeriod": "monthly"
  *         },
  *         {
- *             "id": "17",
- *             "href": "http://serverlocation:port/catalogManagement/productOfferingPrice/17",
  *             "name": "Usage Price",
  *             "description": "usageprice",
  *             "validFor": {
@@ -158,9 +155,24 @@ import org.tmf.dsmapi.commons.annotation.EntityReferenceProperty;
  *                 "taxIncludedAmount": "12.00",
  *                 "dutyFreeAmount": "10.00",
  *                 "taxRate": "20.00",
- *                 "currencyCode": "EUR"
+ *                 "currencyCode": "EUR",
+ *                 "percentage": 0
  *             },
- *             "recurringChargePeriod": ""
+ *             "recurringChargePeriod": "",
+ *             "productOfferPriceAlteration": {
+ *                 "name": "Shipping Discount",
+ *                 "description": "One time shipping discount",
+ *                 "validFor": {
+ *                     "startDateTime": "2013-04-19T16:42:23.0Z"
+ *                 },
+ *                 "priceType": "One Time discount",
+ *                 "unitOfMeasure": "",
+ *                 "price": {
+ *                     "percentage": 100
+ *                 },
+ *                 "recurringChargePeriod": "",
+ *                 "priceCondition": "apply if total amount of the  order is greater than 300.00"
+ *             }
  *         }
  *     ]
  * }
@@ -225,37 +237,37 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
     private ServiceLevelAgreement serviceLevelAgreement;
 
     @Embedded
-    @ElementCollection
-    @CollectionTable(name = "CRI_PRODUCT_OFFER_R_PRODUCT_SPEC", joinColumns = {
-        @JoinColumn(name = "CATALOG_ID", referencedColumnName = "CATALOG_ID"),
-        @JoinColumn(name = "CATALOG_VERSION", referencedColumnName = "CATALOG_VERSION"),
-        @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
-        @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
+    @AttributeOverrides({
+        @AttributeOverride(name="referencedId", column=@Column(name = "SPECIFICATION_ID")),
+        @AttributeOverride(name="referencedVersion", column=@Column(name = "SPECIFICATION_VERSION")),
+        @AttributeOverride(name="referencedHref", column=@Column(name = "SPECIFICATION_HREF")),
+        @AttributeOverride(name="referencedName", column=@Column(name = "SPECIFICATION_NAME")),
+        @AttributeOverride(name="referencedDescription", column=@Column(name = "SPECIFICATION_DESCRIPTION"))
     })
     @EntityReferenceProperty(classId=ProductSpecification.class)
-    private List<CatalogReference> productSpecification;
+    private CatalogReference productSpecification;
 
     @Embedded
-    @ElementCollection
-    @CollectionTable(name = "CRI_PRODUCT_OFFER_R_SERVICE", joinColumns = {
-        @JoinColumn(name = "CATALOG_ID", referencedColumnName = "CATALOG_ID"),
-        @JoinColumn(name = "CATALOG_VERSION", referencedColumnName = "CATALOG_VERSION"),
-        @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
-        @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
+    @AttributeOverrides({
+        @AttributeOverride(name="referencedId", column=@Column(name = "SERVICE_CANDIDATE_ID")),
+        @AttributeOverride(name="referencedVersion", column=@Column(name = "SERVICE_CANDIDATE_VERSION")),
+        @AttributeOverride(name="referencedHref", column=@Column(name = "SERVICE_CANDIDATE_HREF")),
+        @AttributeOverride(name="referencedName", column=@Column(name = "SERVICE_CANDIDATE_NAME")),
+        @AttributeOverride(name="referencedDescription", column=@Column(name = "SERVICE_CANDIDATE_DESCRIPTION"))
     })
     @EntityReferenceProperty(classId=ServiceCandidate.class)
-    private List<CatalogReference> serviceCandidate;
+    private CatalogReference serviceCandidate;
 
     @Embedded
-    @ElementCollection
-    @CollectionTable(name = "CRI_PRODUCT_OFFER_R_RESOURCE", joinColumns = {
-        @JoinColumn(name = "CATALOG_ID", referencedColumnName = "CATALOG_ID"),
-        @JoinColumn(name = "CATALOG_VERSION", referencedColumnName = "CATALOG_VERSION"),
-        @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
-        @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
+    @AttributeOverrides({
+        @AttributeOverride(name="referencedId", column=@Column(name = "RESOURCE_CANDIDATE_ID")),
+        @AttributeOverride(name="referencedVersion", column=@Column(name = "RESOURCE_CANDIDATE_VERSION")),
+        @AttributeOverride(name="referencedHref", column=@Column(name = "RESOURCE_CANDIDATE_HREF")),
+        @AttributeOverride(name="referencedName", column=@Column(name = "RESOURCE_CANDIDATE_NAME")),
+        @AttributeOverride(name="referencedDescription", column=@Column(name = "RESOURCE_CANDIDATE_DESCRIPTION"))
     })
     @EntityReferenceProperty(classId=ResourceCandidate.class)
-    private List<CatalogReference> resourceCandidate;
+    private CatalogReference resourceCandidate;
 
     @ElementCollection
     @CollectionTable(name = "CRI_PRODUCT_OFFER_R_OFFERING_TERM", joinColumns = {
@@ -274,7 +286,7 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         @JoinColumn(name = "ENTITY_ID", referencedColumnName = "ID"),
         @JoinColumn(name = "ENTITY_VERSION", referencedColumnName = "VERSION")
     })
-    private List<ProductOfferingEmbeddedPriceData> productOfferingPrice;
+    private List<ProductOfferingPrice> productOfferingPrice;
 
     public ProductOffering() {
     }
@@ -327,27 +339,27 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         this.serviceLevelAgreement = serviceLevelAgreement;
     }
 
-    public List<CatalogReference> getProductSpecification() {
+    public CatalogReference getProductSpecification() {
         return productSpecification;
     }
 
-    public void setProductSpecification(List<CatalogReference> productSpecification) {
+    public void setProductSpecification(CatalogReference productSpecification) {
         this.productSpecification = productSpecification;
     }
 
-    public List<CatalogReference> getServiceCandidate() {
+    public CatalogReference getServiceCandidate() {
         return serviceCandidate;
     }
 
-    public void setServiceCandidate(List<CatalogReference> serviceCandidate) {
+    public void setServiceCandidate(CatalogReference serviceCandidate) {
         this.serviceCandidate = serviceCandidate;
     }
 
-    public List<CatalogReference> getResourceCandidate() {
+    public CatalogReference getResourceCandidate() {
         return resourceCandidate;
     }
 
-    public void setResourceCandidate(List<CatalogReference> resourceCandidate) {
+    public void setResourceCandidate(CatalogReference resourceCandidate) {
         this.resourceCandidate = resourceCandidate;
     }
 
@@ -359,11 +371,11 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         this.productOfferingTerm = productOfferingTerm;
     }
 
-    public List<ProductOfferingEmbeddedPriceData> getProductOfferingPrice() {
+    public List<ProductOfferingPrice> getProductOfferingPrice() {
         return productOfferingPrice;
     }
 
-    public void setProductOfferingPrice(List<ProductOfferingEmbeddedPriceData> productOfferingPrice) {
+    public void setProductOfferingPrice(List<ProductOfferingPrice> productOfferingPrice) {
         this.productOfferingPrice = productOfferingPrice;
     }
 
@@ -387,28 +399,13 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         return (bundledProductOffering != null && bundledProductOffering.size() > 0) ? bundledProductOffering : null;
     }
 
-    @JsonProperty(value = "productSpecification")
-    public List<CatalogReference> productSpecificationToJson() {
-        return (productSpecification != null && productSpecification.size() > 0) ? productSpecification : null;
-    }
-
-    @JsonProperty(value = "serviceCandidate")
-    public List<CatalogReference> serviceCandidateToJson() {
-        return (serviceCandidate != null && serviceCandidate.size() > 0) ? serviceCandidate : null;
-    }
-
-    @JsonProperty(value = "resourceCandidate")
-    public List<CatalogReference> resourceCandidateToJson() {
-        return (resourceCandidate != null && resourceCandidate.size() > 0) ? resourceCandidate : null;
-    }
-
     @JsonProperty(value = "productOfferingTerm")
     public List<ProductOfferingTerm> productOfferingTermToJson() {
         return (productOfferingTerm != null && productOfferingTerm.size() > 0) ? productOfferingTerm : null;
     }
 
     @JsonProperty(value = "productOfferingPrice")
-    public List<ProductOfferingEmbeddedPriceData> productOfferingPriceToJson() {
+    public List<ProductOfferingPrice> productOfferingPriceToJson() {
         return (productOfferingPrice != null && productOfferingPrice.size() > 0) ? productOfferingPrice : null;
     }
 
@@ -612,21 +609,15 @@ public class ProductOffering extends AbstractCatalogEntity implements Serializab
         productOffering.bundledProductOffering.add(BundledProductReference.createProto());
 
         productOffering.serviceLevelAgreement = ServiceLevelAgreement.createProto();
-
-        productOffering.productSpecification = new ArrayList<CatalogReference>();
-        productOffering.productSpecification.add(CatalogReference.createProto());
-
-        productOffering.serviceCandidate = new ArrayList<CatalogReference>();
-        productOffering.serviceCandidate.add(CatalogReference.createProto());
-
-        productOffering.resourceCandidate = new ArrayList<CatalogReference>();
-        productOffering.resourceCandidate.add(CatalogReference.createProto());
+        productOffering.productSpecification = CatalogReference.createProto();
+        productOffering.serviceCandidate = CatalogReference.createProto();
+        productOffering.resourceCandidate = CatalogReference.createProto();
 
         productOffering.productOfferingTerm = new ArrayList<ProductOfferingTerm>();
         productOffering.productOfferingTerm.add(ProductOfferingTerm.createProto());
 
-        productOffering.productOfferingPrice = new ArrayList<ProductOfferingEmbeddedPriceData>();
-        productOffering.productOfferingPrice.add(ProductOfferingEmbeddedPriceData.createProto());
+        productOffering.productOfferingPrice = new ArrayList<ProductOfferingPrice>();
+        productOffering.productOfferingPrice.add(ProductOfferingPrice.createProto());
 
         return productOffering;
     }

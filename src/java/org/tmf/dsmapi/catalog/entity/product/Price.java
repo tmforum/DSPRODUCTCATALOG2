@@ -17,7 +17,8 @@ import org.tmf.dsmapi.commons.Utilities;
  *     "taxIncludedAmount": "12.00",
  *     "dutyFreeAmount": "10.00",
  *     "taxRate": "20.00",
- *     "currencyCode": "EUR"
+ *     "currencyCode": "EUR",
+ *     "percentage": 0
  * }
  *
  */
@@ -37,6 +38,9 @@ public class Price implements Serializable {
 
     @Column(name = "CURRENCY_CODE", nullable = true)
     String currencyCode;
+    
+    @Column(name = "PERCENTAGE", nullable = true)
+    BigDecimal percentage;
 
     public Price() {
     }
@@ -73,6 +77,14 @@ public class Price implements Serializable {
         this.currencyCode = currencyCode;
     }
 
+    public BigDecimal getPercentage() {
+        return percentage;
+    }
+
+    public void setPercentage(BigDecimal percentage) {
+        this.percentage = percentage;
+    }
+
     @JsonProperty(value = "taxIncludedAmount")
     public String taxIncludedAmountToJson() {
         return OutputUtilities.formatCurrency(taxIncludedAmount);
@@ -87,7 +99,7 @@ public class Price implements Serializable {
     public String taxRateToJson() {
         return OutputUtilities.formatCurrency(taxRate);
     }
-
+    
     @Override
     public int hashCode() {
         int hash = 5;
@@ -96,6 +108,7 @@ public class Price implements Serializable {
         hash = 53 * hash + (this.dutyFreeAmount != null ? this.dutyFreeAmount.hashCode() : 0);
         hash = 53 * hash + (this.taxRate != null ? this.taxRate.hashCode() : 0);
         hash = 53 * hash + (this.currencyCode != null ? this.currencyCode.hashCode() : 0);
+        hash = 53 * hash + (this.percentage != null ? this.percentage.hashCode() : 0);
 
         return hash;
     }
@@ -123,21 +136,26 @@ public class Price implements Serializable {
             return false;
         }
 
+        if (Utilities.areEqual(this.percentage, other.percentage) == false) {
+            return false;
+        }
+        
         return true;
     }
 
     @Override
     public String toString() {
-        return "Price{" + "taxIncludedAmount=" + taxIncludedAmount + ", dutyFreeAmount=" + dutyFreeAmount + ", taxRate=" + taxRate + ", currencyCode=" + currencyCode + '}';
+        return "Price{" + "taxIncludedAmount=" + taxIncludedAmount + ", dutyFreeAmount=" + dutyFreeAmount + ", taxRate=" + taxRate + ", currencyCode=" + currencyCode + ", percentage=" + percentage + '}';
     }
 
     public static Price createProto() {
         Price price = new Price();
 
-        price.taxIncludedAmount = new BigDecimal (13.00);
-        price.dutyFreeAmount = new BigDecimal (12.20);
-        price.taxRate = new BigDecimal (14.01);
+        price.taxIncludedAmount = new BigDecimal(13.00);
+        price.dutyFreeAmount = new BigDecimal(12.20);
+        price.taxRate = new BigDecimal(14.01);
         price.currencyCode = "currency code";
+        price.percentage = new BigDecimal(0.00);
 
         return price;
     }

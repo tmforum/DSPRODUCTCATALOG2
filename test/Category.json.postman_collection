@@ -147,7 +147,7 @@
 						"name": "Created",
 						"detail": "The request has been fulfilled and resulted in a new resource being created."
 					},
-					"time": 119,
+					"time": 58,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -158,7 +158,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:41:50 GMT",
+							"value": "Mon, 29 Dec 2014 17:50:19 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -182,7 +182,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"CATG-052\",\"version\":\"2.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:41:50.579+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:44:23.000+0000\"},\"parentId\":\"743\",\"isRoot\":false}",
+					"text": "{\"id\":\"CATG-052\",\"version\":\"2.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:50:19.776+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:44:23.000+0000\"},\"parentId\":\"743\",\"isRoot\":false}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -191,7 +191,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "92d8cabb-d6cc-2fd2-9876-8c0b47ad4a99",
+					"id": "43c44a55-d01a-2493-dab9-394bbf672700",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.1)",
@@ -231,7 +231,7 @@
 						"name": "Created",
 						"detail": "The request has been fulfilled and resulted in a new resource being created."
 					},
-					"time": 115,
+					"time": 72,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -242,7 +242,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:29:51 GMT",
+							"value": "Mon, 29 Dec 2014 17:49:19 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -266,7 +266,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"CATG-052\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)\",\"name\":\"Cloud Services new\",\"description\":\"A category to hold all available cloud service offers new\",\"lastUpdate\":\"2014-10-23T14:29:51.309+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-04-19T20:44:23.000+0000\"},\"parentId\":\"41 new\",\"isRoot\":false}",
+					"text": "{\"id\":\"CATG-052\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)\",\"name\":\"Cloud Services new\",\"description\":\"A category to hold all available cloud service offers new\",\"lastUpdate\":\"2014-12-29T17:49:19.635+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-04-19T20:44:23.000+0000\"},\"parentId\":\"41 new\",\"isRoot\":false}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -275,7 +275,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "d4ae0f06-9693-d6e3-8afe-5828a5e994dd",
+					"id": "d769d029-7a98-d5a2-0290-2421d8387f4a",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
@@ -315,7 +315,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 186,
+					"time": 16,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -326,7 +326,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Fri, 24 Oct 2014 13:44:04 GMT",
+							"value": "Mon, 29 Dec 2014 17:55:24 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -350,7 +350,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "[{\"id\":\"CATGR-002\",\"version\":\"2.0\"},{\"id\":\"CATGR-001\",\"version\":\"2.0\"},{\"id\":\"3\",\"version\":\"1.0\"},{\"id\":\"CATG-001\",\"version\":\"1.0\"},{\"id\":\"CATG-001\",\"version\":\"1.1\"},{\"id\":\"CATG-001\",\"version\":\"11.0\"},{\"id\":\"CATG-001\",\"version\":\"2.0\"},{\"id\":\"CATG-001\",\"version\":\"1.10\"},{\"id\":\"CATG-052\",\"version\":\"2.5\"}]",
+					"text": "[{\"id\":\"1\",\"version\":\"1.0\"},{\"id\":\"CATG-001\",\"version\":\"1.0\"},{\"id\":\"CATG-001\",\"version\":\"1.1\"},{\"id\":\"CATG-001\",\"version\":\"11.0\"},{\"id\":\"CATG-001\",\"version\":\"2.0\"},{\"id\":\"CATG-001\",\"version\":\"1.10\"},{\"id\":\"CATG-052\",\"version\":\"2.5\"}]",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -359,7 +359,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "03d9e965-7357-160a-3ff3-a638950cfbe4",
+					"id": "c462b898-5059-5431-93f8-f0719b1202dc",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
@@ -390,33 +390,15 @@
 			"name": "B-020-080 - [200]",
 			"description": "Returns all CATG-001 whose version is greater than 1.10\n\nShould return 1.10, 2.0, and 11.0 but not 1.0 & 1.1.",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
-			"responses": [],
-			"synced": false
-		},
-		{
-			"id": "1ce87ecc-a75b-c9d5-bb5e-48e40ea28db5",
-			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
-			"preRequestScript": "",
-			"pathVariables": {},
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"version": 2,
-			"tests": "",
-			"time": 1414073642515,
-			"name": "B-001-050 - [201]",
-			"description": "ID: CATG-001\nversion: 1.1\nlifecycle stat: In Design\nchild category\nUsed by categories in Catalog.",
-			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 			"responses": [
 				{
 					"status": "",
 					"responseCode": {
-						"code": 201,
-						"name": "Created",
-						"detail": "The request has been fulfilled and resulted in a new resource being created."
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 111,
+					"time": 22,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -427,7 +409,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:16:13 GMT",
+							"value": "Mon, 29 Dec 2014 17:54:10 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -451,7 +433,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"CATG-001\",\"version\":\"1.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:16:13.588+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2017-04-19T20:42:24.000+0000\"},\"isRoot\":true}",
+					"text": "[{\"id\":\"CATG-001\",\"version\":\"1.10\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.10)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:47:01.677+0000\",\"lifecycleStatus\":\"Active\",\"isRoot\":true},{\"id\":\"CATG-001\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\"name\":\"cloud Servic\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:53:22.129+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2012-04-19T20:44:23.000+0000\",\"endDateTime\":\"2014-04-19T20:44:23.000+0000\"},\"parentId\":\"R72\",\"isRoot\":false},{\"id\":\"CATG-001\",\"version\":\"11.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(11.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:46:38.348+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"isRoot\":true}]",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -460,7 +442,84 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "a4cebb84-d6f7-28df-916f-ef740f80a244",
+					"id": "f58e79ff-3716-1b5a-6276-1056260a3458",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?id=CATG-001&version.gte=1.10",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
+		},
+		{
+			"id": "1ce87ecc-a75b-c9d5-bb5e-48e40ea28db5",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414073642515,
+			"name": "B-001-050 - [500]",
+			"description": "ID: CATG-001\nversion: 1.1\nlifecycle stat: In Design\nchild category\nUsed by categories in Catalog.\n\n----\nError: duplicate entity (version 1.1).",
+			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 500,
+						"name": "Internal Server Error",
+						"detail": "A generic error message, given when no more specific message is suitable."
+					},
+					"time": 119,
+					"headers": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "3027",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/html",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 29 Dec 2014 17:45:55 GMT",
+							"description": "The date and time that the message was sent"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 500 - </h1><hr/><p><b>type</b> Exception report</p><p><b>message</b></p><p><b>description</b>The server encountered an internal error () that prevented it from fulfilling this request.</p><p><b>exception</b> <pre>javax.servlet.ServletException: javax.transaction.RollbackException: Transaction marked for rollback.</pre></p><p><b>root cause</b> <pre>javax.transaction.RollbackException: Transaction marked for rollback.</pre></p><p><b>root cause</b> <pre>Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.2.v20111125-r10461): org.eclipse.persistence.exceptions.DatabaseException\r\nInternal Exception: java.sql.SQLIntegrityConstraintViolationException: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL141229124351500' defined on 'CRI_CATEGORY'.\r\nError Code: -1\r\nCall: INSERT INTO CRI_CATEGORY (ID, CATALOG_ID, CATALOG_VERSION, VERSION, DESCRIPTION, HERF, IS_ROOT, LAST_UPDATE, LIFECYCLE_STATUS, NAME, PARENT_ID, END_DATE_TIME, START_DATE_TIME) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)\r\n\tbind =&gt; [13 parameters bound]\r\nQuery: InsertObjectQuery(Category{&lt;AbstractCatalogEntity{catalogId=, catalogVersion=, parsedCatalogVersion=ParsedVersion{majorVersion=null, minorVersion=null, externalView=, internalView=, valid=true}}&gt;, parentId=null, isRoot=true})</pre></p><p><b>root cause</b> <pre>java.sql.SQLIntegrityConstraintViolationException: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL141229124351500' defined on 'CRI_CATEGORY'.</pre></p><p><b>root cause</b> <pre>org.apache.derby.client.am.SqlException: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL141229124351500' defined on 'CRI_CATEGORY'.</pre></p><p><b>note</b> <u>The full stack traces of the exception and its root causes are available in the GlassFish Server Open Source Edition 3.1.2.2 logs.</u></p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
+					"language": "html",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"id": "d085ec1e-0381-5cb7-e351-b28a2bab2a93",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
@@ -500,7 +559,7 @@
 						"name": "Created",
 						"detail": "The request has been fulfilled and resulted in a new resource being created."
 					},
-					"time": 165,
+					"time": 85,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -511,7 +570,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 17:55:47 GMT",
+							"value": "Mon, 29 Dec 2014 17:53:13 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -535,7 +594,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"CATG-052\",\"version\":\"2.5\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.5)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers new\",\"lastUpdate\":\"2014-10-23T17:55:47.377+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2014-04-19T20:44:23.000+0000\"},\"parentId\":\"743\",\"isRoot\":false}",
+					"text": "{\"id\":\"CATG-052\",\"version\":\"2.5\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.5)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers new\",\"lastUpdate\":\"2014-12-29T17:53:13.580+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2014-04-19T20:44:23.000+0000\"},\"parentId\":\"743\",\"isRoot\":false}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -544,7 +603,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "f244e2f8-0b84-384d-b363-7d355619b162",
+					"id": "e7b0acbc-d7d5-0ade-ec4c-9fd355d5c545",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
@@ -584,7 +643,7 @@
 						"name": "Not Found",
 						"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
 					},
-					"time": 111,
+					"time": 32,
 					"headers": [
 						{
 							"name": "Content-Length",
@@ -601,7 +660,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:57:03 GMT",
+							"value": "Mon, 29 Dec 2014 17:51:10 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -628,7 +687,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "09c162f0-0fa8-a23e-afdb-8c3792dfa697",
+					"id": "23fb827d-2665-b3a7-6dfb-7b32aa9c0b75",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(75.0",
@@ -667,7 +726,7 @@
 						"name": "Created",
 						"detail": "The request has been fulfilled and resulted in a new resource being created."
 					},
-					"time": 269,
+					"time": 76,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -678,7 +737,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 17:31:33 GMT",
+							"value": "Mon, 29 Dec 2014 17:51:55 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -702,7 +761,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"CATG-052\",\"version\":\"2.5\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.5)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T17:31:33.152+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:44:23.000+0000\"},\"parentId\":\"743\",\"isRoot\":false}",
+					"text": "{\"id\":\"CATG-052\",\"version\":\"2.5\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.5)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:51:55.340+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:44:23.000+0000\"},\"parentId\":\"743\",\"isRoot\":false}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -711,7 +770,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "2aa08ffe-0d20-0146-e92f-6429938d1f5a",
+					"id": "e72a6e1d-0471-2485-baa2-af90a999e2ec",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
@@ -752,7 +811,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 88,
+					"time": 61,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -763,7 +822,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 21:23:53 GMT",
+							"value": "Mon, 29 Dec 2014 17:53:29 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -787,7 +846,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "[{\"id\":\"CATGR-002\",\"version\":\"2.0\",\"lifecycleStatus\":\"In Design\"},{\"id\":\"CATGR-001\",\"version\":\"2.0\",\"lifecycleStatus\":\"In Design\"},{\"id\":\"3\",\"version\":\"1.0\",\"lifecycleStatus\":\"In Design\"},{\"id\":\"CATG-001\",\"version\":\"1.0\",\"lifecycleStatus\":\"In Design\"},{\"id\":\"CATG-001\",\"version\":\"11.0\",\"lifecycleStatus\":\"Active\"},{\"id\":\"CATG-001\",\"version\":\"2.0\",\"lifecycleStatus\":\"Active\"},{\"id\":\"CATG-001\",\"version\":\"1.10\",\"lifecycleStatus\":\"Active\"}]",
+					"text": "[{\"id\":\"1\",\"version\":\"1.0\",\"lifecycleStatus\":\"In Design\"},{\"id\":\"CATG-001\",\"version\":\"1.0\",\"lifecycleStatus\":\"In Design\"},{\"id\":\"CATG-001\",\"version\":\"11.0\",\"lifecycleStatus\":\"Active\"},{\"id\":\"CATG-001\",\"version\":\"2.0\",\"lifecycleStatus\":\"Active\"},{\"id\":\"CATG-001\",\"version\":\"1.10\",\"lifecycleStatus\":\"Active\"}]",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -796,7 +855,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "1453f67f-a4c9-73e3-0bf5-9b250f5af25c",
+					"id": "1e815ce1-a0c2-d167-15d9-b09c35337e91",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?lifecycleStatus=Active%2CIn%20Design&fields=version%2ClifecycleStatus",
@@ -836,7 +895,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 264,
+					"time": 56,
 					"headers": [
 						{
 							"name": "Content-Length",
@@ -847,7 +906,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Fri, 24 Oct 2014 15:29:44 GMT",
+							"value": "Mon, 29 Dec 2014 17:56:22 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -874,7 +933,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "fd4a8eed-296c-cdc6-ed92-bbb1774e0ae3",
+					"id": "c3d427ed-1267-9529-e8aa-7800b8df06f4",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
@@ -914,7 +973,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 103,
+					"time": 55,
 					"headers": [
 						{
 							"name": "Content-Length",
@@ -925,7 +984,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Fri, 24 Oct 2014 15:28:53 GMT",
+							"value": "Mon, 29 Dec 2014 17:56:15 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -952,7 +1011,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "47fefd3c-abce-81a9-2ff0-de1795144680",
+					"id": "8bb0c204-c676-22ce-8964-d498dbe6576c",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
@@ -992,7 +1051,7 @@
 						"name": "Internal Server Error",
 						"detail": "A generic error message, given when no more specific message is suitable."
 					},
-					"time": 170,
+					"time": 49,
 					"headers": [
 						{
 							"name": "Connection",
@@ -1003,7 +1062,7 @@
 						{
 							"name": "Content-Length",
 							"key": "Content-Length",
-							"value": "1703",
+							"value": "1701",
 							"description": "The length of the response body in octets (8-bit bytes)"
 						},
 						{
@@ -1015,13 +1074,13 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:26:35 GMT",
+							"value": "Mon, 29 Dec 2014 17:49:10 GMT",
 							"description": "The date and time that the message was sent"
 						}
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 500 - </h1><hr/><p><b>type</b> Exception report</p><p><b>message</b></p><p><b>description</b>The server encountered an internal error () that prevented it from fulfilling this request.</p><p><b>exception</b> <pre>javax.servlet.ServletException: org.tmf.dsmapi.commons.exceptions.IllegalLifecycleStatusException: LifecycleStatus can only transition to one of [In Test] from the current status of 'In Design'</pre></p><p><b>root cause</b> <pre>org.tmf.dsmapi.commons.exceptions.IllegalLifecycleStatusException: LifecycleStatus can only transition to one of [In Test] from the current status of 'In Design'</pre></p><p><b>note</b> <u>The full stack traces of the exception and its root causes are available in the GlassFish Server Open Source Edition 3.1.2.2 logs.</u></p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
+					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 500 - </h1><hr/><p><b>type</b> Exception report</p><p><b>message</b></p><p><b>description</b>The server encountered an internal error () that prevented it from fulfilling this request.</p><p><b>exception</b> <pre>javax.servlet.ServletException: org.tmf.dsmapi.catalog.exception.IllegalLifecycleStatusException: LifecycleStatus can only transition to one of [In Test] from the current status of 'In Design'</pre></p><p><b>root cause</b> <pre>org.tmf.dsmapi.catalog.exception.IllegalLifecycleStatusException: LifecycleStatus can only transition to one of [In Test] from the current status of 'In Design'</pre></p><p><b>note</b> <u>The full stack traces of the exception and its root causes are available in the GlassFish Server Open Source Edition 3.1.2.2 logs.</u></p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
 					"language": "html",
 					"rawDataType": "text",
 					"state": {
@@ -1030,7 +1089,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "4a8ea98c-26d5-f8fb-feee-df996f0ded45",
+					"id": "41421340-1d72-cb90-19c5-9f67fe3678e7",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
@@ -1072,7 +1131,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 106,
+					"time": 25,
 					"headers": [
 						{
 							"name": "Content-Length",
@@ -1083,7 +1142,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Fri, 24 Oct 2014 15:24:01 GMT",
+							"value": "Mon, 29 Dec 2014 17:55:52 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -1110,7 +1169,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "229868bf-b304-0db8-6ca2-1b35205fa495",
+					"id": "98a45a20-30af-1470-dc03-37d5780d277e",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.0)",
@@ -1149,7 +1208,7 @@
 						"name": "Created",
 						"detail": "The request has been fulfilled and resulted in a new resource being created."
 					},
-					"time": 151,
+					"time": 20,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -1160,7 +1219,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:16:54 GMT",
+							"value": "Mon, 29 Dec 2014 17:47:01 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -1184,7 +1243,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"CATG-001\",\"version\":\"1.10\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.10)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:16:54.102+0000\",\"lifecycleStatus\":\"Active\",\"isRoot\":true}",
+					"text": "{\"id\":\"CATG-001\",\"version\":\"1.10\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.10)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:47:01.677+0000\",\"lifecycleStatus\":\"Active\",\"isRoot\":true}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -1193,7 +1252,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "fe076828-d5fc-1586-8d70-ad70eedf8bda",
+					"id": "a05b37ec-d122-bb79-d228-ed6d6be5a6f8",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
@@ -1233,7 +1292,7 @@
 						"name": "Bad Request",
 						"detail": "The request cannot be fulfilled due to bad syntax."
 					},
-					"time": 116,
+					"time": 16,
 					"headers": [
 						{
 							"name": "Connection",
@@ -1256,7 +1315,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 17:39:47 GMT",
+							"value": "Mon, 29 Dec 2014 17:52:17 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -1283,7 +1342,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "df79407d-58ac-5f27-f780-62075aa9545e",
+					"id": "a1682235-d616-41df-0a30-3e8e18a52af6",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
@@ -1322,7 +1381,7 @@
 						"name": "Not Found",
 						"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
 					},
-					"time": 161,
+					"time": 15,
 					"headers": [
 						{
 							"name": "Content-Length",
@@ -1339,7 +1398,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Fri, 24 Oct 2014 13:34:54 GMT",
+							"value": "Mon, 29 Dec 2014 17:55:18 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -1366,8 +1425,8 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "6e1c82e4-f317-a135-0bdc-af4f593debfe",
-					"name": "Response",
+					"id": "2f2bebbf-5985-1020-1516-1bd5a496fe98",
+					"name": " Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/WRONG-ID",
 						"pathVariables": {},
@@ -1407,7 +1466,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 114,
+					"time": 34,
 					"headers": [
 						{
 							"name": "Content-Length",
@@ -1418,7 +1477,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Fri, 24 Oct 2014 15:33:39 GMT",
+							"value": "Mon, 29 Dec 2014 17:56:37 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -1445,7 +1504,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "d079c191-c911-1c69-1ad9-6325db810e85",
+					"id": "41c3460e-7fa4-ecac-84c2-5d7fcb23c754",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
@@ -1484,7 +1543,7 @@
 						"name": "Bad Request",
 						"detail": "The request cannot be fulfilled due to bad syntax."
 					},
-					"time": 127,
+					"time": 0,
 					"headers": [
 						{
 							"name": "Connection",
@@ -1507,7 +1566,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:40:09 GMT",
+							"value": "Mon, 29 Dec 2014 17:50:12 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -1534,7 +1593,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "7028d673-45d8-9aa3-e03c-c5d964be1528",
+					"id": "1ff3acc4-db2c-6fd7-3e93-99e20e140c7c",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
@@ -1574,7 +1633,7 @@
 						"name": "Not Found",
 						"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
 					},
-					"time": 100,
+					"time": 19,
 					"headers": [
 						{
 							"name": "Content-Length",
@@ -1591,7 +1650,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:19:46 GMT",
+							"value": "Mon, 29 Dec 2014 17:47:59 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -1618,7 +1677,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "be59faf1-2163-617b-15ea-4ed8cdf4cb6f",
+					"id": "f2319189-6770-6a04-645b-610aa6c5eeb3",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.2)",
@@ -1653,69 +1712,11 @@
 				{
 					"status": "",
 					"responseCode": {
-						"code": 200,
-						"name": "OK",
-						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-					},
-					"time": 114,
-					"headers": [
-						{
-							"name": "Content-Length",
-							"key": "Content-Length",
-							"value": "0",
-							"description": "The length of the response body in octets (8-bit bytes)"
-						},
-						{
-							"name": "Date",
-							"key": "Date",
-							"value": "Fri, 24 Oct 2014 15:33:39 GMT",
-							"description": "The date and time that the message was sent"
-						},
-						{
-							"name": "Server",
-							"key": "Server",
-							"value": "GlassFish Server Open Source Edition 3.1.2.2",
-							"description": "A name for the server"
-						},
-						{
-							"name": "X-Powered-By",
-							"key": "X-Powered-By",
-							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
-							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-						}
-					],
-					"cookies": [],
-					"mime": "",
-					"text": "",
-					"language": "html",
-					"rawDataType": "text",
-					"state": {
-						"size": "normal"
-					},
-					"previewType": "html",
-					"searchResultScrolledTo": -1,
-					"forceRaw": false,
-					"id": "d079c191-c911-1c69-1ad9-6325db810e85",
-					"name": "Response",
-					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
-						"pathVariables": {},
-						"data": [],
-						"headers": "Accept: application/json\nContent-Type: application/json\n",
-						"dataMode": "params",
-						"method": "DELETE",
-						"tests": "",
-						"version": 2
-					}
-				},
-				{
-					"status": "",
-					"responseCode": {
 						"code": 404,
 						"name": "Not Found",
 						"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
 					},
-					"time": 90,
+					"time": 21,
 					"headers": [
 						{
 							"name": "Content-Length",
@@ -1732,7 +1733,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Fri, 24 Oct 2014 15:34:21 GMT",
+							"value": "Mon, 29 Dec 2014 17:56:44 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -1759,7 +1760,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "de658873-d695-c780-5354-1674c5300d72",
+					"id": "5c60e48f-5cf0-06aa-c654-73af959bccfc",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
@@ -1798,7 +1799,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 88,
+					"time": 22,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -1809,7 +1810,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 21:45:03 GMT",
+							"value": "Mon, 29 Dec 2014 17:53:57 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -1833,7 +1834,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "[{\"id\":\"CATG-001\",\"version\":\"1.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:15:49.067+0000\",\"lifecycleStatus\":\"In Design\",\"parentId\":\"41\",\"isRoot\":false},{\"id\":\"CATG-001\",\"version\":\"1.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:16:13.588+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2017-04-19T20:42:24.000+0000\"},\"isRoot\":true},{\"id\":\"CATG-001\",\"version\":\"1.10\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.10)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:16:54.102+0000\",\"lifecycleStatus\":\"Active\",\"isRoot\":true},{\"id\":\"CATG-001\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T17:57:11.545+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2012-04-19T20:44:23.000+0000\",\"endDateTime\":\"2014-04-19T20:44:23.000+0000\"},\"parentId\":\"R72\",\"isRoot\":false},{\"id\":\"CATG-001\",\"version\":\"11.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(11.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:16:23.278+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"isRoot\":true}]",
+					"text": "[{\"id\":\"CATG-001\",\"version\":\"1.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:44:29.046+0000\",\"lifecycleStatus\":\"In Design\",\"parentId\":\"41\",\"isRoot\":false},{\"id\":\"CATG-001\",\"version\":\"1.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:44:37.861+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"isRoot\":true},{\"id\":\"CATG-001\",\"version\":\"1.10\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.10)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:47:01.677+0000\",\"lifecycleStatus\":\"Active\",\"isRoot\":true},{\"id\":\"CATG-001\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\"name\":\"cloud Servic\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:53:22.129+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2012-04-19T20:44:23.000+0000\",\"endDateTime\":\"2014-04-19T20:44:23.000+0000\"},\"parentId\":\"R72\",\"isRoot\":false},{\"id\":\"CATG-001\",\"version\":\"11.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(11.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:46:38.348+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"isRoot\":true}]",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -1842,7 +1843,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "766cde6d-a351-96b5-7b1e-22639ed7da0d",
+					"id": "1d68fcbb-a80d-8e64-debf-871269ed0376",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?id=CATG-001&depth=10",
@@ -1881,7 +1882,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 150,
+					"time": 34,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -1892,7 +1893,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 21:57:07 GMT",
+							"value": "Mon, 29 Dec 2014 17:54:16 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -1925,7 +1926,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "bf3d842b-369d-6157-1231-96b552a7cc4c",
+					"id": "61d552cf-e4b6-3a0c-9251-f7e034aba6e8",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?id.ex=CATG-00*%2CCATG-052&fields=version%2CparentId",
@@ -1963,7 +1964,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 83,
+					"time": 15,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -1974,7 +1975,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Fri, 24 Oct 2014 15:35:20 GMT",
+							"value": "Mon, 29 Dec 2014 17:57:06 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -1998,7 +1999,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "[{\"id\":\"CATGR-002\",\"version\":\"2.0\"},{\"id\":\"CATGR-001\",\"version\":\"2.0\"},{\"id\":\"3\",\"version\":\"1.0\"}]",
+					"text": "[{\"id\":\"1\",\"version\":\"1.0\"}]",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -2007,7 +2008,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "bad511cd-cdc5-9f9b-b01a-1c5ae5344c9b",
+					"id": "39d7abac-d04c-30a9-891d-0c8e4a098fe9",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
@@ -2112,7 +2113,7 @@
 						"name": "Created",
 						"detail": "The request has been fulfilled and resulted in a new resource being created."
 					},
-					"time": 128,
+					"time": 19,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -2123,7 +2124,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 17:45:51 GMT",
+							"value": "Mon, 29 Dec 2014 17:52:24 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -2147,7 +2148,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"CATG-052\",\"version\":\"2.5\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.5)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers new\",\"lastUpdate\":\"2014-10-23T17:45:51.700+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:44:23.000+0000\"},\"parentId\":\"743\",\"isRoot\":false}",
+					"text": "{\"id\":\"CATG-052\",\"version\":\"2.5\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.5)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers new\",\"lastUpdate\":\"2014-12-29T17:52:24.903+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:44:23.000+0000\"},\"parentId\":\"743\",\"isRoot\":false}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -2156,7 +2157,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "4a13734d-1fd4-fb7a-2819-6697cb6530df",
+					"id": "9bc89b31-9000-bb45-404b-5da27a4f5b0a",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
@@ -2196,7 +2197,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 85,
+					"time": 31,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -2207,7 +2208,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:18:48 GMT",
+							"value": "Mon, 29 Dec 2014 17:47:51 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -2231,7 +2232,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "9",
+					"text": "7",
 					"language": "html",
 					"rawDataType": "text",
 					"state": {
@@ -2240,7 +2241,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "d38bc197-7632-dcec-4a60-0bf9ad16b2ac",
+					"id": "8da875c0-053f-96b4-07aa-376fcc324c66",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/admin/count",
@@ -2279,7 +2280,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 83,
+					"time": 15,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -2290,7 +2291,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:19:54 GMT",
+							"value": "Mon, 29 Dec 2014 17:48:05 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -2314,7 +2315,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"CATG-001\",\"version\":\"1.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:16:13.588+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2017-04-19T20:42:24.000+0000\"},\"isRoot\":true}",
+					"text": "{\"id\":\"CATG-001\",\"version\":\"1.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:44:37.861+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"isRoot\":true}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -2323,7 +2324,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "430d1c86-0b78-a86c-c81e-5453303fd862",
+					"id": "08daf83d-fc94-054a-cd77-dc90bbd999b8",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.1)",
@@ -2373,7 +2374,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:31:40 GMT",
+							"value": "Mon, 29 Dec 2014 17:49:27 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -2397,7 +2398,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"CATG-052\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:31:40.271+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:44:23.000+0000\"},\"parentId\":\"41\",\"isRoot\":false}",
+					"text": "{\"id\":\"CATG-052\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:49:27.833+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:44:23.000+0000\"},\"parentId\":\"41\",\"isRoot\":false}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -2406,7 +2407,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "f429f017-9dca-127b-499a-9e81ea6646d7",
+					"id": "2f189bfc-0b9d-1cfb-9b58-4c6c143c640b",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
@@ -2445,7 +2446,7 @@
 						"name": "Bad Request",
 						"detail": "The request cannot be fulfilled due to bad syntax."
 					},
-					"time": 130,
+					"time": 35,
 					"headers": [
 						{
 							"name": "Connection",
@@ -2468,7 +2469,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Sat, 25 Oct 2014 15:29:57 GMT",
+							"value": "Mon, 29 Dec 2014 17:49:50 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -2495,7 +2496,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "2d7d00b6-cba5-ecb7-ab1e-6a5e8f54b87c",
+					"id": "88f21fc7-6196-9cb2-d8a7-93f7cdffefe0",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
@@ -2537,7 +2538,7 @@
 						"name": "Created",
 						"detail": "The request has been fulfilled and resulted in a new resource being created."
 					},
-					"time": 119,
+					"time": 383,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -2548,7 +2549,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:12:16 GMT",
+							"value": "Mon, 29 Dec 2014 17:44:12 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -2572,7 +2573,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"3\",\"version\":\"1.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/3:(1.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:12:16.464+0000\",\"lifecycleStatus\":\"In Design\",\"parentId\":\"41\",\"isRoot\":false}",
+					"text": "{\"id\":\"1\",\"version\":\"1.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/1:(1.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:44:11.987+0000\",\"lifecycleStatus\":\"In Design\",\"parentId\":\"41\",\"isRoot\":false}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -2581,7 +2582,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "a7288076-9551-2e82-d6e4-b55b30658bd6",
+					"id": "ee125b5c-643d-ff96-8dc8-780bb0b3ba4b",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
@@ -2620,7 +2621,7 @@
 						"name": "Created",
 						"detail": "The request has been fulfilled and resulted in a new resource being created."
 					},
-					"time": 173,
+					"time": 46,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -2631,7 +2632,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 17:36:01 GMT",
+							"value": "Mon, 29 Dec 2014 17:52:09 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -2655,7 +2656,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"CATG-052\",\"version\":\"2.5\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.5)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers-mod\",\"lastUpdate\":\"2014-10-23T17:36:01.517+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:44:23.000+0000\"},\"parentId\":\"743\",\"isRoot\":false}",
+					"text": "{\"id\":\"CATG-052\",\"version\":\"2.5\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.5)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers-mod\",\"lastUpdate\":\"2014-12-29T17:52:09.189+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:44:23.000+0000\"},\"parentId\":\"743\",\"isRoot\":false}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -2664,7 +2665,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "7c931f2b-df07-7b57-1b26-f5ca2f1b9ac3",
+					"id": "26781b59-1673-6e33-ec95-162e6b65ba74",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
@@ -2706,7 +2707,7 @@
 						"name": "Bad Request",
 						"detail": "The request cannot be fulfilled due to bad syntax."
 					},
-					"time": 129,
+					"time": 15,
 					"headers": [
 						{
 							"name": "Connection",
@@ -2729,7 +2730,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:33:27 GMT",
+							"value": "Mon, 29 Dec 2014 17:49:35 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -2756,7 +2757,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "e7a2ba0e-a1e3-7fe3-9726-f30e2472b0f7",
+					"id": "a2de5b6c-c555-71b2-a977-56ca17ca21bd",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
@@ -2795,7 +2796,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 146,
+					"time": 41,
 					"headers": [
 						{
 							"name": "Content-Length",
@@ -2806,7 +2807,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Fri, 24 Oct 2014 13:47:33 GMT",
+							"value": "Mon, 29 Dec 2014 17:55:43 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -2833,7 +2834,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "45aee18a-ceb7-5339-913c-c2f0956e5708",
+					"id": "69ffecbe-838b-a6ad-473a-4173c56faa4e",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.5)",
@@ -2874,7 +2875,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 72,
+					"time": 16,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -2885,7 +2886,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 21:40:54 GMT",
+							"value": "Mon, 29 Dec 2014 17:48:12 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -2909,7 +2910,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"id\",\"version\":\"1.2\",\"href\":\"href\",\"name\":\"name\",\"description\":\"description\",\"lastUpdate\":\"2014-10-23T21:40:54.677+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"1970-01-01T00:00:00.000+0000\",\"endDateTime\":\"2014-10-23T21:40:54.677+0000\"},\"parentId\":\"parent id\",\"isRoot\":false}",
+					"text": "{\"id\":\"id\",\"version\":\"1.2\",\"href\":\"href\",\"name\":\"name\",\"description\":\"description\",\"lastUpdate\":\"2014-12-29T17:48:12.110+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"1970-01-01T00:00:00.000+0000\",\"endDateTime\":\"2014-12-29T17:48:12.110+0000\"},\"parentId\":\"parent id\",\"isRoot\":false}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -2918,7 +2919,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "69731358-d9bf-7fc3-ba99-46981b9fa3ee",
+					"id": "cd4cebcf-fbac-51eb-7d37-c9aecfd799b2",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/admin/proto",
@@ -2956,7 +2957,7 @@
 						"name": "Not Found",
 						"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
 					},
-					"time": 116,
+					"time": 44,
 					"headers": [
 						{
 							"name": "Content-Length",
@@ -2973,7 +2974,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:58:12 GMT",
+							"value": "Mon, 29 Dec 2014 17:51:17 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -3000,7 +3001,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "36b1f739-8ad8-c8c6-23bc-e63785cdcddd",
+					"id": "a0ade59e-ffaa-456f-5f58-9bb405c91b93",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(22.0)",
@@ -3042,7 +3043,7 @@
 						"name": "Bad Request",
 						"detail": "The request cannot be fulfilled due to bad syntax."
 					},
-					"time": 123,
+					"time": 0,
 					"headers": [
 						{
 							"name": "Connection",
@@ -3065,7 +3066,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:35:51 GMT",
+							"value": "Mon, 29 Dec 2014 17:49:59 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -3092,7 +3093,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "4e462ca9-e0dc-43cf-5921-ff69fea2b098",
+					"id": "d4e3b709-14c4-6d4d-caf7-8710d5a76aef",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
@@ -3131,7 +3132,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 99,
+					"time": 16,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -3142,7 +3143,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Fri, 24 Oct 2014 15:28:04 GMT",
+							"value": "Mon, 29 Dec 2014 17:56:10 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -3166,7 +3167,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "[{\"id\":\"CATGR-002\",\"version\":\"2.0\"},{\"id\":\"CATGR-001\",\"version\":\"2.0\"},{\"id\":\"3\",\"version\":\"1.0\"},{\"id\":\"CATG-001\",\"version\":\"11.0\"},{\"id\":\"CATG-001\",\"version\":\"2.0\"},{\"id\":\"CATG-001\",\"version\":\"1.10\"}]",
+					"text": "[{\"id\":\"1\",\"version\":\"1.0\"},{\"id\":\"CATG-001\",\"version\":\"11.0\"},{\"id\":\"CATG-001\",\"version\":\"2.0\"},{\"id\":\"CATG-001\",\"version\":\"1.10\"}]",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -3175,7 +3176,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "6246b023-8da9-bd25-1584-f7c16d207e34",
+					"id": "f46e569d-a0a4-724a-00d4-3c32ad2d29d5",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
@@ -3216,7 +3217,7 @@
 						"name": "Not Found",
 						"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
 					},
-					"time": 64,
+					"time": 31,
 					"headers": [
 						{
 							"name": "Content-Length",
@@ -3233,7 +3234,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:23:03 GMT",
+							"value": "Mon, 29 Dec 2014 17:48:55 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -3260,7 +3261,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "8550bc0c-b9b7-53c5-946d-8fa8300a21d8",
+					"id": "9e1cf0f7-faac-f25b-575f-b79224ae5b1d",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(20.4",
@@ -3300,7 +3301,7 @@
 						"name": "Created",
 						"detail": "The request has been fulfilled and resulted in a new resource being created."
 					},
-					"time": 135,
+					"time": 58,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -3311,7 +3312,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:15:49 GMT",
+							"value": "Mon, 29 Dec 2014 17:44:29 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -3335,7 +3336,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"CATG-001\",\"version\":\"1.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:15:49.067+0000\",\"lifecycleStatus\":\"In Design\",\"parentId\":\"41\",\"isRoot\":false}",
+					"text": "{\"id\":\"CATG-001\",\"version\":\"1.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:44:29.046+0000\",\"lifecycleStatus\":\"In Design\",\"parentId\":\"41\",\"isRoot\":false}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -3344,7 +3345,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "30140683-da0b-acfb-64e6-35613ce315e5",
+					"id": "87fb6a50-9e3a-279e-00fc-4e8879ce5ef3",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
@@ -3384,7 +3385,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 63,
+					"time": 35,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -3395,7 +3396,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:18:01 GMT",
+							"value": "Mon, 29 Dec 2014 17:47:43 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -3419,7 +3420,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "[{\"id\":\"CATGR-002\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-002:(2.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:07:04.744+0000\",\"lifecycleStatus\":\"In Design\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"parentId\":\"41\",\"isRoot\":false},{\"id\":\"CATGR-001\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:07:35.216+0000\",\"lifecycleStatus\":\"In Design\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"parentId\":\"41\",\"isRoot\":false},{\"id\":\"3\",\"version\":\"1.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/3:(1.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:12:16.464+0000\",\"lifecycleStatus\":\"In Design\",\"parentId\":\"41\",\"isRoot\":false},{\"id\":\"CATG-052\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:15:40.144+0000\",\"lifecycleStatus\":\"In Design\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"parentId\":\"41\",\"isRoot\":false},{\"id\":\"CATG-001\",\"version\":\"1.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:15:49.067+0000\",\"lifecycleStatus\":\"In Design\",\"parentId\":\"41\",\"isRoot\":false},{\"id\":\"CATG-001\",\"version\":\"1.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:16:13.588+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2017-04-19T20:42:24.000+0000\"},\"isRoot\":true},{\"id\":\"CATG-001\",\"version\":\"11.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(11.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:16:23.278+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"isRoot\":true},{\"id\":\"CATG-001\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:16:33.929+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-04-19T20:42:24.000+0000\"},\"parentId\":\"R72\",\"isRoot\":false},{\"id\":\"CATG-001\",\"version\":\"1.10\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.10)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:16:54.102+0000\",\"lifecycleStatus\":\"Active\",\"isRoot\":true}]",
+					"text": "[{\"id\":\"1\",\"version\":\"1.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/1:(1.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:44:11.987+0000\",\"lifecycleStatus\":\"In Design\",\"parentId\":\"41\",\"isRoot\":false},{\"id\":\"CATG-052\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:44:20.682+0000\",\"lifecycleStatus\":\"In Design\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"parentId\":\"41\",\"isRoot\":false},{\"id\":\"CATG-001\",\"version\":\"1.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:44:29.046+0000\",\"lifecycleStatus\":\"In Design\",\"parentId\":\"41\",\"isRoot\":false},{\"id\":\"CATG-001\",\"version\":\"1.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:44:37.861+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"isRoot\":true},{\"id\":\"CATG-001\",\"version\":\"11.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(11.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:46:38.348+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"isRoot\":true},{\"id\":\"CATG-001\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:46:48.164+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-04-19T20:42:24.000+0000\"},\"parentId\":\"R72\",\"isRoot\":false},{\"id\":\"CATG-001\",\"version\":\"1.10\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.10)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:47:01.677+0000\",\"lifecycleStatus\":\"Active\",\"isRoot\":true}]",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -3428,7 +3429,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "44e5d4c6-9c3b-caae-397d-abe04fe78773",
+					"id": "513a1183-0e49-ad8b-52a6-8b491cb4f30a",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
@@ -3467,7 +3468,7 @@
 						"name": "Created",
 						"detail": "The request has been fulfilled and resulted in a new resource being created."
 					},
-					"time": 84,
+					"time": 64,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -3478,7 +3479,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:15:40 GMT",
+							"value": "Mon, 29 Dec 2014 17:44:20 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -3502,7 +3503,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"CATG-052\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:15:40.144+0000\",\"lifecycleStatus\":\"In Design\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"parentId\":\"41\",\"isRoot\":false}",
+					"text": "{\"id\":\"CATG-052\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:44:20.682+0000\",\"lifecycleStatus\":\"In Design\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"parentId\":\"41\",\"isRoot\":false}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -3511,7 +3512,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "cf079c02-e47b-db1a-7a8e-0ee549f1df78",
+					"id": "3abc7a38-e798-0aab-b85e-f0973d9e6df3",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
@@ -3551,7 +3552,7 @@
 						"name": "Internal Server Error",
 						"detail": "A generic error message, given when no more specific message is suitable."
 					},
-					"time": 152,
+					"time": 7,
 					"headers": [
 						{
 							"name": "Connection",
@@ -3574,7 +3575,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 17:49:31 GMT",
+							"value": "Mon, 29 Dec 2014 17:52:32 GMT",
 							"description": "The date and time that the message was sent"
 						}
 					],
@@ -3589,7 +3590,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "21e45a84-f177-9853-ffc6-fe7ea70e7543",
+					"id": "0e2cc880-7c73-447a-eaed-d1e404e450ea",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.6)",
@@ -3618,48 +3619,54 @@
 			"version": 2,
 			"tests": "",
 			"time": 1410526803968,
-			"name": "B-001-040 - [500]",
-			"description": "ID: CATG-001\nversion: 1.01\nlifecycle stat: In Test\nroot category\nno lastupdate tag\nno start but end\n\nError on Version",
+			"name": "B-001-040 - [201]",
+			"description": "ID: CATG-001\nversion: 1.01\nlifecycle stat: In Test\nroot category\nno lastupdate tag\nno start but end\n\nVersion normalized to 1.1 (from 1.01).",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 			"responses": [
 				{
 					"status": "",
 					"responseCode": {
-						"code": 500,
-						"name": "Internal Server Error",
-						"detail": "A generic error message, given when no more specific message is suitable."
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
 					},
-					"time": 120,
+					"time": 46,
 					"headers": [
-						{
-							"name": "Connection",
-							"key": "Connection",
-							"value": "close",
-							"description": "Options that are desired for the connection"
-						},
-						{
-							"name": "Content-Length",
-							"key": "Content-Length",
-							"value": "1797",
-							"description": "The length of the response body in octets (8-bit bytes)"
-						},
 						{
 							"name": "Content-Type",
 							"key": "Content-Type",
-							"value": "text/html",
+							"value": "application/json",
 							"description": "The mime type of this content"
 						},
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:16:01 GMT",
+							"value": "Mon, 29 Dec 2014 17:44:37 GMT",
 							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition 3.1.2.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
 						}
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 500 - </h1><hr/><p><b>type</b> Exception report</p><p><b>message</b></p><p><b>description</b>The server encountered an internal error () that prevented it from fulfilling this request.</p><p><b>exception</b> <pre>javax.servlet.ServletException: org.codehaus.jackson.map.JsonMappingException: '1.01' is not a valid version. (through reference chain: org.tmf.dsmapi.catalog.Category[&quot;version&quot;])</pre></p><p><b>root cause</b> <pre>org.codehaus.jackson.map.JsonMappingException: '1.01' is not a valid version. (through reference chain: org.tmf.dsmapi.catalog.Category[&quot;version&quot;])</pre></p><p><b>root cause</b> <pre>java.lang.IllegalArgumentException: '1.01' is not a valid version.</pre></p><p><b>note</b> <u>The full stack traces of the exception and its root causes are available in the GlassFish Server Open Source Edition 3.1.2.2 logs.</u></p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
-					"language": "html",
+					"text": "{\"id\":\"CATG-001\",\"version\":\"1.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:44:37.861+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"isRoot\":true}",
+					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
 						"size": "normal"
@@ -3667,7 +3674,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "f790f0a5-368b-7ac4-ef79-6e133cf800a9",
+					"id": "544c40ea-962b-e564-d0c2-27772f4c0acd",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
@@ -3707,7 +3714,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 88,
+					"time": 33,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -3718,7 +3725,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 21:28:07 GMT",
+							"value": "Mon, 29 Dec 2014 17:53:35 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -3742,7 +3749,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "[{\"id\":\"CATG-001\",\"version\":\"1.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:16:13.588+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2017-04-19T20:42:24.000+0000\"},\"isRoot\":true},{\"id\":\"CATG-001\",\"version\":\"11.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(11.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:16:23.278+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"isRoot\":true},{\"id\":\"CATG-001\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T17:57:11.545+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2012-04-19T20:44:23.000+0000\",\"endDateTime\":\"2014-04-19T20:44:23.000+0000\"},\"parentId\":\"R72\",\"isRoot\":false},{\"id\":\"CATG-001\",\"version\":\"1.10\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.10)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:16:54.102+0000\",\"lifecycleStatus\":\"Active\",\"isRoot\":true},{\"id\":\"CATG-052\",\"version\":\"2.5\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.5)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers new\",\"lastUpdate\":\"2014-10-23T17:55:47.377+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2014-04-19T20:44:23.000+0000\"},\"parentId\":\"743\",\"isRoot\":false}]",
+					"text": "[{\"id\":\"CATG-001\",\"version\":\"1.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:44:37.861+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"isRoot\":true},{\"id\":\"CATG-001\",\"version\":\"11.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(11.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:46:38.348+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"isRoot\":true},{\"id\":\"CATG-001\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\"name\":\"cloud Servic\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:53:22.129+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2012-04-19T20:44:23.000+0000\",\"endDateTime\":\"2014-04-19T20:44:23.000+0000\"},\"parentId\":\"R72\",\"isRoot\":false},{\"id\":\"CATG-001\",\"version\":\"1.10\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.10)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:47:01.677+0000\",\"lifecycleStatus\":\"Active\",\"isRoot\":true},{\"id\":\"CATG-052\",\"version\":\"2.5\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.5)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers new\",\"lastUpdate\":\"2014-12-29T17:53:13.580+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2014-04-19T20:44:23.000+0000\"},\"parentId\":\"743\",\"isRoot\":false}]",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -3751,7 +3758,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "500a54b6-a947-ec85-b097-0c292bc6836a",
+					"id": "d129b6c4-d695-d46a-1dfe-0a7847d54da0",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?lifecycleStatus.ne=In%20Design",
@@ -3789,7 +3796,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 106,
+					"time": 16,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -3800,7 +3807,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Fri, 24 Oct 2014 15:30:44 GMT",
+							"value": "Mon, 29 Dec 2014 17:56:30 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -3824,7 +3831,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "[{\"id\":\"CATGR-002\",\"version\":\"2.0\"},{\"id\":\"CATGR-001\",\"version\":\"2.0\"},{\"id\":\"3\",\"version\":\"1.0\"},{\"id\":\"CATG-001\",\"version\":\"1.10\"}]",
+					"text": "[{\"id\":\"1\",\"version\":\"1.0\"},{\"id\":\"CATG-001\",\"version\":\"1.10\"}]",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -3833,7 +3840,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "34d7a718-06d3-498a-2531-c312f2304a93",
+					"id": "25e07a01-8bf0-b7f4-8678-6ec2eb0029e1",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
@@ -3874,7 +3881,7 @@
 						"name": "Method Not Allowed",
 						"detail": "A request was made of a resource using a request method not supported by that resource; for example, using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource."
 					},
-					"time": 141,
+					"time": 16,
 					"headers": [
 						{
 							"name": "Allow",
@@ -3897,7 +3904,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Fri, 24 Oct 2014 13:33:04 GMT",
+							"value": "Mon, 29 Dec 2014 17:55:11 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -3924,7 +3931,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "104adf31-2d1b-d276-8549-fa572120b2ed",
+					"id": "cad5340e-d3dc-58df-c091-46b80969c381",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
@@ -3962,7 +3969,7 @@
 						"name": "Created",
 						"detail": "The request has been fulfilled and resulted in a new resource being created."
 					},
-					"time": 99,
+					"time": 47,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -3973,7 +3980,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:16:33 GMT",
+							"value": "Mon, 29 Dec 2014 17:46:48 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -3997,7 +4004,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"CATG-001\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:16:33.929+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-04-19T20:42:24.000+0000\"},\"parentId\":\"R72\",\"isRoot\":false}",
+					"text": "{\"id\":\"CATG-001\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:46:48.164+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-04-19T20:42:24.000+0000\"},\"parentId\":\"R72\",\"isRoot\":false}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -4006,7 +4013,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "9d633707-f689-7840-94fd-c064cb6ecc52",
+					"id": "4d048bcf-77e8-ede3-3971-5d259e097a61",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
@@ -4048,7 +4055,7 @@
 						"name": "Bad Request",
 						"detail": "The request cannot be fulfilled due to bad syntax."
 					},
-					"time": 3146,
+					"time": 15,
 					"headers": [
 						{
 							"name": "Connection",
@@ -4071,7 +4078,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 17:30:20 GMT",
+							"value": "Mon, 29 Dec 2014 17:51:47 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -4098,7 +4105,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "fa144da4-2cde-a7c4-f9c6-bccc62f04194",
+					"id": "f3b46992-c245-dc94-d63e-9cfe29fa6980",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
@@ -4138,7 +4145,7 @@
 						"name": "Created",
 						"detail": "The request has been fulfilled and resulted in a new resource being created."
 					},
-					"time": 138,
+					"time": 60,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -4149,7 +4156,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:37:05 GMT",
+							"value": "Mon, 29 Dec 2014 17:50:05 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -4173,7 +4180,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"CATG-052\",\"version\":\"2.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:37:05.813+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:44:23.000+0000\"},\"isRoot\":true}",
+					"text": "{\"id\":\"CATG-052\",\"version\":\"2.1\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.1)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:50:05.196+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:44:23.000+0000\"},\"isRoot\":true}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -4182,7 +4189,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "301d56bc-0ea6-af15-2e0a-689bac91b71b",
+					"id": "f4b5ebd1-956b-8c4b-1f14-79b2831c938a",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
@@ -4222,7 +4229,7 @@
 						"name": "Created",
 						"detail": "The request has been fulfilled and resulted in a new resource being created."
 					},
-					"time": 134,
+					"time": 26,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -4233,7 +4240,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:16:23 GMT",
+							"value": "Mon, 29 Dec 2014 17:46:38 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -4257,7 +4264,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"CATG-001\",\"version\":\"11.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(11.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:16:23.278+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"isRoot\":true}",
+					"text": "{\"id\":\"CATG-001\",\"version\":\"11.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(11.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:46:38.348+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"isRoot\":true}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -4266,7 +4273,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "feeaacf5-c2e8-6221-8bd9-479599731d88",
+					"id": "75a849af-951d-9f88-541b-87b6fd69499f",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
@@ -4306,7 +4313,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 88,
+					"time": 84,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -4317,7 +4324,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:17:23 GMT",
+							"value": "Mon, 29 Dec 2014 17:47:32 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -4341,7 +4348,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"CATG-001\",\"version\":\"11.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(11.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T14:16:23.278+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"isRoot\":true}",
+					"text": "{\"id\":\"CATG-001\",\"version\":\"11.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(11.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:46:38.348+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"isRoot\":true}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -4350,7 +4357,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "591736a9-ade0-111d-b778-d13d6644d61b",
+					"id": "89d98522-0651-00d0-0093-fced90f5265a",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
@@ -4388,7 +4395,7 @@
 						"name": "Not Found",
 						"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
 					},
-					"time": 91,
+					"time": 16,
 					"headers": [
 						{
 							"name": "Content-Length",
@@ -4405,7 +4412,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Fri, 24 Oct 2014 13:45:58 GMT",
+							"value": "Mon, 29 Dec 2014 17:55:35 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -4432,7 +4439,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "d6aeb7d9-1414-5ad7-1210-6164a7ed76f4",
+					"id": "4bc9a6f5-4af6-cfc3-e2c9-e716e891965f",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(9.0)",
@@ -4473,7 +4480,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 109,
+					"time": 15,
 					"headers": [
 						{
 							"name": "Content-Length",
@@ -4484,7 +4491,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Fri, 24 Oct 2014 15:26:35 GMT",
+							"value": "Mon, 29 Dec 2014 17:56:04 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -4511,7 +4518,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "b65a1772-b30a-a353-195e-dc288a3ab35c",
+					"id": "615a1281-e506-766e-a189-54ee5d38f1e6",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.1)",
@@ -4549,7 +4556,7 @@
 						"name": "Not Found",
 						"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
 					},
-					"time": 110,
+					"time": 16,
 					"headers": [
 						{
 							"name": "Content-Length",
@@ -4566,7 +4573,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:25:04 GMT",
+							"value": "Mon, 29 Dec 2014 17:49:03 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -4593,7 +4600,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "d0784ff4-3194-eb5f-95d1-fcd1ebf6e8b3",
+					"id": "36c3024e-90d3-6597-8798-a4ebcfd91e34",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(20.4)",
@@ -4635,7 +4642,7 @@
 						"name": "Internal Server Error",
 						"detail": "A generic error message, given when no more specific message is suitable."
 					},
-					"time": 182,
+					"time": 23,
 					"headers": [
 						{
 							"name": "Connection",
@@ -4646,7 +4653,7 @@
 						{
 							"name": "Content-Length",
 							"key": "Content-Length",
-							"value": "1739",
+							"value": "1737",
 							"description": "The length of the response body in octets (8-bit bytes)"
 						},
 						{
@@ -4658,13 +4665,13 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 15:01:19 GMT",
+							"value": "Mon, 29 Dec 2014 17:51:25 GMT",
 							"description": "The date and time that the message was sent"
 						}
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 500 - </h1><hr/><p><b>type</b> Exception report</p><p><b>message</b></p><p><b>description</b>The server encountered an internal error () that prevented it from fulfilling this request.</p><p><b>exception</b> <pre>javax.servlet.ServletException: org.tmf.dsmapi.commons.exceptions.IllegalLifecycleStatusException: LifecycleStatus can only transition to one of [In Design, Active, Rejected] from the current status of 'In Test'</pre></p><p><b>root cause</b> <pre>org.tmf.dsmapi.commons.exceptions.IllegalLifecycleStatusException: LifecycleStatus can only transition to one of [In Design, Active, Rejected] from the current status of 'In Test'</pre></p><p><b>note</b> <u>The full stack traces of the exception and its root causes are available in the GlassFish Server Open Source Edition 3.1.2.2 logs.</u></p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
+					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 500 - </h1><hr/><p><b>type</b> Exception report</p><p><b>message</b></p><p><b>description</b>The server encountered an internal error () that prevented it from fulfilling this request.</p><p><b>exception</b> <pre>javax.servlet.ServletException: org.tmf.dsmapi.catalog.exception.IllegalLifecycleStatusException: LifecycleStatus can only transition to one of [In Design, Active, Rejected] from the current status of 'In Test'</pre></p><p><b>root cause</b> <pre>org.tmf.dsmapi.catalog.exception.IllegalLifecycleStatusException: LifecycleStatus can only transition to one of [In Design, Active, Rejected] from the current status of 'In Test'</pre></p><p><b>note</b> <u>The full stack traces of the exception and its root causes are available in the GlassFish Server Open Source Edition 3.1.2.2 logs.</u></p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
 					"language": "html",
 					"rawDataType": "text",
 					"state": {
@@ -4673,7 +4680,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "e45eb1a8-2854-c55d-9e7b-60a2b7922743",
+					"id": "50b35314-1d14-a7be-4919-d03e2ddf748f",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.1)",
@@ -4712,7 +4719,7 @@
 						"name": "Bad Request",
 						"detail": "The request cannot be fulfilled due to bad syntax."
 					},
-					"time": 136,
+					"time": 17,
 					"headers": [
 						{
 							"name": "Connection",
@@ -4735,7 +4742,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 17:33:24 GMT",
+							"value": "Mon, 29 Dec 2014 17:52:02 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -4762,7 +4769,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "1c649357-fce1-6155-bab7-9b7af3499902",
+					"id": "65c2a1dd-bc1c-37bd-be10-839ac8587609",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
@@ -4804,7 +4811,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 94,
+					"time": 15,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -4815,7 +4822,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Fri, 24 Oct 2014 15:39:54 GMT",
+							"value": "Mon, 29 Dec 2014 17:53:49 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -4839,7 +4846,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "[{\"id\":\"CATG-001\",\"version\":\"1.1\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2017-04-19T20:42:24.000+0000\"}},{\"id\":\"CATG-001\",\"version\":\"11.0\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"}},{\"id\":\"CATG-001\",\"version\":\"2.0\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2012-04-19T20:44:23.000+0000\",\"endDateTime\":\"2014-04-19T20:44:23.000+0000\"}},{\"id\":\"CATG-001\",\"version\":\"1.10\",\"lifecycleStatus\":\"Active\"},{\"id\":\"CATG-052\",\"version\":\"2.5\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2014-04-19T20:44:23.000+0000\"}}]",
+					"text": "[{\"id\":\"CATG-001\",\"version\":\"1.1\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:42:23.000+0000\"}},{\"id\":\"CATG-001\",\"version\":\"11.0\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"}},{\"id\":\"CATG-001\",\"version\":\"2.0\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2012-04-19T20:44:23.000+0000\",\"endDateTime\":\"2014-04-19T20:44:23.000+0000\"}},{\"id\":\"CATG-001\",\"version\":\"1.10\",\"lifecycleStatus\":\"Active\"},{\"id\":\"CATG-052\",\"version\":\"2.5\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2014-04-19T20:44:23.000+0000\"}}]",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -4848,7 +4855,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "505aa38d-29d4-d2ee-f9d7-8646902fd03f",
+					"id": "aad1eab5-5135-b986-8c6a-cde4668a59b2",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?lifecycleStatus.gte=In%20Test&fields=version%2ClifecycleStatus%2CvalidFor",
@@ -4887,7 +4894,7 @@
 						"name": "Created",
 						"detail": "The request has been fulfilled and resulted in a new resource being created."
 					},
-					"time": 105,
+					"time": 15,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -4898,7 +4905,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 15:03:38 GMT",
+							"value": "Mon, 29 Dec 2014 17:51:34 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -4922,7 +4929,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"CATG-052\",\"version\":\"2.2\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.2)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers new\",\"lastUpdate\":\"2014-10-23T15:03:38.570+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:44:23.000+0000\"},\"parentId\":\"743\",\"isRoot\":false}",
+					"text": "{\"id\":\"CATG-052\",\"version\":\"2.2\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.2)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers new\",\"lastUpdate\":\"2014-12-29T17:51:34.971+0000\",\"lifecycleStatus\":\"In Test\",\"validFor\":{\"endDateTime\":\"2013-04-19T20:44:23.000+0000\"},\"parentId\":\"743\",\"isRoot\":false}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -4931,7 +4938,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "a286f3c1-1071-d5c8-7d5d-86d822cce8e5",
+					"id": "5b662bd1-aaad-b2c4-47da-e1721e3ac8d6",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.1)",
@@ -4971,7 +4978,7 @@
 						"name": "Internal Server Error",
 						"detail": "A generic error message, given when no more specific message is suitable."
 					},
-					"time": 78,
+					"time": 22,
 					"headers": [
 						{
 							"name": "Connection",
@@ -4982,7 +4989,7 @@
 						{
 							"name": "Content-Length",
 							"key": "Content-Length",
-							"value": "1693",
+							"value": "1691",
 							"description": "The length of the response body in octets (8-bit bytes)"
 						},
 						{
@@ -4994,13 +5001,13 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 14:16:45 GMT",
+							"value": "Mon, 29 Dec 2014 17:46:55 GMT",
 							"description": "The date and time that the message was sent"
 						}
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 500 - </h1><hr/><p><b>type</b> Exception report</p><p><b>message</b></p><p><b>description</b>The server encountered an internal error () that prevented it from fulfilling this request.</p><p><b>exception</b> <pre>javax.servlet.ServletException: org.tmf.dsmapi.commons.exceptions.IllegalLifecycleStatusException: Initial lifecycleStatus must be one of : [In Study, In Design, In Test, Active, Launched]</pre></p><p><b>root cause</b> <pre>org.tmf.dsmapi.commons.exceptions.IllegalLifecycleStatusException: Initial lifecycleStatus must be one of : [In Study, In Design, In Test, Active, Launched]</pre></p><p><b>note</b> <u>The full stack traces of the exception and its root causes are available in the GlassFish Server Open Source Edition 3.1.2.2 logs.</u></p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
+					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 500 - </h1><hr/><p><b>type</b> Exception report</p><p><b>message</b></p><p><b>description</b>The server encountered an internal error () that prevented it from fulfilling this request.</p><p><b>exception</b> <pre>javax.servlet.ServletException: org.tmf.dsmapi.catalog.exception.IllegalLifecycleStatusException: Initial lifecycleStatus must be one of : [In Study, In Design, In Test, Active, Launched]</pre></p><p><b>root cause</b> <pre>org.tmf.dsmapi.catalog.exception.IllegalLifecycleStatusException: Initial lifecycleStatus must be one of : [In Study, In Design, In Test, Active, Launched]</pre></p><p><b>note</b> <u>The full stack traces of the exception and its root causes are available in the GlassFish Server Open Source Edition 3.1.2.2 logs.</u></p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
 					"language": "html",
 					"rawDataType": "text",
 					"state": {
@@ -5009,7 +5016,7 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "eadc2d11-0bed-4c5e-04f1-cb9c6b7c56c1",
+					"id": "5e8a278c-ea68-b46e-2109-35b86beef628",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
@@ -5049,7 +5056,7 @@
 						"name": "OK",
 						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
 					},
-					"time": 90,
+					"time": 32,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -5060,7 +5067,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Fri, 24 Oct 2014 15:39:27 GMT",
+							"value": "Mon, 29 Dec 2014 17:53:41 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -5093,8 +5100,8 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "c5f1046a-495b-09b6-3c6a-4cdf0a572166",
-					"name": "Resposne",
+					"id": "af6e3bfc-cf66-f05f-a6d2-b6973eba8d63",
+					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?lifecycleStatus.gt=In%20Test&fields=version%2ClifecycleStatus%2CvalidFor",
 						"pathVariables": {},
@@ -5132,7 +5139,7 @@
 						"name": "Created",
 						"detail": "The request has been fulfilled and resulted in a new resource being created."
 					},
-					"time": 129,
+					"time": 69,
 					"headers": [
 						{
 							"name": "Content-Type",
@@ -5143,7 +5150,7 @@
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Thu, 23 Oct 2014 17:57:11 GMT",
+							"value": "Mon, 29 Dec 2014 17:53:22 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -5167,7 +5174,7 @@
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "{\"id\":\"CATG-001\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-10-23T17:57:11.545+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2012-04-19T20:44:23.000+0000\",\"endDateTime\":\"2014-04-19T20:44:23.000+0000\"},\"parentId\":\"R72\",\"isRoot\":false}",
+					"text": "{\"id\":\"CATG-001\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\"name\":\"cloud Servic\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:53:22.129+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2012-04-19T20:44:23.000+0000\",\"endDateTime\":\"2014-04-19T20:44:23.000+0000\"},\"parentId\":\"R72\",\"isRoot\":false}",
 					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
@@ -5176,12 +5183,12 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "6a6dc510-38bc-da2e-7d3f-2ab43d201508",
+					"id": "e376eb71-cc3c-4861-8cb3-0901d79cf89e",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)",
 						"pathVariables": {},
-						"data": "{\n\n    \"validFor\": {\n        \"startDateTime\": \"2012-04-19T16:44:23-04:00\",\n        \"endDateTime\": \"2014-04-19T16:44:23-04:00\"\n    }\n}",
+						"data": "{\n    \"name\": \"cloud Servic\",\n    \"validFor\": {\n        \"startDateTime\": \"2012-04-19T16:44:23-04:00\",\n        \"endDateTime\": \"2014-04-19T16:44:23-04:00\"\n    }\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
 						"dataMode": "raw",
 						"method": "PATCH",

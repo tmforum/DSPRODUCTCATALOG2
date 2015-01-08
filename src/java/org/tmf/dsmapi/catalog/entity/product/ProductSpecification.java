@@ -47,6 +47,7 @@ import org.tmf.dsmapi.commons.annotation.EntityReferenceProperty;
  *         "startDateTime": "2013-04-19T16:42:23-04:00",
  *         "endDateTime": "2013-06-19T00:00:00-04:00"
  *     },
+ *     "productNumber", "I42-340-DX",
  *     "isBundle": "true",
  *     "brand": "Apple",
  *     "attachment": [
@@ -192,6 +193,9 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
 
     private static final Logger logger = Logger.getLogger(ProductSpecification.class.getName());
 
+    @Column(name = "PRODUCT_NUMBER", nullable = true)
+    private String productNumber;
+    
     @Column(name = "IS_BUNDLE", nullable = true)
     private Boolean isBundle;
 
@@ -272,6 +276,14 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
     private List<ProductSpecCharacteristic> productSpecCharacteristic;
 
     public ProductSpecification() {
+    }
+
+    public String getProductNumber() {
+        return productNumber;
+    }
+
+    public void setProductNumber(String productNumber) {
+        this.productNumber = productNumber;
     }
 
     public Boolean getIsBundle() {
@@ -387,6 +399,7 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
 
         hash = 29 * hash + super.hashCode();
 
+        hash = 29 * hash + (this.productNumber != null ? this.productNumber.hashCode() : 0);
         hash = 29 * hash + (this.isBundle != null ? this.isBundle.hashCode() : 0);
         hash = 29 * hash + (this.brand != null ? this.brand.hashCode() : 0);
         hash = 29 * hash + (this.attachment != null ? this.attachment.hashCode() : 0);
@@ -407,6 +420,10 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         }
 
         final ProductSpecification other = (ProductSpecification) object;
+        if (Utilities.areEqual(this.productNumber, other.productNumber) == false) {
+            return false;
+        }
+        
         if (Utilities.areEqual(this.isBundle, other.isBundle) == false) {
             return false;
         }
@@ -448,7 +465,7 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
 
     @Override
     public String toString() {
-        return "ProductSpecification{<" + super.toString() + ">, isBundle=" + isBundle + ", brand=" + brand + ", attachment=" + attachment + ", relatedParty=" + relatedParty + ", bundledProductSpecification=" + bundledProductSpecification + ", productSpecificationRelationship=" + productSpecificationRelationship + ", serviceSpecification=" + serviceSpecification + ", resourceSpecification=" + resourceSpecification + ", productSpecCharacteristic=" + productSpecCharacteristic + '}';
+        return "ProductSpecification{<" + super.toString() + ">, productNumber=" + productNumber + ", isBundle=" + isBundle + ", brand=" + brand + ", attachment=" + attachment + ", relatedParty=" + relatedParty + ", bundledProductSpecification=" + bundledProductSpecification + ", productSpecificationRelationship=" + productSpecificationRelationship + ", serviceSpecification=" + serviceSpecification + ", resourceSpecification=" + resourceSpecification + ", productSpecCharacteristic=" + productSpecCharacteristic + '}';
     }
 
     @Override
@@ -474,6 +491,10 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
 
         super.edit(input);
 
+        if (this.productNumber == null) {
+            this.productNumber = input.productNumber;
+        }
+        
         if (this.isBundle == null) {
             this.isBundle = input.isBundle;
         }
@@ -574,6 +595,7 @@ public class ProductSpecification extends AbstractCatalogEntity implements Seria
         productSpecification.setLifecycleStatus(LifecycleStatus.ACTIVE);
         productSpecification.setValidFor(TimeRange.createProto ());
 
+        productSpecification.productNumber = "I42-340-DX";
         productSpecification.isBundle = true;
         productSpecification.brand = "brand";
 

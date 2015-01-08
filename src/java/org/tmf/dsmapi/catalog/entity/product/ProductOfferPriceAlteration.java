@@ -17,13 +17,10 @@ import org.tmf.dsmapi.commons.Utilities;
  * @author bahman.barzideh
  *
  * {
- *     "id": "15",
- *     "href": " http://serverlocation:port/catalogManagement/productOfferPriceAlteration/15",
  *     "name": "Shipping Discount",
  *     "description": "One time shipping discount",
  *     "validFor": {
  *         "startDateTime": "2013-04-19T16:42:23-04:00",
- *         "endDateTime": ""
  *     },
  *     "priceType": "One Time discount",
  *     "unitOfMeasure": "",
@@ -31,7 +28,6 @@ import org.tmf.dsmapi.commons.Utilities;
  *         "percentage": "100%"
  *     },
  *     "recurringChargePeriod": "",
- *     "applicationDuration": "",
  *     "priceCondition": "apply if total amount of the  order is greater than 300.00"
  * }
  *
@@ -41,13 +37,7 @@ import org.tmf.dsmapi.commons.Utilities;
 public class ProductOfferPriceAlteration implements Serializable {
     private final static long serialVersionUID = 1L;
 
-    private final static Logger logger = Logger.getLogger(ProductOfferingPrice.class.getName());
-
-    @Column(name = "PRICE_ALT_ID", nullable = true)
-    private String id;
-
-    @Column(name = "PRICE_ALT_HREF", nullable = true)
-    private String href;
+    private final static Logger logger = Logger.getLogger(ProductOffering.class.getName());
 
     @Column(name = "PRICE_ALT_NAME", nullable = true)
     private String name;
@@ -74,29 +64,10 @@ public class ProductOfferPriceAlteration implements Serializable {
     @Column(name = "PRICE_ALT_RECURRING_CHARGE_PERIOD", nullable = true)
     private String recurringChargePeriod;
 
-    @Column(name = "PRICE_ALT_APPLICATION_DURATION", nullable = true)
-    private String applicationDuration;
-
     @Column(name = "PRICE_ALT_PRICE_CONDITION", nullable = true)
     private String priceCondition;
 
     public ProductOfferPriceAlteration() {
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getHref() {
-        return href;
-    }
-
-    public void setHref(String href) {
-        this.href = href;
     }
 
     public String getName() {
@@ -155,14 +126,6 @@ public class ProductOfferPriceAlteration implements Serializable {
         this.recurringChargePeriod = recurringChargePeriod;
     }
 
-    public String getApplicationDuration() {
-        return applicationDuration;
-    }
-
-    public void setApplicationDuration(String applicationDuration) {
-        this.applicationDuration = applicationDuration;
-    }
-
     public String getPriceCondition() {
         return priceCondition;
     }
@@ -180,8 +143,6 @@ public class ProductOfferPriceAlteration implements Serializable {
     public int hashCode() {
         int hash = 3;
 
-        hash = 61 * hash + (this.id != null ? this.id.hashCode() : 0);
-        hash = 61 * hash + (this.href != null ? this.href.hashCode() : 0);
         hash = 61 * hash + (this.name != null ? this.name.hashCode() : 0);
         hash = 61 * hash + (this.description != null ? this.description.hashCode() : 0);
         hash = 61 * hash + (this.validFor != null ? this.validFor.hashCode() : 0);
@@ -189,7 +150,6 @@ public class ProductOfferPriceAlteration implements Serializable {
         hash = 61 * hash + (this.unitOfMeasure != null ? this.unitOfMeasure.hashCode() : 0);
         hash = 61 * hash + (this.price != null ? this.price.hashCode() : 0);
         hash = 61 * hash + (this.recurringChargePeriod != null ? this.recurringChargePeriod.hashCode() : 0);
-        hash = 61 * hash + (this.applicationDuration != null ? this.applicationDuration.hashCode() : 0);
         hash = 61 * hash + (this.priceCondition != null ? this.priceCondition.hashCode() : 0);
 
         return hash;
@@ -202,14 +162,6 @@ public class ProductOfferPriceAlteration implements Serializable {
         }
 
         final ProductOfferPriceAlteration other = (ProductOfferPriceAlteration) object;
-        if (Utilities.areEqual(this.id, other.id) == false) {
-            return false;
-        }
-
-        if (Utilities.areEqual(this.href, other.href) == false) {
-            return false;
-        }
-
         if (Utilities.areEqual(this.name, other.name) == false) {
             return false;
         }
@@ -238,10 +190,6 @@ public class ProductOfferPriceAlteration implements Serializable {
             return false;
         }
 
-        if (Utilities.areEqual(this.applicationDuration, other.applicationDuration) == false) {
-            return false;
-        }
-
         if (Utilities.areEqual(this.priceCondition, other.priceCondition) == false) {
             return false;
         }
@@ -251,14 +199,12 @@ public class ProductOfferPriceAlteration implements Serializable {
 
     @Override
     public String toString() {
-        return "ProductOfferPriceAlteration{" + "id=" + id + ", href=" + href + ", name=" + name + ", description=" + description + ", validFor=" + validFor + ", priceType=" + priceType + ", unitOfMeasure=" + unitOfMeasure + ", price=" + price + ", recurringChargePeriod=" + recurringChargePeriod + ", applicationDuration=" + applicationDuration + ", priceCondition=" + priceCondition + '}';
+        return "ProductOfferPriceAlteration{" + "name=" + name + ", description=" + description + ", validFor=" + validFor + ", priceType=" + priceType + ", unitOfMeasure=" + unitOfMeasure + ", price=" + price + ", recurringChargePeriod=" + recurringChargePeriod + ", priceCondition=" + priceCondition + '}';
     }
 
     public static ProductOfferPriceAlteration createProto() {
         ProductOfferPriceAlteration productOfferPriceAlteration = new ProductOfferPriceAlteration();
 
-        productOfferPriceAlteration.id = "id";
-        productOfferPriceAlteration.href = "href";
         productOfferPriceAlteration.name = "name";
         productOfferPriceAlteration.description = "description";
         productOfferPriceAlteration.validFor = TimeRange.createProto();
@@ -266,7 +212,6 @@ public class ProductOfferPriceAlteration implements Serializable {
         productOfferPriceAlteration.unitOfMeasure = "unit of measure";
         productOfferPriceAlteration.price = AlterationPrice.createProto();
         productOfferPriceAlteration.recurringChargePeriod = "recurring charge period";
-        productOfferPriceAlteration.applicationDuration = "application duration";
         productOfferPriceAlteration.priceCondition = "price condition";
 
         return productOfferPriceAlteration;

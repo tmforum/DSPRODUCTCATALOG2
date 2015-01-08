@@ -21,7 +21,7 @@ import org.tmf.dsmapi.commons.Utilities;
 public class AlterationPrice implements Serializable {
     private final static long serialVersionUID = 1L;
 
-    private final static Logger logger = Logger.getLogger(ProductOfferingPrice.class.getName());
+    private final static Logger logger = Logger.getLogger(ProductOffering.class.getName());
 
     @Column(name = "PRICE_ALT_PERCENTAGE", nullable = true)
     String percentage;
