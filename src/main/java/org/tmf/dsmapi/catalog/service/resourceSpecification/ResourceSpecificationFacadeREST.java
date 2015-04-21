@@ -20,9 +20,10 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
-import org.tmf.dsmapi.catalog.entity.LifecycleStatus;
-import org.tmf.dsmapi.catalog.entity.resource.ResourceSpecification;
+import org.tmf.dsmapi.catalog.resource.LifecycleStatus;
+import org.tmf.dsmapi.catalog.entity.resource.ResourceSpecificationEntity;
 import org.tmf.dsmapi.catalog.exception.IllegalLifecycleStatusException;
+import org.tmf.dsmapi.catalog.resource.resource.ResourceSpecification;
 import org.tmf.dsmapi.catalog.service.AbstractFacadeREST;
 import org.tmf.dsmapi.catalog.service.ServiceConstants;
 import org.tmf.dsmapi.commons.ParsedVersion;
@@ -37,7 +38,7 @@ import org.tmf.dsmapi.commons.jaxrs.PATCH;
  */
 @Stateless
 @Path("resourceSpecification")
-public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<ResourceSpecification> {
+public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<ResourceSpecificationEntity> {
     private static final Logger logger = Logger.getLogger(ResourceSpecification.class.getName());
 
     @EJB
@@ -47,7 +48,7 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
      *
      */
     public ResourceSpecificationFacadeREST() {
-        super(ResourceSpecification.class);
+        super(ResourceSpecificationEntity.class);
     }
 
     /*
@@ -64,7 +65,7 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response create(ResourceSpecification input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response create(ResourceSpecificationEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ResourceSpecificationFacadeREST:create()");
 
         if (input == null) {
@@ -100,7 +101,7 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
     @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("entityId") String entityId, ResourceSpecification input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response update(@PathParam("entityId") String entityId, ResourceSpecificationEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ResourceSpecificationFacadeREST:update(entityId: {0})", entityId);
 
         return update_(entityId, null, input, uriInfo);
@@ -113,7 +114,7 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, ResourceSpecification input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, ResourceSpecificationEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ResourceSpecificationFacadeREST:update(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return update_(entityId, entityVersion, input, uriInfo);
@@ -126,7 +127,7 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
     @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("entityId") String entityId, ResourceSpecification input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response edit(@PathParam("entityId") String entityId, ResourceSpecificationEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ResourceSpecificationFacadeREST:edit(entityId: {0})", entityId);
 
         return edit_(entityId, null, input, uriInfo);
@@ -139,7 +140,7 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, ResourceSpecification input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, ResourceSpecificationEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ResourceSpecificationFacadeREST:edit(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return edit_(entityId, entityVersion, input, uriInfo);
@@ -181,7 +182,7 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
         Set<String> outputFields = getFieldSet(queryParameterParser);
         queryParameterParser.removeTagWithValues("depth");
 
-        Set<ResourceSpecification> entities = manager.find(queryParameterParser.getTagsWithValue());
+        Set<ResourceSpecificationEntity> entities = manager.find(queryParameterParser.getTagsWithValue());
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
@@ -229,7 +230,7 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
     public Response proto() {
         logger.log(Level.FINE, "ResourceSpecificationFacadeREST:proto()");
 
-        return Response.ok(ResourceSpecification.createProto()).build();
+        return Response.ok(ResourceSpecificationEntity.createProto()).build();
     }
 
     /*
@@ -248,7 +249,7 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
     /*
      *
      */
-    private Response update_(String entityId, ParsedVersion entityVersion, ResourceSpecification input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    private Response update_(String entityId, ParsedVersion entityVersion, ResourceSpecificationEntity input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ResourceSpecificationFacadeREST:update_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
@@ -261,8 +262,8 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        List<ResourceSpecification> entities = manager.findById(ResourceSpecification.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
-        ResourceSpecification entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
+        List<ResourceSpecificationEntity> entities = manager.findById(ResourceSpecificationEntity.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
+        ResourceSpecificationEntity entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
         if (entity == null) {
             logger.log(Level.FINE, "requested ResourceSpecification [{0}, {1}] not found", new Object[]{entityId, entityVersion});
             return Response.status(Response.Status.NOT_FOUND).build();
@@ -295,7 +296,7 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
     /*
      *
      */
-    private Response edit_(String entityId, ParsedVersion entityVersion, ResourceSpecification input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    private Response edit_(String entityId, ParsedVersion entityVersion, ResourceSpecificationEntity input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ResourceSpecificationFacadeREST:edit_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
@@ -303,8 +304,8 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        List<ResourceSpecification> entities = manager.findById(ResourceSpecification.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
-        ResourceSpecification entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
+        List<ResourceSpecificationEntity> entities = manager.findById(ResourceSpecificationEntity.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
+        ResourceSpecificationEntity entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
         if (entity == null) {
             logger.log(Level.FINE, "requested ResourceSpecification [{0}, {1}] not found", new Object[]{entityId, entityVersion});
             return Response.status(Response.Status.NOT_FOUND).build();
@@ -348,7 +349,7 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
     private Response remove_(String entityId, ParsedVersion entityVersion) {
         logger.log(Level.FINE, "ResourceSpecificationFacadeREST:remove_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
-        List<ResourceSpecification> entities = manager.findById(ResourceSpecification.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
+        List<ResourceSpecificationEntity> entities = manager.findById(ResourceSpecificationEntity.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
@@ -363,12 +364,12 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
     private Response find_(String entityId, ParsedVersion entityVersion, int depth, UriInfo uriInfo) {
         logger.log(Level.FINE, "ResourceSpecificationFacadeREST:find_(entityId: {0}, entityVersion: {1}, depth: {2})", new Object[]{entityId, entityVersion, depth});
 
-        List<ResourceSpecification> entities = manager.findById(ResourceSpecification.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
+        List<ResourceSpecificationEntity> entities = manager.findById(ResourceSpecificationEntity.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        ResourceSpecification entity = entities.get(0);
+        ResourceSpecificationEntity entity = entities.get(0);
         getReferencedEntities(entity, depth);
 
         QueryParameterParser queryParameterParser = new QueryParameterParser(uriInfo.getRequestUri().getQuery());

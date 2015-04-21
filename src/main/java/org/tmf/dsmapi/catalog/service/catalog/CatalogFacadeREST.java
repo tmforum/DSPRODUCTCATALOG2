@@ -20,9 +20,10 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
-import org.tmf.dsmapi.catalog.entity.LifecycleStatus;
-import org.tmf.dsmapi.catalog.entity.catalog.Catalog;
+import org.tmf.dsmapi.catalog.entity.catalog.CatalogEntity;
 import org.tmf.dsmapi.catalog.exception.IllegalLifecycleStatusException;
+import org.tmf.dsmapi.catalog.resource.LifecycleStatus;
+import org.tmf.dsmapi.catalog.resource.catalog.Catalog;
 import org.tmf.dsmapi.catalog.service.AbstractFacadeREST;
 import org.tmf.dsmapi.catalog.service.ServiceConstants;
 import org.tmf.dsmapi.commons.ParsedVersion;
@@ -37,7 +38,7 @@ import org.tmf.dsmapi.commons.jaxrs.PATCH;
  */
 @Stateless
 @Path("catalog")
-public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
+public class CatalogFacadeREST extends AbstractFacadeREST<CatalogEntity> {
     private static final Logger logger = Logger.getLogger(Catalog.class.getName());
 
     @EJB
@@ -47,7 +48,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
      *
      */
     public CatalogFacadeREST() {
-        super(Catalog.class);
+        super(CatalogEntity.class);
     }
 
     /*
@@ -64,7 +65,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response create(Catalog input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response create(CatalogEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "CatalogFacadeREST:create()");
 
         if (input == null) {
@@ -99,7 +100,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
     @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("entityId") String entityId, Catalog input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response update(@PathParam("entityId") String entityId, CatalogEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "CatalogFacadeREST:update(entityId: {0})", entityId);
 
         return update_(entityId, null, input, uriInfo);
@@ -112,7 +113,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, Catalog input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, CatalogEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "CatalogFacadeREST:update(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return update_(entityId, entityVersion, input, uriInfo);
@@ -125,7 +126,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
     @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("entityId") String entityId, Catalog input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response edit(@PathParam("entityId") String entityId, CatalogEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "CatalogFacadeREST::edit(entityId: {0})", new Object[]{entityId});
 
         return edit_(entityId, null, input, uriInfo);
@@ -138,7 +139,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, Catalog input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, CatalogEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "CatalogFacadeREST:edit(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return edit_(entityId, entityVersion, input, uriInfo);
@@ -180,7 +181,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
         Set<String> outputFields = getFieldSet(queryParameterParser);
         queryParameterParser.removeTagWithValues("depth");
 
-        Set<Catalog> entities = manager.find(queryParameterParser.getTagsWithValue());
+        Set<CatalogEntity> entities = manager.find(queryParameterParser.getTagsWithValue());
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
@@ -228,7 +229,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
     public Response proto() {
         logger.log(Level.FINE, "CatalogFacadeREST:proto()");
 
-        return Response.ok(Catalog.createProto()).build();
+        return Response.ok(CatalogEntity.createProto()).build();
     }
 
     /*
@@ -247,7 +248,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
     /*
      *
      */
-    private Response update_(String entityId, ParsedVersion entityVersion, Catalog input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    private Response update_(String entityId, ParsedVersion entityVersion, CatalogEntity input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "CatalogFacadeREST:update_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
@@ -260,8 +261,8 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        List<Catalog> entities = manager.findCatalogById(entityId, entityVersion);
-        Catalog entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
+        List<CatalogEntity> entities = manager.findCatalogById(entityId, entityVersion);
+        CatalogEntity entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
         if (entity == null) {
             logger.log(Level.FINE, "requested Catalog [{0}, {1}] not found", new Object[]{entityId, entityVersion});
             return Response.status(Response.Status.NOT_FOUND).build();
@@ -292,7 +293,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
     /*
      *
      */
-    private Response edit_(String entityId, ParsedVersion entityVersion, Catalog input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    private Response edit_(String entityId, ParsedVersion entityVersion, CatalogEntity input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "CatalogFacadeREST:edit_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
@@ -300,8 +301,8 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        List<Catalog> entities = manager.findCatalogById(entityId, entityVersion);
-        Catalog entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
+        List<CatalogEntity> entities = manager.findCatalogById(entityId, entityVersion);
+        CatalogEntity entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
         if (entity == null) {
             logger.log(Level.FINE, "requested Catalog [{0}, {1}] not found", new Object[]{entityId, entityVersion});
             return Response.status(Response.Status.NOT_FOUND).build();
@@ -343,7 +344,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
     private Response remove_(String entityId, ParsedVersion entityVersion) {
         logger.log(Level.FINE, "CatalogFacadeREST:remove_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
-        List<Catalog> entities = manager.findCatalogById(entityId, entityVersion);
+        List<CatalogEntity> entities = manager.findCatalogById(entityId, entityVersion);
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
@@ -358,12 +359,12 @@ public class CatalogFacadeREST extends AbstractFacadeREST<Catalog> {
     private Response find_(String entityId, ParsedVersion entityVersion, int depth, UriInfo uriInfo) {
         logger.log(Level.FINE, "CatalogFacadeREST:find_(entityId: {0}, entityVersion: {1}, depth: {2})", new Object[]{entityId, entityVersion, depth});
 
-        List<Catalog> entities = manager.findCatalogById(entityId, entityVersion);
+        List<CatalogEntity> entities = manager.findCatalogById(entityId, entityVersion);
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        Catalog entity = entities.get(0);
+        CatalogEntity entity = entities.get(0);
         getReferencedEntities(entity, depth);
 
         QueryParameterParser queryParameterParser = new QueryParameterParser(uriInfo.getRequestUri().getQuery());

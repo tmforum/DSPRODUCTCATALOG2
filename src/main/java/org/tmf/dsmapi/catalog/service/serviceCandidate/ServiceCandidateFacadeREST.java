@@ -20,9 +20,10 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
-import org.tmf.dsmapi.catalog.entity.LifecycleStatus;
-import org.tmf.dsmapi.catalog.entity.service.ServiceCandidate;
+import org.tmf.dsmapi.catalog.entity.service.ServiceCandidateEntity;
 import org.tmf.dsmapi.catalog.exception.IllegalLifecycleStatusException;
+import org.tmf.dsmapi.catalog.resource.LifecycleStatus;
+import org.tmf.dsmapi.catalog.resource.service.ServiceCandidate;
 import org.tmf.dsmapi.catalog.service.AbstractFacadeREST;
 import org.tmf.dsmapi.catalog.service.ServiceConstants;
 import org.tmf.dsmapi.commons.ParsedVersion;
@@ -37,7 +38,7 @@ import org.tmf.dsmapi.commons.jaxrs.PATCH;
  */
 @Stateless
 @Path("serviceCandidate")
-public class ServiceCandidateFacadeREST extends AbstractFacadeREST<ServiceCandidate> {
+public class ServiceCandidateFacadeREST extends AbstractFacadeREST<ServiceCandidateEntity> {
     private static final Logger logger = Logger.getLogger(ServiceCandidate.class.getName());
 
     @EJB
@@ -47,7 +48,7 @@ public class ServiceCandidateFacadeREST extends AbstractFacadeREST<ServiceCandid
      *
      */
     public ServiceCandidateFacadeREST() {
-        super(ServiceCandidate.class);
+        super(ServiceCandidateEntity.class);
     }
 
     /*
@@ -64,7 +65,7 @@ public class ServiceCandidateFacadeREST extends AbstractFacadeREST<ServiceCandid
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response create(ServiceCandidate input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response create(ServiceCandidateEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ServiceCandidateFacadeREST:create()");
 
         if (input == null) {
@@ -100,7 +101,7 @@ public class ServiceCandidateFacadeREST extends AbstractFacadeREST<ServiceCandid
     @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("entityId") String entityId, ServiceCandidate input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response update(@PathParam("entityId") String entityId, ServiceCandidateEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ServiceCandidateFacadeREST:update(entityId: {0})", entityId);
 
         return update_(entityId, null, input, uriInfo);
@@ -113,7 +114,7 @@ public class ServiceCandidateFacadeREST extends AbstractFacadeREST<ServiceCandid
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, ServiceCandidate input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, ServiceCandidateEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ServiceCandidateFacadeREST:update(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return update_(entityId, entityVersion, input, uriInfo);
@@ -126,7 +127,7 @@ public class ServiceCandidateFacadeREST extends AbstractFacadeREST<ServiceCandid
     @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("entityId") String entityId, ServiceCandidate input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response edit(@PathParam("entityId") String entityId, ServiceCandidateEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ServiceCandidateFacadeREST:edit(entityId: {0})", entityId);
 
         return edit_(entityId, null, input, uriInfo);
@@ -139,7 +140,7 @@ public class ServiceCandidateFacadeREST extends AbstractFacadeREST<ServiceCandid
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, ServiceCandidate input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, ServiceCandidateEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ServiceCandidateFacadeREST:edit(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return edit_(entityId, entityVersion, input, uriInfo);
@@ -181,7 +182,7 @@ public class ServiceCandidateFacadeREST extends AbstractFacadeREST<ServiceCandid
         Set<String> outputFields = getFieldSet(queryParameterParser);
         queryParameterParser.removeTagWithValues("depth");
 
-        Set<ServiceCandidate> entities = manager.find(queryParameterParser.getTagsWithValue());
+        Set<ServiceCandidateEntity> entities = manager.find(queryParameterParser.getTagsWithValue());
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
@@ -229,7 +230,7 @@ public class ServiceCandidateFacadeREST extends AbstractFacadeREST<ServiceCandid
     public Response proto() {
         logger.log(Level.FINE, "ServiceCandidateFacadeREST:proto()");
 
-        return Response.ok(ServiceCandidate.createProto()).build();
+        return Response.ok(ServiceCandidateEntity.createProto()).build();
     }
 
     /*
@@ -248,7 +249,7 @@ public class ServiceCandidateFacadeREST extends AbstractFacadeREST<ServiceCandid
     /*
      *
      */
-    private Response update_(String entityId, ParsedVersion entityVersion, ServiceCandidate input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    private Response update_(String entityId, ParsedVersion entityVersion, ServiceCandidateEntity input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ServiceCandidateFacadeREST:update_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
@@ -261,8 +262,8 @@ public class ServiceCandidateFacadeREST extends AbstractFacadeREST<ServiceCandid
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        List<ServiceCandidate> entities = manager.findById(ServiceCandidate.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
-        ServiceCandidate entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
+        List<ServiceCandidateEntity> entities = manager.findById(ServiceCandidateEntity.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
+        ServiceCandidateEntity entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
         if (entity == null) {
             logger.log(Level.FINE, "requested ServiceCandidate [{0}, {1}] not found", new Object[]{entityId, entityVersion});
             return Response.status(Response.Status.NOT_FOUND).build();
@@ -295,7 +296,7 @@ public class ServiceCandidateFacadeREST extends AbstractFacadeREST<ServiceCandid
     /*
      *
      */
-    private Response edit_(String entityId, ParsedVersion entityVersion, ServiceCandidate input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    private Response edit_(String entityId, ParsedVersion entityVersion, ServiceCandidateEntity input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ServiceCandidateFacadeREST:edit_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
@@ -303,8 +304,8 @@ public class ServiceCandidateFacadeREST extends AbstractFacadeREST<ServiceCandid
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        List<ServiceCandidate> entities = manager.findById(ServiceCandidate.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
-        ServiceCandidate entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
+        List<ServiceCandidateEntity> entities = manager.findById(ServiceCandidateEntity.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
+        ServiceCandidateEntity entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
         if (entity == null) {
             logger.log(Level.FINE, "requested ServiceCandidate [{0}, {1}] not found", new Object[]{entityId, entityVersion});
             return Response.status(Response.Status.NOT_FOUND).build();
@@ -348,7 +349,7 @@ public class ServiceCandidateFacadeREST extends AbstractFacadeREST<ServiceCandid
     private Response remove_(String entityId, ParsedVersion entityVersion) {
         logger.log(Level.FINE, "ServiceCandidateFacadeREST:remove_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
-        List<ServiceCandidate> entities = manager.findById(ServiceCandidate.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
+        List<ServiceCandidateEntity> entities = manager.findById(ServiceCandidateEntity.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
@@ -363,12 +364,12 @@ public class ServiceCandidateFacadeREST extends AbstractFacadeREST<ServiceCandid
     private Response find_(String entityId, ParsedVersion entityVersion, int depth, UriInfo uriInfo) {
         logger.log(Level.FINE, "ServiceCandidateFacadeREST:find_(entityId: {0}, entityVersion: {1}, depth: {2})", new Object[]{entityId, entityVersion, depth});
 
-        List<ServiceCandidate> entities = manager.findById(ServiceCandidate.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
+        List<ServiceCandidateEntity> entities = manager.findById(ServiceCandidateEntity.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        ServiceCandidate entity = entities.get(0);
+        ServiceCandidateEntity entity = entities.get(0);
         getReferencedEntities(entity, depth);
 
         QueryParameterParser queryParameterParser = new QueryParameterParser(uriInfo.getRequestUri().getQuery());

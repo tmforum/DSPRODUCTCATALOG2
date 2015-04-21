@@ -20,9 +20,10 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
-import org.tmf.dsmapi.catalog.entity.LifecycleStatus;
-import org.tmf.dsmapi.catalog.entity.product.ProductSpecification;
+import org.tmf.dsmapi.catalog.entity.product.ProductSpecificationEntity;
 import org.tmf.dsmapi.catalog.exception.IllegalLifecycleStatusException;
+import org.tmf.dsmapi.catalog.resource.LifecycleStatus;
+import org.tmf.dsmapi.catalog.resource.product.ProductSpecification;
 import org.tmf.dsmapi.catalog.service.AbstractFacadeREST;
 import org.tmf.dsmapi.catalog.service.ServiceConstants;
 import org.tmf.dsmapi.commons.ParsedVersion;
@@ -37,7 +38,7 @@ import org.tmf.dsmapi.commons.jaxrs.PATCH;
  */
 @Stateless
 @Path("productSpecification")
-public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSpecification> {
+public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSpecificationEntity> {
     private static final Logger logger = Logger.getLogger(ProductSpecification.class.getName());
 
     @EJB
@@ -47,7 +48,7 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
      *
      */
     public ProductSpecificationFacadeREST() {
-        super(ProductSpecification.class);
+        super(ProductSpecificationEntity.class);
     }
 
     /*
@@ -64,7 +65,7 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response create(ProductSpecification input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response create(ProductSpecificationEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ProductSpecificationFacadeREST:create()");
 
         if (input == null) {
@@ -100,7 +101,7 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
     @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("entityId") String entityId, ProductSpecification input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response update(@PathParam("entityId") String entityId, ProductSpecificationEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ProductSpecificationFacadeREST:update(entityId: {0})", entityId);
 
         return update_(entityId, null, input, uriInfo);
@@ -113,7 +114,7 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, ProductSpecification input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response update(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, ProductSpecificationEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ProductSpecificationFacadeREST:update(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return update_(entityId, entityVersion, input, uriInfo);
@@ -126,7 +127,7 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
     @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("entityId") String entityId, ProductSpecification input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response edit(@PathParam("entityId") String entityId, ProductSpecificationEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ProductSpecificationFacadeREST:edit(entityId: {0})", entityId);
 
         return edit_(entityId, null, input, uriInfo);
@@ -139,7 +140,7 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, ProductSpecification input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    public Response edit(@PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, ProductSpecificationEntity input, @Context UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ProductSpecificationFacadeREST:edit(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         return edit_(entityId, entityVersion, input, uriInfo);
@@ -181,7 +182,7 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
         Set<String> outputFields = getFieldSet(queryParameterParser);
         queryParameterParser.removeTagWithValues("depth");
 
-        Set<ProductSpecification> entities = manager.find(queryParameterParser.getTagsWithValue());
+        Set<ProductSpecificationEntity> entities = manager.find(queryParameterParser.getTagsWithValue());
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
@@ -229,7 +230,7 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
     public Response proto() {
         logger.log(Level.FINE, "ProductSpecificationFacadeREST:proto()");
 
-        return Response.ok(ProductSpecification.createProto()).build();
+        return Response.ok(ProductSpecificationEntity.createProto()).build();
     }
 
     /*
@@ -248,7 +249,7 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
     /*
      *
      */
-    private Response update_(String entityId, ParsedVersion entityVersion, ProductSpecification input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    private Response update_(String entityId, ParsedVersion entityVersion, ProductSpecificationEntity input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ProductSpecificationFacadeREST:update_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
@@ -261,8 +262,8 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        List<ProductSpecification> entities = manager.findById(ProductSpecification.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
-        ProductSpecification entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
+        List<ProductSpecificationEntity> entities = manager.findById(ProductSpecificationEntity.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
+        ProductSpecificationEntity entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
         if (entity == null) {
             logger.log(Level.FINE, "requested entity [{0}, {1}] not found", new Object[]{entityId, entityVersion});
             return Response.status(Response.Status.NOT_FOUND).build();
@@ -295,7 +296,7 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
     /*
      *
      */
-    private Response edit_(String entityId, ParsedVersion entityVersion, ProductSpecification input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
+    private Response edit_(String entityId, ParsedVersion entityVersion, ProductSpecificationEntity input, UriInfo uriInfo) throws IllegalLifecycleStatusException {
         logger.log(Level.FINE, "ProductSpecificationFacadeREST:edit_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
         if (input == null) {
@@ -303,8 +304,8 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        List<ProductSpecification> entities = manager.findById(ProductSpecification.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
-        ProductSpecification entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
+        List<ProductSpecificationEntity> entities = manager.findById(ProductSpecificationEntity.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
+        ProductSpecificationEntity entity = (entities != null && entities.size() > 0) ? entities.get(0) : null;
         if (entity == null) {
             logger.log(Level.FINE, "requested ProductSpecification [{0}, {1}] not found", new Object[]{entityId, entityVersion});
             return Response.status(Response.Status.NOT_FOUND).build();
@@ -348,7 +349,7 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
     private Response remove_(String entityId, ParsedVersion entityVersion) {
         logger.log(Level.FINE, "ProductSpecificationFacadeREST:remove_(entityId: {0}, entityVersion: {1})", new Object[]{entityId, entityVersion});
 
-        List<ProductSpecification> entities = manager.findById(ProductSpecification.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
+        List<ProductSpecificationEntity> entities = manager.findById(ProductSpecificationEntity.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
@@ -363,12 +364,12 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
     private Response find_(String entityId, ParsedVersion entityVersion, int depth, UriInfo uriInfo) {
         logger.log(Level.FINE, "ProductSpecificationFacadeREST:find_(entityId: {0}, entityVersion: {1}, depth: {2})", new Object[]{entityId, entityVersion, depth});
 
-        List<ProductSpecification> entities = manager.findById(ProductSpecification.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
+        List<ProductSpecificationEntity> entities = manager.findById(ProductSpecificationEntity.ROOT_CATALOG_ID, ParsedVersion.ROOT_CATALOG_VERSION, entityId, entityVersion);
         if (entities == null || entities.size() <= 0) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        ProductSpecification entity = entities.get(0);
+        ProductSpecificationEntity entity = entities.get(0);
         getReferencedEntities(entity, depth);
 
         QueryParameterParser queryParameterParser = new QueryParameterParser(uriInfo.getRequestUri().getQuery());

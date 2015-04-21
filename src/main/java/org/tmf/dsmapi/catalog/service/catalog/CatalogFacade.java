@@ -3,7 +3,7 @@ package org.tmf.dsmapi.catalog.service.catalog;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import org.tmf.dsmapi.catalog.entity.catalog.Catalog;
+import org.tmf.dsmapi.catalog.entity.catalog.CatalogEntity;
 import org.tmf.dsmapi.catalog.service.AbstractFacade;
 
 /**
@@ -12,13 +12,13 @@ import org.tmf.dsmapi.catalog.service.AbstractFacade;
  *
  */
 @Stateless
-public class CatalogFacade extends AbstractFacade<Catalog> {
+public class CatalogFacade extends AbstractFacade<CatalogEntity> {
 
     @PersistenceContext(unitName = "DSProductCatalogPU")
     private EntityManager entityManager;
 
     public CatalogFacade() {
-        super(Catalog.class);
+        super(CatalogEntity.class);
     }
 
     @Override

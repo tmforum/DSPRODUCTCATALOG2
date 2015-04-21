@@ -17,7 +17,8 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
-import org.tmf.dsmapi.catalog.entity.service.ServiceSpecification;
+import org.tmf.dsmapi.catalog.entity.service.ServiceSpecificationEntity;
+import org.tmf.dsmapi.catalog.resource.service.ServiceSpecification;
 import org.tmf.dsmapi.catalog.service.AbstractFacadeREST;
 import org.tmf.dsmapi.commons.ParsedVersion;
 import org.tmf.dsmapi.commons.exceptions.BadUsageException;
@@ -30,7 +31,7 @@ import org.tmf.dsmapi.commons.jaxrs.PATCH;
  */
 @Stateless
 @Path("catalog/{catalogId}/serviceSpecification")
-public class ServiceSpecificationInCatalogIdFacadeREST extends AbstractFacadeREST<ServiceSpecification> {
+public class ServiceSpecificationInCatalogIdFacadeREST extends AbstractFacadeREST<ServiceSpecificationEntity> {
     private static final Logger logger = Logger.getLogger(ServiceSpecification.class.getName());
 
     @EJB
@@ -40,7 +41,7 @@ public class ServiceSpecificationInCatalogIdFacadeREST extends AbstractFacadeRES
      *
      */
     public ServiceSpecificationInCatalogIdFacadeREST() {
-        super(ServiceSpecification.class);
+        super(ServiceSpecificationEntity.class);
     }
 
     /*
@@ -57,7 +58,7 @@ public class ServiceSpecificationInCatalogIdFacadeREST extends AbstractFacadeRES
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response create(@PathParam("catalogId") String catalogId, ServiceSpecification input, @Context UriInfo uriInfo) {
+    public Response create(@PathParam("catalogId") String catalogId, ServiceSpecificationEntity input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ServiceSpecificationInCatalogIdFacadeREST:create(catalogId: {0})", catalogId);
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -70,7 +71,7 @@ public class ServiceSpecificationInCatalogIdFacadeREST extends AbstractFacadeRES
     @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("catalogId") String catalogId, @PathParam("entityId") String entityId, ServiceSpecification input, @Context UriInfo uriInfo) {
+    public Response update(@PathParam("catalogId") String catalogId, @PathParam("entityId") String entityId, ServiceSpecificationEntity input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ServiceSpecificationInCatalogIdFacadeREST:update(catalogId: {0}, entityId: {1})", new Object[]{catalogId, entityId});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -83,7 +84,7 @@ public class ServiceSpecificationInCatalogIdFacadeREST extends AbstractFacadeRES
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response update(@PathParam("catalogId") String catalogId, @PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, ServiceSpecification input, @Context UriInfo uriInfo) {
+    public Response update(@PathParam("catalogId") String catalogId, @PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, ServiceSpecificationEntity input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ServiceSpecificationInCatalogIdFacadeREST:update(catalogId: {0}, entityId: {1}, entityVersion: {2})", new Object[]{catalogId, entityId, entityVersion});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -96,7 +97,7 @@ public class ServiceSpecificationInCatalogIdFacadeREST extends AbstractFacadeRES
     @Path("{entityId}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("catalogId") String catalogId, @PathParam("entityId") String entityId, ServiceSpecification input, @Context UriInfo uriInfo) {
+    public Response edit(@PathParam("catalogId") String catalogId, @PathParam("entityId") String entityId, ServiceSpecificationEntity input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ServiceSpecificationInCatalogIdFacadeREST:edit(catalogId: {0}, entityId: {1})", new Object[]{catalogId, entityId});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -109,7 +110,7 @@ public class ServiceSpecificationInCatalogIdFacadeREST extends AbstractFacadeRES
     @Path("{entityId}:({entityVersion})")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Response edit(@PathParam("catalogId") String catalogId, @PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, ServiceSpecification input, @Context UriInfo uriInfo) {
+    public Response edit(@PathParam("catalogId") String catalogId, @PathParam("entityId") String entityId, @PathParam("entityVersion") ParsedVersion entityVersion, ServiceSpecificationEntity input, @Context UriInfo uriInfo) {
         logger.log(Level.FINE, "ServiceSpecificationInCatalogIdFacadeREST:edit(catalogId: {0}, entityId: {1}, entityVersion: {2})", new Object[]{catalogId, entityId, entityVersion});
 
         return Response.status(Response.Status.FORBIDDEN).build();
@@ -181,7 +182,7 @@ public class ServiceSpecificationInCatalogIdFacadeREST extends AbstractFacadeRES
     public Response proto(@PathParam("catalogId") String catalogId) {
         logger.log(Level.FINE, "ServiceSpecificationInCatalogIdFacadeREST:proto(catalogId: {0})", catalogId);
 
-        return Response.ok(ServiceSpecification.createProto()).build();
+        return Response.ok(ServiceSpecificationEntity.createProto()).build();
     }
 
     /*
