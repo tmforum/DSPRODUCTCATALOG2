@@ -184,7 +184,7 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
 
         Set<ProductSpecificationEntity> entities = manager.find(queryParameterParser.getTagsWithValue());
         if (entities == null || entities.size() <= 0) {
-            return Response.status(Response.Status.NOT_FOUND).build();
+            return Response.ok(entities).build();
         }
 
         getReferencedEntities(entities, depth);
