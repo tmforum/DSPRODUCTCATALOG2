@@ -9,6 +9,7 @@
 			"name": "001 - POST",
 			"description": "",
 			"order": [
+				"52c03c8e-efc8-c898-0347-09b2d763a134",
 				"a11ea3c3-4ecf-7318-5a11-f7889ba4ba28",
 				"2c1afd64-cb2f-4c75-a3fc-1bcd91666966",
 				"2db59a2e-3a2c-69a9-f841-35167c8ea29b",
@@ -20,7 +21,9 @@
 				"b4274a29-aac4-24f1-05ee-4b7bb842340d"
 			],
 			"collection_name": "Catalog",
-			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166"
+			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "564a6ac5-2fb4-1cf9-16a6-a6faa10af958",
@@ -35,7 +38,9 @@
 				"223e53c0-054c-2d26-a6e0-67761c3dbaf6"
 			],
 			"collection_name": "Catalog",
-			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166"
+			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "0f3e3e04-9fc4-f68e-fa59-cf77e2e46e3c",
@@ -54,7 +59,9 @@
 				"d1801898-b402-c99d-21ad-f5c484a7d8cd"
 			],
 			"collection_name": "Catalog",
-			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166"
+			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "97709793-5dec-34af-997f-70cf523ba4cf",
@@ -64,7 +71,9 @@
 				"e757e30a-0d4a-ce58-9b0c-4d14ebcfd7ec"
 			],
 			"collection_name": "Catalog",
-			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166"
+			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "f25c86cf-c102-d558-7428-56a470872c4f",
@@ -86,7 +95,9 @@
 				"6eda9a14-0c7c-49f2-262d-06abfe707a4b"
 			],
 			"collection_name": "Catalog",
-			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166"
+			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "6e174242-87b4-69ad-2b63-02fa82d317c7",
@@ -110,7 +121,9 @@
 				"a3c063e8-6090-a26b-5277-6d60285e7c1d"
 			],
 			"collection_name": "Catalog",
-			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166"
+			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "daaa338e-27c6-0a66-45bd-da8334148481",
@@ -132,11 +145,18 @@
 				"0caf9c51-b53a-ec8f-7db6-5debe618f147"
 			],
 			"collection_name": "Catalog",
-			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166"
+			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166",
+			"collection_owner": "",
+			"write": true
 		}
 	],
 	"timestamp": 1409863910501,
 	"synced": false,
+	"owner": "",
+	"subscribed": false,
+	"remoteLink": "",
+	"public": false,
+	"write": true,
 	"requests": [
 		{
 			"id": "03e944b9-5a30-8f59-18de-26168f4576c3",
@@ -1645,7 +1665,7 @@
 			"tests": "",
 			"time": 1414072187982,
 			"name": "A-010-090 - [500]",
-			"description": "Change version to 1.6; lifecycleStatus to Retired.\n\n-----\n\nError: Bad lifecycle transition (must go to in design, active or retired).\n",
+			"description": "Change version to 1.6; lifecycleStatus to Retired.\n\n-----\n\nError: Bad lifecycle transition (must go to in design, active or rejected).\n",
 			"collectionId": "1deb8d7e-9715-3968-c288-7d89c626c166",
 			"responses": [
 				{
@@ -1709,6 +1729,95 @@
 			],
 			"synced": false,
 			"rawModeData": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.6\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"Retired\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATG-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        },\n        {\n            \"id\": \"CATGR-002\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-002:(2.0)\",\n            \"name\": \"Cloud offerings\",\n          \"version\":\"12.20\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        },\n        {\n            \"id\": \"129\",\n            \"href\": \"http://serverLocation:port/partyManagement/partyRole/129\",\n            \"role\": \"Customer\"\n        }\n    ]\n}"
+		},
+		{
+			"id": "52c03c8e-efc8-c898-0347-09b2d763a134",
+			"headers": "Accept: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "1deb8d7e-9715-3968-c288-7d89c626c166",
+			"data": [],
+			"dataMode": "params",
+			"name": "A - 001-005 [200]",
+			"description": "GET All\n\n-----\n\noutput: returns empty set",
+			"descriptionFormat": "html",
+			"time": 1430157934791,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 691,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "2",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Apr 2015 19:01:22 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition  4.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1  Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[]",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"write": true,
+					"runTests": true,
+					"id": "c618bc64-8177-5ef6-3552-6f5c1033068d",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "7ac831a3-25ff-2c76-9d4e-48f334ef6be6",
+			"synced": false
 		},
 		{
 			"id": "57e1b9e2-3522-c3b6-b0c6-1b978681c592",
@@ -2200,7 +2309,7 @@
 			"tests": "",
 			"time": 1410375951662,
 			"name": "A-005-030 - [200]",
-			"description": "GET count\n\n-----\n\nShould return 4",
+			"description": "GET count\n\n-----\n\nShould return 6",
 			"collectionId": "1deb8d7e-9715-3968-c288-7d89c626c166",
 			"responses": [
 				{
@@ -5140,7 +5249,7 @@
 			"tests": "",
 			"time": 1413402445584,
 			"name": "A015-010 - [200]",
-			"description": "should return version 1.5 & 1.6 but no 1.2.\n",
+			"description": "should return version 1.5 & 1.6 but no 1.2 for CATL-002.\n",
 			"collectionId": "1deb8d7e-9715-3968-c288-7d89c626c166",
 			"responses": [
 				{

@@ -9,6 +9,7 @@
 			"name": "001 - POST",
 			"description": "",
 			"order": [
+				"4eb16e14-da3e-d8ec-f972-96a9373eda17",
 				"68aca02b-ba7a-aae2-a1a0-cd451735b751",
 				"79a5e06a-9014-6226-e292-72af3c7b2795",
 				"a51ae303-072b-e397-1f36-0ceb1abf1ef9",
@@ -19,7 +20,9 @@
 				"d0fc3c4f-fd34-6d84-619d-a606ad7d95a7"
 			],
 			"collection_name": "ServiceCandidate",
-			"collection_id": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc"
+			"collection_id": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "f285e892-e0f0-0bc8-2d80-c0c9d7d8e698",
@@ -40,7 +43,9 @@
 				"a61d2d95-c6c6-47bb-4247-e1e7bc01c25d"
 			],
 			"collection_name": "ServiceCandidate",
-			"collection_id": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc"
+			"collection_id": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "b30d93b2-865e-24cc-aac3-d32573a1b1e0",
@@ -54,7 +59,9 @@
 				"67ddec4e-4883-1086-80fe-56d93b30d567"
 			],
 			"collection_name": "ServiceCandidate",
-			"collection_id": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc"
+			"collection_id": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "80c03eba-7e60-93dd-74f9-8a9367507bf3",
@@ -67,7 +74,9 @@
 				"9190323a-4690-ba91-fb9d-15813309db68"
 			],
 			"collection_name": "ServiceCandidate",
-			"collection_id": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc"
+			"collection_id": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "9f673bbf-c8d1-1ed9-1737-15717d4a0504",
@@ -79,7 +88,9 @@
 				"75dce192-172e-c953-53e9-a26b4ef0a639"
 			],
 			"collection_name": "ServiceCandidate",
-			"collection_id": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc"
+			"collection_id": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "a10b2c52-b5f9-0eb4-b0f1-e66ae57f6e5d",
@@ -97,11 +108,18 @@
 				"ddc8a543-7139-e3ad-5f1e-9bd956bebb72"
 			],
 			"collection_name": "ServiceCandidate",
-			"collection_id": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc"
+			"collection_id": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc",
+			"collection_owner": "",
+			"write": true
 		}
 	],
 	"timestamp": 1414184895065,
 	"synced": false,
+	"owner": "",
+	"subscribed": false,
+	"remoteLink": "",
+	"public": false,
+	"write": true,
 	"requests": [
 		{
 			"id": "00ed3352-3054-aa23-39bc-33ac5845a38d",
@@ -801,6 +819,95 @@
 					}
 				}
 			],
+			"synced": false
+		},
+		{
+			"id": "4eb16e14-da3e-d8ec-f972-96a9373eda17",
+			"headers": "Accept: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc",
+			"data": [],
+			"dataMode": "params",
+			"name": "T-001-005 [200]",
+			"description": "GET All\n\n-----\n\noutput: returns empty set",
+			"descriptionFormat": "html",
+			"time": 1430158983583,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 33,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "2",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Apr 2015 19:04:24 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition  4.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1  Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[]",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"write": true,
+					"runTests": true,
+					"id": "18379219-a367-8873-405e-81eef9f9a2bc",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "c3109e65-3da8-20d2-bec3-66095d99026c",
 			"synced": false
 		},
 		{

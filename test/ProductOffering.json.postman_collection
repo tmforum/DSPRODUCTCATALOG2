@@ -9,6 +9,7 @@
 			"name": "001 - POST",
 			"description": "",
 			"order": [
+				"b9e2e5d2-5f5f-340c-bf65-e9b7ab49cfaa",
 				"10ba1b7a-43e4-fd0d-8fda-3e28cd44b418",
 				"007b72c5-1fc7-5b67-3be3-bf7fd8d15395",
 				"6aad9e55-aef3-db38-c8ff-1ebe90091afb",
@@ -17,7 +18,9 @@
 				"8e574d38-f1e8-166f-8c82-51835ed0b38a"
 			],
 			"collection_name": "ProductOffering",
-			"collection_id": "ab410f73-ef53-b7c1-69db-0c37ff5b01e2"
+			"collection_id": "ab410f73-ef53-b7c1-69db-0c37ff5b01e2",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "e5df3241-51b9-541c-b965-59b83a6959cd",
@@ -33,7 +36,9 @@
 				"4181c890-00d3-0cdf-b9ba-f91002d8414a"
 			],
 			"collection_name": "ProductOffering",
-			"collection_id": "ab410f73-ef53-b7c1-69db-0c37ff5b01e2"
+			"collection_id": "ab410f73-ef53-b7c1-69db-0c37ff5b01e2",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "79b4275a-0109-ee62-816b-f9020bd762e5",
@@ -51,7 +56,9 @@
 				"00de1655-0973-7fcd-4a4f-349136a9a3b1"
 			],
 			"collection_name": "ProductOffering",
-			"collection_id": "ab410f73-ef53-b7c1-69db-0c37ff5b01e2"
+			"collection_id": "ab410f73-ef53-b7c1-69db-0c37ff5b01e2",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "8a859782-9ce1-027f-56dd-356f2047facd",
@@ -68,7 +75,9 @@
 				"cf222f73-1954-f20f-e7be-c47bd038a400"
 			],
 			"collection_name": "ProductOffering",
-			"collection_id": "ab410f73-ef53-b7c1-69db-0c37ff5b01e2"
+			"collection_id": "ab410f73-ef53-b7c1-69db-0c37ff5b01e2",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "c5bf10fe-1961-897e-11d1-dd87661e4122",
@@ -83,7 +92,9 @@
 				"6edbf010-84f8-6ce7-799a-e7b7af3ed919"
 			],
 			"collection_name": "ProductOffering",
-			"collection_id": "ab410f73-ef53-b7c1-69db-0c37ff5b01e2"
+			"collection_id": "ab410f73-ef53-b7c1-69db-0c37ff5b01e2",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "ac3e8089-e2ef-6965-318b-700e651ec19c",
@@ -98,11 +109,18 @@
 				"aece82f8-98b5-3419-d70d-25735189ee5a"
 			],
 			"collection_name": "ProductOffering",
-			"collection_id": "ab410f73-ef53-b7c1-69db-0c37ff5b01e2"
+			"collection_id": "ab410f73-ef53-b7c1-69db-0c37ff5b01e2",
+			"collection_owner": "",
+			"write": true
 		}
 	],
 	"timestamp": 1414184862691,
 	"synced": false,
+	"owner": "",
+	"subscribed": false,
+	"remoteLink": "",
+	"public": false,
+	"write": true,
 	"requests": [
 		{
 			"id": "007b72c5-1fc7-5b67-3be3-bf7fd8d15395",
@@ -2227,7 +2245,7 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1419957459814,
+			"time": 1429532519944,
 			"name": "J - 001-050 - [201]",
 			"description": "Same ID, older version.\nEnd time is higher by 1 minute.\nPrices lower by 10 cents.",
 			"collectionId": "ab410f73-ef53-b7c1-69db-0c37ff5b01e2",
@@ -2235,41 +2253,47 @@
 				{
 					"status": "",
 					"responseCode": {
-						"code": 500,
-						"name": "Internal Server Error",
-						"detail": "A generic error message, given when no more specific message is suitable."
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
 					},
-					"time": 26,
+					"time": 77,
 					"headers": [
-						{
-							"name": "Connection",
-							"key": "Connection",
-							"value": "close",
-							"description": "Options that are desired for the connection"
-						},
 						{
 							"name": "Content-Length",
 							"key": "Content-Length",
-							"value": "2089",
+							"value": "2886",
 							"description": "The length of the response body in octets (8-bit bytes)"
 						},
 						{
 							"name": "Content-Type",
 							"key": "Content-Type",
-							"value": "text/html",
+							"value": "application/json",
 							"description": "The mime type of this content"
 						},
 						{
 							"name": "Date",
 							"key": "Date",
-							"value": "Tue, 30 Dec 2014 16:41:56 GMT",
+							"value": "Mon, 20 Apr 2015 12:22:01 GMT",
 							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition  4.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1  Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
 						}
 					],
 					"cookies": [],
 					"mime": "",
-					"text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>GlassFish Server Open Source Edition 3.1.2.2 - Error report</title><style type=\"text/css\"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 500 - </h1><hr/><p><b>type</b> Exception report</p><p><b>message</b></p><p><b>description</b>The server encountered an internal error () that prevented it from fulfilling this request.</p><p><b>exception</b> <pre>javax.servlet.ServletException: org.codehaus.jackson.map.JsonMappingException: Can not deserialize instance of org.tmf.dsmapi.catalog.entity.CatalogReference out of START_ARRAY token\n at [Source: org.apache.catalina.connector.CoyoteInputStream@342f0bb2; line: 60, column: 10] (through reference chain: org.tmf.dsmapi.catalog.entity.product.ProductOffering[&quot;serviceCandidate&quot;])</pre></p><p><b>root cause</b> <pre>org.codehaus.jackson.map.JsonMappingException: Can not deserialize instance of org.tmf.dsmapi.catalog.entity.CatalogReference out of START_ARRAY token\n at [Source: org.apache.catalina.connector.CoyoteInputStream@342f0bb2; line: 60, column: 10] (through reference chain: org.tmf.dsmapi.catalog.entity.product.ProductOffering[&quot;serviceCandidate&quot;])</pre></p><p><b>note</b> <u>The full stack traces of the exception and its root causes are available in the GlassFish Server Open Source Edition 3.1.2.2 logs.</u></p><hr/><h3>GlassFish Server Open Source Edition 3.1.2.2</h3></body></html>",
-					"language": "html",
+					"text": "{\"id\":\"POFER-640\",\"version\":\"0.9\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/productOffering/POFER-640:(0.9)\",\"name\":\"Virtual Storage Medium\",\"description\":\"Virtual Storage Medium\",\"lastUpdate\":\"2015-04-20T12:22:01.879+0000\",\"lifecycleStatus\":\"Active\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2019-01-01T04:01:00.000+0000\"},\"isBundle\":true,\"category\":[{\"id\":\"12\",\"version\":\"2.0\",\"href\":\"http://serverlocation:port/catalogManagement/category/12\",\"name\":\"Cloud offerings\"}],\"channel\":[{\"id\":\"13\",\"href\":\"http://serverlocation:port/marketSales/channel/13\",\"name\":\"Online Channel\"}],\"place\":[{\"id\":\"12\",\"href\":\"http://serverlocation:port/marketSales/place/12\",\"name\":\"France\"}],\"bundledProductOffering\":[{\"id\":\"15\",\"href\":\"http://serverlocation:port/catalogManagement/productOffering/15\",\"name\":\"Offering 15\",\"lifecycleStatus\":\"Active\"},{\"id\":\"64\",\"href\":\"http://serverlocation:port/catalogManagement/productOffering/64\",\"name\":\"Offering 64\",\"lifecycleStatus\":\"Active\"}],\"serviceLevelAgreement\":{\"id\":\"28\",\"href\":\"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\"name\":\"Standard SLA\"},\"productSpecification\":{\"id\":\"13\",\"version\":\"2.0\",\"href\":\"http://serverlocation:port/catalogManagement/productSpecification/13\",\"name\":\"specification product 1\"},\"serviceCandidate\":{\"id\":\"13\",\"version\":\"2.0\",\"href\":\"http://serverlocation:port/catalogManagement/serviceCandidate/13\",\"name\":\"specification service 1\"},\"resourceCandidate\":{\"id\":\"13\",\"version\":\"2.0\",\"href\":\"http://serverlocation:port/catalogManagement/resourceCandidate/13\",\"name\":\"specification resource 1\"},\"productOfferingTerm\":[{\"name\":\"12 Month\",\"description\":\"12 month contract\",\"duration\":\"12\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"}}],\"productOfferingPrice\":[{\"priceType\":\"recurring\",\"unitOfMeasure\":\"\",\"price\":{\"taxIncludedAmount\":\"11.90\",\"dutyFreeAmount\":\"9.90\",\"taxRate\":\"19.90\",\"currencyCode\":\"USD\",\"percentage\":0},\"recurringChargePeriod\":\"monthly\",\"name\":\"Monthly Price\",\"description\":\"monthlyprice\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"}},{\"priceType\":\"usage\",\"unitOfMeasure\":\"second\",\"price\":{\"taxIncludedAmount\":\"11.90\",\"dutyFreeAmount\":\"9.90\",\"taxRate\":\"19.90\",\"currencyCode\":\"EUR\",\"percentage\":0},\"recurringChargePeriod\":\"\",\"productOfferPriceAlteration\":{\"name\":\"Shipping Discount\",\"description\":\"One time shipping discount\",\"validFor\":{\"startDateTime\":\"2013-04-19T16:42:23.000+0000\"},\"priceType\":\"one time\",\"unitOfMeasure\":\"\",\"price\":{\"percentage\":\"100\"},\"recurringChargePeriod\":\"\",\"priceCondition\":\"apply if total amount of the  order is greater than 300.00\"},\"name\":\"Usage Price\",\"description\":\"usageprice\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\",\"endDateTime\":\"2013-06-19T04:00:00.000+0000\"}}]}",
+					"language": "javascript",
 					"rawDataType": "text",
 					"state": {
 						"size": "normal"
@@ -2277,12 +2301,14 @@
 					"previewType": "html",
 					"searchResultScrolledTo": -1,
 					"forceRaw": false,
-					"id": "c696ed56-fef4-88a0-6bb6-700e75566ed4",
+					"write": true,
+					"runTests": true,
+					"id": "42a084fa-91c0-4515-951f-a053beb03bbb",
 					"name": "Response",
 					"request": {
 						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/productOffering",
 						"pathVariables": {},
-						"data": "{\n  \"id\": \"POFER-640\",\n    \"href\": \"http://serverlocation:port/catalogManagement/productOffering/42\",\n    \"version\": \"0.9\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"name\": \"Virtual Storage Medium\",\n    \"description\": \"Virtual Storage Medium\",\n    \"isBundle\": true,\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2019-01-01T00:01:00-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"12\",\n            \"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n            \"version\": \"2.0\",\n            \"name\": \"Cloud offerings\"\n        }\n    ],\n    \"channel\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/marketSales/channel/13\",\n            \"name\": \"Online Channel\"\n        }\n    ],\n    \"place\": [\n        {\n            \"id\": \"12\",\n            \"href\": \"http://serverlocation:port/marketSales/place/12\",\n            \"name\": \"France\"\n        }\n    ],\n    \"bundledProductOffering\": [\n        {\n            \"id\": \"15\",\n            \"href\": \"http://serverlocation:port/catalogManagement/productOffering/15\",\n            \"lifecycleStatus\": \"Active\",\n            \"name\": \"Offering 15\"\n        },\n        {\n            \"id\": \"64\",\n            \"href\": \"http://serverlocation:port/catalogManagement/productOffering/64\",\n            \"lifecycleStatus\": \"Active\",\n            \"name\": \"Offering 64\"\n        }\n    ],\n    \"serviceLevelAgreement\": {\n        \"id\": \"28\",\n        \"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n        \"name\": \"Standard SLA\"\n    },\n    \"productSpecification\": {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/productSpecification/13\",\n            \"version\": \"2.0\",\n            \"name\": \"specification product 1\"\n        },\n    \"serviceCandidate\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/13\",\n            \"version\": \"2.0\",\n            \"name\": \"specification service 1\"\n        }\n    ],\n    \"resourceCandidate\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/13\",\n            \"version\": \"2.0\",\n            \"name\": \"specification resource 1\"\n        }\n    ],\n    \"productOfferingTerm\": [\n        {\n            \"name\": \"12 Month\",\n            \"description\": \"12 month contract\",\n            \"duration\": \"12\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n            }\n        }\n    ],\n    \"productOfferingPrice\": [\n        {\n            \"name\": \"Monthly Price\",\n            \"description\": \"monthlyprice\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n            },\n            \"priceType\": \"recurring\",\n            \"unitOfMeasure\": \"\",\n            \"price\": {\n                \"taxIncludedAmount\": \"11.90\",\n                \"dutyFreeAmount\": \"09.90\",\n                \"taxRate\": \"19.90\",\n                \"currencyCode\": \"USD\",\n                \"percentage\": 0\n            },\n            \"recurringChargePeriod\": \"monthly\"\n        },\n        {\n            \"name\": \"Usage Price\",\n            \"description\": \"usageprice\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n            },\n            \"priceType\": \"usage\",\n            \"unitOfMeasure\": \"second\",\n            \"price\": {\n                \"taxIncludedAmount\": \"11.90\",\n                \"dutyFreeAmount\": \"9.90\",\n                \"taxRate\": \"19.90\",\n                \"currencyCode\": \"EUR\",\n                \"percentage\": 0\n            },\n            \"recurringChargePeriod\": \"\",\n            \"productOfferPriceAlteration\": {\n                \"name\": \"Shipping Discount\",\n                \"description\": \"One time shipping discount\",\n                \"validFor\": {\n                    \"startDateTime\": \"2013-04-19T16:42:23.0Z\"\n                },\n                \"priceType\": \"one time\",\n                \"unitOfMeasure\": \"\",\n                \"price\": {\n                    \"percentage\": 100\n                },\n                \"recurringChargePeriod\": \"\",\n                \"priceCondition\": \"apply if total amount of the  order is greater than 300.00\"\n            }\n        }\n    ]\n}",
+						"data": "{\r\n    \"id\": \"POFER-640\",\r\n    \"href\": \"http://serverlocation:port/catalogManagement/productOffering/42\",\r\n    \"version\": \"0.9\",\r\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\r\n    \"name\": \"Virtual Storage Medium\",\r\n    \"description\": \"Virtual Storage Medium\",\r\n    \"isBundle\": true,\r\n    \"lifecycleStatus\": \"Active\",\r\n    \"validFor\": {\r\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\r\n        \"endDateTime\": \"2019-01-01T00:01:00-04:00\"\r\n    },\r\n    \"category\": [\r\n        {\r\n            \"id\": \"12\",\r\n            \"href\": \"http://serverlocation:port/catalogManagement/category/12\",\r\n            \"version\": \"2.0\",\r\n            \"name\": \"Cloud offerings\"\r\n        }\r\n    ],\r\n    \"channel\": [\r\n        {\r\n            \"id\": \"13\",\r\n            \"href\": \"http://serverlocation:port/marketSales/channel/13\",\r\n            \"name\": \"Online Channel\"\r\n        }\r\n    ],\r\n    \"place\": [\r\n        {\r\n            \"id\": \"12\",\r\n            \"href\": \"http://serverlocation:port/marketSales/place/12\",\r\n            \"name\": \"France\"\r\n        }\r\n    ],\r\n    \"bundledProductOffering\": [\r\n        {\r\n            \"id\": \"15\",\r\n            \"href\": \"http://serverlocation:port/catalogManagement/productOffering/15\",\r\n            \"lifecycleStatus\": \"Active\",\r\n            \"name\": \"Offering 15\"\r\n        },\r\n        {\r\n            \"id\": \"64\",\r\n            \"href\": \"http://serverlocation:port/catalogManagement/productOffering/64\",\r\n            \"lifecycleStatus\": \"Active\",\r\n            \"name\": \"Offering 64\"\r\n        }\r\n    ],\r\n    \"serviceLevelAgreement\": {\r\n        \"id\": \"28\",\r\n        \"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\r\n        \"name\": \"Standard SLA\"\r\n    },\r\n    \"productSpecification\": {\r\n        \"id\": \"13\",\r\n        \"href\": \"http://serverlocation:port/catalogManagement/productSpecification/13\",\r\n        \"version\": \"2.0\",\r\n        \"name\": \"specification product 1\"\r\n    },\r\n    \"serviceCandidate\": {\r\n        \"id\": \"13\",\r\n        \"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/13\",\r\n        \"version\": \"2.0\",\r\n        \"name\": \"specification service 1\"\r\n    },\r\n    \"resourceCandidate\": {\r\n        \"id\": \"13\",\r\n        \"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/13\",\r\n        \"version\": \"2.0\",\r\n        \"name\": \"specification resource 1\"\r\n    },\r\n    \"productOfferingTerm\": [\r\n        {\r\n            \"name\": \"12 Month\",\r\n            \"description\": \"12 month contract\",\r\n            \"duration\": \"12\",\r\n            \"validFor\": {\r\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\r\n                \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\r\n            }\r\n        }\r\n    ],\r\n    \"productOfferingPrice\": [\r\n        {\r\n            \"name\": \"Monthly Price\",\r\n            \"description\": \"monthlyprice\",\r\n            \"validFor\": {\r\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\r\n                \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\r\n            },\r\n            \"priceType\": \"recurring\",\r\n            \"unitOfMeasure\": \"\",\r\n            \"price\": {\r\n                \"taxIncludedAmount\": \"11.90\",\r\n                \"dutyFreeAmount\": \"09.90\",\r\n                \"taxRate\": \"19.90\",\r\n                \"currencyCode\": \"USD\",\r\n                \"percentage\": 0\r\n            },\r\n            \"recurringChargePeriod\": \"monthly\"\r\n        },\r\n        {\r\n            \"name\": \"Usage Price\",\r\n            \"description\": \"usageprice\",\r\n            \"validFor\": {\r\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\r\n                \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\r\n            },\r\n            \"priceType\": \"usage\",\r\n            \"unitOfMeasure\": \"second\",\r\n            \"price\": {\r\n                \"taxIncludedAmount\": \"11.90\",\r\n                \"dutyFreeAmount\": \"9.90\",\r\n                \"taxRate\": \"19.90\",\r\n                \"currencyCode\": \"EUR\",\r\n                \"percentage\": 0\r\n            },\r\n            \"recurringChargePeriod\": \"\",\r\n            \"productOfferPriceAlteration\": {\r\n                \"name\": \"Shipping Discount\",\r\n                \"description\": \"One time shipping discount\",\r\n                \"validFor\": {\r\n                    \"startDateTime\": \"2013-04-19T16:42:23.0Z\"\r\n                },\r\n                \"priceType\": \"one time\",\r\n                \"unitOfMeasure\": \"\",\r\n                \"price\": {\r\n                    \"percentage\": 100\r\n                },\r\n                \"recurringChargePeriod\": \"\",\r\n                \"priceCondition\": \"apply if total amount of the  order is greater than 300.00\"\r\n            }\r\n        }\r\n    ]\r\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
 						"dataMode": "raw",
 						"method": "POST",
@@ -2292,7 +2318,7 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"POFER-640\",\n    \"href\": \"http://serverlocation:port/catalogManagement/productOffering/42\",\n    \"version\": \"0.9\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"name\": \"Virtual Storage Medium\",\n    \"description\": \"Virtual Storage Medium\",\n    \"isBundle\": true,\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2019-01-01T00:01:00-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"12\",\n            \"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n            \"version\": \"2.0\",\n            \"name\": \"Cloud offerings\"\n        }\n    ],\n    \"channel\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/marketSales/channel/13\",\n            \"name\": \"Online Channel\"\n        }\n    ],\n    \"place\": [\n        {\n            \"id\": \"12\",\n            \"href\": \"http://serverlocation:port/marketSales/place/12\",\n            \"name\": \"France\"\n        }\n    ],\n    \"bundledProductOffering\": [\n        {\n            \"id\": \"15\",\n            \"href\": \"http://serverlocation:port/catalogManagement/productOffering/15\",\n            \"lifecycleStatus\": \"Active\",\n            \"name\": \"Offering 15\"\n        },\n        {\n            \"id\": \"64\",\n            \"href\": \"http://serverlocation:port/catalogManagement/productOffering/64\",\n            \"lifecycleStatus\": \"Active\",\n            \"name\": \"Offering 64\"\n        }\n    ],\n    \"serviceLevelAgreement\": {\n        \"id\": \"28\",\n        \"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n        \"name\": \"Standard SLA\"\n    },\n    \"productSpecification\": {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/productSpecification/13\",\n            \"version\": \"2.0\",\n            \"name\": \"specification product 1\"\n        },\n    \"serviceCandidate\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/13\",\n            \"version\": \"2.0\",\n            \"name\": \"specification service 1\"\n        }\n    ],\n    \"resourceCandidate\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/13\",\n            \"version\": \"2.0\",\n            \"name\": \"specification resource 1\"\n        }\n    ],\n    \"productOfferingTerm\": [\n        {\n            \"name\": \"12 Month\",\n            \"description\": \"12 month contract\",\n            \"duration\": \"12\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n            }\n        }\n    ],\n    \"productOfferingPrice\": [\n        {\n            \"name\": \"Monthly Price\",\n            \"description\": \"monthlyprice\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n            },\n            \"priceType\": \"recurring\",\n            \"unitOfMeasure\": \"\",\n            \"price\": {\n                \"taxIncludedAmount\": \"11.90\",\n                \"dutyFreeAmount\": \"09.90\",\n                \"taxRate\": \"19.90\",\n                \"currencyCode\": \"USD\",\n                \"percentage\": 0\n            },\n            \"recurringChargePeriod\": \"monthly\"\n        },\n        {\n            \"name\": \"Usage Price\",\n            \"description\": \"usageprice\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n            },\n            \"priceType\": \"usage\",\n            \"unitOfMeasure\": \"second\",\n            \"price\": {\n                \"taxIncludedAmount\": \"11.90\",\n                \"dutyFreeAmount\": \"9.90\",\n                \"taxRate\": \"19.90\",\n                \"currencyCode\": \"EUR\",\n                \"percentage\": 0\n            },\n            \"recurringChargePeriod\": \"\",\n            \"productOfferPriceAlteration\": {\n                \"name\": \"Shipping Discount\",\n                \"description\": \"One time shipping discount\",\n                \"validFor\": {\n                    \"startDateTime\": \"2013-04-19T16:42:23.0Z\"\n                },\n                \"priceType\": \"one time\",\n                \"unitOfMeasure\": \"\",\n                \"price\": {\n                    \"percentage\": 100\n                },\n                \"recurringChargePeriod\": \"\",\n                \"priceCondition\": \"apply if total amount of the  order is greater than 300.00\"\n            }\n        }\n    ]\n}"
+			"rawModeData": "{\r\n    \"id\": \"POFER-640\",\r\n    \"href\": \"http://serverlocation:port/catalogManagement/productOffering/42\",\r\n    \"version\": \"0.9\",\r\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\r\n    \"name\": \"Virtual Storage Medium\",\r\n    \"description\": \"Virtual Storage Medium\",\r\n    \"isBundle\": true,\r\n    \"lifecycleStatus\": \"Active\",\r\n    \"validFor\": {\r\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\r\n        \"endDateTime\": \"2019-01-01T00:01:00-04:00\"\r\n    },\r\n    \"category\": [\r\n        {\r\n            \"id\": \"12\",\r\n            \"href\": \"http://serverlocation:port/catalogManagement/category/12\",\r\n            \"version\": \"2.0\",\r\n            \"name\": \"Cloud offerings\"\r\n        }\r\n    ],\r\n    \"channel\": [\r\n        {\r\n            \"id\": \"13\",\r\n            \"href\": \"http://serverlocation:port/marketSales/channel/13\",\r\n            \"name\": \"Online Channel\"\r\n        }\r\n    ],\r\n    \"place\": [\r\n        {\r\n            \"id\": \"12\",\r\n            \"href\": \"http://serverlocation:port/marketSales/place/12\",\r\n            \"name\": \"France\"\r\n        }\r\n    ],\r\n    \"bundledProductOffering\": [\r\n        {\r\n            \"id\": \"15\",\r\n            \"href\": \"http://serverlocation:port/catalogManagement/productOffering/15\",\r\n            \"lifecycleStatus\": \"Active\",\r\n            \"name\": \"Offering 15\"\r\n        },\r\n        {\r\n            \"id\": \"64\",\r\n            \"href\": \"http://serverlocation:port/catalogManagement/productOffering/64\",\r\n            \"lifecycleStatus\": \"Active\",\r\n            \"name\": \"Offering 64\"\r\n        }\r\n    ],\r\n    \"serviceLevelAgreement\": {\r\n        \"id\": \"28\",\r\n        \"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\r\n        \"name\": \"Standard SLA\"\r\n    },\r\n    \"productSpecification\": {\r\n        \"id\": \"13\",\r\n        \"href\": \"http://serverlocation:port/catalogManagement/productSpecification/13\",\r\n        \"version\": \"2.0\",\r\n        \"name\": \"specification product 1\"\r\n    },\r\n    \"serviceCandidate\": {\r\n        \"id\": \"13\",\r\n        \"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/13\",\r\n        \"version\": \"2.0\",\r\n        \"name\": \"specification service 1\"\r\n    },\r\n    \"resourceCandidate\": {\r\n        \"id\": \"13\",\r\n        \"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/13\",\r\n        \"version\": \"2.0\",\r\n        \"name\": \"specification resource 1\"\r\n    },\r\n    \"productOfferingTerm\": [\r\n        {\r\n            \"name\": \"12 Month\",\r\n            \"description\": \"12 month contract\",\r\n            \"duration\": \"12\",\r\n            \"validFor\": {\r\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\r\n                \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\r\n            }\r\n        }\r\n    ],\r\n    \"productOfferingPrice\": [\r\n        {\r\n            \"name\": \"Monthly Price\",\r\n            \"description\": \"monthlyprice\",\r\n            \"validFor\": {\r\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\r\n                \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\r\n            },\r\n            \"priceType\": \"recurring\",\r\n            \"unitOfMeasure\": \"\",\r\n            \"price\": {\r\n                \"taxIncludedAmount\": \"11.90\",\r\n                \"dutyFreeAmount\": \"09.90\",\r\n                \"taxRate\": \"19.90\",\r\n                \"currencyCode\": \"USD\",\r\n                \"percentage\": 0\r\n            },\r\n            \"recurringChargePeriod\": \"monthly\"\r\n        },\r\n        {\r\n            \"name\": \"Usage Price\",\r\n            \"description\": \"usageprice\",\r\n            \"validFor\": {\r\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\r\n                \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\r\n            },\r\n            \"priceType\": \"usage\",\r\n            \"unitOfMeasure\": \"second\",\r\n            \"price\": {\r\n                \"taxIncludedAmount\": \"11.90\",\r\n                \"dutyFreeAmount\": \"9.90\",\r\n                \"taxRate\": \"19.90\",\r\n                \"currencyCode\": \"EUR\",\r\n                \"percentage\": 0\r\n            },\r\n            \"recurringChargePeriod\": \"\",\r\n            \"productOfferPriceAlteration\": {\r\n                \"name\": \"Shipping Discount\",\r\n                \"description\": \"One time shipping discount\",\r\n                \"validFor\": {\r\n                    \"startDateTime\": \"2013-04-19T16:42:23.0Z\"\r\n                },\r\n                \"priceType\": \"one time\",\r\n                \"unitOfMeasure\": \"\",\r\n                \"price\": {\r\n                    \"percentage\": 100\r\n                },\r\n                \"recurringChargePeriod\": \"\",\r\n                \"priceCondition\": \"apply if total amount of the  order is greater than 300.00\"\r\n            }\r\n        }\r\n    ]\r\n}"
 		},
 		{
 			"id": "8ec36f3a-62c8-04cb-3976-810c49913aec",
@@ -2988,6 +3014,95 @@
 			],
 			"synced": false,
 			"rawModeData": "{\n  \"id\": \"POFER-640\",\n    \"href\": \"http://serverlocation:port/catalogManagement/productOffering/42\",\n    \"version\": \"0.11\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"name\": \"Virtual Storage Medium\",\n    \"description\": \"Virtual Storage Medium\",\n    \"isBundle\": true,\n    \"lifecycleStatus\": \"In Design\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2019-01-01T00:00:01-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"12\",\n            \"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n            \"version\": \"2.0\",\n            \"name\": \"Cloud offerings\"\n        }\n    ],\n    \"channel\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/marketSales/channel/13\",\n            \"name\": \"Online Channel\"\n        }\n    ],\n    \"place\": [\n        {\n            \"id\": \"12\",\n            \"href\": \"http://serverlocation:port/marketSales/place/12\",\n            \"name\": \"France\"\n        }\n    ],\n    \"bundledProductOffering\": [\n        {\n            \"id\": \"15\",\n            \"href\": \"http://serverlocation:port/catalogManagement/productOffering/15\",\n            \"lifecycleStatus\": \"Active\",\n            \"name\": \"Offering 15\"\n        },\n        {\n            \"id\": \"64\",\n            \"href\": \"http://serverlocation:port/catalogManagement/productOffering/64\",\n            \"lifecycleStatus\": \"Active\",\n            \"name\": \"Offering 64\"\n        }\n    ],\n    \"serviceLevelAgreement\": {\n        \"id\": \"28\",\n        \"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n        \"name\": \"Standard SLA\"\n    },\n    \"productSpecification\": {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/productSpecification/13\",\n            \"version\": \"2.0\",\n            \"name\": \"specification product 1\"\n        },\n    \"serviceCandidate\": {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/13\",\n            \"version\": \"2.0\",\n            \"name\": \"specification service 1\"\n        },\n    \"resourceCandidate\": {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/resourceCandidate/13\",\n            \"version\": \"2.0\",\n            \"name\": \"specification resource 1\"\n        },\n    \"productOfferingTerm\": [\n        {\n            \"name\": \"12 Month\",\n            \"description\": \"12 month contract\",\n            \"duration\": \"12\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n            }\n        }\n    ],\n    \"productOfferingPrice\": [\n        {\n            \"name\": \"Monthly Price\",\n            \"description\": \"monthlyprice\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n            },\n            \"priceType\": \"recurring\",\n            \"unitOfMeasure\": \"\",\n            \"price\": {\n                \"taxIncludedAmount\": \"12.01\",\n                \"dutyFreeAmount\": \"10.01\",\n                \"taxRate\": \"20.01\",\n                \"currencyCode\": \"USD\",\n                \"percentage\": 0\n            },\n            \"recurringChargePeriod\": \"monthly\"\n        },\n        {\n            \"name\": \"Usage Price\",\n            \"description\": \"usageprice\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n            },\n            \"priceType\": \"usage\",\n            \"unitOfMeasure\": \"second\",\n            \"price\": {\n                \"taxIncludedAmount\": \"12.01\",\n                \"dutyFreeAmount\": \"10.01\",\n                \"taxRate\": \"20.01\",\n                \"currencyCode\": \"EUR\",\n                \"percentage\": 0\n            },\n            \"recurringChargePeriod\": \"\",\n            \"productOfferPriceAlteration\": {\n                \"name\": \"Shipping Discount\",\n                \"description\": \"One time shipping discount\",\n                \"validFor\": {\n                    \"startDateTime\": \"2013-04-19T16:42:23.0Z\"\n                },\n                \"priceType\": \"one time\",\n                \"unitOfMeasure\": \"\",\n                \"price\": {\n                    \"percentage\": 100\n                },\n                \"recurringChargePeriod\": \"\",\n                \"priceCondition\": \"apply if total amount of the  order is greater than 300.00\"\n            }\n        }\n    ]\n}"
+		},
+		{
+			"id": "b9e2e5d2-5f5f-340c-bf65-e9b7ab49cfaa",
+			"headers": "Accept: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/productOffering",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "ab410f73-ef53-b7c1-69db-0c37ff5b01e2",
+			"data": [],
+			"dataMode": "params",
+			"name": "J - 001-005 [200]",
+			"description": "GET All\n\n-----\n\noutput: returns empty set",
+			"descriptionFormat": "html",
+			"time": 1430158089230,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 37,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "2",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Apr 2015 19:02:13 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition  4.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1  Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[]",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"write": true,
+					"runTests": true,
+					"id": "3245ae32-9350-5c4c-992f-c59614989fac",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/productOffering",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "af152eaa-053b-655e-7c13-6476ed4ea890",
+			"synced": false
 		},
 		{
 			"id": "bbbc8a93-7b0b-d2ce-245c-85a3e1e68768",

@@ -2,17 +2,15 @@
 	"id": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 	"name": "Category",
 	"description": "",
-	"order": [
-		"ab8fb523-8718-0a99-98a4-551810a7b801"
-	],
+	"order": [],
 	"folders": [
 		{
 			"id": "8ff59bb0-f5d3-d55b-5905-596224f4c560",
 			"name": "001 - POST",
 			"description": "",
 			"order": [
+				"77151860-da03-85fe-431e-2fc15d65cc89",
 				"6b1179ea-3584-0502-82ae-c753afe28a35",
-				"ab8fb523-8718-0a99-98a4-551810a7b801",
 				"a5e43d59-1bfa-00d5-6b82-ca7d8256750b",
 				"b3ab93f4-ed8c-ff4c-1207-0cd63c1dd591",
 				"1ce87ecc-a75b-c9d5-bb5e-48e40ea28db5",
@@ -22,7 +20,9 @@
 				"4083e4a9-9505-19a6-eb73-22b9b8bf030d"
 			],
 			"collection_name": "Category",
-			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259"
+			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "6e92966e-a082-0933-ce14-a42467192d3d",
@@ -37,7 +37,9 @@
 				"8ca530a1-3b38-05c7-71ea-11461549547a"
 			],
 			"collection_name": "Category",
-			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259"
+			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "82ef1498-1a1a-1f98-27df-fd4ea7ab3b6b",
@@ -57,7 +59,9 @@
 				"12d3eb8c-194b-a418-dc25-dac5c5068e45"
 			],
 			"collection_name": "Category",
-			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259"
+			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "6aa1457a-46f5-e934-dc7c-3001b4db515d",
@@ -77,7 +81,9 @@
 				"ac3c27d3-cbf9-6373-cc72-30ec366de7f1"
 			],
 			"collection_name": "Category",
-			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259"
+			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "7e546597-8270-98c3-1b41-85395132c717",
@@ -95,7 +101,9 @@
 				"5b97d0cc-cad5-27ec-ccfa-0bdb74227230"
 			],
 			"collection_name": "Category",
-			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259"
+			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "139e70ab-2343-10cd-4282-45f169dc33dc",
@@ -118,11 +126,18 @@
 				"5cccff6d-1d2c-88e4-2286-64f11ff10d76"
 			],
 			"collection_name": "Category",
-			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259"
+			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"collection_owner": "",
+			"write": true
 		}
 	],
 	"timestamp": 1410525262088,
 	"synced": false,
+	"owner": "",
+	"subscribed": false,
+	"remoteLink": "",
+	"public": false,
+	"write": true,
 	"requests": [
 		{
 			"id": "12d3eb8c-194b-a418-dc25-dac5c5068e45",
@@ -2526,7 +2541,9 @@
 			"dataMode": "raw",
 			"version": 2,
 			"tests": "",
-			"time": 1413229826696,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1429638311444,
 			"name": "B-001-010 - [201]",
 			"description": "ID: auto gen\nchild category\nlifecyclestatus: In Design\n",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
@@ -2597,7 +2614,7 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"1.0\",\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\",\n  \"lifecycleStatus\": \"In Design\"\n}"
+			"rawModeData": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\",\n  \"lifecycleStatus\": \"In Design\"\n}"
 		},
 		{
 			"id": "6c3b8154-6b01-f670-8e45-4fdb26a6c52a",
@@ -2850,6 +2867,93 @@
 			],
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"synced": false
+		},
+		{
+			"id": "77151860-da03-85fe-431e-2fc15d65cc89",
+			"headers": "Accept: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1430161312773,
+			"name": "B-001-005 [200]",
+			"description": "GET All\n\n-----\n\noutput: returns empty set",
+			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 60,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "2",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Apr 2015 19:01:58 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition  4.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1  Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[]",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"write": true,
+					"runTests": true,
+					"id": "e1157571-9a7a-dcbb-24d9-67f886b3ef84",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
 			"synced": false
 		},
 		{
@@ -3289,7 +3393,9 @@
 			"dataMode": "raw",
 			"version": 2,
 			"tests": "",
-			"time": 1413229997817,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1429638535863,
 			"name": "B-001-030 - [201]",
 			"description": "ID: specified CATG-001/1.0\nchild category\nIn Design\nno start or end",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
@@ -3360,7 +3466,7 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\":\"CATG-001\",  \n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.0\",\n  \"lifecycleStatus\": \"In Design\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"1.0\",\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\":\"CATG-001\",  \n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.0\",\n  \"lifecycleStatus\": \"In Design\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
 		},
 		{
 			"id": "a868e36d-9641-350a-08af-e2199ce4ed6e",
@@ -3444,90 +3550,6 @@
 				}
 			],
 			"synced": false
-		},
-		{
-			"id": "ab8fb523-8718-0a99-98a4-551810a7b801",
-			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
-			"preRequestScript": "",
-			"pathVariables": {},
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"version": 2,
-			"tests": "",
-			"time": 1413396798752,
-			"name": "B-001-020 - [201]",
-			"description": "ID: CATG-052\nchild category",
-			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
-			"responses": [
-				{
-					"status": "",
-					"responseCode": {
-						"code": 201,
-						"name": "Created",
-						"detail": "The request has been fulfilled and resulted in a new resource being created."
-					},
-					"time": 64,
-					"headers": [
-						{
-							"name": "Content-Type",
-							"key": "Content-Type",
-							"value": "application/json",
-							"description": "The mime type of this content"
-						},
-						{
-							"name": "Date",
-							"key": "Date",
-							"value": "Mon, 29 Dec 2014 17:44:20 GMT",
-							"description": "The date and time that the message was sent"
-						},
-						{
-							"name": "Server",
-							"key": "Server",
-							"value": "GlassFish Server Open Source Edition 3.1.2.2",
-							"description": "A name for the server"
-						},
-						{
-							"name": "Transfer-Encoding",
-							"key": "Transfer-Encoding",
-							"value": "chunked",
-							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-						},
-						{
-							"name": "X-Powered-By",
-							"key": "X-Powered-By",
-							"value": "Servlet/3.0 JSP/2.2 (GlassFish Server Open Source Edition 3.1.2.2 Java/Oracle Corporation/1.7)",
-							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-						}
-					],
-					"cookies": [],
-					"mime": "",
-					"text": "{\"id\":\"CATG-052\",\"version\":\"2.0\",\"href\":\"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)\",\"name\":\"Cloud Services\",\"description\":\"A category to hold all available cloud service offers\",\"lastUpdate\":\"2014-12-29T17:44:20.682+0000\",\"lifecycleStatus\":\"In Design\",\"validFor\":{\"startDateTime\":\"2013-04-19T20:42:23.000+0000\"},\"parentId\":\"41\",\"isRoot\":false}",
-					"language": "javascript",
-					"rawDataType": "text",
-					"state": {
-						"size": "normal"
-					},
-					"previewType": "html",
-					"searchResultScrolledTo": -1,
-					"forceRaw": false,
-					"id": "3abc7a38-e798-0aab-b85e-f0973d9e6df3",
-					"name": "Response",
-					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
-						"pathVariables": {},
-						"data": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Design\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
-						"headers": "Accept: application/json\nContent-Type: application/json\n",
-						"dataMode": "raw",
-						"method": "POST",
-						"tests": "",
-						"version": 2
-					}
-				}
-			],
-			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Design\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
 		},
 		{
 			"id": "ac3c27d3-cbf9-6373-cc72-30ec366de7f1",

@@ -9,6 +9,7 @@
 			"name": "001 - POST",
 			"description": "",
 			"order": [
+				"1314c177-b061-84e7-75c8-708077679735",
 				"4f2710ae-aa00-6ea6-264c-b5a6e8931758",
 				"f50139e7-45d7-279c-5995-4f80b87ad264",
 				"7b77cfee-ed9a-f753-fdb2-c367e1c3d65e",
@@ -20,7 +21,9 @@
 				"1cfcf88c-0920-9a6d-c0d8-24e6faeb4a54"
 			],
 			"collection_name": "ServiceSpecification",
-			"collection_id": "ec8f82e8-33dd-163d-6693-a8e6e5bf3576"
+			"collection_id": "ec8f82e8-33dd-163d-6693-a8e6e5bf3576",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "4862aecb-9c19-4535-179b-0207bc3cf74c",
@@ -40,7 +43,9 @@
 				"ab22515d-cef4-2d23-08f7-f32da18c4dd9"
 			],
 			"collection_name": "ServiceSpecification",
-			"collection_id": "ec8f82e8-33dd-163d-6693-a8e6e5bf3576"
+			"collection_id": "ec8f82e8-33dd-163d-6693-a8e6e5bf3576",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "09925c8d-2f18-99e6-2747-bdd0a6c379cf",
@@ -54,7 +59,9 @@
 				"130a063e-94cd-3e6a-35a7-b6ae88e305f2"
 			],
 			"collection_name": "ServiceSpecification",
-			"collection_id": "ec8f82e8-33dd-163d-6693-a8e6e5bf3576"
+			"collection_id": "ec8f82e8-33dd-163d-6693-a8e6e5bf3576",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "1a5cb0b0-ca09-3dac-4a81-131393f925aa",
@@ -68,7 +75,9 @@
 				"ea514afd-d632-1bda-3f53-0b37927fbe3f"
 			],
 			"collection_name": "ServiceSpecification",
-			"collection_id": "ec8f82e8-33dd-163d-6693-a8e6e5bf3576"
+			"collection_id": "ec8f82e8-33dd-163d-6693-a8e6e5bf3576",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "421ce927-3b35-6317-fd39-dd39e8335e01",
@@ -84,11 +93,18 @@
 				"1bdf932b-b810-5718-db6a-a172075f5103"
 			],
 			"collection_name": "ServiceSpecification",
-			"collection_id": "ec8f82e8-33dd-163d-6693-a8e6e5bf3576"
+			"collection_id": "ec8f82e8-33dd-163d-6693-a8e6e5bf3576",
+			"collection_owner": "",
+			"write": true
 		}
 	],
 	"timestamp": 1414184905555,
 	"synced": false,
+	"owner": "",
+	"subscribed": false,
+	"remoteLink": "",
+	"public": false,
+	"write": true,
 	"requests": [
 		{
 			"id": "130a063e-94cd-3e6a-35a7-b6ae88e305f2",
@@ -179,6 +195,93 @@
 			],
 			"synced": false,
 			"rawModeData": "{\n  \"id\": \"SSPEC-010\",\n    \"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/22\",\n    \"version\": \"11.5\",\n    \"serviceSpecCharacteristic\": [\n        {\n            \"id\": \"34\",\n            \"name\": \"Screen Size\",\n            \"description\": \"Screen size\",\n            \"valueType\": \"number\",\n            \"configurable\": false,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"serviceSpecCharRelationship\": [\n                {\n                    \"type\": \"exclusivity\",\n                    \"id\": \"43\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ],\n            \"serviceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"number\",\n                    \"default\": true,\n                    \"value\": \"4.2\",\n                    \"unitOfMeasure\": \"inches\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        }\n    ]\n}"
+		},
+		{
+			"id": "1314c177-b061-84e7-75c8-708077679735",
+			"headers": "Accept: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1430161502969,
+			"name": "F-001-005 [200]",
+			"description": "GET All\n\n-----\n\noutput: returns empty set",
+			"collectionId": "ec8f82e8-33dd-163d-6693-a8e6e5bf3576",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 36,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "2",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Apr 2015 19:05:06 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition  4.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1  Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[]",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"write": true,
+					"runTests": true,
+					"id": "66582993-2b52-14ac-f5d3-58598fdfe420",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"synced": false
 		},
 		{
 			"id": "165c0e2a-0a26-6659-798d-45f6de1a715b",
@@ -2139,9 +2242,11 @@
 			"dataMode": "raw",
 			"version": 2,
 			"tests": "",
-			"time": 1414603775636,
-			"name": "V-005-020 - [500]",
-			"description": "bad url: missing ) on version.\ninvalid lifecycle status value.\n\n---\n\nfails on marshalling lifecycle status.\nresponse has all valid values for lifecyclestatus",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1429622650342,
+			"name": "V-005-020 - [400]",
+			"description": "bad url: missing ) on version.\ninvalid lifecycle status value.\nbad version # format\n---\n\nfails on marshalling lifecycle status.\nresponse has all valid values for lifecyclestatus\n\nmarshal error hides bad version number format in URL.",
 			"collectionId": "ec8f82e8-33dd-163d-6693-a8e6e5bf3576",
 			"responses": [
 				{
@@ -2218,7 +2323,7 @@
 			"version": 2,
 			"tests": "",
 			"time": 1414604713684,
-			"name": "V-005-060 - [500]",
+			"name": "V-005-060 - [400]",
 			"description": "bad version (too low).\n",
 			"collectionId": "ec8f82e8-33dd-163d-6693-a8e6e5bf3576",
 			"responses": [

@@ -9,6 +9,7 @@
 			"name": "001 - POST",
 			"description": "",
 			"order": [
+				"5a3f224b-570e-4573-615d-57112a1777d6",
 				"2eeb1bd7-3a8c-0acf-91c2-0b8569094e9f",
 				"35246039-536a-1bfe-2480-5c4ea5bbc297",
 				"5f894645-ddc8-945f-ced5-9b1340de515b",
@@ -18,7 +19,9 @@
 				"662a9eca-4d06-058c-0386-8152bf0d22fb"
 			],
 			"collection_name": "ResourceSpecification",
-			"collection_id": "e82b2943-781f-2840-21be-8637253fbb4b"
+			"collection_id": "e82b2943-781f-2840-21be-8637253fbb4b",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "880d4753-3162-f805-6aa9-8e304ded6972",
@@ -31,7 +34,9 @@
 				"1b0b7a6c-5e76-a6d8-3a2e-fbf3ec4b9baa"
 			],
 			"collection_name": "ResourceSpecification",
-			"collection_id": "e82b2943-781f-2840-21be-8637253fbb4b"
+			"collection_id": "e82b2943-781f-2840-21be-8637253fbb4b",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "b516f72a-7f67-1bf1-90d7-8a4192034eaf",
@@ -44,7 +49,9 @@
 				"97fd05b5-86f6-5ecd-ec4e-45fcaa5ffa82"
 			],
 			"collection_name": "ResourceSpecification",
-			"collection_id": "e82b2943-781f-2840-21be-8637253fbb4b"
+			"collection_id": "e82b2943-781f-2840-21be-8637253fbb4b",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "c4ed83fe-ac26-e933-b152-2f176a285e49",
@@ -59,7 +66,9 @@
 				"dfcdbb5f-9665-3383-0392-e6aff24d6a7e"
 			],
 			"collection_name": "ResourceSpecification",
-			"collection_id": "e82b2943-781f-2840-21be-8637253fbb4b"
+			"collection_id": "e82b2943-781f-2840-21be-8637253fbb4b",
+			"collection_owner": "",
+			"write": true
 		},
 		{
 			"id": "4c2681ae-7a29-ccb1-c820-ed32f5be1120",
@@ -75,11 +84,18 @@
 				"8c6c6ac4-f76b-8a4f-95eb-219be28896e6"
 			],
 			"collection_name": "ResourceSpecification",
-			"collection_id": "e82b2943-781f-2840-21be-8637253fbb4b"
+			"collection_id": "e82b2943-781f-2840-21be-8637253fbb4b",
+			"collection_owner": "",
+			"write": true
 		}
 	],
 	"timestamp": 1414184921116,
 	"synced": false,
+	"owner": "",
+	"subscribed": false,
+	"remoteLink": "",
+	"public": false,
+	"write": true,
 	"requests": [
 		{
 			"id": "1642d74c-ae00-2a07-0e2b-5703d1166b98",
@@ -601,6 +617,95 @@
 			],
 			"synced": false,
 			"rawModeData": "{\n\n    \"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/22\",\n    \"name\": \"iPhone 43-mod\",\n    \"description\": \"Siri should work on this iPhone-mod\",\n    \"brand\": \"Apple, Inc.\",\n    \"version\": \"3.1\",\n    \"lastUpdate\": \"2019-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2016-06-19T00:00:00-04:00\"\n    },\n    \"attachment\": [\n        {\n            \"id\": \"23\",\n            \"href\": \"http://serverlocation:port/documentManagment/attachment/23\",\n            \"type\": \"Picture\",\n            \"url\": \"http://xxxxx\"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"role\": \"User\",\n            \"id\": \"1235\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1235\"\n        }\n    ],\n \n    \"resourceSpecCharacteristic\": [\n\n        {\n            \"id\": \"55\",\n            \"name\": \"Color\",\n            \"description\": \"Color\",\n            \"valueType\": \"string\",\n            \"configurable\": true,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"resourceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"string\",\n                    \"default\": true,\n                    \"value\": \"Black\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                },\n                {\n                    \"valueType\": \"string\",\n                    \"default\": false,\n                    \"value\": \"White\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                },\n                {\n                    \"valueType\": \"string\",\n                    \"default\": false,\n                    \"value\": \"Gold\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        }\n    ]\n}"
+		},
+		{
+			"id": "5a3f224b-570e-4573-615d-57112a1777d6",
+			"headers": "Accept: application/json\n",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "e82b2943-781f-2840-21be-8637253fbb4b",
+			"data": [],
+			"dataMode": "params",
+			"name": "R-001-005 [200]",
+			"description": "GET All\n\n-----\n\noutput: returns empty set",
+			"descriptionFormat": "html",
+			"time": 1430158870606,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 36,
+					"headers": [
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "2",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 27 Apr 2015 19:04:06 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition  4.1",
+							"description": "A name for the server"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1  Java/Oracle Corporation/1.7)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[]",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceRaw": false,
+					"write": true,
+					"runTests": true,
+					"id": "8e679351-99fb-f461-b20a-7f87e6fd91cb",
+					"name": "Response",
+					"request": {
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/resourceSpecification",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Accept: application/json\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"version": 2
+					}
+				}
+			],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "d3257bea-1489-e976-356f-492797ad87f2",
+			"synced": false
 		},
 		{
 			"id": "5f894645-ddc8-945f-ced5-9b1340de515b",
