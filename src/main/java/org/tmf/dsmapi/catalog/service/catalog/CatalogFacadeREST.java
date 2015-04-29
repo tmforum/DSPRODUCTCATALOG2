@@ -22,6 +22,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import org.tmf.dsmapi.catalog.entity.catalog.CatalogEntity;
 import org.tmf.dsmapi.catalog.exception.IllegalLifecycleStatusException;
+import org.tmf.dsmapi.catalog.hub.service.catalog.CatalogEventPublisherLocal;
 import org.tmf.dsmapi.catalog.resource.LifecycleStatus;
 import org.tmf.dsmapi.catalog.resource.catalog.Catalog;
 import org.tmf.dsmapi.catalog.service.AbstractFacadeREST;
@@ -43,6 +44,9 @@ public class CatalogFacadeREST extends AbstractFacadeREST<CatalogEntity> {
 
     @EJB
     CatalogFacade manager;
+
+    @EJB
+    CatalogEventPublisherLocal publisher;
 
     /*
      *
@@ -89,7 +93,8 @@ public class CatalogFacadeREST extends AbstractFacadeREST<CatalogEntity> {
 
         input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.edit(input);
-
+        
+        publisher.createNotification(input, null, null);
         return Response.status(Response.Status.CREATED).entity(input).build();
     }
 
@@ -273,6 +278,8 @@ public class CatalogFacadeREST extends AbstractFacadeREST<CatalogEntity> {
         if (input.keysMatch(entity)) {
             input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
             manager.edit(input);
+            
+            publisher.updateNotification(input, null, null);
             return Response.status(Response.Status.CREATED).entity(entity).build();
         }
 
@@ -287,6 +294,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST<CatalogEntity> {
         input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.edit(input);
 
+        publisher.updateNotification(input, null, null);
         return Response.status(Response.Status.CREATED).entity(input).build();
     }
 
@@ -322,6 +330,8 @@ public class CatalogFacadeREST extends AbstractFacadeREST<CatalogEntity> {
             input.setVersion(entity.getVersion());
             input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
             manager.edit(input);
+            
+            publisher.valueChangedNotification(input, null, null);
             return Response.status(Response.Status.CREATED).entity(entity).build();
         }
 
@@ -335,6 +345,7 @@ public class CatalogFacadeREST extends AbstractFacadeREST<CatalogEntity> {
         input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.create(input);
 
+        publisher.valueChangedNotification(input, null, null);
         return Response.status(Response.Status.CREATED).entity(input).build();
     }
 
@@ -349,7 +360,10 @@ public class CatalogFacadeREST extends AbstractFacadeREST<CatalogEntity> {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        manager.remove(entities.get(0));
+        CatalogEntity entity = entities.get(0);
+        manager.remove(entity);
+
+//        publisher.deletionNotification(entity, null, null);        
         return Response.ok().build();
     }
 

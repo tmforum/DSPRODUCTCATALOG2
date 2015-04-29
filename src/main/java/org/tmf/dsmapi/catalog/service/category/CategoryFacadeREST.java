@@ -22,6 +22,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import org.tmf.dsmapi.catalog.entity.category.CategoryEntity;
 import org.tmf.dsmapi.catalog.exception.IllegalLifecycleStatusException;
+import org.tmf.dsmapi.catalog.hub.service.category.CategoryEventPublisherLocal;
 import org.tmf.dsmapi.catalog.resource.LifecycleStatus;
 import org.tmf.dsmapi.catalog.resource.category.Category;
 import org.tmf.dsmapi.catalog.service.AbstractFacadeREST;
@@ -43,6 +44,9 @@ public class CategoryFacadeREST extends AbstractFacadeREST<CategoryEntity> {
 
     @EJB
     private CategoryFacade manager;
+
+    @EJB
+    CategoryEventPublisherLocal publisher;
 
     /*
      *
@@ -91,6 +95,7 @@ public class CategoryFacadeREST extends AbstractFacadeREST<CategoryEntity> {
         input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.edit(input);
 
+        publisher.createNotification(input, null, null);
         return Response.status(Response.Status.CREATED).entity(input).build();
     }
 
@@ -276,6 +281,8 @@ public class CategoryFacadeREST extends AbstractFacadeREST<CategoryEntity> {
         if (input.keysMatch(entity)) {
             input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
             manager.edit(input);
+
+            publisher.updateNotification(input, null, null);
             return Response.status(Response.Status.CREATED).entity(entity).build();
         }
 
@@ -290,6 +297,7 @@ public class CategoryFacadeREST extends AbstractFacadeREST<CategoryEntity> {
         input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.edit(input);
 
+        publisher.updateNotification(input, null, null);
         return Response.status(Response.Status.CREATED).entity(input).build();
     }
 
@@ -327,6 +335,8 @@ public class CategoryFacadeREST extends AbstractFacadeREST<CategoryEntity> {
             input.setVersion(entity.getVersion());
             input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
             manager.edit(input);
+
+            publisher.valueChangedNotification(input, null, null);
             return Response.status(Response.Status.CREATED).entity(entity).build();
         }
 
@@ -340,6 +350,7 @@ public class CategoryFacadeREST extends AbstractFacadeREST<CategoryEntity> {
         input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.create(input);
 
+        publisher.valueChangedNotification(input, null, null);
         return Response.status(Response.Status.CREATED).entity(input).build();
     }
 
@@ -354,7 +365,10 @@ public class CategoryFacadeREST extends AbstractFacadeREST<CategoryEntity> {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        manager.remove(entities.get(0));
+        CategoryEntity entity = entities.get(0);
+        manager.remove(entity);
+ 
+//        publisher.deletionNotification(entity, null, null);
         return Response.ok().build();
     }
 

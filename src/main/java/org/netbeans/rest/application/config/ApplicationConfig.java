@@ -8,12 +8,14 @@ import org.glassfish.jersey.server.ResourceConfig;
  * @author pierregauthier
  *
  */
-@ApplicationPath("catalogManagement")
+@ApplicationPath("api/catalogManagement/v2")
 public class ApplicationConfig extends ResourceConfig {
 
     public ApplicationConfig() {
         packages ("org.codehaus.jackson.jaxrs");
 
+        register(org.tmf.dsmapi.jaxrs.resource.hub.CatalogHubResource.class);
+                
         register(org.tmf.dsmapi.catalog.service.catalog.CatalogFacadeREST.class);
         register(org.tmf.dsmapi.catalog.service.category.CategoryFacadeREST.class);
         register(org.tmf.dsmapi.catalog.service.category.CategoryInCatalogIdFacadeREST.class);

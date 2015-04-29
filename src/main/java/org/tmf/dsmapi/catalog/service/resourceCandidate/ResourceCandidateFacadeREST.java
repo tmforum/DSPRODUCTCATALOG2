@@ -22,6 +22,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import org.tmf.dsmapi.catalog.entity.resource.ResourceCandidateEntity;
 import org.tmf.dsmapi.catalog.exception.IllegalLifecycleStatusException;
+import org.tmf.dsmapi.catalog.hub.service.resourceCandidate.ResourceCandidateEventPublisherLocal;
 import org.tmf.dsmapi.catalog.resource.LifecycleStatus;
 import org.tmf.dsmapi.catalog.resource.resource.ResourceCandidate;
 import org.tmf.dsmapi.catalog.service.AbstractFacadeREST;
@@ -44,6 +45,9 @@ public class ResourceCandidateFacadeREST extends AbstractFacadeREST<ResourceCand
     @EJB
     private ResourceCandidateFacade manager;
 
+    @EJB
+    ResourceCandidateEventPublisherLocal publisher;
+    
     /*
      *
      */
@@ -91,6 +95,7 @@ public class ResourceCandidateFacadeREST extends AbstractFacadeREST<ResourceCand
         input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.edit(input);
 
+        publisher.createNotification(input, null, null);
         return Response.status(Response.Status.CREATED).entity(input).build();
     }
 
@@ -276,6 +281,8 @@ public class ResourceCandidateFacadeREST extends AbstractFacadeREST<ResourceCand
         if (input.keysMatch(entity)) {
             input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
             manager.edit(input);
+            
+            publisher.updateNotification(input, null, null);
             return Response.status(Response.Status.CREATED).entity(entity).build();
         }
 
@@ -290,6 +297,7 @@ public class ResourceCandidateFacadeREST extends AbstractFacadeREST<ResourceCand
         input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.edit(input);
 
+        publisher.updateNotification(input, null, null);
         return Response.status(Response.Status.CREATED).entity(input).build();
     }
 
@@ -325,6 +333,8 @@ public class ResourceCandidateFacadeREST extends AbstractFacadeREST<ResourceCand
             input.setVersion(entity.getVersion());
             input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
             manager.edit(input);
+            
+            publisher.valueChangedNotification(input, null, null);
             return Response.status(Response.Status.CREATED).entity(entity).build();
         }
 
@@ -340,6 +350,7 @@ public class ResourceCandidateFacadeREST extends AbstractFacadeREST<ResourceCand
         input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.create(input);
 
+        publisher.valueChangedNotification(input, null, null);
         return Response.status(Response.Status.CREATED).entity(input).build();
     }
 
@@ -354,7 +365,10 @@ public class ResourceCandidateFacadeREST extends AbstractFacadeREST<ResourceCand
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        manager.remove(entities.get(0));
+        ResourceCandidateEntity entity = entities.get(0);
+        manager.remove(entity);
+ 
+//        publisher.deletionNotification(entity, null, null);
         return Response.ok().build();
     }
 

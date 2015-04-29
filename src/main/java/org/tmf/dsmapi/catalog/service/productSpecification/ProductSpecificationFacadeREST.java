@@ -22,6 +22,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import org.tmf.dsmapi.catalog.entity.product.ProductSpecificationEntity;
 import org.tmf.dsmapi.catalog.exception.IllegalLifecycleStatusException;
+import org.tmf.dsmapi.catalog.hub.service.productSpecification.ProductSpecificationEventPublisherLocal;
 import org.tmf.dsmapi.catalog.resource.LifecycleStatus;
 import org.tmf.dsmapi.catalog.resource.product.ProductSpecification;
 import org.tmf.dsmapi.catalog.service.AbstractFacadeREST;
@@ -43,7 +44,9 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
 
     @EJB
     private ProductSpecificationFacade manager;
-
+    
+    @EJB
+    ProductSpecificationEventPublisherLocal publisher;
     /*
      *
      */
@@ -91,6 +94,7 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
         input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.edit(input);
 
+        publisher.createNotification(input, null, null);
         return Response.status(Response.Status.CREATED).entity(input).build();
     }
 
@@ -281,6 +285,8 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
 
         if (input.hasHigherVersionThan(entity) == false) {
             logger.log(Level.FINE, "specified version ({0}) must be higher than entity version ({1})", new Object[]{input.getVersion(), entity.getVersion()});
+            
+            publisher.updateNotification(input, null, null);
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
@@ -290,6 +296,7 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
         input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.edit(input);
 
+        publisher.updateNotification(input, null, null);
         return Response.status(Response.Status.CREATED).entity(input).build();
     }
 
@@ -327,6 +334,8 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
             input.setVersion(entity.getVersion());
             input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
             manager.edit(input);
+            
+            publisher.valueChangedNotification(input, null, null);
             return Response.status(Response.Status.CREATED).entity(entity).build();
         }
 
@@ -340,6 +349,7 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
         input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.create(input);
 
+        publisher.valueChangedNotification(input, null, null);
         return Response.status(Response.Status.CREATED).entity(input).build();
     }
 
@@ -354,7 +364,10 @@ public class ProductSpecificationFacadeREST extends AbstractFacadeREST<ProductSp
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        manager.remove(entities.get(0));
+        ProductSpecificationEntity entity = entities.get(0);
+        manager.remove(entity);
+ 
+//        publisher.deletionNotification(entity, null, null);
         return Response.ok().build();
     }
 

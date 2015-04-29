@@ -23,6 +23,7 @@ import javax.ws.rs.core.UriInfo;
 import org.tmf.dsmapi.catalog.resource.LifecycleStatus;
 import org.tmf.dsmapi.catalog.entity.resource.ResourceSpecificationEntity;
 import org.tmf.dsmapi.catalog.exception.IllegalLifecycleStatusException;
+import org.tmf.dsmapi.catalog.hub.service.resourceSpecification.ResourceSpecificationEventPublisherLocal;
 import org.tmf.dsmapi.catalog.resource.resource.ResourceSpecification;
 import org.tmf.dsmapi.catalog.service.AbstractFacadeREST;
 import org.tmf.dsmapi.catalog.service.ServiceConstants;
@@ -44,6 +45,9 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
     @EJB
     private ResourceSpecificationFacade manager;
 
+    @EJB
+    ResourceSpecificationEventPublisherLocal publisher;
+        
     /*
      *
      */
@@ -91,6 +95,7 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
         input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.edit(input);
 
+        publisher.createNotification(input, null, null);
         return Response.status(Response.Status.CREATED).entity(input).build();
     }
 
@@ -276,6 +281,8 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
         if (input.keysMatch(entity)) {
             input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
             manager.edit(input);
+            
+            publisher.updateNotification(input, null, null);
             return Response.status(Response.Status.CREATED).entity(entity).build();
         }
 
@@ -290,6 +297,7 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
         input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.edit(input);
 
+        publisher.updateNotification(input, null, null);
         return Response.status(Response.Status.CREATED).entity(input).build();
     }
 
@@ -327,6 +335,8 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
             input.setVersion(entity.getVersion());
             input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
             manager.edit(input);
+            
+            publisher.valueChangedNotification(input, null, null);
             return Response.status(Response.Status.CREATED).entity(entity).build();
         }
 
@@ -340,6 +350,7 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
         input.setHref(buildHref(uriInfo, input.getId(), input.getParsedVersion()));
         manager.create(input);
 
+        publisher.valueChangedNotification(input, null, null);
         return Response.status(Response.Status.CREATED).entity(input).build();
     }
 
@@ -354,7 +365,10 @@ public class ResourceSpecificationFacadeREST extends AbstractFacadeREST<Resource
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        manager.remove(entities.get(0));
+        ResourceSpecificationEntity entity = entities.get(0);
+        manager.remove(entity);
+ 
+//        publisher.deletionNotification(entity, null, null);
         return Response.ok().build();
     }
 
