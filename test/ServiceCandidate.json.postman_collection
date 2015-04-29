@@ -22,7 +22,8 @@
 			"collection_name": "ServiceCandidate",
 			"collection_id": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc",
 			"collection_owner": "",
-			"write": true
+			"write": true,
+			"owner": 0
 		},
 		{
 			"id": "f285e892-e0f0-0bc8-2d80-c0c9d7d8e698",
@@ -45,7 +46,8 @@
 			"collection_name": "ServiceCandidate",
 			"collection_id": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc",
 			"collection_owner": "",
-			"write": true
+			"write": true,
+			"owner": 0
 		},
 		{
 			"id": "b30d93b2-865e-24cc-aac3-d32573a1b1e0",
@@ -61,7 +63,8 @@
 			"collection_name": "ServiceCandidate",
 			"collection_id": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc",
 			"collection_owner": "",
-			"write": true
+			"write": true,
+			"owner": 0
 		},
 		{
 			"id": "80c03eba-7e60-93dd-74f9-8a9367507bf3",
@@ -76,7 +79,8 @@
 			"collection_name": "ServiceCandidate",
 			"collection_id": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc",
 			"collection_owner": "",
-			"write": true
+			"write": true,
+			"owner": 0
 		},
 		{
 			"id": "9f673bbf-c8d1-1ed9-1737-15717d4a0504",
@@ -90,7 +94,8 @@
 			"collection_name": "ServiceCandidate",
 			"collection_id": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc",
 			"collection_owner": "",
-			"write": true
+			"write": true,
+			"owner": 0
 		},
 		{
 			"id": "a10b2c52-b5f9-0eb4-b0f1-e66ae57f6e5d",
@@ -110,21 +115,24 @@
 			"collection_name": "ServiceCandidate",
 			"collection_id": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc",
 			"collection_owner": "",
-			"write": true
+			"write": true,
+			"owner": 0
 		}
 	],
 	"timestamp": 1414184895065,
 	"synced": false,
-	"owner": "",
+	"owner": 0,
 	"subscribed": false,
 	"remoteLink": "",
 	"public": false,
 	"write": true,
+	"sharedWithTeam": false,
+	"hasRequests": true,
 	"requests": [
 		{
 			"id": "00ed3352-3054-aa23-39bc-33ac5845a38d",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -191,7 +199,7 @@
 					"id": "ab86586b-5d5e-8b45-022d-74e2f83d1ab3",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 						"pathVariables": {},
 						"data": "{\n  \"id\":\"CATG001\",\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"2.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"Second category for testing service candidate\",\n  \"lifecycleStatus\": \"In Test\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -203,12 +211,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\":\"CATG001\",\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"2.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"Second category for testing service candidate\",\n  \"lifecycleStatus\": \"In Test\"\n}"
+			"rawModeData": "{\n  \"id\":\"CATG001\",\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"2.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"Second category for testing service candidate\",\n  \"lifecycleStatus\": \"In Test\"\n}",
+			"owner": 0,
+			"folder": "f285e892-e0f0-0bc8-2d80-c0c9d7d8e698"
 		},
 		{
 			"id": "04c588e0-fe34-e3dd-e89d-ee05d3c0be1d",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -281,7 +291,7 @@
 					"id": "da17174f-fabe-ba7d-9a46-128512691df3",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 						"pathVariables": {},
 						"data": "",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -293,12 +303,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": ""
+			"rawModeData": "",
+			"owner": 0,
+			"folder": "a10b2c52-b5f9-0eb4-b0f1-e66ae57f6e5d"
 		},
 		{
 			"id": "05043fab-8e31-8951-a656-06dfa1e077ca",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-101:(200.149)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-101:(200.149)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -359,7 +371,7 @@
 					"id": "f4b36640-c27a-a2bc-0375-efb5078bab81",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-101:(200.149)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-101:(200.149)",
 						"pathVariables": {},
 						"data": "",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -371,12 +383,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": ""
+			"rawModeData": "",
+			"owner": 0,
+			"folder": "a10b2c52-b5f9-0eb4-b0f1-e66ae57f6e5d"
 		},
 		{
 			"id": "10e90f79-7090-9ae0-ee42-c030649e2774",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate?category=(id=CATG001&version.lte=2.0)&fields=category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate?category=(id=CATG001&version.lte=2.0)&fields=category",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -443,7 +457,7 @@
 					"id": "2c6ce405-d547-c07a-ffb1-2ebbd926de6d",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate?category=(id=CATG001&version.lte=2.0)&fields=category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate?category=(id=CATG001&version.lte=2.0)&fields=category",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -454,12 +468,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "9f673bbf-c8d1-1ed9-1737-15717d4a0504"
 		},
 		{
 			"id": "196b6704-2b9a-5813-b05b-2809db95919e",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-100:(200.150)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-100:(200.150)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -526,7 +542,7 @@
 					"id": "d2da904b-b435-2350-c38f-cc07762d7af0",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-100:(200.150)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-100:(200.150)",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"SCAN-100\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.150\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Launched\",\n\t\"validFor\": {\n\t\t\"endDateTime\": \"2019-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(2.0)\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n        {\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC001\",\n\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC001:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -538,12 +554,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"SCAN-100\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.150\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Launched\",\n\t\"validFor\": {\n\t\t\"endDateTime\": \"2019-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(2.0)\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n        {\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC001\",\n\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC001:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+			"rawModeData": "{\n  \"id\": \"SCAN-100\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.150\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Launched\",\n\t\"validFor\": {\n\t\t\"endDateTime\": \"2019-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(2.0)\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n        {\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC001\",\n\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC001:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+			"owner": 0,
+			"folder": "b30d93b2-865e-24cc-aac3-d32573a1b1e0"
 		},
 		{
 			"id": "210379cc-c380-b575-6ad7-4f0f3b792de4",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -604,7 +622,7 @@
 					"id": "d5b81ed1-dfc8-4b5f-2664-5ce8969c6f03",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"SCAN-101\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.150\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\"\n}\n",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -616,12 +634,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"SCAN-101\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.150\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\"\n}\n"
+			"rawModeData": "{\n  \"id\": \"SCAN-101\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.150\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\"\n}\n",
+			"owner": 0,
+			"folder": "c3109e65-3da8-20d2-bec3-66095d99026c"
 		},
 		{
 			"id": "257316f9-cdca-05f1-50b2-f31a6959dd81",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate?depth=3",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate?depth=3",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -634,12 +654,14 @@
 			"description": "Get with depth=3;\n\n---\ndepth will work for some entities but not others (their hrefs are not correct).\n",
 			"collectionId": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc",
 			"responses": [],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "9f673bbf-c8d1-1ed9-1737-15717d4a0504"
 		},
 		{
 			"id": "282459d8-fe09-d975-1f29-6a2b2ffbe8b5",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -706,7 +728,7 @@
 					"id": "a460f577-30eb-fa7c-5a9f-b516d09af2d7",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"SCAN-101\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.149\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\"\n}\n",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -718,12 +740,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"SCAN-101\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.149\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\"\n}\n"
+			"rawModeData": "{\n  \"id\": \"SCAN-101\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.149\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\"\n}\n",
+			"owner": 0,
+			"folder": "c3109e65-3da8-20d2-bec3-66095d99026c"
 		},
 		{
 			"id": "2b0e75c8-24c9-d000-da41-f39fa519c166",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate?fields=id,version",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate?fields=id,version",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -736,12 +760,14 @@
 			"description": "Check on the entities.",
 			"collectionId": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc",
 			"responses": [],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "a10b2c52-b5f9-0eb4-b0f1-e66ae57f6e5d"
 		},
 		{
 			"id": "47fabaa3-00d4-505e-85d9-fca185528882",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/admin/proto",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/admin/proto",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -808,7 +834,7 @@
 					"id": "6bc5a04f-c4fb-6ccd-4b99-324f0e03322a",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/admin/proto",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/admin/proto",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -819,12 +845,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "f285e892-e0f0-0bc8-2d80-c0c9d7d8e698"
 		},
 		{
 			"id": "4eb16e14-da3e-d8ec-f972-96a9373eda17",
 			"headers": "Accept: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "GET",
@@ -893,7 +921,7 @@
 					"id": "18379219-a367-8873-405e-81eef9f9a2bc",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\n",
@@ -908,12 +936,13 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"folder": "c3109e65-3da8-20d2-bec3-66095d99026c",
-			"synced": false
+			"synced": false,
+			"owner": 0
 		},
 		{
 			"id": "502ca7db-6d55-2f02-7c3e-5299dd9d9a84",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-100:(200.155)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-100:(200.155)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -980,7 +1009,7 @@
 					"id": "bd1af676-516f-e8c7-7b1b-6322203502b9",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-100:(200.155)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-100:(200.155)",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -991,12 +1020,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "f285e892-e0f0-0bc8-2d80-c0c9d7d8e698"
 		},
 		{
 			"id": "55ebc3de-e112-7c6e-e66f-3bc02400b4a9",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate?fields=id,version",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate?fields=id,version",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -1063,7 +1094,7 @@
 					"id": "5e3c7bb7-bb9d-c3fb-136a-f7cf53d8f1f0",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate?fields=id,version",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate?fields=id,version",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1074,12 +1105,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "a10b2c52-b5f9-0eb4-b0f1-e66ae57f6e5d"
 		},
 		{
 			"id": "570f4b3e-ccc4-073e-2996-5ddb58936ede",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -1146,7 +1179,7 @@
 					"id": "0ec70b0e-166d-bd62-f662-bdef8541b996",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"SCAN-101\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.150\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"13\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"14\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1158,12 +1191,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"SCAN-101\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.150\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"13\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"14\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+			"rawModeData": "{\n  \"id\": \"SCAN-101\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.150\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"13\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"14\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+			"owner": 0,
+			"folder": "c3109e65-3da8-20d2-bec3-66095d99026c"
 		},
 		{
 			"id": "587262a0-d749-ed28-302e-458eca3d9f81",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-101",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-101",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -1230,7 +1265,7 @@
 					"id": "3fe339ac-9ffc-9290-a52b-ab28203516ce",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-101",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-101",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"SCAN-101\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.151\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"13\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"14\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1242,12 +1277,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"SCAN-101\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.151\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"13\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"14\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+			"rawModeData": "{\n  \"id\": \"SCAN-101\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.151\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"13\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"14\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+			"owner": 0,
+			"folder": "b30d93b2-865e-24cc-aac3-d32573a1b1e0"
 		},
 		{
 			"id": "5c6bd8fa-a67e-443d-f489-b9ef00bde675",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -1314,7 +1351,7 @@
 					"id": "2cc33102-2c3d-bbc7-63bc-22971806cdeb",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATG001\",\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"First category to hold all available cloud service offers\",\n  \"lifecycleStatus\": \"In Design\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1326,12 +1363,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATG001\",\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"First category to hold all available cloud service offers\",\n  \"lifecycleStatus\": \"In Design\"\n}"
+			"rawModeData": "{\n  \"id\": \"CATG001\",\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"First category to hold all available cloud service offers\",\n  \"lifecycleStatus\": \"In Design\"\n}",
+			"owner": 0,
+			"folder": "f285e892-e0f0-0bc8-2d80-c0c9d7d8e698"
 		},
 		{
 			"id": "67ddec4e-4883-1086-80fe-56d93b30d567",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-101",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-101",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -1404,7 +1443,7 @@
 					"id": "beebbfce-0449-1424-9ed6-8eb3e31cf965",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-101",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-101",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"SCAN-101\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.150\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"13\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"14\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1416,12 +1455,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"SCAN-101\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.150\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"13\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"14\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+			"rawModeData": "{\n  \"id\": \"SCAN-101\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.150\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"13\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"14\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+			"owner": 0,
+			"folder": "b30d93b2-865e-24cc-aac3-d32573a1b1e0"
 		},
 		{
 			"id": "68aca02b-ba7a-aae2-a1a0-cd451735b751",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -1488,7 +1529,7 @@
 					"id": "cc91e96a-1033-8968-ecec-5fbb64ea3d5b",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 						"pathVariables": {},
 						"data": "{\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"2.0\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1500,12 +1541,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"2.0\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+			"rawModeData": "{\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"2.0\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+			"owner": 0,
+			"folder": "c3109e65-3da8-20d2-bec3-66095d99026c"
 		},
 		{
 			"id": "6b7c614d-5725-6326-33b2-10178821bffd",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceSpecification",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -1572,7 +1615,7 @@
 					"id": "a0cb6f87-dffc-e194-c387-c60c95102248",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceSpecification",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"SSPEC001\",\n    \"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/22\",\n    \"version\": \"1.1\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"In Study\",\n    \"name\": \"iPhone 42\",\n    \"description\": \"Service spec to test service candidate\",\n    \"brand\": \"Apple\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n    },\n    \"attachment\": [\n        {\n            \"id\": \"56\",\n            \"href\": \"http://serverlocation:port/documentManagment/attachment/56\",\n            \"type\": \"Picture\",\n            \"url\": \"http://xxxxx\"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        }\n    ],\n    \"serviceSpecificationRelationship\": [\n        {\n            \"type\": \"dependency\",\n            \"id\": \"23\",\n            \"href\": \" http://serverlocation:port/catalogManagement/serviceSpecification/23\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"requiredServiceSpecification\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n            \"name\": \"specification 1\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"requiredResourceSpecification\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n            \"name\": \"specification 1\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"serviceSpecCharacteristic\": [\n        {\n            \"id\": \"34\",\n            \"name\": \"Screen Size\",\n            \"description\": \"Screen size\",\n            \"valueType\": \"number\",\n            \"configurable\": false,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"serviceSpecCharRelationship\": [\n                {\n                    \"type\": \"dependency\",\n                    \"id\": \"43\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ],\n            \"serviceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"number\",\n                    \"default\": true,\n                    \"value\": \"4.2\",\n                    \"unitOfMeasure\": \"inches\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": \"54\",\n            \"name\": \"Colour\",\n            \"description\": \"Product colour\",\n            \"valueType\": \"string\",\n            \"configurable\": true,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"serviceSpecCharRelationship\": [\n                {\n                    \"type\": \"dependency\",\n                    \"id\": \"43\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ],\n            \"serviceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"string\",\n                    \"default\": true,\n                    \"value\": \"Black\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                },\n                {\n                    \"valueType\": \"string\",\n                    \"default\": false,\n                    \"value\": \"White\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1584,12 +1627,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"SSPEC001\",\n    \"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/22\",\n    \"version\": \"1.1\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"In Study\",\n    \"name\": \"iPhone 42\",\n    \"description\": \"Service spec to test service candidate\",\n    \"brand\": \"Apple\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n    },\n    \"attachment\": [\n        {\n            \"id\": \"56\",\n            \"href\": \"http://serverlocation:port/documentManagment/attachment/56\",\n            \"type\": \"Picture\",\n            \"url\": \"http://xxxxx\"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        }\n    ],\n    \"serviceSpecificationRelationship\": [\n        {\n            \"type\": \"dependency\",\n            \"id\": \"23\",\n            \"href\": \" http://serverlocation:port/catalogManagement/serviceSpecification/23\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"requiredServiceSpecification\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n            \"name\": \"specification 1\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"requiredResourceSpecification\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n            \"name\": \"specification 1\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"serviceSpecCharacteristic\": [\n        {\n            \"id\": \"34\",\n            \"name\": \"Screen Size\",\n            \"description\": \"Screen size\",\n            \"valueType\": \"number\",\n            \"configurable\": false,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"serviceSpecCharRelationship\": [\n                {\n                    \"type\": \"dependency\",\n                    \"id\": \"43\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ],\n            \"serviceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"number\",\n                    \"default\": true,\n                    \"value\": \"4.2\",\n                    \"unitOfMeasure\": \"inches\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": \"54\",\n            \"name\": \"Colour\",\n            \"description\": \"Product colour\",\n            \"valueType\": \"string\",\n            \"configurable\": true,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"serviceSpecCharRelationship\": [\n                {\n                    \"type\": \"dependency\",\n                    \"id\": \"43\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ],\n            \"serviceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"string\",\n                    \"default\": true,\n                    \"value\": \"Black\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                },\n                {\n                    \"valueType\": \"string\",\n                    \"default\": false,\n                    \"value\": \"White\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        }\n    ]\n}"
+			"rawModeData": "{\n  \"id\": \"SSPEC001\",\n    \"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/22\",\n    \"version\": \"1.1\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"In Study\",\n    \"name\": \"iPhone 42\",\n    \"description\": \"Service spec to test service candidate\",\n    \"brand\": \"Apple\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n    },\n    \"attachment\": [\n        {\n            \"id\": \"56\",\n            \"href\": \"http://serverlocation:port/documentManagment/attachment/56\",\n            \"type\": \"Picture\",\n            \"url\": \"http://xxxxx\"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        }\n    ],\n    \"serviceSpecificationRelationship\": [\n        {\n            \"type\": \"dependency\",\n            \"id\": \"23\",\n            \"href\": \" http://serverlocation:port/catalogManagement/serviceSpecification/23\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"requiredServiceSpecification\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n            \"name\": \"specification 1\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"requiredResourceSpecification\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n            \"name\": \"specification 1\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"serviceSpecCharacteristic\": [\n        {\n            \"id\": \"34\",\n            \"name\": \"Screen Size\",\n            \"description\": \"Screen size\",\n            \"valueType\": \"number\",\n            \"configurable\": false,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"serviceSpecCharRelationship\": [\n                {\n                    \"type\": \"dependency\",\n                    \"id\": \"43\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ],\n            \"serviceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"number\",\n                    \"default\": true,\n                    \"value\": \"4.2\",\n                    \"unitOfMeasure\": \"inches\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": \"54\",\n            \"name\": \"Colour\",\n            \"description\": \"Product colour\",\n            \"valueType\": \"string\",\n            \"configurable\": true,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"serviceSpecCharRelationship\": [\n                {\n                    \"type\": \"dependency\",\n                    \"id\": \"43\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ],\n            \"serviceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"string\",\n                    \"default\": true,\n                    \"value\": \"Black\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                },\n                {\n                    \"valueType\": \"string\",\n                    \"default\": false,\n                    \"value\": \"White\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "f285e892-e0f0-0bc8-2d80-c0c9d7d8e698"
 		},
 		{
 			"id": "758c9a7b-c661-3cd3-c843-8758e82ee12a",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -1656,7 +1701,7 @@
 					"id": "81d41c69-06fc-9168-f25a-f2a4afb6519d",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"SCAN-025\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.150\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1668,12 +1713,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"SCAN-100\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.150\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+			"rawModeData": "{\n  \"id\": \"SCAN-100\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.150\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+			"owner": 0,
+			"folder": "c3109e65-3da8-20d2-bec3-66095d99026c"
 		},
 		{
 			"id": "75dce192-172e-c953-53e9-a26b4ef0a639",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate?category=(id=CATG001&version.gt=2.0)&fields=category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate?category=(id=CATG001&version.gt=2.0)&fields=category",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -1740,7 +1787,7 @@
 					"id": "ffcdca10-4762-7279-02c0-6aabd88fd4ec",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate?category=(id=CATG001&version.gt=2.0)&fields=category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate?category=(id=CATG001&version.gt=2.0)&fields=category",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1751,12 +1798,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "9f673bbf-c8d1-1ed9-1737-15717d4a0504"
 		},
 		{
 			"id": "79a5e06a-9014-6226-e292-72af3c7b2795",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -1823,7 +1872,7 @@
 					"id": "6578d142-b44c-9f24-7ae9-5da836eda4ea",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"SCAN-100\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.151\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1835,12 +1884,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"SCAN-100\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.151\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+			"rawModeData": "{\n  \"id\": \"SCAN-100\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.151\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+			"owner": 0,
+			"folder": "c3109e65-3da8-20d2-bec3-66095d99026c"
 		},
 		{
 			"id": "7c2020af-0deb-7c28-2709-6c07ea89fb07",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-100",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-100",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -1853,12 +1904,14 @@
 			"description": "latest version.\n\n------\n\nreturns version 200.151",
 			"collectionId": "eaeb6c47-f967-2f37-6a61-42eba5b4c7dc",
 			"responses": [],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "f285e892-e0f0-0bc8-2d80-c0c9d7d8e698"
 		},
 		{
 			"id": "81424e32-a2fc-bb49-631a-f712b773ac76",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-109",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-109",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -1925,7 +1978,7 @@
 					"id": "2f1a4d71-bbf3-b1aa-abd1-42ba0e62b3bd",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-109",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-109",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"SCAN-101\",\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(2.0)\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC002\",\n\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC002:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1937,12 +1990,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"SCAN-101\",\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(2.0)\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC002\",\n\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC002:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+			"rawModeData": "{\n  \"id\": \"SCAN-101\",\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(2.0)\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC002\",\n\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC002:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+			"owner": 0,
+			"folder": "80c03eba-7e60-93dd-74f9-8a9367507bf3"
 		},
 		{
 			"id": "81a501e6-a64c-1753-09d1-b5b2392e9f17",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-100",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-100",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -2003,7 +2058,7 @@
 					"id": "61330606-0d60-b30e-be08-6af467705f42",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-100",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-100",
 						"pathVariables": {},
 						"data": "",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2015,12 +2070,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": ""
+			"rawModeData": "",
+			"owner": 0,
+			"folder": "a10b2c52-b5f9-0eb4-b0f1-e66ae57f6e5d"
 		},
 		{
 			"id": "86f13c0f-104f-27ae-4f7a-fe4af6326dd8",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceSpecification",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -2087,7 +2144,7 @@
 					"id": "94697660-a3c1-b422-dc8a-0883cc2181e0",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceSpecification",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"SSPEC002\",\n    \"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/22\",\n    \"version\": \"1.1\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"In Study\",\n    \"name\": \"iPhone 42\",\n    \"description\": \"Service spec to test service candidate\",\n    \"brand\": \"Apple\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n    },\n    \"attachment\": [\n        {\n            \"id\": \"56\",\n            \"href\": \"http://serverlocation:port/documentManagment/attachment/56\",\n            \"type\": \"Picture\",\n            \"url\": \"http://xxxxx\"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        }\n    ],\n    \"serviceSpecificationRelationship\": [\n        {\n            \"type\": \"dependency\",\n            \"id\": \"23\",\n            \"href\": \" http://serverlocation:port/catalogManagement/serviceSpecification/23\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"requiredServiceSpecification\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n            \"name\": \"specification 1\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"requiredResourceSpecification\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n            \"name\": \"specification 1\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"serviceSpecCharacteristic\": [\n        {\n            \"id\": \"34\",\n            \"name\": \"Screen Size\",\n            \"description\": \"Screen size\",\n            \"valueType\": \"number\",\n            \"configurable\": false,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"serviceSpecCharRelationship\": [\n                {\n                    \"type\": \"dependency\",\n                    \"id\": \"43\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ],\n            \"serviceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"number\",\n                    \"default\": true,\n                    \"value\": \"4.2\",\n                    \"unitOfMeasure\": \"inches\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": \"54\",\n            \"name\": \"Colour\",\n            \"description\": \"Product colour\",\n            \"valueType\": \"string\",\n            \"configurable\": true,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"serviceSpecCharRelationship\": [\n                {\n                    \"type\": \"dependency\",\n                    \"id\": \"43\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ],\n            \"serviceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"string\",\n                    \"default\": true,\n                    \"value\": \"Black\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                },\n                {\n                    \"valueType\": \"string\",\n                    \"default\": false,\n                    \"value\": \"White\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2099,12 +2156,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"SSPEC002\",\n    \"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/22\",\n    \"version\": \"1.1\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"In Study\",\n    \"name\": \"iPhone 42\",\n    \"description\": \"Service spec to test service candidate\",\n    \"brand\": \"Apple\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n    },\n    \"attachment\": [\n        {\n            \"id\": \"56\",\n            \"href\": \"http://serverlocation:port/documentManagment/attachment/56\",\n            \"type\": \"Picture\",\n            \"url\": \"http://xxxxx\"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        }\n    ],\n    \"serviceSpecificationRelationship\": [\n        {\n            \"type\": \"dependency\",\n            \"id\": \"23\",\n            \"href\": \" http://serverlocation:port/catalogManagement/serviceSpecification/23\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"requiredServiceSpecification\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n            \"name\": \"specification 1\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"requiredResourceSpecification\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n            \"name\": \"specification 1\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"serviceSpecCharacteristic\": [\n        {\n            \"id\": \"34\",\n            \"name\": \"Screen Size\",\n            \"description\": \"Screen size\",\n            \"valueType\": \"number\",\n            \"configurable\": false,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"serviceSpecCharRelationship\": [\n                {\n                    \"type\": \"dependency\",\n                    \"id\": \"43\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ],\n            \"serviceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"number\",\n                    \"default\": true,\n                    \"value\": \"4.2\",\n                    \"unitOfMeasure\": \"inches\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": \"54\",\n            \"name\": \"Colour\",\n            \"description\": \"Product colour\",\n            \"valueType\": \"string\",\n            \"configurable\": true,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"serviceSpecCharRelationship\": [\n                {\n                    \"type\": \"dependency\",\n                    \"id\": \"43\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ],\n            \"serviceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"string\",\n                    \"default\": true,\n                    \"value\": \"Black\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                },\n                {\n                    \"valueType\": \"string\",\n                    \"default\": false,\n                    \"value\": \"White\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        }\n    ]\n}"
+			"rawModeData": "{\n  \"id\": \"SSPEC002\",\n    \"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/22\",\n    \"version\": \"1.1\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"In Study\",\n    \"name\": \"iPhone 42\",\n    \"description\": \"Service spec to test service candidate\",\n    \"brand\": \"Apple\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n    },\n    \"attachment\": [\n        {\n            \"id\": \"56\",\n            \"href\": \"http://serverlocation:port/documentManagment/attachment/56\",\n            \"type\": \"Picture\",\n            \"url\": \"http://xxxxx\"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        }\n    ],\n    \"serviceSpecificationRelationship\": [\n        {\n            \"type\": \"dependency\",\n            \"id\": \"23\",\n            \"href\": \" http://serverlocation:port/catalogManagement/serviceSpecification/23\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"requiredServiceSpecification\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n            \"name\": \"specification 1\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"requiredResourceSpecification\": [\n        {\n            \"id\": \"13\",\n            \"href\": \"http://serverlocation:port/catalogManagement/resourceSpecification/13\",\n            \"name\": \"specification 1\",\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            }\n        }\n    ],\n    \"serviceSpecCharacteristic\": [\n        {\n            \"id\": \"34\",\n            \"name\": \"Screen Size\",\n            \"description\": \"Screen size\",\n            \"valueType\": \"number\",\n            \"configurable\": false,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"serviceSpecCharRelationship\": [\n                {\n                    \"type\": \"dependency\",\n                    \"id\": \"43\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ],\n            \"serviceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"number\",\n                    \"default\": true,\n                    \"value\": \"4.2\",\n                    \"unitOfMeasure\": \"inches\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": \"54\",\n            \"name\": \"Colour\",\n            \"description\": \"Product colour\",\n            \"valueType\": \"string\",\n            \"configurable\": true,\n            \"validFor\": {\n                \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                \"endDateTime\": \"\"\n            },\n            \"serviceSpecCharRelationship\": [\n                {\n                    \"type\": \"dependency\",\n                    \"id\": \"43\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ],\n            \"serviceSpecCharacteristicValue\": [\n                {\n                    \"valueType\": \"string\",\n                    \"default\": true,\n                    \"value\": \"Black\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                },\n                {\n                    \"valueType\": \"string\",\n                    \"default\": false,\n                    \"value\": \"White\",\n                    \"unitOfMeasure\": \"\",\n                    \"valueFrom\": \"\",\n                    \"valueTo\": \"\",\n                    \"validFor\": {\n                        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n                        \"endDateTime\": \"\"\n                    }\n                }\n            ]\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "f285e892-e0f0-0bc8-2d80-c0c9d7d8e698"
 		},
 		{
 			"id": "9190323a-4690-ba91-fb9d-15813309db68",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-101:(200.149)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-101:(200.149)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -2171,7 +2230,7 @@
 					"id": "095f0606-f4e3-c0b0-16f7-6a51c618d4bc",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-101:(200.149)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-101:(200.149)",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"SCAN-101\",\n  \"validFor\": {\n\t\t\"startDateTime\": \"2019-04-19T16:42:23-04:00\"\n\t},\n\t\"category\": [\n      \t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC002\",\n\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC002:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2183,12 +2242,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"SCAN-101\",\n  \"validFor\": {\n\t\t\"startDateTime\": \"2019-04-19T16:42:23-04:00\"\n\t},\n\t\"category\": [\n      \t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC002\",\n\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC002:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+			"rawModeData": "{\n  \"id\": \"SCAN-101\",\n  \"validFor\": {\n\t\t\"startDateTime\": \"2019-04-19T16:42:23-04:00\"\n\t},\n\t\"category\": [\n      \t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC002\",\n\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC002:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+			"owner": 0,
+			"folder": "80c03eba-7e60-93dd-74f9-8a9367507bf3"
 		},
 		{
 			"id": "933f7ad5-c6c3-8722-d94d-d6da1b30d918",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-101:(140.5)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-101:(140.5)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -2255,7 +2316,7 @@
 					"id": "f3a251ac-ea1a-009f-9685-eb91a2e85396",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-101:(140.5)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-101:(140.5)",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"SCAN-101\",\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(2.0)\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC002\",\n\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC002:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2267,12 +2328,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"SCAN-101\",\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(2.0)\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC002\",\n\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC002:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+			"rawModeData": "{\n  \"id\": \"SCAN-101\",\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(2.0)\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC002\",\n\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC002:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+			"owner": 0,
+			"folder": "80c03eba-7e60-93dd-74f9-8a9367507bf3"
 		},
 		{
 			"id": "954b81bf-4bff-a8cc-9e7c-a00c24bc3bdc",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-100:(200.151)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-100:(200.151)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -2333,7 +2396,7 @@
 					"id": "65766014-0fde-afe8-0354-bfe0d4cdb22c",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-100:(200.151)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-100:(200.151)",
 						"pathVariables": {},
 						"data": "",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2345,12 +2408,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": ""
+			"rawModeData": "",
+			"owner": 0,
+			"folder": "a10b2c52-b5f9-0eb4-b0f1-e66ae57f6e5d"
 		},
 		{
 			"id": "a3103a00-2777-0543-9e64-c15baca41c0d",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate?fields=version",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate?fields=version",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -2417,7 +2482,7 @@
 					"id": "3982fc60-5068-95c6-c071-6b93bd5b1a79",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate?fields=version",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate?fields=version",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2428,12 +2493,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "f285e892-e0f0-0bc8-2d80-c0c9d7d8e698"
 		},
 		{
 			"id": "a51ae303-072b-e397-1f36-0ceb1abf1ef9",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-025",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-025",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -2506,7 +2573,7 @@
 					"id": "3ad150a4-1a8a-6ac6-666c-e0b1569f29e5",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-025",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-025",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"SCAN-025\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.151\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2518,12 +2585,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"SCAN-025\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.151\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+			"rawModeData": "{\n  \"id\": \"SCAN-025\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.151\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"12\",\n\t\t\t\"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"13\",\n\t\t\"href\": \"http://serverlocation:port/catalogManagement/serviceSpecification/13\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+			"owner": 0,
+			"folder": "c3109e65-3da8-20d2-bec3-66095d99026c"
 		},
 		{
 			"id": "a61d2d95-c6c6-47bb-4247-e1e7bc01c25d",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-RRR",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-RRR",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -2590,7 +2659,7 @@
 					"id": "071600f7-e091-4e35-93b2-6a402b6e144e",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-RRR",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-RRR",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2601,12 +2670,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "f285e892-e0f0-0bc8-2d80-c0c9d7d8e698"
 		},
 		{
 			"id": "a89f2e72-6636-c169-8448-4d3518f70c1e",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-100:(200.150)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-100:(200.150)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -2673,7 +2744,7 @@
 					"id": "85d1b29f-ec8e-359b-8eb0-efa2e22a9aba",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-100:(200.150)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-100:(200.150)",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2684,12 +2755,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "f285e892-e0f0-0bc8-2d80-c0c9d7d8e698"
 		},
 		{
 			"id": "aac14031-192d-16f3-1e18-157e1f223fe0",
 			"headers": "Accept: text/plain\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/admin/count",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/admin/count",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -2756,7 +2829,7 @@
 					"id": "a1e38d86-f6e9-54be-12d6-94b71f9702ae",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/admin/count",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/admin/count",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: text/plain\nContent-Type: application/json\n",
@@ -2767,12 +2840,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "f285e892-e0f0-0bc8-2d80-c0c9d7d8e698"
 		},
 		{
 			"id": "c4486a4e-2048-50ec-266c-997c96b2a23d",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-101:(200.0)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-101:(200.0)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -2839,7 +2914,7 @@
 					"id": "bf581b61-7c1b-8add-0b57-93af81787fa5",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-101:(200.0)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-101:(200.0)",
 						"pathVariables": {},
 						"data": "",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2851,12 +2926,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": ""
+			"rawModeData": "",
+			"owner": 0,
+			"folder": "a10b2c52-b5f9-0eb4-b0f1-e66ae57f6e5d"
 		},
 		{
 			"id": "d0fbe9cc-6490-4bc0-0fca-16a9797019c1",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-101",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-101",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -2923,7 +3000,7 @@
 					"id": "a6e621e2-b32b-d9bd-1d91-a7a7df85c323",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-101",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-101",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"SCAN-101\",\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(2.0)\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC002\",\n\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC002:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2935,12 +3012,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"SCAN-101\",\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(2.0)\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC002\",\n\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC002:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+			"rawModeData": "{\n  \"id\": \"SCAN-101\",\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(2.0)\",\n\t\t\t\"version\": \"2.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t},\n      \t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\"\n\t\t}\n\t],\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC002\",\n\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC002:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+			"owner": 0,
+			"folder": "80c03eba-7e60-93dd-74f9-8a9367507bf3"
 		},
 		{
 			"id": "d0fc3c4f-fd34-6d84-619d-a606ad7d95a7",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -3007,7 +3086,7 @@
 					"id": "e28e52cd-79d8-29ee-0727-9278c976388c",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"SCAN-105\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.149\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n  \"category\":[\n    ]\n}\n",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3019,12 +3098,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"SCAN-105\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.149\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n  \"category\":[\n    ]\n}\n"
+			"rawModeData": "{\n  \"id\": \"SCAN-105\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.149\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n  \"category\":[\n    ]\n}\n",
+			"owner": 0,
+			"folder": "c3109e65-3da8-20d2-bec3-66095d99026c"
 		},
 		{
 			"id": "ddc8a543-7139-e3ad-5f1e-9bd956bebb72",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate?fields=id,version",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate?fields=id,version",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -3091,7 +3172,7 @@
 					"id": "eec3c9fd-f66f-6160-ca16-c77c32549573",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate?fields=id,version",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate?fields=id,version",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3102,12 +3183,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "a10b2c52-b5f9-0eb4-b0f1-e66ae57f6e5d"
 		},
 		{
 			"id": "f355f3ce-c6e6-6b20-ae95-97538c202251",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -3180,7 +3263,7 @@
 					"id": "41cafbaf-f8a6-8712-7126-8f0f7d3bf83e",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"SCAN-100\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.151\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\",\n          \"description\": \"some description\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC001\",\n\t\t\"href\":  \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC001:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3192,12 +3275,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"SCAN-100\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.151\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\",\n          \"description\": \"some description\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC001\",\n\t\t\"href\":  \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC001:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+			"rawModeData": "{\n  \"id\": \"SCAN-100\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.151\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\",\n          \"description\": \"some description\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC001\",\n\t\t\"href\":  \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC001:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+			"owner": 0,
+			"folder": "b30d93b2-865e-24cc-aac3-d32573a1b1e0"
 		},
 		{
 			"id": "f3e66ced-44ce-526d-897c-92f756ec8c66",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate?fields=version,category.id,category.version,serviceSpecification.id,serviceSpecification.version",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate?fields=version,category.id,category.version,serviceSpecification.id,serviceSpecification.version",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -3264,7 +3349,7 @@
 					"id": "7889d41d-8b98-47bc-7928-1428dcf04c8e",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate?fields=version,category.id,category.version,serviceSpecification.id,serviceSpecification.version",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate?fields=version,category.id,category.version,serviceSpecification.id,serviceSpecification.version",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3275,12 +3360,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "f285e892-e0f0-0bc8-2d80-c0c9d7d8e698"
 		},
 		{
 			"id": "fc08e619-64be-1e26-127d-b4c526cc79b3",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-100",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-100",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -3347,7 +3434,7 @@
 					"id": "b23b1725-39b7-a5cb-2f02-8bfcfb975c3e",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-100",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-100",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"SCAN-100\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.151\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\",\n          \"description\": \"some description\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC001\",\n\t\t\"href\":  \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC001:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3359,12 +3446,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"SCAN-100\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.151\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\",\n          \"description\": \"some description\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC001\",\n\t\t\"href\":  \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC001:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n"
+			"rawModeData": "{\n  \"id\": \"SCAN-100\",\n\t\"href\": \"http://serverlocation:port/catalogManagement/serviceCandidate/42\",\n\t\"name\": \"Virtual Storage Medium\",\n\t\"version\": \"200.151\",\n\t\"description\": \"Virtual Storage Medium\",\n\t\"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n\t\"lifecycleStatus\": \"Active\",\n\t\"validFor\": {\n\t\t\"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n\t\t\"endDateTime\": \"2013-06-19T00:00:00-04:00\"\n\t},\n\t\"category\": [\n\t\t{\n\t\t\t\"id\": \"CATG001\",\n\t\t\t\"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG001:(1.0)\",\n\t\t\t\"version\": \"1.0\",\n\t\t\t\"name\": \"Cloud service\",\n          \"description\": \"some description\"\n\t\t}\n\t],\n\t\"serviceLevelAgreement\": {\n\t\t\"id\": \"28\",\n\t\t\"href\": \"http://serverlocation:port/slaManagement/serviceLevelAgreement/28\",\n\t\t\"name\": \"Standard SLA\"\n\t},\n\t\"serviceSpecification\": {\n\t\t\"id\": \"SSPEC001\",\n\t\t\"href\":  \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceSpecification/SSPEC001:(1.1)\",\n\t\t\"name\": \"specification 1\",\n\t\t\"version\": \"1.1\"\n\t}\n}\n",
+			"owner": 0,
+			"folder": "b30d93b2-865e-24cc-aac3-d32573a1b1e0"
 		},
 		{
 			"id": "fd03d831-c81c-d2e3-14ce-3edb93c8884e",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-400",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-400",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -3431,7 +3520,7 @@
 					"id": "4eca24cb-53e3-c845-1c88-bf5fe3f3f96e",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/serviceCandidate/SCAN-400",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/serviceCandidate/SCAN-400",
 						"pathVariables": {},
 						"data": "",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3443,7 +3532,9 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": ""
+			"rawModeData": "",
+			"owner": 0,
+			"folder": "a10b2c52-b5f9-0eb4-b0f1-e66ae57f6e5d"
 		}
 	]
 }

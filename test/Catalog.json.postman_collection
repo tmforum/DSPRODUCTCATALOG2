@@ -23,7 +23,8 @@
 			"collection_name": "Catalog",
 			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166",
 			"collection_owner": "",
-			"write": true
+			"write": true,
+			"owner": 0
 		},
 		{
 			"id": "564a6ac5-2fb4-1cf9-16a6-a6faa10af958",
@@ -40,7 +41,8 @@
 			"collection_name": "Catalog",
 			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166",
 			"collection_owner": "",
-			"write": true
+			"write": true,
+			"owner": 0
 		},
 		{
 			"id": "0f3e3e04-9fc4-f68e-fa59-cf77e2e46e3c",
@@ -61,7 +63,8 @@
 			"collection_name": "Catalog",
 			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166",
 			"collection_owner": "",
-			"write": true
+			"write": true,
+			"owner": 0
 		},
 		{
 			"id": "97709793-5dec-34af-997f-70cf523ba4cf",
@@ -73,7 +76,8 @@
 			"collection_name": "Catalog",
 			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166",
 			"collection_owner": "",
-			"write": true
+			"write": true,
+			"owner": 0
 		},
 		{
 			"id": "f25c86cf-c102-d558-7428-56a470872c4f",
@@ -97,7 +101,8 @@
 			"collection_name": "Catalog",
 			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166",
 			"collection_owner": "",
-			"write": true
+			"write": true,
+			"owner": 0
 		},
 		{
 			"id": "6e174242-87b4-69ad-2b63-02fa82d317c7",
@@ -123,7 +128,8 @@
 			"collection_name": "Catalog",
 			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166",
 			"collection_owner": "",
-			"write": true
+			"write": true,
+			"owner": 0
 		},
 		{
 			"id": "daaa338e-27c6-0a66-45bd-da8334148481",
@@ -147,21 +153,24 @@
 			"collection_name": "Catalog",
 			"collection_id": "1deb8d7e-9715-3968-c288-7d89c626c166",
 			"collection_owner": "",
-			"write": true
+			"write": true,
+			"owner": 0
 		}
 	],
 	"timestamp": 1409863910501,
 	"synced": false,
-	"owner": "",
+	"owner": 0,
 	"subscribed": false,
 	"remoteLink": "",
 	"public": false,
 	"write": true,
+	"sharedWithTeam": false,
+	"hasRequests": true,
 	"requests": [
 		{
 			"id": "03e944b9-5a30-8f59-18de-26168f4576c3",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -222,7 +231,7 @@
 					"id": "7a352afc-4f8f-da2b-ad79-86ad32eb9d98",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -233,12 +242,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "daaa338e-27c6-0a66-45bd-da8334148481"
 		},
 		{
 			"id": "078cefc9-9c43-0d3e-6210-9bc1a67886e5",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version,id,category&depth=2",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=version,id,category&depth=2",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "GET",
@@ -304,7 +315,7 @@
 					"id": "72c0e4ed-98cb-71bf-3cf9-49103010ba6f",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version,id,category&depth=2",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=version,id,category&depth=2",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -317,12 +328,14 @@
 			],
 			"tests": "",
 			"collectionId": "1deb8d7e-9715-3968-c288-7d89c626c166",
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e174242-87b4-69ad-2b63-02fa82d317c7"
 		},
 		{
 			"id": "07b3b787-fd4c-40f7-6537-acf450ac7565",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "PATCH",
@@ -388,7 +401,7 @@
 					"id": "febdfd24-2daa-b9ff-3f5a-2af692e0d2da",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002",
 						"pathVariables": {},
 						"data": "{\n       \"validFor\": {\n           \"endDateTime\": \"2013-04-19T20:42:23.000+0000\"\n       }\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -402,12 +415,14 @@
 			"tests": "",
 			"collectionId": "1deb8d7e-9715-3968-c288-7d89c626c166",
 			"synced": false,
-			"rawModeData": "{\n       \"validFor\": {\n           \"endDateTime\": \"2013-04-19T20:42:23.000+0000\"\n       }\n}"
+			"rawModeData": "{\n       \"validFor\": {\n           \"endDateTime\": \"2013-04-19T20:42:23.000+0000\"\n       }\n}",
+			"owner": 0,
+			"folder": "f25c86cf-c102-d558-7428-56a470872c4f"
 		},
 		{
 			"id": "0acdfbe2-21a4-815f-6760-ef727504b547",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -474,7 +489,7 @@
 					"id": "8ab64f2c-5a59-00cc-fa7d-9495e54c1f39",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATL-001\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -486,12 +501,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATL-001\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}"
+			"rawModeData": "{\n  \"id\": \"CATL-001\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "7ac831a3-25ff-2c76-9d4e-48f334ef6be6"
 		},
 		{
 			"id": "0caf9c51-b53a-ec8f-7db6-5debe618f147",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version%2Ccategory.id%2Ccategory.version%2CrelatedParty.id%2CrelatedParty.role",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=version%2Ccategory.id%2Ccategory.version%2CrelatedParty.id%2CrelatedParty.role",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -558,7 +575,7 @@
 					"id": "a55f1613-d04f-dd16-196a-44cf82856a94",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version%2Ccategory.id%2Ccategory.version%2CrelatedParty.id%2CrelatedParty.role",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=version%2Ccategory.id%2Ccategory.version%2CrelatedParty.id%2CrelatedParty.role",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -569,12 +586,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "daaa338e-27c6-0a66-45bd-da8334148481"
 		},
 		{
 			"id": "16394c36-e0a8-cce7-f32a-020b16f87c8a",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?relatedParty.role.ex=*ustomer&category.version=12.20",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?relatedParty.role.ex=*ustomer&category.version=12.20",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -641,7 +660,7 @@
 					"id": "3d5fdbe3-571f-d90e-3898-d61d3bc43cf7",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?relatedParty.role.ex=*ustomer&category.version=12.20",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?relatedParty.role.ex=*ustomer&category.version=12.20",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -652,12 +671,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e174242-87b4-69ad-2b63-02fa82d317c7"
 		},
 		{
 			"id": "223e53c0-054c-2d26-a6e0-67761c3dbaf6",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/admin/proto",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/admin/proto",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -724,7 +745,7 @@
 					"id": "68c41826-cd9c-32d7-1dcb-a5183e661cae",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/admin/proto",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/admin/proto",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -735,12 +756,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "564a6ac5-2fb4-1cf9-16a6-a6faa10af958"
 		},
 		{
 			"id": "262d3698-e23d-b355-c549-31a9e70ba603",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.6)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.6)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -807,7 +830,7 @@
 					"id": "e3ae9bd8-3453-03e7-9a1e-b8743aecfada",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.6)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.6)",
 						"pathVariables": {},
 						"data": "{\n\n  \"lifecycleStatus\": \"Launched\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -819,12 +842,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n\n  \"lifecycleStatus\": \"Launched\"\n}"
+			"rawModeData": "{\n\n  \"lifecycleStatus\": \"Launched\"\n}",
+			"owner": 0,
+			"folder": "f25c86cf-c102-d558-7428-56a470872c4f"
 		},
 		{
 			"id": "2c1afd64-cb2f-4c75-a3fc-1bcd91666966",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -891,7 +916,7 @@
 					"id": "2b8e11ce-ed33-0a49-66cc-8a2a1c93bf39",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 						"pathVariables": {},
 						"data": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"category\": [\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"relatedParty\": [\n\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -903,12 +928,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"category\": [\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"relatedParty\": [\n\n    ]\n}"
+			"rawModeData": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"category\": [\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"relatedParty\": [\n\n    ]\n}",
+			"owner": 0,
+			"folder": "7ac831a3-25ff-2c76-9d4e-48f334ef6be6"
 		},
 		{
 			"id": "2db59a2e-3a2c-69a9-f841-35167c8ea29b",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -975,7 +1002,7 @@
 					"id": "6a69b03d-cfc8-63eb-42fa-d296778290f9",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 						"pathVariables": {},
 						"data": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    }\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -987,12 +1014,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    }\n}"
+			"rawModeData": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    }\n}",
+			"owner": 0,
+			"folder": "7ac831a3-25ff-2c76-9d4e-48f334ef6be6"
 		},
 		{
 			"id": "2fa907d7-a6c1-b850-34ce-5772ceebac6c",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -1053,7 +1082,7 @@
 					"id": "3e314db3-272a-9294-a0ff-e27da9402066",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 						"pathVariables": {},
 						"data": "{\n  \"version\":\"1.\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n  \"lifecycleStatus\": \"Rejected\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1065,12 +1094,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"version\":\"1.\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n  \"lifecycleStatus\": \"Rejected\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}"
+			"rawModeData": "{\n  \"version\":\"1.\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n  \"lifecycleStatus\": \"Rejected\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "7ac831a3-25ff-2c76-9d4e-48f334ef6be6"
 		},
 		{
 			"id": "3862a2b9-06d1-b990-4176-bb73fdd3e636",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.6)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.6)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -1131,7 +1162,7 @@
 					"id": "e1e692e7-f983-0898-af2a-074fdec6550f",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.6)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.6)",
 						"pathVariables": {},
 						"data": "{\n\n  \"lifecycleStatus\": \"Retire\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1143,12 +1174,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n\n  \"lifecycleStatus\": \"Retire\"\n}"
+			"rawModeData": "{\n\n  \"lifecycleStatus\": \"Retire\"\n}",
+			"owner": 0,
+			"folder": "f25c86cf-c102-d558-7428-56a470872c4f"
 		},
 		{
 			"id": "3c9ab226-1b4b-5617-0753-e3745cfeeda9",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.9",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.9",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -1215,7 +1248,7 @@
 					"id": "43487971-6d93-6b8f-88bc-11397bb934e6",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.9",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.9",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n      \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1227,12 +1260,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n      \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}"
+			"rawModeData": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n      \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "f25c86cf-c102-d558-7428-56a470872c4f"
 		},
 		{
 			"id": "3d2dabb9-7127-e0a8-d734-355792f886d7",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?relatedParty.role.ex=*ustomer",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?relatedParty.role.ex=*ustomer",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -1299,7 +1334,7 @@
 					"id": "323783ad-ed8d-4223-067f-c190495f5bf7",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?relatedParty.role.ex=*ustomer",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?relatedParty.role.ex=*ustomer",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1310,12 +1345,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e174242-87b4-69ad-2b63-02fa82d317c7"
 		},
 		{
 			"id": "3d84edf4-e69a-58b2-39be-abb9703290d3",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.6)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.6)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -1388,7 +1425,7 @@
 					"id": "aecbba9d-7139-e9a1-4c92-c2767e0f22e7",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.6)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.6)",
 						"pathVariables": {},
 						"data": "{\n    \"version\": \"1.2\",\n    \"href\": \"garbage\",\n    \"name\": \"Catalog Wholesale Business-Mod\",\n    \"lastUpdate\": \"2012-01-01T00:00:00.000+0000\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1400,12 +1437,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n    \"version\": \"1.2\",\n    \"href\": \"garbage\",\n    \"name\": \"Catalog Wholesale Business-Mod\",\n    \"lastUpdate\": \"2012-01-01T00:00:00.000+0000\"\n}"
+			"rawModeData": "{\n    \"version\": \"1.2\",\n    \"href\": \"garbage\",\n    \"name\": \"Catalog Wholesale Business-Mod\",\n    \"lastUpdate\": \"2012-01-01T00:00:00.000+0000\"\n}",
+			"owner": 0,
+			"folder": "f25c86cf-c102-d558-7428-56a470872c4f"
 		},
 		{
 			"id": "3e554c17-4718-ad4f-a7c1-477326594aa5",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-001:(1.0)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-001:(1.0)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -1472,7 +1511,7 @@
 					"id": "30e54e56-9638-890f-4191-35284e70d742",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-001:(1.0)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-001:(1.0)",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1483,12 +1522,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "daaa338e-27c6-0a66-45bd-da8334148481"
 		},
 		{
 			"id": "42c80b14-d133-6c69-6d1d-81375543076a",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.9",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.9",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -1555,7 +1596,7 @@
 					"id": "15d6bc53-6689-0d6b-df22-fd9f7075560c",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.9",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.9",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n      \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1567,12 +1608,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n      \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}"
+			"rawModeData": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n      \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "0f3e3e04-9fc4-f68e-fa59-cf77e2e46e3c"
 		},
 		{
 			"id": "4eb532d3-dce5-43f0-8b87-6218f9ff8df8",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version,id,category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=version,id,category",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -1639,7 +1682,7 @@
 					"id": "a23da762-c75e-cb49-7d3f-268dd9591478",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version,id,category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=version,id,category",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1650,12 +1693,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e174242-87b4-69ad-2b63-02fa82d317c7"
 		},
 		{
 			"id": "4fd28e18-9559-6d57-b89b-0e37d750c946",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.2)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -1716,7 +1761,7 @@
 					"id": "38049217-cb55-c6f0-29a1-a479ec74f1cf",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.2)",
 						"pathVariables": {},
 						"data": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.6\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"Retired\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATG-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        },\n        {\n            \"id\": \"CATGR-002\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-002:(2.0)\",\n            \"name\": \"Cloud offerings\",\n          \"version\":\"12.20\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        },\n        {\n            \"id\": \"129\",\n            \"href\": \"http://serverLocation:port/partyManagement/partyRole/129\",\n            \"role\": \"Customer\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1728,12 +1773,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.6\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"Retired\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATG-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        },\n        {\n            \"id\": \"CATGR-002\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-002:(2.0)\",\n            \"name\": \"Cloud offerings\",\n          \"version\":\"12.20\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        },\n        {\n            \"id\": \"129\",\n            \"href\": \"http://serverLocation:port/partyManagement/partyRole/129\",\n            \"role\": \"Customer\"\n        }\n    ]\n}"
+			"rawModeData": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.6\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"Retired\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATG-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        },\n        {\n            \"id\": \"CATGR-002\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-002:(2.0)\",\n            \"name\": \"Cloud offerings\",\n          \"version\":\"12.20\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        },\n        {\n            \"id\": \"129\",\n            \"href\": \"http://serverLocation:port/partyManagement/partyRole/129\",\n            \"role\": \"Customer\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "0f3e3e04-9fc4-f68e-fa59-cf77e2e46e3c"
 		},
 		{
 			"id": "52c03c8e-efc8-c898-0347-09b2d763a134",
 			"headers": "Accept: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "GET",
@@ -1802,7 +1849,7 @@
 					"id": "c618bc64-8177-5ef6-3552-6f5c1033068d",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\n",
@@ -1817,12 +1864,13 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"folder": "7ac831a3-25ff-2c76-9d4e-48f334ef6be6",
-			"synced": false
+			"synced": false,
+			"owner": 0
 		},
 		{
 			"id": "57e1b9e2-3522-c3b6-b0c6-1b978681c592",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version,category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=version,category",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "GET",
@@ -1888,7 +1936,7 @@
 					"id": "9cb1a4de-35ce-b306-8e46-8470661b5228",
 					"name": "",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version,category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=version,category",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1952,7 +2000,7 @@
 					"id": "a8cb7b9c-492c-1023-e6aa-90e9c7993860",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version,category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=version,category",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1965,12 +2013,14 @@
 			],
 			"tests": "",
 			"collectionId": "1deb8d7e-9715-3968-c288-7d89c626c166",
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e174242-87b4-69ad-2b63-02fa82d317c7"
 		},
 		{
 			"id": "58157263-e512-e9b6-47d4-447ef9c559bd",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -2031,7 +2081,7 @@
 					"id": "dc0b86d3-d84d-75c4-3793-f489b667f235",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 						"pathVariables": {},
 						"data": "{\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n  \"lifecycleStatus\": \"Rejected\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2043,12 +2093,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n  \"lifecycleStatus\": \"Rejected\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}"
+			"rawModeData": "{\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n  \"lifecycleStatus\": \"Rejected\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "7ac831a3-25ff-2c76-9d4e-48f334ef6be6"
 		},
 		{
 			"id": "614252cf-e48d-cb83-b15c-f09a11cddcc3",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002?fields=version%2CvalidFor.endDateTime",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002?fields=version%2CvalidFor.endDateTime",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "GET",
@@ -2114,7 +2166,7 @@
 					"id": "26ce1975-2327-29e0-07ad-ef3abd1df5b0",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002?fields=version%2CvalidFor.endDateTime",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002?fields=version%2CvalidFor.endDateTime",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2127,12 +2179,14 @@
 			],
 			"tests": "",
 			"collectionId": "1deb8d7e-9715-3968-c288-7d89c626c166",
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "daaa338e-27c6-0a66-45bd-da8334148481"
 		},
 		{
 			"id": "6246e3e6-3f8c-2797-f2ef-609805546bc3",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?relatedParty.role.ex=*ustomer&fields=relatedParty.role,relatedParty.name,relatedParty.id",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?relatedParty.role.ex=*ustomer&fields=relatedParty.role,relatedParty.name,relatedParty.id",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -2199,7 +2253,7 @@
 					"id": "7e836c25-604b-6792-d72b-912b2a496d23",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?relatedParty.role.ex=*ustomer&fields=relatedParty.role,relatedParty.name,relatedParty.id",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?relatedParty.role.ex=*ustomer&fields=relatedParty.role,relatedParty.name,relatedParty.id",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2210,12 +2264,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e174242-87b4-69ad-2b63-02fa82d317c7"
 		},
 		{
 			"id": "62ac1f24-e427-4c75-aaf2-f9035eccc4ba",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -2282,7 +2338,7 @@
 					"id": "8a396ffc-7906-a47f-aedd-ba9a9b1b7642",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATGR-002\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Design\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2294,12 +2350,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATGR-002\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Design\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\": \"CATGR-002\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Design\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "6e174242-87b4-69ad-2b63-02fa82d317c7"
 		},
 		{
 			"id": "6919f17c-0149-fefe-1099-001209737998",
 			"headers": "Accept: text/plain\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/admin/count",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/admin/count",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -2366,7 +2424,7 @@
 					"id": "cc2d00d0-37be-d138-ddc2-0ed77e4cf2ef",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/admin/count",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/admin/count",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: text/plain\n",
@@ -2377,12 +2435,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "564a6ac5-2fb4-1cf9-16a6-a6faa10af958"
 		},
 		{
 			"id": "6bf7a07d-9877-f2d6-8798-cc4de9fb7e11",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version%2Cid%2Ccategory",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=version%2Cid%2Ccategory",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -2449,7 +2509,7 @@
 					"id": "bd3efc6c-cdaf-beb0-4a09-c19479b85cb1",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version%2Cid%2Ccategory",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=version%2Cid%2Ccategory",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2460,12 +2520,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e174242-87b4-69ad-2b63-02fa82d317c7"
 		},
 		{
 			"id": "6eda9a14-0c7c-49f2-262d-06abfe707a4b",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -2532,7 +2594,7 @@
 					"id": "164b5d7b-8ed2-75a2-a834-488027664bdd",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002",
 						"pathVariables": {},
 						"data": "{\n       \"validFor\": {\n           \"startDateTime\": \"2013-04-19T20:42:23.000+0000\",\n           \"endDateTime\": \"2013-04-19T20:42:24.000+0000\"\n       }\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2544,12 +2606,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n       \"validFor\": {\n           \"startDateTime\": \"2013-04-19T20:42:23.000+0000\",\n           \"endDateTime\": \"2013-04-19T20:42:24.000+0000\"\n       }\n}"
+			"rawModeData": "{\n       \"validFor\": {\n           \"startDateTime\": \"2013-04-19T20:42:23.000+0000\",\n           \"endDateTime\": \"2013-04-19T20:42:24.000+0000\"\n       }\n}",
+			"owner": 0,
+			"folder": "f25c86cf-c102-d558-7428-56a470872c4f"
 		},
 		{
 			"id": "74d4553f-e672-06f6-1d77-2d08503fed6d",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.6)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.6)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -2616,7 +2680,7 @@
 					"id": "7ccfc950-9a1c-60bd-3d95-c36e9fd9f6b6",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.6)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.6)",
 						"pathVariables": {},
 						"data": "{\n    \"version\": \"1.7\",\n    \"href\": \"garbage\",\n    \"name\": \"Catalog Wholesale Business-Mod\",\n    \"lastUpdate\": \"2012-01-01T00:00:00.000+0000\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2628,12 +2692,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n    \"version\": \"1.7\",\n    \"href\": \"garbage\",\n    \"name\": \"Catalog Wholesale Business-Mod\",\n    \"lastUpdate\": \"2012-01-01T00:00:00.000+0000\"\n}"
+			"rawModeData": "{\n    \"version\": \"1.7\",\n    \"href\": \"garbage\",\n    \"name\": \"Catalog Wholesale Business-Mod\",\n    \"lastUpdate\": \"2012-01-01T00:00:00.000+0000\"\n}",
+			"owner": 0,
+			"folder": "f25c86cf-c102-d558-7428-56a470872c4f"
 		},
 		{
 			"id": "7b2780ed-b723-3d35-1725-1916a1ca5a88",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.2)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -2700,7 +2766,7 @@
 					"id": "27785b65-af46-ed01-453f-f7f4b2c2cea4",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.2)",
 						"pathVariables": {},
 						"data": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.2\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"In Design\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"name\": \"Cloud offerings 2 \",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2712,12 +2778,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.2\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"In Design\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"name\": \"Cloud offerings 2 \",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        }\n    ]\n}"
+			"rawModeData": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.2\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"In Design\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"name\": \"Cloud offerings 2 \",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "0f3e3e04-9fc4-f68e-fa59-cf77e2e46e3c"
 		},
 		{
 			"id": "7bb39475-d5d2-6bf6-5dd4-776edcd76fc3",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=id%2Cversion",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=id%2Cversion",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -2784,7 +2852,7 @@
 					"id": "3efb9716-6ae5-2de5-0493-8d7fd765c7b8",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=id%2Cversion",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=id%2Cversion",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2795,12 +2863,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "daaa338e-27c6-0a66-45bd-da8334148481"
 		},
 		{
 			"id": "84ee8336-d686-975b-d24b-a59ecd808bad",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -2861,7 +2931,7 @@
 					"id": "194616e5-36d1-c293-8dfb-9f5bc611efdf",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2872,12 +2942,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "daaa338e-27c6-0a66-45bd-da8334148481"
 		},
 		{
 			"id": "89b03b12-8636-e4ee-e599-adcdf5b15f86",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.9)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.9)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -2946,7 +3018,7 @@
 					"id": "8b70146f-adf0-7da2-b8e1-97487dd4a382",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.9)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.9)",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n      \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2958,12 +3030,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n      \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}"
+			"rawModeData": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n      \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "f25c86cf-c102-d558-7428-56a470872c4f"
 		},
 		{
 			"id": "8a2b8d8f-72b5-d10d-f0e8-da3186bc6e12",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -3030,7 +3104,7 @@
 					"id": "408f2d25-7005-e17b-abd6-b4f46c5d0cb1",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.2\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3042,12 +3116,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.2\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}"
+			"rawModeData": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.2\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "daaa338e-27c6-0a66-45bd-da8334148481"
 		},
 		{
 			"id": "8b99983d-c109-cddb-f2cd-1412dc8576fd",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "PATCH",
@@ -3119,7 +3195,7 @@
 					"id": "61bbebf9-9398-5663-59aa-3780a0805ff9",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002",
 						"pathVariables": {},
 						"data": "{\n       \"validFor\": {\n           \"startDateTime\": \"2013-04-19T20:42:23.000+0000\",\n           \"endDateTime\": \"2013-04-19T20:42:23.000+0000\"\n       }\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3133,12 +3209,14 @@
 			"tests": "",
 			"collectionId": "1deb8d7e-9715-3968-c288-7d89c626c166",
 			"synced": false,
-			"rawModeData": "{\n       \"validFor\": {\n           \"startDateTime\": \"2013-04-19T20:42:23.000+0000\",\n           \"endDateTime\": \"2013-04-19T20:42:23.000+0000\"\n       }\n}"
+			"rawModeData": "{\n       \"validFor\": {\n           \"startDateTime\": \"2013-04-19T20:42:23.000+0000\",\n           \"endDateTime\": \"2013-04-19T20:42:23.000+0000\"\n       }\n}",
+			"owner": 0,
+			"folder": "f25c86cf-c102-d558-7428-56a470872c4f"
 		},
 		{
 			"id": "8f72fe60-2a5e-668b-737b-fb322c24fbae",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.2)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -3199,7 +3277,7 @@
 					"id": "24782d2e-ea99-5f91-ae5a-20bf91fc3d9d",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.2)",
 						"pathVariables": {},
 						"data": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.2\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"Active\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        },\n        {\n            \"id\": \"CATGR-002\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-002:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        },\n        {\n            \"id\": \"129\",\n            \"href\": \"http://serverLocation:port/partyManagement/partyRole/129\",\n            \"role\": \"Customer\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3211,12 +3289,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.2\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"Active\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        },\n        {\n            \"id\": \"CATGR-002\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-002:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        },\n        {\n            \"id\": \"129\",\n            \"href\": \"http://serverLocation:port/partyManagement/partyRole/129\",\n            \"role\": \"Customer\"\n        }\n    ]\n}"
+			"rawModeData": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.2\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"Active\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        },\n        {\n            \"id\": \"CATGR-002\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-002:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        },\n        {\n            \"id\": \"129\",\n            \"href\": \"http://serverLocation:port/partyManagement/partyRole/129\",\n            \"role\": \"Customer\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "0f3e3e04-9fc4-f68e-fa59-cf77e2e46e3c"
 		},
 		{
 			"id": "95ed8df9-0426-43fc-a7a4-141873d643b0",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-001:(BAD-VERSION)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-001:(BAD-VERSION)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -3283,7 +3363,7 @@
 					"id": "ac472b24-84ad-4c94-3512-2f2c2278649f",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-001:(BAD-VERSION)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-001:(BAD-VERSION)",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3294,12 +3374,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "daaa338e-27c6-0a66-45bd-da8334148481"
 		},
 		{
 			"id": "96eb9b41-04b5-26df-94cf-d6457ca26320",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?depth=6",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?depth=6",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -3366,7 +3448,7 @@
 					"id": "3c15cef0-09b0-b563-3236-3309e3695803",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?depth=6",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?depth=6",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3377,12 +3459,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e174242-87b4-69ad-2b63-02fa82d317c7"
 		},
 		{
 			"id": "a11ea3c3-4ecf-7318-5a11-f7889ba4ba28",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -3451,7 +3535,7 @@
 					"id": "ac417707-3aae-9f1e-acba-34d7d6a0c15b",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 						"pathVariables": {},
 						"data": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": \"2.0\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3463,12 +3547,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": \"2.0\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}"
+			"rawModeData": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": \"2.0\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "7ac831a3-25ff-2c76-9d4e-48f334ef6be6"
 		},
 		{
 			"id": "a140d9cb-ffe0-5099-4051-ec2a33d8ceb1",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.9)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.9)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -3535,7 +3621,7 @@
 					"id": "6e9c4c95-764c-fc26-3561-670f44914ead",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.9)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.9)",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n      \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3547,12 +3633,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n      \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}"
+			"rawModeData": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n      \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "0f3e3e04-9fc4-f68e-fa59-cf77e2e46e3c"
 		},
 		{
 			"id": "a3224df3-1b8f-2feb-5cba-c5d669f0eb19",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.2)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -3619,7 +3707,7 @@
 					"id": "3b62b19c-a0aa-37ef-a75b-b61370dcfa20",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.2)",
 						"pathVariables": {},
 						"data": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.2\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"In Test\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        },\n        {\n            \"id\": \"CATGR-002\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-002:(2.0)\",\n          \"version\":\"12.20\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        },\n        {\n            \"id\": \"129\",\n            \"href\": \"http://serverLocation:port/partyManagement/partyRole/129\",\n            \"role\": \"Customer\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3631,12 +3719,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.2\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"In Test\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        },\n        {\n            \"id\": \"CATGR-002\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-002:(2.0)\",\n          \"version\":\"12.20\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        },\n        {\n            \"id\": \"129\",\n            \"href\": \"http://serverLocation:port/partyManagement/partyRole/129\",\n            \"role\": \"Customer\"\n        }\n    ]\n}"
+			"rawModeData": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.2\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"In Test\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        },\n        {\n            \"id\": \"CATGR-002\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-002:(2.0)\",\n          \"version\":\"12.20\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        },\n        {\n            \"id\": \"129\",\n            \"href\": \"http://serverLocation:port/partyManagement/partyRole/129\",\n            \"role\": \"Customer\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "0f3e3e04-9fc4-f68e-fa59-cf77e2e46e3c"
 		},
 		{
 			"id": "a38bb465-8ade-626a-d6e2-351255bcaf08",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -3703,7 +3793,7 @@
 					"id": "84cd336e-23b5-c8ec-9f60-3b65b0b53824",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3714,12 +3804,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "564a6ac5-2fb4-1cf9-16a6-a6faa10af958"
 		},
 		{
 			"id": "a3c063e8-6090-a26b-5277-6d60285e7c1d",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?relatedParty.role.ex=*ustomer&category.version=12.20&depth=2",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?relatedParty.role.ex=*ustomer&category.version=12.20&depth=2",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -3786,7 +3878,7 @@
 					"id": "86d8031e-a5f7-6475-b19b-64bdc8225ef8",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?relatedParty.role.ex=*ustomer&category.version=12.20&depth=2",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?relatedParty.role.ex=*ustomer&category.version=12.20&depth=2",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3797,12 +3889,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e174242-87b4-69ad-2b63-02fa82d317c7"
 		},
 		{
 			"id": "ad9f1971-2b3a-7e12-cedf-5ea5d9338bb6",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.2)",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "GET",
@@ -3868,7 +3962,7 @@
 					"id": "c85a14d1-120e-bf1c-32a4-e16db36be765",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.2)",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3881,12 +3975,14 @@
 			],
 			"tests": "",
 			"collectionId": "1deb8d7e-9715-3968-c288-7d89c626c166",
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "564a6ac5-2fb4-1cf9-16a6-a6faa10af958"
 		},
 		{
 			"id": "b0e322bb-372d-6cbc-669e-d22fc96b3925",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "GET",
@@ -3952,7 +4048,7 @@
 					"id": "88a88e88-dfa2-d21f-7519-880fd7555024",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3965,12 +4061,14 @@
 			],
 			"tests": "",
 			"collectionId": "1deb8d7e-9715-3968-c288-7d89c626c166",
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "564a6ac5-2fb4-1cf9-16a6-a6faa10af958"
 		},
 		{
 			"id": "b4274a29-aac4-24f1-05ee-4b7bb842340d",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -4037,7 +4135,7 @@
 					"id": "ebd19861-e581-e75d-b53a-017c2684346e",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n      \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4049,12 +4147,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n      \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}"
+			"rawModeData": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n      \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "7ac831a3-25ff-2c76-9d4e-48f334ef6be6"
 		},
 		{
 			"id": "b9ceb5f9-3627-8884-651d-810d9d1efe59",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.2)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -4121,7 +4221,7 @@
 					"id": "6ef1f710-2bfe-6221-61c5-ca01eca31715",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.2)",
 						"pathVariables": {},
 						"data": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.2\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2) 2\",\n    \"name\": \"Catalog Wholesale Business 2\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses 2\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"In Design\",\n    \"type\": \"Product Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001 2\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0) 2\",\n            \"name\": \"Cloud offerings 2 \",\n            \"description\": \" A category to hold all available cloud service offers  2\"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234 2\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234 2\",\n            \"role\": \"Owner 2\"\n        },\n        {\n            \"id\": \"128 2\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234 2\",\n            \"role\": \"Reviser 2\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4133,12 +4233,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.2\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2) 2\",\n    \"name\": \"Catalog Wholesale Business 2\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses 2\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"In Design\",\n    \"type\": \"Product Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001 2\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0) 2\",\n            \"name\": \"Cloud offerings 2 \",\n            \"description\": \" A category to hold all available cloud service offers  2\"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234 2\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234 2\",\n            \"role\": \"Owner 2\"\n        },\n        {\n            \"id\": \"128 2\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234 2\",\n            \"role\": \"Reviser 2\"\n        }\n    ]\n}"
+			"rawModeData": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.2\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2) 2\",\n    \"name\": \"Catalog Wholesale Business 2\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses 2\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"In Design\",\n    \"type\": \"Product Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001 2\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0) 2\",\n            \"name\": \"Cloud offerings 2 \",\n            \"description\": \" A category to hold all available cloud service offers  2\"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234 2\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234 2\",\n            \"role\": \"Owner 2\"\n        },\n        {\n            \"id\": \"128 2\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234 2\",\n            \"role\": \"Reviser 2\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "0f3e3e04-9fc4-f68e-fa59-cf77e2e46e3c"
 		},
 		{
 			"id": "bc1d78ad-e900-6aa5-6c7c-9cb887f73149",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/NO-SUCH-ENTITY",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/NO-SUCH-ENTITY",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -4205,7 +4307,7 @@
 					"id": "805844ec-b535-6f4c-7252-2e1acdba9654",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/NO-SUCH-ENTITY",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/NO-SUCH-ENTITY",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4216,12 +4318,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "daaa338e-27c6-0a66-45bd-da8334148481"
 		},
 		{
 			"id": "bcbdfd44-0763-8821-bd90-e9844bde923a",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.2)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -4282,7 +4386,7 @@
 					"id": "4ab47a58-d82c-3ec8-7e0e-b6cfd094470c",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.2)",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n  \"lifecycleStatus\":\"In Test\",\n      \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4294,12 +4398,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n  \"lifecycleStatus\":\"In Test\",\n      \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}"
+			"rawModeData": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.5\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n  \"lifecycleStatus\":\"In Test\",\n      \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:42:23-04:00\"\n    },\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "0f3e3e04-9fc4-f68e-fa59-cf77e2e46e3c"
 		},
 		{
 			"id": "c11c1bbb-94b3-048e-4544-1c0931b92dea",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -4372,7 +4478,7 @@
 					"id": "e1707ba8-b183-ba1d-c17b-a07f3f11c931",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002",
 						"pathVariables": {},
 						"data": "{\n       \"validFor\": {\n           \"startDateTime\": \"2013-04-19T20:42:23.000+0000\",\n           \"endDateTime\": \"2013-04-19T20:42:23.000+0000\"\n       }\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4384,12 +4490,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n       \"validFor\": {\n           \"startDateTime\": \"2013-04-19T20:42:23.000+0000\",\n           \"endDateTime\": \"2013-04-19T20:42:23.000+0000\"\n       }\n}"
+			"rawModeData": "{\n       \"validFor\": {\n           \"startDateTime\": \"2013-04-19T20:42:23.000+0000\",\n           \"endDateTime\": \"2013-04-19T20:42:23.000+0000\"\n       }\n}",
+			"owner": 0,
+			"folder": "f25c86cf-c102-d558-7428-56a470872c4f"
 		},
 		{
 			"id": "c5225de2-7799-da26-53be-a9d1668a4fa3",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -4456,7 +4564,7 @@
 					"id": "63d4cc60-2c35-ac11-f5c4-ab3d11a31382",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.2\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4468,12 +4576,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.2\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}"
+			"rawModeData": "{\n  \"id\": \"CATL-002\",\n  \"version\":\"1.2\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATGR-001\",\n          \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-001:(2.0)\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "7ac831a3-25ff-2c76-9d4e-48f334ef6be6"
 		},
 		{
 			"id": "c7bd2a5a-39cb-3eba-6a97-55b482ec2751",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "PATCH",
@@ -4539,7 +4649,7 @@
 					"id": "2ef5bde3-f51a-49cb-8742-a295132b5da0",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002",
 						"pathVariables": {},
 						"data": "{\n       \"validFor\": {\n           \"startDateTime\": \"2013-04-19T20:42:23.000+0000\"\n       }\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4553,12 +4663,14 @@
 			"tests": "",
 			"collectionId": "1deb8d7e-9715-3968-c288-7d89c626c166",
 			"synced": false,
-			"rawModeData": "{\n       \"validFor\": {\n           \"startDateTime\": \"2013-04-19T20:42:23.000+0000\"\n       }\n}"
+			"rawModeData": "{\n       \"validFor\": {\n           \"startDateTime\": \"2013-04-19T20:42:23.000+0000\"\n       }\n}",
+			"owner": 0,
+			"folder": "f25c86cf-c102-d558-7428-56a470872c4f"
 		},
 		{
 			"id": "caffa3a8-d341-4042-e1e9-4a3381504400",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.2)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -4631,7 +4743,7 @@
 					"id": "ba103130-2711-9228-840c-854cba9d65a7",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.2)",
 						"pathVariables": {},
 						"data": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.1\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"In Test\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATG-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        },\n        {\n            \"id\": \"CATGR-002\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-002:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        },\n        {\n            \"id\": \"129\",\n            \"href\": \"http://serverLocation:port/partyManagement/partyRole/129\",\n            \"role\": \"Customer\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4643,12 +4755,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.1\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"In Test\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATG-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        },\n        {\n            \"id\": \"CATGR-002\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-002:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        },\n        {\n            \"id\": \"129\",\n            \"href\": \"http://serverLocation:port/partyManagement/partyRole/129\",\n            \"role\": \"Customer\"\n        }\n    ]\n}"
+			"rawModeData": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.1\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"In Test\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATG-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        },\n        {\n            \"id\": \"CATGR-002\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-002:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        },\n        {\n            \"id\": \"129\",\n            \"href\": \"http://serverLocation:port/partyManagement/partyRole/129\",\n            \"role\": \"Customer\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "0f3e3e04-9fc4-f68e-fa59-cf77e2e46e3c"
 		},
 		{
 			"id": "d1801898-b402-c99d-21ad-f5c484a7d8cd",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.2)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -4715,7 +4829,7 @@
 					"id": "e31c179e-0431-3427-94f2-9c3c0043d9f3",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.2)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.2)",
 						"pathVariables": {},
 						"data": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.6\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"Active\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATG-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        },\n        {\n            \"id\": \"CATGR-002\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-002:(2.0)\",\n            \"name\": \"Cloud offerings\",\n          \"version\":\"12.20\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        },\n        {\n            \"id\": \"129\",\n            \"href\": \"http://serverLocation:port/partyManagement/partyRole/129\",\n            \"role\": \"Customer\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4727,12 +4841,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.6\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"Active\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATG-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        },\n        {\n            \"id\": \"CATGR-002\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-002:(2.0)\",\n            \"name\": \"Cloud offerings\",\n          \"version\":\"12.20\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        },\n        {\n            \"id\": \"129\",\n            \"href\": \"http://serverLocation:port/partyManagement/partyRole/129\",\n            \"role\": \"Customer\"\n        }\n    ]\n}"
+			"rawModeData": "{\n    \"id\": \"CATL-002\",\n    \"version\": \"1.6\",\n  \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog-garbage\",\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"lastUpdate\": \"2013-09-16T18:42:07.618+0000\",\n    \"lifecycleStatus\": \"Active\",\n    \"type\": \"Service Catalog\",\n    \"category\": [\n        {\n            \"id\": \"CATG-001\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)\",\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        },\n        {\n            \"id\": \"CATGR-002\",\n            \"href\": \"http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATGR-002:(2.0)\",\n            \"name\": \"Cloud offerings\",\n          \"version\":\"12.20\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"relatedParty\": [\n        {\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Owner\"\n        },\n        {\n            \"id\": \"128\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"role\": \"Reviser\"\n        },\n        {\n            \"id\": \"129\",\n            \"href\": \"http://serverLocation:port/partyManagement/partyRole/129\",\n            \"role\": \"Customer\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "0f3e3e04-9fc4-f68e-fa59-cf77e2e46e3c"
 		},
 		{
 			"id": "d7966548-9464-1221-2ee1-2f4fe3015791",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -4799,7 +4915,7 @@
 					"id": "4ccb694b-c7d4-a0af-a306-9c1395a730cb",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATGR-001\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Design\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4811,12 +4927,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATGR-001\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Design\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\": \"CATGR-001\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Design\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "6e174242-87b4-69ad-2b63-02fa82d317c7"
 		},
 		{
 			"id": "d8ee4ad5-aa31-286e-0322-a9283107b3d1",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.9)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.9)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -4883,7 +5001,7 @@
 					"id": "c3d289c2-371b-84a4-cd81-c9dcb9a828f0",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.9)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.9)",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4894,12 +5012,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "564a6ac5-2fb4-1cf9-16a6-a6faa10af958"
 		},
 		{
 			"id": "dc406074-f55d-de21-95ea-f19923c57402",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.6)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.6)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -4972,7 +5092,7 @@
 					"id": "1b2b544a-7d9d-3afd-a7e3-a275302466f0",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.6)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.6)",
 						"pathVariables": {},
 						"data": "{\n    \"version\": \"1.6\",\n    \"href\": \"garbage\",\n    \"name\": \"Catalog Wholesale Business-Mod\",\n    \"lastUpdate\": \"2012-01-01T00:00:00.000+0000\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4984,12 +5104,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n    \"version\": \"1.6\",\n    \"href\": \"garbage\",\n    \"name\": \"Catalog Wholesale Business-Mod\",\n    \"lastUpdate\": \"2012-01-01T00:00:00.000+0000\"\n}"
+			"rawModeData": "{\n    \"version\": \"1.6\",\n    \"href\": \"garbage\",\n    \"name\": \"Catalog Wholesale Business-Mod\",\n    \"lastUpdate\": \"2012-01-01T00:00:00.000+0000\"\n}",
+			"owner": 0,
+			"folder": "f25c86cf-c102-d558-7428-56a470872c4f"
 		},
 		{
 			"id": "e01d14bd-851a-aaa2-ba7e-cb51b4b07f60",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -5062,7 +5184,7 @@
 					"id": "9799f7da-89de-1439-9f0a-0e6ddea5238a",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -5073,12 +5195,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "daaa338e-27c6-0a66-45bd-da8334148481"
 		},
 		{
 			"id": "e314cb2f-451f-0266-45ec-f31790359adc",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version,id,category&depth=1",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=version,id,category&depth=1",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -5145,7 +5269,7 @@
 					"id": "9a220869-79c3-3a3b-8f4e-fecab87e20c8",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version,id,category&depth=1",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=version,id,category&depth=1",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -5156,12 +5280,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e174242-87b4-69ad-2b63-02fa82d317c7"
 		},
 		{
 			"id": "e6459de5-96f9-6f5f-b617-7ec49709dcc1",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.6)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.6)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -5222,7 +5348,7 @@
 					"id": "cbaa71ca-5c53-202d-c5cb-47e369294b94",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.6)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.6)",
 						"pathVariables": {},
 						"data": "{\n\n  \"lifecycleStatus\": \"In Test\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -5234,12 +5360,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n\n  \"lifecycleStatus\": \"In Test\"\n}"
+			"rawModeData": "{\n\n  \"lifecycleStatus\": \"In Test\"\n}",
+			"owner": 0,
+			"folder": "f25c86cf-c102-d558-7428-56a470872c4f"
 		},
 		{
 			"id": "e757e30a-0d4a-ce58-9b0c-4d14ebcfd7ec",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -5306,7 +5434,7 @@
 					"id": "1747b1cc-f8c9-34bb-1d39-f04d70529012",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -5317,12 +5445,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "97709793-5dec-34af-997f-70cf523ba4cf"
 		},
 		{
 			"id": "e8d2b326-ac50-ac43-0a6e-a5b646de9a52",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002?fields=version%2CvalidFor.endDateTime",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002?fields=version%2CvalidFor.endDateTime",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -5389,7 +5519,7 @@
 					"id": "a289d0d4-19a5-b4bf-7c85-43cad84251e8",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002?fields=version%2CvalidFor.endDateTime",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002?fields=version%2CvalidFor.endDateTime",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -5400,12 +5530,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "daaa338e-27c6-0a66-45bd-da8334148481"
 		},
 		{
 			"id": "f51f9cc4-069c-f0d2-7f69-a8ee27b4264e",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-001",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-001",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -5466,7 +5598,7 @@
 					"id": "eb54a1fa-f757-0620-7717-826c8020907d",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-001",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-001",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -5477,12 +5609,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "daaa338e-27c6-0a66-45bd-da8334148481"
 		},
 		{
 			"id": "f930c75d-9ab7-97ed-76f0-cb4c3cf54484",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-009",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-009",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "POST",
@@ -5554,7 +5688,7 @@
 					"id": "48ced0bf-25ab-ecff-901f-76d3b3226f03",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-009",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-009",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATL-009\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"category\": [\n        {\n            \"id\": \"12\",\n            \"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -5568,12 +5702,14 @@
 			"tests": "",
 			"collectionId": "1deb8d7e-9715-3968-c288-7d89c626c166",
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATL-009\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"category\": [\n        {\n            \"id\": \"12\",\n            \"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}"
+			"rawModeData": "{\n  \"id\": \"CATL-009\",\n    \"href\": \"http://serverlocation:port/catalogManagement/catalog/10\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"type\": \"Product Catalog\",\n    \"category\": [\n        {\n            \"id\": \"12\",\n            \"href\": \"http://serverlocation:port/catalogManagement/category/12\",\n            \"version\": 2.0,\n            \"name\": \"Cloud offerings\",\n            \"description\": \" A category to hold all available cloud service offers \"\n        }\n    ],\n    \"name\": \"Catalog Wholesale Business\",\n    \"description\": \"Contains Wholesale products, services, and resources for Businesses\",\n    \"relatedParty\": [\n        {\n            \"role\": \"Owner\",\n            \"id\": \"1234\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\"\n        },\n        {\n            \"role\": \"Reviser\",\n            \"href\": \"http ://serverLocation:port/partyManagement/partyRole/1234\",\n            \"id\": \"128\"\n        }\n    ]\n}",
+			"owner": 0,
+			"folder": "7ac831a3-25ff-2c76-9d4e-48f334ef6be6"
 		},
 		{
 			"id": "fa2933bd-4b5d-67aa-826d-c33487111ade",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version,id,category&depth=2",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=version,id,category&depth=2",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "GET",
@@ -5639,7 +5775,7 @@
 					"id": "f425d97b-c8ad-4130-3b24-76d10cae310f",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version,id,category&depth=2",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=version,id,category&depth=2",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -5652,12 +5788,14 @@
 			],
 			"tests": "",
 			"collectionId": "1deb8d7e-9715-3968-c288-7d89c626c166",
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e174242-87b4-69ad-2b63-02fa82d317c7"
 		},
 		{
 			"id": "fc9d4f8e-cd3d-c54b-c7a4-58262810b6a4",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version,id,category&depth=2",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=version,id,category&depth=2",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -5724,7 +5862,7 @@
 					"id": "6a6b1748-e7f4-95f1-e7fd-3bab497abddd",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?fields=version,id,category&depth=2",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?fields=version,id,category&depth=2",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -5735,12 +5873,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e174242-87b4-69ad-2b63-02fa82d317c7"
 		},
 		{
 			"id": "fcd37af0-6b6e-58f5-c5c9-c8f6965b6d83",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.5)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.5)",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "DELETE",
@@ -5800,7 +5940,7 @@
 					"id": "fce57af3-4196-961e-45a7-df220d4da364",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog/CATL-002:(1.5)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog/CATL-002:(1.5)",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -5813,12 +5953,14 @@
 			],
 			"tests": "",
 			"collectionId": "1deb8d7e-9715-3968-c288-7d89c626c166",
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "daaa338e-27c6-0a66-45bd-da8334148481"
 		},
 		{
 			"id": "feed9661-28d5-b5a3-1325-b6aa61c07cae",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?relatedParty.role.ex=*ustomer&category.version=12.2",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?relatedParty.role.ex=*ustomer&category.version=12.2",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -5885,7 +6027,7 @@
 					"id": "df540a31-b1d6-beed-4462-4c5e14af749a",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/catalog?relatedParty.role.ex=*ustomer&category.version=12.2",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/catalog?relatedParty.role.ex=*ustomer&category.version=12.2",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -5896,7 +6038,9 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e174242-87b4-69ad-2b63-02fa82d317c7"
 		}
 	]
 }

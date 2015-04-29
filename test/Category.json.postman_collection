@@ -21,8 +21,9 @@
 			],
 			"collection_name": "Category",
 			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
-			"collection_owner": "",
-			"write": true
+			"collection_owner": 0,
+			"write": true,
+			"owner": 0
 		},
 		{
 			"id": "6e92966e-a082-0933-ce14-a42467192d3d",
@@ -38,8 +39,9 @@
 			],
 			"collection_name": "Category",
 			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
-			"collection_owner": "",
-			"write": true
+			"collection_owner": 0,
+			"write": true,
+			"owner": 0
 		},
 		{
 			"id": "82ef1498-1a1a-1f98-27df-fd4ea7ab3b6b",
@@ -60,8 +62,9 @@
 			],
 			"collection_name": "Category",
 			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
-			"collection_owner": "",
-			"write": true
+			"collection_owner": 0,
+			"write": true,
+			"owner": 0
 		},
 		{
 			"id": "6aa1457a-46f5-e934-dc7c-3001b4db515d",
@@ -82,8 +85,9 @@
 			],
 			"collection_name": "Category",
 			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
-			"collection_owner": "",
-			"write": true
+			"collection_owner": 0,
+			"write": true,
+			"owner": 0
 		},
 		{
 			"id": "7e546597-8270-98c3-1b41-85395132c717",
@@ -102,8 +106,9 @@
 			],
 			"collection_name": "Category",
 			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
-			"collection_owner": "",
-			"write": true
+			"collection_owner": 0,
+			"write": true,
+			"owner": 0
 		},
 		{
 			"id": "139e70ab-2343-10cd-4282-45f169dc33dc",
@@ -127,13 +132,15 @@
 			],
 			"collection_name": "Category",
 			"collection_id": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
-			"collection_owner": "",
-			"write": true
+			"collection_owner": 0,
+			"write": true,
+			"owner": 0
 		}
 	],
 	"timestamp": 1410525262088,
 	"synced": false,
-	"owner": "",
+	"owner": 0,
+	"sharedWithTeam": false,
 	"subscribed": false,
 	"remoteLink": "",
 	"public": false,
@@ -142,7 +149,7 @@
 		{
 			"id": "12d3eb8c-194b-a418-dc25-dac5c5068e45",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.1)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.1)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -209,7 +216,7 @@
 					"id": "43c44a55-d01a-2493-dab9-394bbf672700",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.1)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.1)",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"743\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -221,12 +228,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"743\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"743\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "82ef1498-1a1a-1f98-27df-fd4ea7ab3b6b"
 		},
 		{
 			"id": "1a480f38-538c-804a-3955-6ffad3b6d12e",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.0)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -293,7 +302,7 @@
 					"id": "d769d029-7a98-d5a2-0290-2421d8387f4a",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.0)",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42 new\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41 new\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services new\",\n    \"description\": \"A category to hold all available cloud service offers new\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -305,12 +314,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42 new\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41 new\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services new\",\n    \"description\": \"A category to hold all available cloud service offers new\"\n}"
+			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42 new\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41 new\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services new\",\n    \"description\": \"A category to hold all available cloud service offers new\"\n}",
+			"owner": 0,
+			"folder": "82ef1498-1a1a-1f98-27df-fd4ea7ab3b6b"
 		},
 		{
 			"id": "1c8ba24b-5360-64a0-97df-808dfac5cb7c",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?fields=version",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -377,7 +388,7 @@
 					"id": "c462b898-5059-5431-93f8-f0719b1202dc",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?fields=version",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -388,12 +399,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "139e70ab-2343-10cd-4282-45f169dc33dc"
 		},
 		{
 			"id": "1ce6dba3-75d1-d86e-a487-047f1afff4e0",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?id=CATG-001&version.gte=1.10",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?id=CATG-001&version.gte=1.10",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -460,7 +473,7 @@
 					"id": "f58e79ff-3716-1b5a-6276-1056260a3458",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?id=CATG-001&version.gte=1.10",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?id=CATG-001&version.gte=1.10",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -471,12 +484,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "7e546597-8270-98c3-1b41-85395132c717"
 		},
 		{
 			"id": "1ce87ecc-a75b-c9d5-bb5e-48e40ea28db5",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -537,7 +552,7 @@
 					"id": "d085ec1e-0381-5cb7-e351-b28a2bab2a93",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 						"pathVariables": {},
 						"data": "{\n  \"id\":\"CATG-001\",\n  \"version\":\"1.1\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n      \"endDateTime\": \"2017-04-19T16:42:24-04:00\"\n    },\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -549,12 +564,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\":\"CATG-001\",\n  \"version\":\"1.1\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n      \"endDateTime\": \"2017-04-19T16:42:24-04:00\"\n    },\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\":\"CATG-001\",\n  \"version\":\"1.1\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n      \"endDateTime\": \"2017-04-19T16:42:24-04:00\"\n    },\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "8ff59bb0-f5d3-d55b-5905-596224f4c560"
 		},
 		{
 			"id": "22a49c2b-22f3-ce9e-259c-bdb8f5348999",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -621,7 +638,7 @@
 					"id": "e7b0acbc-d7d5-0ade-ec4c-9fd355d5c545",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052",
 						"pathVariables": {},
 						"data": "{\n\n    \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:44:23-04:00\"\n    }\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -633,12 +650,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n\n    \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:44:23-04:00\"\n    }\n}"
+			"rawModeData": "{\n\n    \"validFor\": {\n        \"endDateTime\": \"2014-04-19T16:44:23-04:00\"\n    }\n}",
+			"owner": 0,
+			"folder": "7e546597-8270-98c3-1b41-85395132c717"
 		},
 		{
 			"id": "26420ffe-8be9-a6be-0700-d57ed8b16d97",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(75.0",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(75.0",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -705,7 +724,7 @@
 					"id": "23fb827d-2665-b3a7-6dfb-7b32aa9c0b75",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(75.0",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(75.0",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"743\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -717,12 +736,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"743\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"743\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "6aa1457a-46f5-e934-dc7c-3001b4db515d"
 		},
 		{
 			"id": "2b951b34-c6db-1d90-5b02-1200eb60d464",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "PATCH",
@@ -788,7 +809,7 @@
 					"id": "e72a6e1d-0471-2485-baa2-af90a999e2ec",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052",
 						"pathVariables": {},
 						"data": "{\n    \"version\": \"2.5\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -802,12 +823,14 @@
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 			"synced": false,
-			"rawModeData": "{\n    \"version\": \"2.5\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n    \"version\": \"2.5\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "6aa1457a-46f5-e934-dc7c-3001b4db515d"
 		},
 		{
 			"id": "2cf64e28-c1b1-90db-d5fc-20df892960b3",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?lifecycleStatus=Active%2CIn%20Design&fields=version%2ClifecycleStatus",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?lifecycleStatus=Active%2CIn%20Design&fields=version%2ClifecycleStatus",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "GET",
@@ -873,7 +896,7 @@
 					"id": "1e815ce1-a0c2-d167-15d9-b09c35337e91",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?lifecycleStatus=Active%2CIn%20Design&fields=version%2ClifecycleStatus",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?lifecycleStatus=Active%2CIn%20Design&fields=version%2ClifecycleStatus",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -886,12 +909,14 @@
 			],
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "7e546597-8270-98c3-1b41-85395132c717"
 		},
 		{
 			"id": "3119a442-98b2-673e-7b11-753aa34a85b9",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "DELETE",
@@ -951,7 +976,7 @@
 					"id": "c3d427ed-1267-9529-e8aa-7800b8df06f4",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -964,12 +989,14 @@
 			],
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "139e70ab-2343-10cd-4282-45f169dc33dc"
 		},
 		{
 			"id": "32b165c1-2343-0dc2-0e57-93cddfac9d61",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "DELETE",
@@ -1029,7 +1056,7 @@
 					"id": "8bb0c204-c676-22ce-8964-d498dbe6576c",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1042,12 +1069,14 @@
 			],
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "139e70ab-2343-10cd-4282-45f169dc33dc"
 		},
 		{
 			"id": "34438b8b-7b3d-c405-cb41-4148ecf486a7",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.0)",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "PUT",
@@ -1107,7 +1136,7 @@
 					"id": "41421340-1d72-cb90-19c5-9f67fe3678e7",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.0)",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"Retired\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1121,12 +1150,14 @@
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"Retired\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"Retired\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "82ef1498-1a1a-1f98-27df-fd4ea7ab3b6b"
 		},
 		{
 			"id": "34b68c87-bed9-a667-d33d-2382bd28ce0e",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.0)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001:(1.0)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -1187,7 +1218,7 @@
 					"id": "98a45a20-30af-1470-dc03-37d5780d277e",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.0)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001:(1.0)",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1198,12 +1229,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "139e70ab-2343-10cd-4282-45f169dc33dc"
 		},
 		{
 			"id": "4083e4a9-9505-19a6-eb73-22b9b8bf030d",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -1270,7 +1303,7 @@
 					"id": "a05b37ec-d122-bb79-d228-ed6d6be5a6f8",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 						"pathVariables": {},
 						"data": "{\n  \"id\":\"CATG-001\",\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.10\",\n  \"lifecycleStatus\":\"Active\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1282,12 +1315,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\":\"CATG-001\",\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.10\",\n  \"lifecycleStatus\":\"Active\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\":\"CATG-001\",\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.10\",\n  \"lifecycleStatus\":\"Active\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "8ff59bb0-f5d3-d55b-5905-596224f4c560"
 		},
 		{
 			"id": "432747bf-3b18-2019-28f3-f20669b01f2b",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -1360,7 +1395,7 @@
 					"id": "a1682235-d616-41df-0a30-3e8e18a52af6",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052",
 						"pathVariables": {},
 						"data": "{\n\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\",\n        \"startDateTime\": \"2013-04-19T16:44:23-04:00\"\n    }\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1372,12 +1407,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\",\n        \"startDateTime\": \"2013-04-19T16:44:23-04:00\"\n    }\n}"
+			"rawModeData": "{\n\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\",\n        \"startDateTime\": \"2013-04-19T16:44:23-04:00\"\n    }\n}",
+			"owner": 0,
+			"folder": "6aa1457a-46f5-e934-dc7c-3001b4db515d"
 		},
 		{
 			"id": "444c1cf5-fee0-baf2-3ac2-45a260c419ae",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/WRONG-ID",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/WRONG-ID",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "DELETE",
@@ -1443,7 +1480,7 @@
 					"id": "2f2bebbf-5985-1020-1516-1bd5a496fe98",
 					"name": " Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/WRONG-ID",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/WRONG-ID",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1456,12 +1493,14 @@
 			],
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "139e70ab-2343-10cd-4282-45f169dc33dc"
 		},
 		{
 			"id": "44f0be12-160a-54c9-e54e-9c310580c10d",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -1522,7 +1561,7 @@
 					"id": "41c3460e-7fa4-ecac-84c2-5d7fcb23c754",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1533,12 +1572,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "139e70ab-2343-10cd-4282-45f169dc33dc"
 		},
 		{
 			"id": "46b7a03e-fd35-d0c2-2e1b-2f70164b4ca5",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -1611,7 +1652,7 @@
 					"id": "1ff3acc4-db2c-6fd7-3e93-99e20e140c7c",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1623,12 +1664,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "82ef1498-1a1a-1f98-27df-fd4ea7ab3b6b"
 		},
 		{
 			"id": "46d247c1-cae0-12e1-c6d2-98d533248741",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.2)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001:(1.2)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -1695,7 +1738,7 @@
 					"id": "f2319189-6770-6a04-645b-610aa6c5eeb3",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.2)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001:(1.2)",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1706,12 +1749,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e92966e-a082-0933-ce14-a42467192d3d"
 		},
 		{
 			"id": "4d05beac-08a5-3eaf-4bb8-ca32900eafae",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -1778,7 +1823,7 @@
 					"id": "5c60e48f-5cf0-06aa-c654-73af959bccfc",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1789,12 +1834,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "139e70ab-2343-10cd-4282-45f169dc33dc"
 		},
 		{
 			"id": "4ff6910d-a738-0ca9-d9a9-5b90de400fc7",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?id=CATG-001&depth=10",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?id=CATG-001&depth=10",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -1861,7 +1908,7 @@
 					"id": "1d68fcbb-a80d-8e64-debf-871269ed0376",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?id=CATG-001&depth=10",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?id=CATG-001&depth=10",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1872,12 +1919,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "7e546597-8270-98c3-1b41-85395132c717"
 		},
 		{
 			"id": "5b97d0cc-cad5-27ec-ccfa-0bdb74227230",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?id.ex=CATG-00*%2CCATG-052&fields=version%2CparentId",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?id.ex=CATG-00*%2CCATG-052&fields=version%2CparentId",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -1944,7 +1993,7 @@
 					"id": "61d552cf-e4b6-3a0c-9251-f7e034aba6e8",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?id.ex=CATG-00*%2CCATG-052&fields=version%2CparentId",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?id.ex=CATG-00*%2CCATG-052&fields=version%2CparentId",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -1955,12 +2004,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "7e546597-8270-98c3-1b41-85395132c717"
 		},
 		{
 			"id": "5cccff6d-1d2c-88e4-2286-64f11ff10d76",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?fields=version",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "GET",
@@ -2026,7 +2077,7 @@
 					"id": "39d7abac-d04c-30a9-891d-0c8e4a098fe9",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?fields=version",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2039,12 +2090,14 @@
 			],
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "139e70ab-2343-10cd-4282-45f169dc33dc"
 		},
 		{
 			"id": "5eaa4966-340b-d9a2-72e4-011285db7547",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -2111,7 +2164,7 @@
 					"id": "ceed4d5c-0d8e-9a60-2227-ecd20317cebf",
 					"name": "",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052",
 						"pathVariables": {},
 						"data": "{\n  \"id\":\"CATG-027\",\n    \"description\": \"A category to hold all available cloud service offers new\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2175,7 +2228,7 @@
 					"id": "9bc89b31-9000-bb45-404b-5da27a4f5b0a",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052",
 						"pathVariables": {},
 						"data": "{\n  \"id\":\"CATG-027\",\n    \"description\": \"A category to hold all available cloud service offers new\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2187,12 +2240,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\":\"CATG-027\",\n    \"description\": \"A category to hold all available cloud service offers new\"\n}"
+			"rawModeData": "{\n  \"id\":\"CATG-027\",\n    \"description\": \"A category to hold all available cloud service offers new\"\n}",
+			"owner": 0,
+			"folder": "6aa1457a-46f5-e934-dc7c-3001b4db515d"
 		},
 		{
 			"id": "5f2c470a-cb53-2341-9b52-a1e64d74b218",
 			"headers": "",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/admin/count",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/admin/count",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -2259,7 +2314,7 @@
 					"id": "8da875c0-053f-96b4-07aa-376fcc324c66",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/admin/count",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/admin/count",
 						"pathVariables": {},
 						"data": [],
 						"headers": "",
@@ -2270,12 +2325,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e92966e-a082-0933-ce14-a42467192d3d"
 		},
 		{
 			"id": "620890bf-ecb4-c48f-652e-4f3cc5f234c9",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.1)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001:(1.1)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -2342,7 +2399,7 @@
 					"id": "08daf83d-fc94-054a-cd77-dc90bbd999b8",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.1)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001:(1.1)",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2353,12 +2410,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e92966e-a082-0933-ce14-a42467192d3d"
 		},
 		{
 			"id": "65830e4f-713d-d71a-d66c-6ee5c38e99b9",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.0)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -2425,7 +2484,7 @@
 					"id": "2f189bfc-0b9d-1cfb-9b58-4c6c143c640b",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.0)",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2437,12 +2496,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "82ef1498-1a1a-1f98-27df-fd4ea7ab3b6b"
 		},
 		{
 			"id": "68de8b06-7483-a166-9222-f9e285606f0c",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.0)",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "PUT",
@@ -2514,7 +2575,7 @@
 					"id": "88f21fc7-6196-9cb2-d8a7-93f7cdffefe0",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.0)",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"1.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2528,12 +2589,14 @@
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"1.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"1.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "82ef1498-1a1a-1f98-27df-fd4ea7ab3b6b"
 		},
 		{
 			"id": "6b1179ea-3584-0502-82ae-c753afe28a35",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -2602,7 +2665,7 @@
 					"id": "ee125b5c-643d-ff96-8dc8-780bb0b3ba4b",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 						"pathVariables": {},
 						"data": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"1.0\",\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\",\n  \"lifecycleStatus\": \"In Design\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2614,12 +2677,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\",\n  \"lifecycleStatus\": \"In Design\"\n}"
+			"rawModeData": "{\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.0\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\",\n  \"lifecycleStatus\": \"In Design\"\n}",
+			"owner": 0,
+			"folder": "8ff59bb0-f5d3-d55b-5905-596224f4c560"
 		},
 		{
 			"id": "6c3b8154-6b01-f670-8e45-4fdb26a6c52a",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "PATCH",
@@ -2685,7 +2750,7 @@
 					"id": "26781b59-1673-6e33-ec95-162e6b65ba74",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052",
 						"pathVariables": {},
 						"data": "{\n    \"description\": \"A category to hold all available cloud service offers-mod\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2699,12 +2764,14 @@
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 			"synced": false,
-			"rawModeData": "{\n    \"description\": \"A category to hold all available cloud service offers-mod\"\n}"
+			"rawModeData": "{\n    \"description\": \"A category to hold all available cloud service offers-mod\"\n}",
+			"owner": 0,
+			"folder": "6aa1457a-46f5-e934-dc7c-3001b4db515d"
 		},
 		{
 			"id": "7179a28f-60d2-1ae5-cec4-bbc37389fa43",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.0)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -2777,7 +2844,7 @@
 					"id": "a2de5b6c-c555-71b2-a977-56ca17ca21bd",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.0)",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"1.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2789,12 +2856,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"1.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"1.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "82ef1498-1a1a-1f98-27df-fd4ea7ab3b6b"
 		},
 		{
 			"id": "72b086d8-1fd2-722b-382a-0dbf3e08bcdd",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.5)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.5)",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "DELETE",
@@ -2854,7 +2923,7 @@
 					"id": "69ffecbe-838b-a6ad-473a-4173c56faa4e",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.5)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.5)",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -2867,12 +2936,14 @@
 			],
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "139e70ab-2343-10cd-4282-45f169dc33dc"
 		},
 		{
 			"id": "77151860-da03-85fe-431e-2fc15d65cc89",
 			"headers": "Accept: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -2943,7 +3014,7 @@
 					"id": "e1157571-9a7a-dcbb-24d9-67f886b3ef84",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\n",
@@ -2954,12 +3025,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "8ff59bb0-f5d3-d55b-5905-596224f4c560"
 		},
 		{
 			"id": "8ca530a1-3b38-05c7-71ea-11461549547a",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/admin/proto",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/admin/proto",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -3026,7 +3099,7 @@
 					"id": "cd4cebcf-fbac-51eb-7d37-c9aecfd799b2",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/admin/proto",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/admin/proto",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3037,12 +3110,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e92966e-a082-0933-ce14-a42467192d3d"
 		},
 		{
 			"id": "90fc01dc-e0c9-ebad-8639-ec4f985b395e",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(22.0)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(22.0)",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "PATCH",
@@ -3108,7 +3183,7 @@
 					"id": "a0ade59e-ffaa-456f-5f58-9bb405c91b93",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(22.0)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(22.0)",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"743\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3122,12 +3197,14 @@
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"743\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"743\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "6aa1457a-46f5-e934-dc7c-3001b4db515d"
 		},
 		{
 			"id": "9632ee2f-72af-3fb8-4cb2-7f3642d85f50",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.0)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -3200,7 +3277,7 @@
 					"id": "d4e3b709-14c4-6d4d-caf7-8710d5a76aef",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.0)",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3212,12 +3289,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "82ef1498-1a1a-1f98-27df-fd4ea7ab3b6b"
 		},
 		{
 			"id": "98be9c51-dc47-537c-4367-324ec45922bf",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?fields=version",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "GET",
@@ -3283,7 +3362,7 @@
 					"id": "f46e569d-a0a4-724a-00d4-3c32ad2d29d5",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?fields=version",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3296,12 +3375,14 @@
 			],
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "139e70ab-2343-10cd-4282-45f169dc33dc"
 		},
 		{
 			"id": "9f96512f-f84e-ce30-b56b-a408919de539",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(20.4",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(20.4",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -3368,7 +3449,7 @@
 					"id": "9e1cf0f7-faac-f25b-575f-b79224ae5b1d",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(20.4",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(20.4",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Design\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3380,12 +3461,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Design\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Design\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "82ef1498-1a1a-1f98-27df-fd4ea7ab3b6b"
 		},
 		{
 			"id": "a5e43d59-1bfa-00d5-6b82-ca7d8256750b",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -3454,7 +3537,7 @@
 					"id": "87fb6a50-9e3a-279e-00fc-4e8879ce5ef3",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 						"pathVariables": {},
 						"data": "{\n  \"id\":\"CATG-001\",  \n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.0\",\n  \"lifecycleStatus\": \"In Design\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"1.0\",\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3466,12 +3549,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\":\"CATG-001\",  \n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.0\",\n  \"lifecycleStatus\": \"In Design\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\":\"CATG-001\",  \n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.0\",\n  \"lifecycleStatus\": \"In Design\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "8ff59bb0-f5d3-d55b-5905-596224f4c560"
 		},
 		{
 			"id": "a868e36d-9641-350a-08af-e2199ce4ed6e",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -3538,7 +3623,7 @@
 					"id": "513a1183-0e49-ad8b-52a6-8b491cb4f30a",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3549,12 +3634,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e92966e-a082-0933-ce14-a42467192d3d"
 		},
 		{
 			"id": "ac3c27d3-cbf9-6373-cc72-30ec366de7f1",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.6)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.6)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -3615,7 +3702,7 @@
 					"id": "0e2cc880-7c73-447a-eaed-d1e404e450ea",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.6)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.6)",
 						"pathVariables": {},
 						"data": "",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3627,12 +3714,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": ""
+			"rawModeData": "",
+			"owner": 0,
+			"folder": "6aa1457a-46f5-e934-dc7c-3001b4db515d"
 		},
 		{
 			"id": "b3ab93f4-ed8c-ff4c-1207-0cd63c1dd591",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -3699,7 +3788,7 @@
 					"id": "544c40ea-962b-e564-d0c2-27772f4c0acd",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 						"pathVariables": {},
 						"data": "{\n  \"id\":\"CATG-001\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"version\": \"1.01\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:42:23-04:00\"\n    },\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3711,12 +3800,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\":\"CATG-001\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"version\": \"1.01\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:42:23-04:00\"\n    },\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\":\"CATG-001\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"version\": \"1.01\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:42:23-04:00\"\n    },\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "8ff59bb0-f5d3-d55b-5905-596224f4c560"
 		},
 		{
 			"id": "bdd7d498-ea86-420c-9bf0-b85afb94927a",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?lifecycleStatus.ne=In%20Design",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?lifecycleStatus.ne=In%20Design",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -3783,7 +3874,7 @@
 					"id": "d129b6c4-d695-d46a-1dfe-0a7847d54da0",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?lifecycleStatus.ne=In%20Design",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?lifecycleStatus.ne=In%20Design",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3794,12 +3885,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "7e546597-8270-98c3-1b41-85395132c717"
 		},
 		{
 			"id": "c2755728-5460-b0ad-0413-017648d9c9a1",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?fields=version",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "GET",
@@ -3865,7 +3958,7 @@
 					"id": "25e07a01-8bf0-b7f4-8678-6ec2eb0029e1",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?fields=version",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?fields=version",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3878,12 +3971,14 @@
 			],
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "139e70ab-2343-10cd-4282-45f169dc33dc"
 		},
 		{
 			"id": "c7e0ea55-94ef-f8e5-fb4b-49d0ede19dd5",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -3956,7 +4051,7 @@
 					"id": "cad5340e-d3dc-58df-c091-46b80969c381",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -3967,12 +4062,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "139e70ab-2343-10cd-4282-45f169dc33dc"
 		},
 		{
 			"id": "ca7c1eb0-a925-6293-4ddc-9fd88e8d4afe",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "POST",
@@ -4038,7 +4135,7 @@
 					"id": "4d048bcf-77e8-ede3-3971-5d259e097a61",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 						"pathVariables": {},
 						"data": "{\n  \"id\":\"CATG-001\",\n  \"version\":\"2.0\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n      \"endDateTime\": \"2013-04-19T16:42:24-04:00\"\n    },\n    \"isRoot\": false,\n  \"parentId\":\"R72\",\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4052,12 +4149,14 @@
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 			"synced": false,
-			"rawModeData": "{\n  \"id\":\"CATG-001\",\n  \"version\":\"2.0\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n      \"endDateTime\": \"2013-04-19T16:42:24-04:00\"\n    },\n    \"isRoot\": false,\n  \"parentId\":\"R72\",\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\":\"CATG-001\",\n  \"version\":\"2.0\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n      \"endDateTime\": \"2013-04-19T16:42:24-04:00\"\n    },\n    \"isRoot\": false,\n  \"parentId\":\"R72\",\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "8ff59bb0-f5d3-d55b-5905-596224f4c560"
 		},
 		{
 			"id": "ce7e5300-ac93-3fd7-0195-fe42a5729516",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -4130,7 +4229,7 @@
 					"id": "f3b46992-c245-dc94-d63e-9cfe29fa6980",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052",
 						"pathVariables": {},
 						"data": "{\n    \"version\": \"2.1\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4142,12 +4241,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n    \"version\": \"2.1\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n    \"version\": \"2.1\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "6aa1457a-46f5-e934-dc7c-3001b4db515d"
 		},
 		{
 			"id": "d22d2899-0b93-3305-bb1f-8df8c7249839",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.0)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
@@ -4214,7 +4315,7 @@
 					"id": "f4b5ebd1-956b-8c4b-1f14-79b2831c938a",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.0)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.0)",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": null,\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4226,12 +4327,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": null,\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.1\",\n    \"lifecycleStatus\": \"In Test\",\n    \"validFor\": {\n        \"endDateTime\": \"2013-04-19T16:44:23-04:00\"\n    },\n    \"parentId\": null,\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "82ef1498-1a1a-1f98-27df-fd4ea7ab3b6b"
 		},
 		{
 			"id": "d2b53c2c-3b6c-88b3-8164-e901b474cceb",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -4298,7 +4401,7 @@
 					"id": "75a849af-951d-9f88-541b-87b6fd69499f",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 						"pathVariables": {},
 						"data": "{\n  \"id\":\"CATG-001\",\n  \"version\":\"11.0\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\"\n    },\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4310,12 +4413,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\":\"CATG-001\",\n  \"version\":\"11.0\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\"\n    },\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\":\"CATG-001\",\n  \"version\":\"11.0\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"lifecycleStatus\": \"Active\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\"\n    },\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "8ff59bb0-f5d3-d55b-5905-596224f4c560"
 		},
 		{
 			"id": "d4d0865c-a832-be68-2c4d-5944bb1e5141",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -4382,7 +4487,7 @@
 					"id": "89d98522-0651-00d0-0093-fced90f5265a",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4393,12 +4498,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "6e92966e-a082-0933-ce14-a42467192d3d"
 		},
 		{
 			"id": "d5ed05bb-4481-bd7a-b453-8d476b2e85d2",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(9.0)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(9.0)",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "DELETE",
@@ -4464,7 +4571,7 @@
 					"id": "4bc9a6f5-4af6-cfc3-e2c9-e716e891965f",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(9.0)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(9.0)",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4477,12 +4584,14 @@
 			],
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "139e70ab-2343-10cd-4282-45f169dc33dc"
 		},
 		{
 			"id": "dee7a14b-2891-c2ea-cbf9-8eb160f072b9",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.1)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001:(1.1)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -4543,7 +4652,7 @@
 					"id": "615a1281-e506-766e-a189-54ee5d38f1e6",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(1.1)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001:(1.1)",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4554,12 +4663,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "139e70ab-2343-10cd-4282-45f169dc33dc"
 		},
 		{
 			"id": "e162da9f-2e16-cd4b-a344-f20126e6caa0",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(20.4)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(20.4)",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "PUT",
@@ -4625,7 +4736,7 @@
 					"id": "36c3024e-90d3-6597-8798-a4ebcfd91e34",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(20.4)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(20.4)",
 						"pathVariables": {},
 						"data": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Design\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4639,12 +4750,14 @@
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 			"synced": false,
-			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Design\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\": \"CATG-052\",\n    \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"version\": \"2.0\",\n    \"lifecycleStatus\": \"In Design\",\n    \"validFor\": {\n        \"startDateTime\": \"2013-04-19T16:42:23-04:00\",\n        \"endDateTime\": \"\"\n    },\n    \"parentId\": \"41\",\n    \"isRoot\": false,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "82ef1498-1a1a-1f98-27df-fd4ea7ab3b6b"
 		},
 		{
 			"id": "e1ba5381-a9d1-6679-9232-5f84f5c76c08",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.1)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.1)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -4705,7 +4818,7 @@
 					"id": "50b35314-1d14-a7be-4919-d03e2ddf748f",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.1)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.1)",
 						"pathVariables": {},
 						"data": "{\n\n    \"lifecycleStatus\": \"In Study\",\n    \"description\": \"A category to hold all available cloud service offers new\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4717,12 +4830,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n\n    \"lifecycleStatus\": \"In Study\",\n    \"description\": \"A category to hold all available cloud service offers new\"\n}"
+			"rawModeData": "{\n\n    \"lifecycleStatus\": \"In Study\",\n    \"description\": \"A category to hold all available cloud service offers new\"\n}",
+			"owner": 0,
+			"folder": "6aa1457a-46f5-e934-dc7c-3001b4db515d"
 		},
 		{
 			"id": "e7437851-4e2c-f438-2703-e13bbf3b1127",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052",
 			"pathVariables": {},
 			"preRequestScript": "",
 			"method": "PATCH",
@@ -4794,7 +4909,7 @@
 					"id": "65c2a1dd-bc1c-37bd-be10-839ac8587609",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052",
 						"pathVariables": {},
 						"data": "{\n    \"version\": \"2.5\",\n    \"description\": \"A category to hold all available cloud service offers mod\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4808,12 +4923,14 @@
 			"tests": "",
 			"collectionId": "cf382091-c7b8-bdcc-b5fb-c606e503d259",
 			"synced": false,
-			"rawModeData": "{\n    \"version\": \"2.5\",\n    \"description\": \"A category to hold all available cloud service offers mod\"\n}"
+			"rawModeData": "{\n    \"version\": \"2.5\",\n    \"description\": \"A category to hold all available cloud service offers mod\"\n}",
+			"owner": 0,
+			"folder": "6aa1457a-46f5-e934-dc7c-3001b4db515d"
 		},
 		{
 			"id": "ea41fb22-d732-adf7-a797-91b86d723ed3",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?lifecycleStatus.gte=In%20Test&fields=version%2ClifecycleStatus%2CvalidFor",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?lifecycleStatus.gte=In%20Test&fields=version%2ClifecycleStatus%2CvalidFor",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -4880,7 +4997,7 @@
 					"id": "aad1eab5-5135-b986-8c6a-cde4668a59b2",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?lifecycleStatus.gte=In%20Test&fields=version%2ClifecycleStatus%2CvalidFor",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?lifecycleStatus.gte=In%20Test&fields=version%2ClifecycleStatus%2CvalidFor",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4891,12 +5008,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "7e546597-8270-98c3-1b41-85395132c717"
 		},
 		{
 			"id": "ec5d70b6-70dd-2e2a-4362-c3013d2a0949",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.1)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.1)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -4963,7 +5082,7 @@
 					"id": "5b662bd1-aaad-b2c4-47da-e1721e3ac8d6",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-052:(2.1)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-052:(2.1)",
 						"pathVariables": {},
 						"data": "{\n    \"version\": \"2.2\",\n    \"description\": \"A category to hold all available cloud service offers new\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -4975,12 +5094,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n    \"version\": \"2.2\",\n    \"description\": \"A category to hold all available cloud service offers new\"\n}"
+			"rawModeData": "{\n    \"version\": \"2.2\",\n    \"description\": \"A category to hold all available cloud service offers new\"\n}",
+			"owner": 0,
+			"folder": "6aa1457a-46f5-e934-dc7c-3001b4db515d"
 		},
 		{
 			"id": "ecdbbe9e-4de8-120e-cf07-67af0c08e3f1",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
@@ -5041,7 +5162,7 @@
 					"id": "5e8a278c-ea68-b46e-2109-35b86beef628",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category",
 						"pathVariables": {},
 						"data": "{\n  \"id\":\"CATG-001\",\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.10\",\n  \"lifecycleStatus\":\"Rejected\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -5053,12 +5174,14 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n  \"id\":\"CATG-001\",\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.10\",\n  \"lifecycleStatus\":\"Rejected\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}"
+			"rawModeData": "{\n  \"id\":\"CATG-001\",\n  \"href\": \"http://serverlocation:port/catalogManagement/category/42\",\n  \"version\": \"1.10\",\n  \"lifecycleStatus\":\"Rejected\",\n    \"lastUpdate\": \"2013-04-19T16:42:23-04:00\",\n    \"isRoot\": true,\n    \"name\": \"Cloud Services\",\n    \"description\": \"A category to hold all available cloud service offers\"\n}",
+			"owner": 0,
+			"folder": "8ff59bb0-f5d3-d55b-5905-596224f4c560"
 		},
 		{
 			"id": "f5afbade-a49e-65f8-98de-9a8c8dab45e2",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?lifecycleStatus.gt=In%20Test&fields=version%2ClifecycleStatus%2CvalidFor",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?lifecycleStatus.gt=In%20Test&fields=version%2ClifecycleStatus%2CvalidFor",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -5125,7 +5248,7 @@
 					"id": "af6e3bfc-cf66-f05f-a6d2-b6973eba8d63",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category?lifecycleStatus.gt=In%20Test&fields=version%2ClifecycleStatus%2CvalidFor",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category?lifecycleStatus.gt=In%20Test&fields=version%2ClifecycleStatus%2CvalidFor",
 						"pathVariables": {},
 						"data": [],
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -5136,12 +5259,14 @@
 					}
 				}
 			],
-			"synced": false
+			"synced": false,
+			"owner": 0,
+			"folder": "7e546597-8270-98c3-1b41-85395132c717"
 		},
 		{
 			"id": "ff41dc32-941d-6762-836e-6b81a786c1bf",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
-			"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)",
+			"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001:(2.0)",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PATCH",
@@ -5208,7 +5333,7 @@
 					"id": "e376eb71-cc3c-4861-8cb3-0901d79cf89e",
 					"name": "Response",
 					"request": {
-						"url": "http://localhost:8080/DSPRODUCTCATALOG2/catalogManagement/category/CATG-001:(2.0)",
+						"url": "http://localhost:8080/DSPRODUCTCATALOG2/api/catalogManagement/v2/category/CATG-001:(2.0)",
 						"pathVariables": {},
 						"data": "{\n    \"name\": \"cloud Servic\",\n    \"validFor\": {\n        \"startDateTime\": \"2012-04-19T16:44:23-04:00\",\n        \"endDateTime\": \"2014-04-19T16:44:23-04:00\"\n    }\n}",
 						"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -5220,7 +5345,9 @@
 				}
 			],
 			"synced": false,
-			"rawModeData": "{\n    \"name\": \"cloud Servic\",\n    \"validFor\": {\n        \"startDateTime\": \"2012-04-19T16:44:23-04:00\",\n        \"endDateTime\": \"2014-04-19T16:44:23-04:00\"\n    }\n}"
+			"rawModeData": "{\n    \"name\": \"cloud Servic\",\n    \"validFor\": {\n        \"startDateTime\": \"2012-04-19T16:44:23-04:00\",\n        \"endDateTime\": \"2014-04-19T16:44:23-04:00\"\n    }\n}",
+			"owner": 0,
+			"folder": "7e546597-8270-98c3-1b41-85395132c717"
 		}
 	]
 }
